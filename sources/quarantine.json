@@ -1,0 +1,704 @@
+[
+  {
+    "source": "single",
+    "pokemon": "브리두라스",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "망나뇽",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "팬텀",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "워시로토무",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "찌리배리",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "타부자고",
+    "category": "abilities",
+    "name": "283"
+  },
+  {
+    "source": "single",
+    "pokemon": "타부자고",
+    "category": "moves",
+    "name": "874"
+  },
+  {
+    "source": "single",
+    "pokemon": "타부자고",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "드래펄트",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "오롱털",
+    "category": "moves",
+    "name": "789"
+  },
+  {
+    "source": "single",
+    "pokemon": "드래캄",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "히트로토무",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "저승갓숭",
+    "category": "moves",
+    "name": "889"
+  },
+  {
+    "source": "single",
+    "pokemon": "히스이 미끄래곤",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "가디안",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "눈여아",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "묘두기",
+    "category": "abilities",
+    "name": "218"
+  },
+  {
+    "source": "single",
+    "pokemon": "어흥염",
+    "category": "moves",
+    "name": "ＤＤラリアット"
+  },
+  {
+    "source": "single",
+    "pokemon": "라플레시아",
+    "category": "abilities",
+    "name": "27"
+  },
+  {
+    "source": "single",
+    "pokemon": "장침바루",
+    "category": "moves",
+    "name": "839"
+  },
+  {
+    "source": "single",
+    "pokemon": "저리더프",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "일레도리자드",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "히스이 모크나이퍼",
+    "category": "moves",
+    "name": "３ぼんのや"
+  },
+  {
+    "source": "single",
+    "pokemon": "칼라마네로",
+    "category": "moves",
+    "name": "576"
+  },
+  {
+    "source": "single",
+    "pokemon": "커트로토무",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "쥬피썬더",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "몽얌나",
+    "category": "abilities",
+    "name": "108"
+  },
+  {
+    "source": "single",
+    "pokemon": "괴력몬",
+    "category": "moves",
+    "name": "ＤＤラリアット"
+  },
+  {
+    "source": "single",
+    "pokemon": "전룡",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "미끄래곤",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "할비롱",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "부란다",
+    "category": "moves",
+    "name": "ＤＤラリアット"
+  },
+  {
+    "source": "single",
+    "pokemon": "피카츄",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "키키링",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "대여르",
+    "category": "moves",
+    "name": "748"
+  },
+  {
+    "source": "single",
+    "pokemon": "대여르",
+    "category": "moves",
+    "name": "１０まんばりき"
+  },
+  {
+    "source": "single",
+    "pokemon": "메더",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "냐오닉스(수컷)",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "마임꽁꽁",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "썬더볼트",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "에몽가",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "켄타로스",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "프로스트로토무",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "냐오닉스(암컷)",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "데덴네",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "신비록",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "침바루",
+    "category": "moves",
+    "name": "839"
+  },
+  {
+    "source": "single",
+    "pokemon": "스핀로토무",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "애프룡",
+    "category": "moves",
+    "name": "Ｇのちから"
+  },
+  {
+    "source": "single",
+    "pokemon": "로토무",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "하랑우탄",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "알로라 라이츄",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "single",
+    "pokemon": "프레프티르",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "어흥염",
+    "category": "moves",
+    "name": "ＤＤラリアット"
+  },
+  {
+    "source": "double",
+    "pokemon": "키키링",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "브리두라스",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "오롱털",
+    "category": "moves",
+    "name": "789"
+  },
+  {
+    "source": "double",
+    "pokemon": "대짱이",
+    "category": "moves",
+    "name": "１０まんばりき"
+  },
+  {
+    "source": "double",
+    "pokemon": "마기라스",
+    "category": "moves",
+    "name": "１０まんばりき"
+  },
+  {
+    "source": "double",
+    "pokemon": "타부자고",
+    "category": "abilities",
+    "name": "283"
+  },
+  {
+    "source": "double",
+    "pokemon": "타부자고",
+    "category": "moves",
+    "name": "874"
+  },
+  {
+    "source": "double",
+    "pokemon": "타부자고",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "눈여아",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "워시로토무",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "망나뇽",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "몰드류",
+    "category": "moves",
+    "name": "１０まんばりき"
+  },
+  {
+    "source": "double",
+    "pokemon": "팬텀",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "저승갓숭",
+    "category": "moves",
+    "name": "889"
+  },
+  {
+    "source": "double",
+    "pokemon": "가디안",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "맘모꾸리",
+    "category": "moves",
+    "name": "１０まんばりき"
+  },
+  {
+    "source": "double",
+    "pokemon": "묘두기",
+    "category": "abilities",
+    "name": "218"
+  },
+  {
+    "source": "double",
+    "pokemon": "라플레시아",
+    "category": "abilities",
+    "name": "27"
+  },
+  {
+    "source": "double",
+    "pokemon": "장침바루",
+    "category": "moves",
+    "name": "839"
+  },
+  {
+    "source": "double",
+    "pokemon": "히트로토무",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "저리더프",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "잠만보",
+    "category": "moves",
+    "name": "１０まんばりき"
+  },
+  {
+    "source": "double",
+    "pokemon": "할비롱",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "만마드",
+    "category": "moves",
+    "name": "１０まんばりき"
+  },
+  {
+    "source": "double",
+    "pokemon": "쥬피썬더",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "골루그",
+    "category": "moves",
+    "name": "１０まんばりき"
+  },
+  {
+    "source": "double",
+    "pokemon": "찌리배리",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "드래캄",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "일레도리자드",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "히스이 모크나이퍼",
+    "category": "moves",
+    "name": "３ぼんのや"
+  },
+  {
+    "source": "double",
+    "pokemon": "강철톤",
+    "category": "moves",
+    "name": "１０まんばりき"
+  },
+  {
+    "source": "double",
+    "pokemon": "히스이 미끄래곤",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "글라이온",
+    "category": "moves",
+    "name": "１０まんばりき"
+  },
+  {
+    "source": "double",
+    "pokemon": "신비록",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "팔데아 켄타로스(워터종)",
+    "category": "moves",
+    "name": "１０まんばりき"
+  },
+  {
+    "source": "double",
+    "pokemon": "전룡",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "거대코뿌리",
+    "category": "moves",
+    "name": "１０まんばりき"
+  },
+  {
+    "source": "double",
+    "pokemon": "하마돈",
+    "category": "moves",
+    "name": "１０まんばりき"
+  },
+  {
+    "source": "double",
+    "pokemon": "아마루르가",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "악비아르",
+    "category": "moves",
+    "name": "１０まんばりき"
+  },
+  {
+    "source": "double",
+    "pokemon": "커트로토무",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "프로스트로토무",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "대여르",
+    "category": "moves",
+    "name": "748"
+  },
+  {
+    "source": "double",
+    "pokemon": "팔데아 켄타로스(블레이즈종)",
+    "category": "moves",
+    "name": "１０まんばりき"
+  },
+  {
+    "source": "double",
+    "pokemon": "피카츄",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "썬더볼트",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "토대부기",
+    "category": "moves",
+    "name": "１０まんばりき"
+  },
+  {
+    "source": "double",
+    "pokemon": "미끄래곤",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "몽얌나",
+    "category": "abilities",
+    "name": "108"
+  },
+  {
+    "source": "double",
+    "pokemon": "냐오닉스(암컷)",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "부란다",
+    "category": "moves",
+    "name": "ＤＤラリアット"
+  },
+  {
+    "source": "double",
+    "pokemon": "사다이사",
+    "category": "moves",
+    "name": "１０まんばりき"
+  },
+  {
+    "source": "double",
+    "pokemon": "파르토",
+    "category": "moves",
+    "name": "１０まんばりき"
+  },
+  {
+    "source": "double",
+    "pokemon": "알로라 라이츄",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "애프룡",
+    "category": "moves",
+    "name": "Ｇのちから"
+  },
+  {
+    "source": "double",
+    "pokemon": "로토무",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "메더",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "켄타로스",
+    "category": "moves",
+    "name": "１０まんばりき"
+  },
+  {
+    "source": "double",
+    "pokemon": "데덴네",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "스핀로토무",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "나루림",
+    "category": "moves",
+    "name": "１０まんボルト"
+  },
+  {
+    "source": "double",
+    "pokemon": "팔데아 켄타로스(컴뱃종)",
+    "category": "moves",
+    "name": "１０まんばりき"
+  },
+  {
+    "source": "double",
+    "pokemon": "침바루",
+    "category": "moves",
+    "name": "839"
+  }
+]

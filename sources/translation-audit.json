@@ -1,0 +1,2642 @@
+[
+  {
+    "id": "0670-05",
+    "original": "フラエッテ",
+    "form": "えいえんのはな",
+    "name": "플라엣테(영원의 꽃)",
+    "originalItem": "フラエッテナイト",
+    "item": "플라엣테나이트"
+  },
+  {
+    "id": "0823-00",
+    "original": "アーマーガア",
+    "form": "",
+    "name": "아머까오",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0748-00",
+    "original": "ドヒドイデ",
+    "form": "",
+    "name": "더시마사리",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0445-00",
+    "original": "ガブリアス",
+    "form": "",
+    "name": "한카리아스",
+    "originalItem": "カゴのみ",
+    "item": "유루열매"
+  },
+  {
+    "id": "0503-01",
+    "original": "ダイケンキ",
+    "form": "ヒスイのすがた",
+    "name": "히스이 대검귀",
+    "originalItem": "くろいメガネ",
+    "item": "검은안경"
+  },
+  {
+    "id": "0655-00",
+    "original": "マフォクシー",
+    "form": "",
+    "name": "마폭시",
+    "originalItem": "マフォクシナイト",
+    "item": "마폭시나이트"
+  },
+  {
+    "id": "0026-00",
+    "original": "ライチュウ",
+    "form": "",
+    "name": "라이츄",
+    "originalItem": "ライチュウナイトＹ",
+    "item": "라이츄나이트Y"
+  },
+  {
+    "id": "0908-00",
+    "original": "マスカーニャ",
+    "form": "",
+    "name": "마스카나",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0376-00",
+    "original": "メタグロス",
+    "form": "",
+    "name": "메타그로스",
+    "originalItem": "メタグロスナイト",
+    "item": "메타그로스나이트"
+  },
+  {
+    "id": "0902-00",
+    "original": "イダイトウ",
+    "form": "オスのすがた",
+    "name": "대쓰여너(수컷)",
+    "originalItem": "しんぴのしずく",
+    "item": "신비의물방울"
+  },
+  {
+    "id": "0212-00",
+    "original": "ハッサム",
+    "form": "",
+    "name": "핫삼",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0094-00",
+    "original": "ゲンガー",
+    "form": "",
+    "name": "팬텀",
+    "originalItem": "ゲンガナイト",
+    "item": "팬텀나이트"
+  },
+  {
+    "id": "0635-00",
+    "original": "サザンドラ",
+    "form": "",
+    "name": "삼삼드래",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0823-00",
+    "original": "アーマーガア",
+    "form": "",
+    "name": "아머까오",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0445-00",
+    "original": "ガブリアス",
+    "form": "",
+    "name": "한카리아스",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0730-00",
+    "original": "アシレーヌ",
+    "form": "",
+    "name": "누리레느",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0637-00",
+    "original": "ウルガモス",
+    "form": "",
+    "name": "불카모스",
+    "originalItem": "ラムのみ",
+    "item": "리샘열매"
+  },
+  {
+    "id": "0448-00",
+    "original": "ルカリオ",
+    "form": "",
+    "name": "루카리오",
+    "originalItem": "ルカリオナイト",
+    "item": "루카리오나이트"
+  },
+  {
+    "id": "0778-00",
+    "original": "ミミッキュ",
+    "form": "ばけたすがた",
+    "name": "따라큐",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0700-00",
+    "original": "ニンフィア",
+    "form": "",
+    "name": "님피아",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0130-00",
+    "original": "ギャラドス",
+    "form": "",
+    "name": "갸라도스",
+    "originalItem": "ギャラドスナイト",
+    "item": "갸라도스나이트"
+  },
+  {
+    "id": "0445-00",
+    "original": "ガブリアス",
+    "form": "",
+    "name": "한카리아스",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0730-00",
+    "original": "アシレーヌ",
+    "form": "",
+    "name": "누리레느",
+    "originalItem": "ラムのみ",
+    "item": "리샘열매"
+  },
+  {
+    "id": "0908-00",
+    "original": "マスカーニャ",
+    "form": "",
+    "name": "마스카나",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0149-00",
+    "original": "カイリュー",
+    "form": "",
+    "name": "망나뇽",
+    "originalItem": "カイリュナイト",
+    "item": "망나뇽나이트"
+  },
+  {
+    "id": "0970-00",
+    "original": "キラフロル",
+    "form": "",
+    "name": "킬라플로르",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0212-00",
+    "original": "ハッサム",
+    "form": "",
+    "name": "핫삼",
+    "originalItem": "ハッサムナイト",
+    "item": "핫삼나이트"
+  },
+  {
+    "id": "0503-01",
+    "original": "ダイケンキ",
+    "form": "ヒスイのすがた",
+    "name": "히스이 대검귀",
+    "originalItem": "ラムのみ",
+    "item": "리샘열매"
+  },
+  {
+    "id": "0445-00",
+    "original": "ガブリアス",
+    "form": "",
+    "name": "한카리아스",
+    "originalItem": "たつじんのおび",
+    "item": "달인의띠"
+  },
+  {
+    "id": "0450-00",
+    "original": "カバルドン",
+    "form": "",
+    "name": "하마돈",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "1000-00",
+    "original": "サーフゴー",
+    "form": "",
+    "name": "타부자고",
+    "originalItem": "カシブのみ",
+    "item": "수불열매"
+  },
+  {
+    "id": "0658-00",
+    "original": "ゲッコウガ",
+    "form": "",
+    "name": "개굴닌자",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0130-00",
+    "original": "ギャラドス",
+    "form": "",
+    "name": "갸라도스",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "1018-00",
+    "original": "ブリジュラス",
+    "form": "",
+    "name": "브리두라스",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0658-00",
+    "original": "ゲッコウガ",
+    "form": "",
+    "name": "개굴닌자",
+    "originalItem": "ゲッコウガナイト",
+    "item": "개굴닌자나이트"
+  },
+  {
+    "id": "0730-00",
+    "original": "アシレーヌ",
+    "form": "",
+    "name": "누리레느",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "1000-00",
+    "original": "サーフゴー",
+    "form": "",
+    "name": "타부자고",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0428-00",
+    "original": "ミミロップ",
+    "form": "",
+    "name": "이어롭",
+    "originalItem": "ミミロップナイト",
+    "item": "이어롭나이트"
+  },
+  {
+    "id": "0902-00",
+    "original": "イダイトウ",
+    "form": "オスのすがた",
+    "name": "대쓰여너(수컷)",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "1018-00",
+    "original": "ブリジュラス",
+    "form": "",
+    "name": "브리두라스",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0445-00",
+    "original": "ガブリアス",
+    "form": "",
+    "name": "한카리아스",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0199-00",
+    "original": "ヤドキング",
+    "form": "",
+    "name": "야도킹",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0006-00",
+    "original": "リザードン",
+    "form": "",
+    "name": "리자몽",
+    "originalItem": "リザードナイトＹ",
+    "item": "리자몽나이트Y"
+  },
+  {
+    "id": "0212-00",
+    "original": "ハッサム",
+    "form": "",
+    "name": "핫삼",
+    "originalItem": "メタルコート",
+    "item": "금속코트"
+  },
+  {
+    "id": "0908-00",
+    "original": "マスカーニャ",
+    "form": "",
+    "name": "마스카나",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0778-00",
+    "original": "ミミッキュ",
+    "form": "ばけたすがた",
+    "name": "따라큐",
+    "originalItem": "ピントレンズ",
+    "item": "초점렌즈"
+  },
+  {
+    "id": "0637-00",
+    "original": "ウルガモス",
+    "form": "",
+    "name": "불카모스",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0036-00",
+    "original": "ピクシー",
+    "form": "",
+    "name": "픽시",
+    "originalItem": "ピクシナイト",
+    "item": "픽시나이트"
+  },
+  {
+    "id": "1018-00",
+    "original": "ブリジュラス",
+    "form": "",
+    "name": "브리두라스",
+    "originalItem": "しろいハーブ",
+    "item": "하양허브"
+  },
+  {
+    "id": "0730-00",
+    "original": "アシレーヌ",
+    "form": "",
+    "name": "누리레느",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0445-00",
+    "original": "ガブリアス",
+    "form": "",
+    "name": "한카리아스",
+    "originalItem": "ラムのみ",
+    "item": "리샘열매"
+  },
+  {
+    "id": "0479-02",
+    "original": "ロトム",
+    "form": "ウォッシュロトム",
+    "name": "워시로토무",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0450-00",
+    "original": "カバルドン",
+    "form": "",
+    "name": "하마돈",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0006-00",
+    "original": "リザードン",
+    "form": "",
+    "name": "리자몽",
+    "originalItem": "リザードナイトＸ",
+    "item": "리자몽나이트X"
+  },
+  {
+    "id": "0197-00",
+    "original": "ブラッキー",
+    "form": "",
+    "name": "블래키",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0970-00",
+    "original": "キラフロル",
+    "form": "",
+    "name": "킬라플로르",
+    "originalItem": "キラフロルナイト",
+    "item": "킬라플로르나이트"
+  },
+  {
+    "id": "0003-00",
+    "original": "フシギバナ",
+    "form": "",
+    "name": "이상해꽃",
+    "originalItem": "フシギバナイト",
+    "item": "이상해꽃나이트"
+  },
+  {
+    "id": "0730-00",
+    "original": "アシレーヌ",
+    "form": "",
+    "name": "누리레느",
+    "originalItem": "カゴのみ",
+    "item": "유루열매"
+  },
+  {
+    "id": "0983-00",
+    "original": "ドドゲザン",
+    "form": "",
+    "name": "대도각참",
+    "originalItem": "くろいメガネ",
+    "item": "검은안경"
+  },
+  {
+    "id": "0121-00",
+    "original": "スターミー",
+    "form": "",
+    "name": "아쿠스타",
+    "originalItem": "スターミナイト",
+    "item": "아쿠스타나이트"
+  },
+  {
+    "id": "0503-01",
+    "original": "ダイケンキ",
+    "form": "ヒスイのすがた",
+    "name": "히스이 대검귀",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "1018-00",
+    "original": "ブリジュラス",
+    "form": "",
+    "name": "브리두라스",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0503-01",
+    "original": "ダイケンキ",
+    "form": "ヒスイのすがた",
+    "name": "히스이 대검귀",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0970-00",
+    "original": "キラフロル",
+    "form": "",
+    "name": "킬라플로르",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0398-00",
+    "original": "ムクホーク",
+    "form": "",
+    "name": "찌르호크",
+    "originalItem": "ムクホークナイト",
+    "item": "찌르호크나이트"
+  },
+  {
+    "id": "0149-00",
+    "original": "カイリュー",
+    "form": "",
+    "name": "망나뇽",
+    "originalItem": "たつじんのおび",
+    "item": "달인의띠"
+  },
+  {
+    "id": "0282-00",
+    "original": "サーナイト",
+    "form": "",
+    "name": "가디안",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0303-00",
+    "original": "クチート",
+    "form": "",
+    "name": "입치트",
+    "originalItem": "クチートナイト",
+    "item": "입치트나이트"
+  },
+  {
+    "id": "0094-00",
+    "original": "ゲンガー",
+    "form": "",
+    "name": "팬텀",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0968-00",
+    "original": "ミミズズ",
+    "form": "",
+    "name": "꿈트렁",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "1018-00",
+    "original": "ブリジュラス",
+    "form": "",
+    "name": "브리두라스",
+    "originalItem": "りゅうのキバ",
+    "item": "용의이빨"
+  },
+  {
+    "id": "0861-00",
+    "original": "オーロンゲ",
+    "form": "",
+    "name": "오롱털",
+    "originalItem": "ひかりのねんど",
+    "item": "빛의점토"
+  },
+  {
+    "id": "0855-00",
+    "original": "ポットデス",
+    "form": "がんさくフォルム",
+    "name": "포트데스",
+    "originalItem": "しろいハーブ",
+    "item": "하양허브"
+  },
+  {
+    "id": "0637-00",
+    "original": "ウルガモス",
+    "form": "",
+    "name": "불카모스",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "1000-00",
+    "original": "サーフゴー",
+    "form": "",
+    "name": "타부자고",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0778-00",
+    "original": "ミミッキュ",
+    "form": "ばけたすがた",
+    "name": "따라큐",
+    "originalItem": "のろいのおふだ",
+    "item": "저주의부적"
+  },
+  {
+    "id": "0115-00",
+    "original": "ガルーラ",
+    "form": "",
+    "name": "캥카",
+    "originalItem": "ガルーラナイト",
+    "item": "캥카나이트"
+  },
+  {
+    "id": "0964-00",
+    "original": "イルカマン",
+    "form": "ナイーブフォルム",
+    "name": "돌핀맨(나이브폼)",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0730-00",
+    "original": "アシレーヌ",
+    "form": "",
+    "name": "누리레느",
+    "originalItem": "ようせいのハネ",
+    "item": "요정의깃털"
+  },
+  {
+    "id": "0908-00",
+    "original": "マスカーニャ",
+    "form": "",
+    "name": "마스카나",
+    "originalItem": "たつじんのおび",
+    "item": "달인의띠"
+  },
+  {
+    "id": "0479-02",
+    "original": "ロトム",
+    "form": "ウォッシュロトム",
+    "name": "워시로토무",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0199-01",
+    "original": "ヤドキング",
+    "form": "ガラルのすがた",
+    "name": "가라르 야도킹",
+    "originalItem": "シュカのみ",
+    "item": "슈캐열매"
+  },
+  {
+    "id": "0911-00",
+    "original": "ラウドボーン",
+    "form": "",
+    "name": "라우드본",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0937-00",
+    "original": "ソウブレイズ",
+    "form": "",
+    "name": "파라블레이즈",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0038-01",
+    "original": "キュウコン",
+    "form": "アローラのすがた",
+    "name": "알로라 나인테일",
+    "originalItem": "ひかりのねんど",
+    "item": "빛의점토"
+  },
+  {
+    "id": "0545-00",
+    "original": "ペンドラー",
+    "form": "",
+    "name": "펜드라",
+    "originalItem": "ペンドラナイト",
+    "item": "펜드라나이트"
+  },
+  {
+    "id": "0212-00",
+    "original": "ハッサム",
+    "form": "",
+    "name": "핫삼",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0009-00",
+    "original": "カメックス",
+    "form": "",
+    "name": "거북왕",
+    "originalItem": "カメックスナイト",
+    "item": "거북왕나이트"
+  },
+  {
+    "id": "0681-00",
+    "original": "ギルガルド",
+    "form": "シールドフォルム",
+    "name": "킬가르도(실드폼)",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0184-00",
+    "original": "マリルリ",
+    "form": "",
+    "name": "마릴리",
+    "originalItem": "リンドのみ",
+    "item": "린드열매"
+  },
+  {
+    "id": "0658-00",
+    "original": "ゲッコウガ",
+    "form": "",
+    "name": "개굴닌자",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0681-00",
+    "original": "ギルガルド",
+    "form": "シールドフォルム",
+    "name": "킬가르도(실드폼)",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0214-00",
+    "original": "ヘラクロス",
+    "form": "",
+    "name": "헤라크로스",
+    "originalItem": "ヘラクロスナイト",
+    "item": "헤라크로스나이트"
+  },
+  {
+    "id": "0730-00",
+    "original": "アシレーヌ",
+    "form": "",
+    "name": "누리레느",
+    "originalItem": "しんぴのしずく",
+    "item": "신비의물방울"
+  },
+  {
+    "id": "0983-00",
+    "original": "ドドゲザン",
+    "form": "",
+    "name": "대도각참",
+    "originalItem": "ラムのみ",
+    "item": "리샘열매"
+  },
+  {
+    "id": "1000-00",
+    "original": "サーフゴー",
+    "form": "",
+    "name": "타부자고",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0130-00",
+    "original": "ギャラドス",
+    "form": "",
+    "name": "갸라도스",
+    "originalItem": "こうかくレンズ",
+    "item": "광각렌즈"
+  },
+  {
+    "id": "0302-00",
+    "original": "ヤミラミ",
+    "form": "",
+    "name": "깜까미",
+    "originalItem": "ひかりのねんど",
+    "item": "빛의점토"
+  },
+  {
+    "id": "0660-00",
+    "original": "ホルード",
+    "form": "",
+    "name": "파르토",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0450-00",
+    "original": "カバルドン",
+    "form": "",
+    "name": "하마돈",
+    "originalItem": "さらさらいわ",
+    "item": "보송보송바위"
+  },
+  {
+    "id": "0530-00",
+    "original": "ドリュウズ",
+    "form": "",
+    "name": "몰드류",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0445-00",
+    "original": "ガブリアス",
+    "form": "",
+    "name": "한카리아스",
+    "originalItem": "ガブリアスナイト",
+    "item": "한카리아스나이트"
+  },
+  {
+    "id": "1000-00",
+    "original": "サーフゴー",
+    "form": "",
+    "name": "타부자고",
+    "originalItem": "シュカのみ",
+    "item": "슈캐열매"
+  },
+  {
+    "id": "0752-00",
+    "original": "オニシズクモ",
+    "form": "",
+    "name": "깨비물거미",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0260-00",
+    "original": "ラグラージ",
+    "form": "",
+    "name": "대짱이",
+    "originalItem": "ラグラージナイト",
+    "item": "대짱이나이트"
+  },
+  {
+    "id": "0681-00",
+    "original": "ギルガルド",
+    "form": "シールドフォルム",
+    "name": "킬가르도(실드폼)",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0778-00",
+    "original": "ミミッキュ",
+    "form": "ばけたすがた",
+    "name": "따라큐",
+    "originalItem": "しめったいわ",
+    "item": "축축한바위"
+  },
+  {
+    "id": "0128-01",
+    "original": "ケンタロス",
+    "form": "パルデアのすがた・コンバットしゅ",
+    "name": "팔데아 켄타로스(컴뱃종)",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0545-00",
+    "original": "ペンドラー",
+    "form": "",
+    "name": "펜드라",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0937-00",
+    "original": "ソウブレイズ",
+    "form": "",
+    "name": "파라블레이즈",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0154-00",
+    "original": "メガニウム",
+    "form": "",
+    "name": "메가니움",
+    "originalItem": "メガニウムナイト",
+    "item": "메가니움나이트"
+  },
+  {
+    "id": "0479-01",
+    "original": "ロトム",
+    "form": "ヒートロトム",
+    "name": "히트로토무",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0473-00",
+    "original": "マンムー",
+    "form": "",
+    "name": "맘모꾸리",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0196-00",
+    "original": "エーフィ",
+    "form": "",
+    "name": "에브이",
+    "originalItem": "たつじんのおび",
+    "item": "달인의띠"
+  },
+  {
+    "id": "0260-00",
+    "original": "ラグラージ",
+    "form": "",
+    "name": "대짱이",
+    "originalItem": "リンドのみ",
+    "item": "린드열매"
+  },
+  {
+    "id": "0748-00",
+    "original": "ドヒドイデ",
+    "form": "",
+    "name": "더시마사리",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0199-01",
+    "original": "ヤドキング",
+    "form": "ガラルのすがた",
+    "name": "가라르 야도킹",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "1018-00",
+    "original": "ブリジュラス",
+    "form": "",
+    "name": "브리두라스",
+    "originalItem": "ピントレンズ",
+    "item": "초점렌즈"
+  },
+  {
+    "id": "0184-00",
+    "original": "マリルリ",
+    "form": "",
+    "name": "마릴리",
+    "originalItem": "しんぴのしずく",
+    "item": "신비의물방울"
+  },
+  {
+    "id": "0637-00",
+    "original": "ウルガモス",
+    "form": "",
+    "name": "불카모스",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0478-00",
+    "original": "ユキメノコ",
+    "form": "",
+    "name": "눈여아",
+    "originalItem": "ユキメノコナイト",
+    "item": "눈여아나이트"
+  },
+  {
+    "id": "0461-00",
+    "original": "マニューラ",
+    "form": "",
+    "name": "포푸니라",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0700-00",
+    "original": "ニンフィア",
+    "form": "",
+    "name": "님피아",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0127-00",
+    "original": "カイロス",
+    "form": "",
+    "name": "쁘사이저",
+    "originalItem": "カイロスナイト",
+    "item": "쁘사이저나이트"
+  },
+  {
+    "id": "0681-00",
+    "original": "ギルガルド",
+    "form": "シールドフォルム",
+    "name": "킬가르도(실드폼)",
+    "originalItem": "のろいのおふだ",
+    "item": "저주의부적"
+  },
+  {
+    "id": "0584-00",
+    "original": "バイバニラ",
+    "form": "",
+    "name": "배바닐라",
+    "originalItem": "とけないこおり",
+    "item": "녹지않는얼음"
+  },
+  {
+    "id": "0130-00",
+    "original": "ギャラドス",
+    "form": "",
+    "name": "갸라도스",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0778-00",
+    "original": "ミミッキュ",
+    "form": "ばけたすがた",
+    "name": "따라큐",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0652-00",
+    "original": "ブリガロン",
+    "form": "",
+    "name": "브리가론",
+    "originalItem": "ブリガロナイト",
+    "item": "브리가론나이트"
+  },
+  {
+    "id": "0395-00",
+    "original": "エンペルト",
+    "form": "",
+    "name": "엠페르트",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0227-00",
+    "original": "エアームド",
+    "form": "",
+    "name": "무장조",
+    "originalItem": "エアームドナイト",
+    "item": "무장조나이트"
+  },
+  {
+    "id": "1018-00",
+    "original": "ブリジュラス",
+    "form": "",
+    "name": "브리두라스",
+    "originalItem": "こうかくレンズ",
+    "item": "광각렌즈"
+  },
+  {
+    "id": "0392-00",
+    "original": "ゴウカザル",
+    "form": "",
+    "name": "초염몽",
+    "originalItem": "イトケのみ",
+    "item": "꼬시개열매"
+  },
+  {
+    "id": "0547-00",
+    "original": "エルフーン",
+    "form": "",
+    "name": "엘풍",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0128-02",
+    "original": "ケンタロス",
+    "form": "パルデアのすがた・ブレイズしゅ",
+    "name": "팔데아 켄타로스(블레이즈종)",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0071-00",
+    "original": "ウツボット",
+    "form": "",
+    "name": "우츠보트",
+    "originalItem": "ウツボットナイト",
+    "item": "우츠보트나이트"
+  },
+  {
+    "id": "0952-00",
+    "original": "スコヴィラン",
+    "form": "",
+    "name": "스코빌런",
+    "originalItem": "スコヴィラナイト",
+    "item": "스코빌런나이트"
+  },
+  {
+    "id": "0983-00",
+    "original": "ドドゲザン",
+    "form": "",
+    "name": "대도각참",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0130-00",
+    "original": "ギャラドス",
+    "form": "",
+    "name": "갸라도스",
+    "originalItem": "ラムのみ",
+    "item": "리샘열매"
+  },
+  {
+    "id": "0778-00",
+    "original": "ミミッキュ",
+    "form": "ばけたすがた",
+    "name": "따라큐",
+    "originalItem": "こうかくレンズ",
+    "item": "광각렌즈"
+  },
+  {
+    "id": "0257-00",
+    "original": "バシャーモ",
+    "form": "",
+    "name": "번치코",
+    "originalItem": "バシャーモナイト",
+    "item": "번치코나이트"
+  },
+  {
+    "id": "0658-00",
+    "original": "ゲッコウガ",
+    "form": "",
+    "name": "개굴닌자",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0157-00",
+    "original": "バクフーン",
+    "form": "",
+    "name": "블레이범",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0324-00",
+    "original": "コータス",
+    "form": "",
+    "name": "코터스",
+    "originalItem": "あついいわ",
+    "item": "뜨거운바위"
+  },
+  {
+    "id": "0003-00",
+    "original": "フシギバナ",
+    "form": "",
+    "name": "이상해꽃",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0778-00",
+    "original": "ミミッキュ",
+    "form": "ばけたすがた",
+    "name": "따라큐",
+    "originalItem": "ラムのみ",
+    "item": "리샘열매"
+  },
+  {
+    "id": "0903-00",
+    "original": "オオニューラ",
+    "form": "",
+    "name": "포푸니크",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0691-00",
+    "original": "ドラミドロ",
+    "form": "",
+    "name": "드래캄",
+    "originalItem": "ドラミドナイト",
+    "item": "드래캄나이트"
+  },
+  {
+    "id": "0503-01",
+    "original": "ダイケンキ",
+    "form": "ヒスイのすがた",
+    "name": "히스이 대검귀",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0036-00",
+    "original": "ピクシー",
+    "form": "",
+    "name": "픽시",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "1018-00",
+    "original": "ブリジュラス",
+    "form": "",
+    "name": "브리두라스",
+    "originalItem": "カゴのみ",
+    "item": "유루열매"
+  },
+  {
+    "id": "0464-00",
+    "original": "ドサイドン",
+    "form": "",
+    "name": "거대코뿌리",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0094-00",
+    "original": "ゲンガー",
+    "form": "",
+    "name": "팬텀",
+    "originalItem": "こうかくレンズ",
+    "item": "광각렌즈"
+  },
+  {
+    "id": "0983-00",
+    "original": "ドドゲザン",
+    "form": "",
+    "name": "대도각참",
+    "originalItem": "ヨプのみ",
+    "item": "로플열매"
+  },
+  {
+    "id": "0911-00",
+    "original": "ラウドボーン",
+    "form": "",
+    "name": "라우드본",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0398-00",
+    "original": "ムクホーク",
+    "form": "",
+    "name": "찌르호크",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0887-00",
+    "original": "ドラパルト",
+    "form": "",
+    "name": "드래펄트",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0970-00",
+    "original": "キラフロル",
+    "form": "",
+    "name": "킬라플로르",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0939-00",
+    "original": "ハラバリー",
+    "form": "",
+    "name": "찌리배리",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0571-01",
+    "original": "ゾロアーク",
+    "form": "ヒスイのすがた",
+    "name": "히스이 조로아크",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0939-00",
+    "original": "ハラバリー",
+    "form": "",
+    "name": "찌리배리",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0727-00",
+    "original": "ガオガエン",
+    "form": "",
+    "name": "어흥염",
+    "originalItem": "カゴのみ",
+    "item": "유루열매"
+  },
+  {
+    "id": "0706-01",
+    "original": "ヌメルゴン",
+    "form": "ヒスイのすがた",
+    "name": "히스이 미끄래곤",
+    "originalItem": "カゴのみ",
+    "item": "유루열매"
+  },
+  {
+    "id": "0254-00",
+    "original": "ジュカイン",
+    "form": "",
+    "name": "나무킹",
+    "originalItem": "ジュカインナイト",
+    "item": "나무킹나이트"
+  },
+  {
+    "id": "0260-00",
+    "original": "ラグラージ",
+    "form": "",
+    "name": "대짱이",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0979-00",
+    "original": "コノヨザル",
+    "form": "",
+    "name": "저승갓숭",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0479-02",
+    "original": "ロトム",
+    "form": "ウォッシュロトム",
+    "name": "워시로토무",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0715-00",
+    "original": "オンバーン",
+    "form": "",
+    "name": "음번",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0279-00",
+    "original": "ペリッパー",
+    "form": "",
+    "name": "패리퍼",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0518-00",
+    "original": "ムシャーナ",
+    "form": "",
+    "name": "몽얌나",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0257-00",
+    "original": "バシャーモ",
+    "form": "",
+    "name": "번치코",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0208-00",
+    "original": "ハガネール",
+    "form": "",
+    "name": "강철톤",
+    "originalItem": "ハガネールナイト",
+    "item": "강철톤나이트"
+  },
+  {
+    "id": "0080-00",
+    "original": "ヤドラン",
+    "form": "",
+    "name": "야도란",
+    "originalItem": "ヤドランナイト",
+    "item": "야도란나이트"
+  },
+  {
+    "id": "0132-00",
+    "original": "メタモン",
+    "form": "",
+    "name": "메타몽",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0445-00",
+    "original": "ガブリアス",
+    "form": "",
+    "name": "한카리아스",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0227-00",
+    "original": "エアームド",
+    "form": "",
+    "name": "무장조",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0635-00",
+    "original": "サザンドラ",
+    "form": "",
+    "name": "삼삼드래",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0279-00",
+    "original": "ペリッパー",
+    "form": "",
+    "name": "패리퍼",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0904-00",
+    "original": "ハリーマン",
+    "form": "",
+    "name": "장침바루",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0939-00",
+    "original": "ハラバリー",
+    "form": "",
+    "name": "찌리배리",
+    "originalItem": "じしゃく",
+    "item": "자석"
+  },
+  {
+    "id": "0149-00",
+    "original": "カイリュー",
+    "form": "",
+    "name": "망나뇽",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0637-00",
+    "original": "ウルガモス",
+    "form": "",
+    "name": "불카모스",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0445-00",
+    "original": "ガブリアス",
+    "form": "",
+    "name": "한카리아스",
+    "originalItem": "ヤチェのみ",
+    "item": "플카열매"
+  },
+  {
+    "id": "0197-00",
+    "original": "ブラッキー",
+    "form": "",
+    "name": "블래키",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "1000-00",
+    "original": "サーフゴー",
+    "form": "",
+    "name": "타부자고",
+    "originalItem": "のろいのおふだ",
+    "item": "저주의부적"
+  },
+  {
+    "id": "0635-00",
+    "original": "サザンドラ",
+    "form": "",
+    "name": "삼삼드래",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0681-00",
+    "original": "ギルガルド",
+    "form": "シールドフォルム",
+    "name": "킬가르도(실드폼)",
+    "originalItem": "ラムのみ",
+    "item": "리샘열매"
+  },
+  {
+    "id": "0902-00",
+    "original": "イダイトウ",
+    "form": "オスのすがた",
+    "name": "대쓰여너(수컷)",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0038-01",
+    "original": "キュウコン",
+    "form": "アローラのすがた",
+    "name": "알로라 나인테일",
+    "originalItem": "たつじんのおび",
+    "item": "달인의띠"
+  },
+  {
+    "id": "0130-00",
+    "original": "ギャラドス",
+    "form": "",
+    "name": "갸라도스",
+    "originalItem": "ちからのハチマキ",
+    "item": "힘의머리띠"
+  },
+  {
+    "id": "0248-00",
+    "original": "バンギラス",
+    "form": "",
+    "name": "마기라스",
+    "originalItem": "バンギラスナイト",
+    "item": "마기라스나이트"
+  },
+  {
+    "id": "1018-00",
+    "original": "ブリジュラス",
+    "form": "",
+    "name": "브리두라스",
+    "originalItem": "ものしりメガネ",
+    "item": "박식안경"
+  },
+  {
+    "id": "0149-00",
+    "original": "カイリュー",
+    "form": "",
+    "name": "망나뇽",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0701-00",
+    "original": "ルチャブル",
+    "form": "",
+    "name": "루차불",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0479-01",
+    "original": "ロトム",
+    "form": "ヒートロトム",
+    "name": "히트로토무",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0358-00",
+    "original": "チリーン",
+    "form": "",
+    "name": "치렁",
+    "originalItem": "チリーンナイト",
+    "item": "치렁나이트"
+  },
+  {
+    "id": "0713-00",
+    "original": "クレベース",
+    "form": "",
+    "name": "크레베이스",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0706-01",
+    "original": "ヌメルゴン",
+    "form": "ヒスイのすがた",
+    "name": "히스이 미끄래곤",
+    "originalItem": "しろいハーブ",
+    "item": "하양허브"
+  },
+  {
+    "id": "0609-00",
+    "original": "シャンデラ",
+    "form": "",
+    "name": "샹델라",
+    "originalItem": "シャンデラナイト",
+    "item": "샹델라나이트"
+  },
+  {
+    "id": "0149-00",
+    "original": "カイリュー",
+    "form": "",
+    "name": "망나뇽",
+    "originalItem": "ラムのみ",
+    "item": "리샘열매"
+  },
+  {
+    "id": "0497-00",
+    "original": "ジャローダ",
+    "form": "",
+    "name": "샤로다",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0904-00",
+    "original": "ハリーマン",
+    "form": "",
+    "name": "장침바루",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0635-00",
+    "original": "サザンドラ",
+    "form": "",
+    "name": "삼삼드래",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0887-00",
+    "original": "ドラパルト",
+    "form": "",
+    "name": "드래펄트",
+    "originalItem": "ひかりのねんど",
+    "item": "빛의점토"
+  },
+  {
+    "id": "0545-00",
+    "original": "ペンドラー",
+    "form": "",
+    "name": "펜드라",
+    "originalItem": "メンタルハーブ",
+    "item": "멘탈허브"
+  },
+  {
+    "id": "0956-00",
+    "original": "クエスパトラ",
+    "form": "",
+    "name": "클레스퍼트라",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0902-00",
+    "original": "イダイトウ",
+    "form": "オスのすがた",
+    "name": "대쓰여너(수컷)",
+    "originalItem": "ラムのみ",
+    "item": "리샘열매"
+  },
+  {
+    "id": "0257-00",
+    "original": "バシャーモ",
+    "form": "",
+    "name": "번치코",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "1018-00",
+    "original": "ブリジュラス",
+    "form": "",
+    "name": "브리두라스",
+    "originalItem": "シュカのみ",
+    "item": "슈캐열매"
+  },
+  {
+    "id": "0473-00",
+    "original": "マンムー",
+    "form": "",
+    "name": "맘모꾸리",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0132-00",
+    "original": "メタモン",
+    "form": "",
+    "name": "메타몽",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0956-00",
+    "original": "クエスパトラ",
+    "form": "",
+    "name": "클레스퍼트라",
+    "originalItem": "ひかりのねんど",
+    "item": "빛의점토"
+  },
+  {
+    "id": "0635-00",
+    "original": "サザンドラ",
+    "form": "",
+    "name": "삼삼드래",
+    "originalItem": "ラムのみ",
+    "item": "리샘열매"
+  },
+  {
+    "id": "0902-01",
+    "original": "イダイトウ",
+    "form": "メスのすがた",
+    "name": "대쓰여너(암컷)",
+    "originalItem": "しんぴのしずく",
+    "item": "신비의물방울"
+  },
+  {
+    "id": "0260-00",
+    "original": "ラグラージ",
+    "form": "",
+    "name": "대짱이",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0143-00",
+    "original": "カビゴン",
+    "form": "",
+    "name": "잠만보",
+    "originalItem": "カゴのみ",
+    "item": "유루열매"
+  },
+  {
+    "id": "0212-00",
+    "original": "ハッサム",
+    "form": "",
+    "name": "핫삼",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0748-00",
+    "original": "ドヒドイデ",
+    "form": "",
+    "name": "더시마사리",
+    "originalItem": "持ち物なし",
+    "item": ""
+  },
+  {
+    "id": "0143-00",
+    "original": "カビゴン",
+    "form": "",
+    "name": "잠만보",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0197-00",
+    "original": "ブラッキー",
+    "form": "",
+    "name": "블래키",
+    "originalItem": "くろいメガネ",
+    "item": "검은안경"
+  },
+  {
+    "id": "0445-00",
+    "original": "ガブリアス",
+    "form": "",
+    "name": "한카리아스",
+    "originalItem": "ハバンのみ",
+    "item": "하반열매"
+  },
+  {
+    "id": "0700-00",
+    "original": "ニンフィア",
+    "form": "",
+    "name": "님피아",
+    "originalItem": "ようせいのハネ",
+    "item": "요정의깃털"
+  },
+  {
+    "id": "0024-00",
+    "original": "アーボック",
+    "form": "",
+    "name": "아보크",
+    "originalItem": "ウタンのみ",
+    "item": "야파열매"
+  },
+  {
+    "id": "0547-00",
+    "original": "エルフーン",
+    "form": "",
+    "name": "엘풍",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0964-00",
+    "original": "イルカマン",
+    "form": "ナイーブフォルム",
+    "name": "돌핀맨(나이브폼)",
+    "originalItem": "しんぴのしずく",
+    "item": "신비의물방울"
+  },
+  {
+    "id": "0395-00",
+    "original": "エンペルト",
+    "form": "",
+    "name": "엠페르트",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0530-00",
+    "original": "ドリュウズ",
+    "form": "",
+    "name": "몰드류",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0823-00",
+    "original": "アーマーガア",
+    "form": "",
+    "name": "아머까오",
+    "originalItem": "オッカのみ",
+    "item": "오카열매"
+  },
+  {
+    "id": "0861-00",
+    "original": "オーロンゲ",
+    "form": "",
+    "name": "오롱털",
+    "originalItem": "ラムのみ",
+    "item": "리샘열매"
+  },
+  {
+    "id": "0302-00",
+    "original": "ヤミラミ",
+    "form": "",
+    "name": "깜까미",
+    "originalItem": "ヤミラミナイト",
+    "item": "깜까미나이트"
+  },
+  {
+    "id": "0675-00",
+    "original": "ゴロンダ",
+    "form": "",
+    "name": "부란다",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0902-01",
+    "original": "イダイトウ",
+    "form": "メスのすがた",
+    "name": "대쓰여너(암컷)",
+    "originalItem": "のろいのおふだ",
+    "item": "저주의부적"
+  },
+  {
+    "id": "0956-00",
+    "original": "クエスパトラ",
+    "form": "",
+    "name": "클레스퍼트라",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0666-18",
+    "original": "ビビヨン",
+    "form": "ファンシーなもよう",
+    "name": "비비용",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0460-00",
+    "original": "ユキノオー",
+    "form": "",
+    "name": "눈설왕",
+    "originalItem": "ユキノオナイト",
+    "item": "눈설왕나이트"
+  },
+  {
+    "id": "0184-00",
+    "original": "マリルリ",
+    "form": "",
+    "name": "마릴리",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0903-00",
+    "original": "オオニューラ",
+    "form": "",
+    "name": "포푸니크",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0902-01",
+    "original": "イダイトウ",
+    "form": "メスのすがた",
+    "name": "대쓰여너(암컷)",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0545-00",
+    "original": "ペンドラー",
+    "form": "",
+    "name": "펜드라",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0479-02",
+    "original": "ロトム",
+    "form": "ウォッシュロトム",
+    "name": "워시로토무",
+    "originalItem": "カゴのみ",
+    "item": "유루열매"
+  },
+  {
+    "id": "0730-00",
+    "original": "アシレーヌ",
+    "form": "",
+    "name": "누리레느",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0952-00",
+    "original": "スコヴィラン",
+    "form": "",
+    "name": "스코빌런",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0445-00",
+    "original": "ガブリアス",
+    "form": "",
+    "name": "한카리아스",
+    "originalItem": "ピントレンズ",
+    "item": "초점렌즈"
+  },
+  {
+    "id": "0902-00",
+    "original": "イダイトウ",
+    "form": "オスのすがた",
+    "name": "대쓰여너(수컷)",
+    "originalItem": "のろいのおふだ",
+    "item": "저주의부적"
+  },
+  {
+    "id": "0038-01",
+    "original": "キュウコン",
+    "form": "アローラのすがた",
+    "name": "알로라 나인테일",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0670-05",
+    "original": "フラエッテ",
+    "form": "えいえんのはな",
+    "name": "플라엣테(영원의 꽃)",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0752-00",
+    "original": "オニシズクモ",
+    "form": "",
+    "name": "깨비물거미",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0911-00",
+    "original": "ラウドボーン",
+    "form": "",
+    "name": "라우드본",
+    "originalItem": "カシブのみ",
+    "item": "수불열매"
+  },
+  {
+    "id": "0143-00",
+    "original": "カビゴン",
+    "form": "",
+    "name": "잠만보",
+    "originalItem": "ヨプのみ",
+    "item": "로플열매"
+  },
+  {
+    "id": "0635-00",
+    "original": "サザンドラ",
+    "form": "",
+    "name": "삼삼드래",
+    "originalItem": "くろいメガネ",
+    "item": "검은안경"
+  },
+  {
+    "id": "0925-00",
+    "original": "イッカネズミ",
+    "form": "３びきかぞく",
+    "name": "파밀리쥐",
+    "originalItem": "こうかくレンズ",
+    "item": "광각렌즈"
+  },
+  {
+    "id": "0668-00",
+    "original": "カエンジシ",
+    "form": "",
+    "name": "화염레오",
+    "originalItem": "カエンジシナイト",
+    "item": "화염레오나이트"
+  },
+  {
+    "id": "0196-00",
+    "original": "エーフィ",
+    "form": "",
+    "name": "에브이",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0545-00",
+    "original": "ペンドラー",
+    "form": "",
+    "name": "펜드라",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0045-00",
+    "original": "ラフレシア",
+    "form": "",
+    "name": "라플레시아",
+    "originalItem": "ラムのみ",
+    "item": "리샘열매"
+  },
+  {
+    "id": "0471-00",
+    "original": "グレイシア",
+    "form": "",
+    "name": "글레이시아",
+    "originalItem": "とけないこおり",
+    "item": "녹지않는얼음"
+  },
+  {
+    "id": "0902-01",
+    "original": "イダイトウ",
+    "form": "メスのすがた",
+    "name": "대쓰여너(암컷)",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0706-01",
+    "original": "ヌメルゴン",
+    "form": "ヒスイのすがた",
+    "name": "히스이 미끄래곤",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0547-00",
+    "original": "エルフーン",
+    "form": "",
+    "name": "엘풍",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0900-00",
+    "original": "バサギリ",
+    "form": "",
+    "name": "사마자르",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0979-00",
+    "original": "コノヨザル",
+    "form": "",
+    "name": "저승갓숭",
+    "originalItem": "でんきだま",
+    "item": "전기구슬"
+  },
+  {
+    "id": "0903-00",
+    "original": "オオニューラ",
+    "form": "",
+    "name": "포푸니크",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0968-00",
+    "original": "ミミズズ",
+    "form": "",
+    "name": "꿈트렁",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0758-00",
+    "original": "エンニュート",
+    "form": "",
+    "name": "염뉴트",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0160-00",
+    "original": "オーダイル",
+    "form": "",
+    "name": "장크로다일",
+    "originalItem": "オーダイルナイト",
+    "item": "장크로다일나이트"
+  },
+  {
+    "id": "0584-00",
+    "original": "バイバニラ",
+    "form": "",
+    "name": "배바닐라",
+    "originalItem": "ひかりのねんど",
+    "item": "빛의점토"
+  },
+  {
+    "id": "0902-00",
+    "original": "イダイトウ",
+    "form": "オスのすがた",
+    "name": "대쓰여너(수컷)",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0972-00",
+    "original": "ハカドッグ",
+    "form": "",
+    "name": "묘두기",
+    "originalItem": "こうかくレンズ",
+    "item": "광각렌즈"
+  },
+  {
+    "id": "0979-00",
+    "original": "コノヨザル",
+    "form": "",
+    "name": "저승갓숭",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0354-00",
+    "original": "ジュペッタ",
+    "form": "",
+    "name": "다크펫",
+    "originalItem": "ジュペッタナイト",
+    "item": "다크펫나이트"
+  },
+  {
+    "id": "0149-00",
+    "original": "カイリュー",
+    "form": "",
+    "name": "망나뇽",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0887-00",
+    "original": "ドラパルト",
+    "form": "",
+    "name": "드래펄트",
+    "originalItem": "カゴのみ",
+    "item": "유루열매"
+  },
+  {
+    "id": "0730-00",
+    "original": "アシレーヌ",
+    "form": "",
+    "name": "누리레느",
+    "originalItem": "ソクノのみ",
+    "item": "초나열매"
+  },
+  {
+    "id": "0350-00",
+    "original": "ミロカロス",
+    "form": "",
+    "name": "밀로틱",
+    "originalItem": "たべのこし",
+    "item": "먹다남은음식"
+  },
+  {
+    "id": "0479-01",
+    "original": "ロトム",
+    "form": "ヒートロトム",
+    "name": "히트로토무",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0902-00",
+    "original": "イダイトウ",
+    "form": "オスのすがた",
+    "name": "대쓰여너(수컷)",
+    "originalItem": "ちからのハチマキ",
+    "item": "힘의머리띠"
+  },
+  {
+    "id": "0302-00",
+    "original": "ヤミラミ",
+    "form": "",
+    "name": "깜까미",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "1000-00",
+    "original": "サーフゴー",
+    "form": "",
+    "name": "타부자고",
+    "originalItem": "メタルコート",
+    "item": "금속코트"
+  },
+  {
+    "id": "0282-00",
+    "original": "サーナイト",
+    "form": "",
+    "name": "가디안",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0282-00",
+    "original": "サーナイト",
+    "form": "",
+    "name": "가디안",
+    "originalItem": "サーナイトナイト",
+    "item": "가디안나이트"
+  },
+  {
+    "id": "0983-00",
+    "original": "ドドゲザン",
+    "form": "",
+    "name": "대도각참",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0395-00",
+    "original": "エンペルト",
+    "form": "",
+    "name": "엠페르트",
+    "originalItem": "シュカのみ",
+    "item": "슈캐열매"
+  },
+  {
+    "id": "0981-00",
+    "original": "リキキリン",
+    "form": "",
+    "name": "키키링",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0324-00",
+    "original": "コータス",
+    "form": "",
+    "name": "코터스",
+    "originalItem": "もくたん",
+    "item": "목탄"
+  },
+  {
+    "id": "0903-00",
+    "original": "オオニューラ",
+    "form": "",
+    "name": "포푸니크",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0681-00",
+    "original": "ギルガルド",
+    "form": "シールドフォルム",
+    "name": "킬가르도(실드폼)",
+    "originalItem": "しろいハーブ",
+    "item": "하양허브"
+  },
+  {
+    "id": "0142-00",
+    "original": "プテラ",
+    "form": "",
+    "name": "프테라",
+    "originalItem": "プテラナイト",
+    "item": "프테라나이트"
+  },
+  {
+    "id": "0983-00",
+    "original": "ドドゲザン",
+    "form": "",
+    "name": "대도각참",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0059-01",
+    "original": "ウインディ",
+    "form": "ヒスイのすがた",
+    "name": "히스이 윈디",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0700-00",
+    "original": "ニンフィア",
+    "form": "",
+    "name": "님피아",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0784-00",
+    "original": "ジャラランガ",
+    "form": "",
+    "name": "짜랑고우거",
+    "originalItem": "ものしりメガネ",
+    "item": "박식안경"
+  },
+  {
+    "id": "1013-00",
+    "original": "ヤバソチャ",
+    "form": "ボンサクのすがた",
+    "name": "그우린차",
+    "originalItem": "きせきのタネ",
+    "item": "기적의씨"
+  },
+  {
+    "id": "0727-00",
+    "original": "ガオガエン",
+    "form": "",
+    "name": "어흥염",
+    "originalItem": "イトケのみ",
+    "item": "꼬시개열매"
+  },
+  {
+    "id": "0142-00",
+    "original": "プテラ",
+    "form": "",
+    "name": "프테라",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0623-00",
+    "original": "ゴルーグ",
+    "form": "",
+    "name": "골루그",
+    "originalItem": "ゴルーグナイト",
+    "item": "골루그나이트"
+  },
+  {
+    "id": "0727-00",
+    "original": "ガオガエン",
+    "form": "",
+    "name": "어흥염",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0981-00",
+    "original": "リキキリン",
+    "form": "",
+    "name": "키키링",
+    "originalItem": "ナモのみ",
+    "item": "마코열매"
+  },
+  {
+    "id": "0059-00",
+    "original": "ウインディ",
+    "form": "",
+    "name": "윈디",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0149-00",
+    "original": "カイリュー",
+    "form": "",
+    "name": "망나뇽",
+    "originalItem": "しろいハーブ",
+    "item": "하양허브"
+  },
+  {
+    "id": "1000-00",
+    "original": "サーフゴー",
+    "form": "",
+    "name": "타부자고",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0784-00",
+    "original": "ジャラランガ",
+    "form": "",
+    "name": "짜랑고우거",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0903-00",
+    "original": "オオニューラ",
+    "form": "",
+    "name": "포푸니크",
+    "originalItem": "しろいハーブ",
+    "item": "하양허브"
+  },
+  {
+    "id": "0530-00",
+    "original": "ドリュウズ",
+    "form": "",
+    "name": "몰드류",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0248-00",
+    "original": "バンギラス",
+    "form": "",
+    "name": "마기라스",
+    "originalItem": "こだわりスカーフ",
+    "item": "구애스카프"
+  },
+  {
+    "id": "0038-01",
+    "original": "キュウコン",
+    "form": "アローラのすがた",
+    "name": "알로라 나인테일",
+    "originalItem": "とけないこおり",
+    "item": "녹지않는얼음"
+  },
+  {
+    "id": "0547-00",
+    "original": "エルフーン",
+    "form": "",
+    "name": "엘풍",
+    "originalItem": "メンタルハーブ",
+    "item": "멘탈허브"
+  },
+  {
+    "id": "0937-00",
+    "original": "ソウブレイズ",
+    "form": "",
+    "name": "파라블레이즈",
+    "originalItem": "ナモのみ",
+    "item": "마코열매"
+  },
+  {
+    "id": "0925-00",
+    "original": "イッカネズミ",
+    "form": "３びきかぞく",
+    "name": "파밀리쥐",
+    "originalItem": "ヨプのみ",
+    "item": "로플열매"
+  },
+  {
+    "id": "0142-00",
+    "original": "プテラ",
+    "form": "",
+    "name": "프테라",
+    "originalItem": "かたいいし",
+    "item": "딱딱한돌"
+  },
+  {
+    "id": "0248-00",
+    "original": "バンギラス",
+    "form": "",
+    "name": "마기라스",
+    "originalItem": "さらさらいわ",
+    "item": "보송보송바위"
+  },
+  {
+    "id": "0972-00",
+    "original": "ハカドッグ",
+    "form": "",
+    "name": "묘두기",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0784-00",
+    "original": "ジャラランガ",
+    "form": "",
+    "name": "짜랑고우거",
+    "originalItem": "ハバンのみ",
+    "item": "하반열매"
+  },
+  {
+    "id": "0248-00",
+    "original": "バンギラス",
+    "form": "",
+    "name": "마기라스",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "1013-00",
+    "original": "ヤバソチャ",
+    "form": "ボンサクのすがた",
+    "name": "그우린차",
+    "originalItem": "ナモのみ",
+    "item": "마코열매"
+  },
+  {
+    "id": "0925-00",
+    "original": "イッカネズミ",
+    "form": "３びきかぞく",
+    "name": "파밀리쥐",
+    "originalItem": "ラムのみ",
+    "item": "리샘열매"
+  },
+  {
+    "id": "1013-00",
+    "original": "ヤバソチャ",
+    "form": "ボンサクのすがた",
+    "name": "그우린차",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0983-00",
+    "original": "ドドゲザン",
+    "form": "",
+    "name": "대도각참",
+    "originalItem": "オッカのみ",
+    "item": "오카열매"
+  },
+  {
+    "id": "0902-00",
+    "original": "イダイトウ",
+    "form": "オスのすがた",
+    "name": "대쓰여너(수컷)",
+    "originalItem": "ナモのみ",
+    "item": "마코열매"
+  },
+  {
+    "id": "0026-00",
+    "original": "ライチュウ",
+    "form": "",
+    "name": "라이츄",
+    "originalItem": "ライチュウナイトＸ",
+    "item": "라이츄나이트X"
+  },
+  {
+    "id": "0181-00",
+    "original": "デンリュウ",
+    "form": "",
+    "name": "전룡",
+    "originalItem": "じしゃく",
+    "item": "자석"
+  },
+  {
+    "id": "0683-00",
+    "original": "フレフワン",
+    "form": "",
+    "name": "프레프티르",
+    "originalItem": "リリバのみ",
+    "item": "바리비열매"
+  },
+  {
+    "id": "0903-00",
+    "original": "オオニューラ",
+    "form": "",
+    "name": "포푸니크",
+    "originalItem": "ラムのみ",
+    "item": "리샘열매"
+  },
+  {
+    "id": "0186-00",
+    "original": "ニョロトノ",
+    "form": "",
+    "name": "왕구리",
+    "originalItem": "オボンのみ",
+    "item": "자뭉열매"
+  },
+  {
+    "id": "0279-00",
+    "original": "ペリッパー",
+    "form": "",
+    "name": "패리퍼",
+    "originalItem": "いのちのたま",
+    "item": "생명의구슬"
+  },
+  {
+    "id": "0778-00",
+    "original": "ミミッキュ",
+    "form": "ばけたすがた",
+    "name": "따라큐",
+    "originalItem": "メンタルハーブ",
+    "item": "멘탈허브"
+  },
+  {
+    "id": "0903-00",
+    "original": "オオニューラ",
+    "form": "",
+    "name": "포푸니크",
+    "originalItem": "くろいてっきゅう",
+    "item": "검은철구"
+  },
+  {
+    "id": "0727-00",
+    "original": "ガオガエン",
+    "form": "",
+    "name": "어흥염",
+    "originalItem": "もくたん",
+    "item": "목탄"
+  },
+  {
+    "id": "0981-00",
+    "original": "リキキリン",
+    "form": "",
+    "name": "키키링",
+    "originalItem": "きあいのタスキ",
+    "item": "기합의띠"
+  },
+  {
+    "id": "0531-00",
+    "original": "タブンネ",
+    "form": "",
+    "name": "다부니",
+    "originalItem": "メンタルハーブ",
+    "item": "멘탈허브"
+  },
+  {
+    "id": "0683-00",
+    "original": "フレフワン",
+    "form": "",
+    "name": "프레프티르",
+    "originalItem": "カゴのみ",
+    "item": "유루열매"
+  }
+]

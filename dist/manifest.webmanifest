@@ -1,0 +1,14 @@
+{
+  "name": "포챔스 달콤아 봇",
+  "short_name": "달콤아 봇",
+  "description": "포켓몬 챔피언스 전용 메타 분석과 파티·선출 도우미",
+  "lang": "ko",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f5f8",
+  "theme_color": "#d94f87",
+  "icons": [
+    {"src": "assets/dalkoma-logo-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "assets/dalkoma-logo-512.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}

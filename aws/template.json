@@ -1,0 +1,505 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Champions Party Lab: private S3 origin, CloudFront, validated Champions collector (schedule disabled).",
+  "Resources": {
+    "SiteBucket": {
+      "Type": "AWS::S3::Bucket",
+      "DeletionPolicy": "Retain",
+      "UpdateReplacePolicy": "Retain",
+      "Properties": {
+        "PublicAccessBlockConfiguration": {
+          "BlockPublicAcls": true,
+          "BlockPublicPolicy": true,
+          "IgnorePublicAcls": true,
+          "RestrictPublicBuckets": true
+        },
+        "VersioningConfiguration": {
+          "Status": "Enabled"
+        },
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "AES256"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "OriginAccess": {
+      "Type": "AWS::CloudFront::OriginAccessControl",
+      "Properties": {
+        "OriginAccessControlConfig": {
+          "Name": {
+            "Fn::Sub": "${AWS::StackName}-oac"
+          },
+          "OriginAccessControlOriginType": "s3",
+          "SigningBehavior": "always",
+          "SigningProtocol": "sigv4"
+        }
+      }
+    },
+    "CachePolicy": {
+      "Type": "AWS::CloudFront::CachePolicy",
+      "Properties": {
+        "CachePolicyConfig": {
+          "Name": {
+            "Fn::Sub": "${AWS::StackName}-cache"
+          },
+          "DefaultTTL": 300,
+          "MinTTL": 0,
+          "MaxTTL": 3600,
+          "ParametersInCacheKeyAndForwardedToOrigin": {
+            "CookiesConfig": {
+              "CookieBehavior": "none"
+            },
+            "HeadersConfig": {
+              "HeaderBehavior": "none"
+            },
+            "QueryStringsConfig": {
+              "QueryStringBehavior": "none"
+            },
+            "EnableAcceptEncodingGzip": true,
+            "EnableAcceptEncodingBrotli": true
+          }
+        }
+      }
+    },
+    "Distribution": {
+      "Type": "AWS::CloudFront::Distribution",
+      "Properties": {
+        "DistributionConfig": {
+          "Enabled": true,
+          "DefaultRootObject": "index.html",
+          "HttpVersion": "http2and3",
+          "IPV6Enabled": true,
+          "PriceClass": "PriceClass_200",
+          "Origins": [
+            {
+              "Id": "SiteOrigin",
+              "DomainName": {
+                "Fn::GetAtt": [
+                  "SiteBucket",
+                  "RegionalDomainName"
+                ]
+              },
+              "OriginAccessControlId": {
+                "Ref": "OriginAccess"
+              },
+              "S3OriginConfig": {
+                "OriginAccessIdentity": ""
+              }
+            }
+          ],
+          "DefaultCacheBehavior": {
+            "TargetOriginId": "SiteOrigin",
+            "ViewerProtocolPolicy": "redirect-to-https",
+            "AllowedMethods": [
+              "GET",
+              "HEAD",
+              "OPTIONS"
+            ],
+            "CachedMethods": [
+              "GET",
+              "HEAD"
+            ],
+            "Compress": true,
+            "CachePolicyId": {
+              "Ref": "CachePolicy"
+            }
+          },
+          "ViewerCertificate": {
+            "CloudFrontDefaultCertificate": true
+          }
+        }
+      }
+    },
+    "BucketPolicy": {
+      "Type": "AWS::S3::BucketPolicy",
+      "Properties": {
+        "Bucket": {
+          "Ref": "SiteBucket"
+        },
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Sid": "CloudFrontRead",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "cloudfront.amazonaws.com"
+              },
+              "Action": "s3:GetObject",
+              "Resource": {
+                "Fn::Sub": "${SiteBucket.Arn}/*"
+              },
+              "Condition": {
+                "StringEquals": {
+                  "AWS:SourceArn": {
+                    "Fn::Sub": "arn:${AWS::Partition}:cloudfront::${AWS::AccountId}:distribution/${Distribution}"
+                  }
+                }
+              }
+            },
+            {
+              "Sid": "RequireTLS",
+              "Effect": "Deny",
+              "Principal": "*",
+              "Action": "s3:*",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "SiteBucket",
+                    "Arn"
+                  ]
+                },
+                {
+                  "Fn::Sub": "${SiteBucket.Arn}/*"
+                }
+              ],
+              "Condition": {
+                "Bool": {
+                  "aws:SecureTransport": "false"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "CollectorRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": "PublishValidatedData",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "s3:PutObject"
+                  ],
+                  "Resource": {
+                    "Fn::Sub": "${SiteBucket.Arn}/opendata.json"
+                  }
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "logs:CreateLogGroup",
+                    "logs:CreateLogStream",
+                    "logs:PutLogEvents"
+                  ],
+                  "Resource": {
+                    "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/*"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "Collector": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Runtime": "python3.12",
+        "Handler": "collector.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "CollectorRole",
+            "Arn"
+          ]
+        },
+        "Timeout": 120,
+        "MemorySize": 256,
+        "Environment": {
+          "Variables": {
+            "DATA_BUCKET": {
+              "Ref": "SiteBucket"
+            }
+          }
+        },
+        "Code": {
+          "ZipFile": "def handler(event,context):\n    raise RuntimeError(\"Upload collector package with aws/deploy.py before invocation\")"
+        }
+      }
+    },
+    "CollectorLogs": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": {
+          "Fn::Sub": "/aws/lambda/${Collector}"
+        },
+        "RetentionInDays": 14
+      }
+    },
+    "ScheduleRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "scheduler.amazonaws.com"
+              },
+              "Action": "sts:AssumeRole",
+              "Condition": {
+                "StringEquals": {
+                  "aws:SourceAccount": {
+                    "Ref": "AWS::AccountId"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": "InvokeCollector",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": "lambda:InvokeFunction",
+                  "Resource": {
+                    "Fn::GetAtt": [
+                      "Collector",
+                      "Arn"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "DailyRefresh": {
+      "Type": "AWS::Scheduler::Schedule",
+      "Properties": {
+        "Description": "Disabled until operator verifies first ingestion. One download per mode per day.",
+        "State": "DISABLED",
+        "ScheduleExpression": "cron(15 6 * * ? *)",
+        "ScheduleExpressionTimezone": "Asia/Seoul",
+        "FlexibleTimeWindow": {
+          "Mode": "OFF"
+        },
+        "Target": {
+          "Arn": {
+            "Fn::GetAtt": [
+              "Collector",
+              "Arn"
+            ]
+          },
+          "RoleArn": {
+            "Fn::GetAtt": [
+              "ScheduleRole",
+              "Arn"
+            ]
+          },
+          "Input": "{}",
+          "RetryPolicy": {
+            "MaximumRetryAttempts": 0,
+            "MaximumEventAgeInSeconds": 3600
+          }
+        }
+      }
+    },
+    "DiscordRole": {
+      "Type": "AWS::IAM::Role",
+      "Condition": "DiscordEnabled",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": "DiscordLogs",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "logs:CreateLogGroup",
+                    "logs:CreateLogStream",
+                    "logs:PutLogEvents"
+                  ],
+                  "Resource": {
+                    "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/*"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "DiscordHandler": {
+      "Type": "AWS::Lambda::Function",
+      "Condition": "DiscordEnabled",
+      "Properties": {
+        "Runtime": "nodejs22.x",
+        "Handler": "handler.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "DiscordRole",
+            "Arn"
+          ]
+        },
+        "MemorySize": 512,
+        "Timeout": 5,
+        "Environment": {
+          "Variables": {
+            "DISCORD_PUBLIC_KEY": {
+              "Ref": "DiscordPublicKey"
+            },
+            "APP_URL": {
+              "Fn::Sub": "https://${Distribution.DomainName}/"
+            }
+          }
+        },
+        "Code": {
+          "ZipFile": "exports.handler=async()=>({statusCode:503,body:\"Upload bot package first\"});"
+        }
+      }
+    },
+    "DiscordLogs": {
+      "Type": "AWS::Logs::LogGroup",
+      "Condition": "DiscordEnabled",
+      "Properties": {
+        "LogGroupName": {
+          "Fn::Sub": "/aws/lambda/${DiscordHandler}"
+        },
+        "RetentionInDays": 14
+      }
+    },
+    "DiscordUrl": {
+      "Type": "AWS::Lambda::Url",
+      "Condition": "DiscordEnabled",
+      "Properties": {
+        "TargetFunctionArn": {
+          "Ref": "DiscordHandler"
+        },
+        "AuthType": "NONE",
+        "InvokeMode": "BUFFERED"
+      }
+    },
+    "DiscordUrlPermission": {
+      "Type": "AWS::Lambda::Permission",
+      "Condition": "DiscordEnabled",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "DiscordHandler"
+        },
+        "Action": "lambda:InvokeFunctionUrl",
+        "Principal": "*",
+        "FunctionUrlAuthType": "NONE"
+      }
+    },
+    "DiscordInvokePermission": {
+      "Type": "AWS::Lambda::Permission",
+      "Condition": "DiscordEnabled",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "DiscordHandler"
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "*",
+        "InvokedViaFunctionUrl": true
+      }
+    }
+  },
+  "Outputs": {
+    "BucketName": {
+      "Value": {
+        "Ref": "SiteBucket"
+      }
+    },
+    "DistributionId": {
+      "Value": {
+        "Ref": "Distribution"
+      }
+    },
+    "CollectorName": {
+      "Value": {
+        "Ref": "Collector"
+      }
+    },
+    "ScheduleName": {
+      "Value": {
+        "Ref": "DailyRefresh"
+      }
+    },
+    "SiteUrl": {
+      "Value": {
+        "Fn::Sub": "https://${Distribution.DomainName}"
+      }
+    },
+    "DiscordFunctionName": {
+      "Condition": "DiscordEnabled",
+      "Value": {
+        "Ref": "DiscordHandler"
+      }
+    },
+    "DiscordEndpoint": {
+      "Condition": "DiscordEnabled",
+      "Value": {
+        "Fn::GetAtt": [
+          "DiscordUrl",
+          "FunctionUrl"
+        ]
+      }
+    }
+  },
+  "Parameters": {
+    "DiscordPublicKey": {
+      "Type": "String",
+      "Default": "",
+      "AllowedPattern": "^$|^[0-9a-fA-F]{64}$",
+      "Description": "Discord application public key; empty disables bot resources."
+    }
+  },
+  "Conditions": {
+    "DiscordEnabled": {
+      "Fn::Not": [
+        {
+          "Fn::Equals": [
+            {
+              "Ref": "DiscordPublicKey"
+            },
+            ""
+          ]
+        }
+      ]
+    }
+  }
+}

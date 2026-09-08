@@ -1,0 +1,1939 @@
+{
+  "schemaVersion": 2,
+  "updatedAt": "2026-09-08",
+  "references": [
+    {
+      "name": "가디안",
+      "variant": "현재 목록 도트",
+      "src": "sprites/gardevoir.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "가라르 메더",
+      "variant": "현재 목록 도트",
+      "src": "sprites/stunfisk-galar.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "가라르 야도란",
+      "variant": "현재 목록 도트",
+      "src": "sprites/slowbro-galar.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "가라르 야도킹",
+      "variant": "현재 목록 도트",
+      "src": "sprites/slowking-galar.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "강철톤",
+      "variant": "현재 목록 도트",
+      "src": "sprites/steelix.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "개굴닌자",
+      "variant": "현재 목록 도트",
+      "src": "sprites/greninja.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "갸라도스",
+      "variant": "현재 목록 도트",
+      "src": "sprites/gyarados.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "거대코뿌리",
+      "variant": "현재 목록 도트",
+      "src": "sprites/rhyperior.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "거북손데스",
+      "variant": "현재 목록 도트",
+      "src": "sprites/barbaracle.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "거북왕",
+      "variant": "현재 목록 도트",
+      "src": "sprites/blastoise.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "견고라스",
+      "variant": "현재 목록 도트",
+      "src": "sprites/tyrantrum.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "곤율거니",
+      "variant": "현재 목록 도트",
+      "src": "sprites/scrafty.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "골루그",
+      "variant": "현재 목록 도트",
+      "src": "sprites/golurk.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "과미드라",
+      "variant": "현재 목록 도트",
+      "src": "sprites/hydrapple.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "괴력몬",
+      "variant": "현재 목록 도트",
+      "src": "sprites/machamp.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "그우린차",
+      "variant": "현재 목록 도트",
+      "src": "sprites/sinistcha.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "글라이온",
+      "variant": "현재 목록 도트",
+      "src": "sprites/gliscor.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "글레이시아",
+      "variant": "현재 목록 도트",
+      "src": "sprites/glaceon.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "깜까미",
+      "variant": "현재 목록 도트",
+      "src": "sprites/sableye.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "깨비물거미",
+      "variant": "현재 목록 도트",
+      "src": "sprites/araquanid.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "꿈트렁",
+      "variant": "현재 목록 도트",
+      "src": "sprites/orthworm.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "나루림",
+      "variant": "현재 목록 도트",
+      "src": "sprites/slurpuff.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "나무킹",
+      "variant": "현재 목록 도트",
+      "src": "sprites/sceptile.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "나인테일",
+      "variant": "현재 목록 도트",
+      "src": "sprites/ninetales.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "내던숭이",
+      "variant": "현재 목록 도트",
+      "src": "sprites/passimian.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "냐오닉스(수컷)",
+      "variant": "현재 목록 도트",
+      "src": "sprites/meowstic-male.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "냐오닉스(암컷)",
+      "variant": "현재 목록 도트",
+      "src": "sprites/meowstic-female.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "노보청",
+      "variant": "현재 목록 도트",
+      "src": "sprites/conkeldurr.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "누리레느",
+      "variant": "현재 목록 도트",
+      "src": "sprites/primarina.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "눈설왕",
+      "variant": "현재 목록 도트",
+      "src": "sprites/abomasnow.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "눈여아",
+      "variant": "현재 목록 도트",
+      "src": "sprites/froslass.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "님피아",
+      "variant": "현재 목록 도트",
+      "src": "sprites/sylveon.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "다부니",
+      "variant": "현재 목록 도트",
+      "src": "sprites/audino.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "다크펫",
+      "variant": "현재 목록 도트",
+      "src": "sprites/banette.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "단지래플",
+      "variant": "현재 목록 도트",
+      "src": "sprites/appletun.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "달코퀸",
+      "variant": "현재 목록 도트",
+      "src": "sprites/tsareena.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "대검귀",
+      "variant": "현재 목록 도트",
+      "src": "sprites/samurott.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "대도각참",
+      "variant": "현재 목록 도트",
+      "src": "sprites/kingambit.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "대로트",
+      "variant": "현재 목록 도트",
+      "src": "sprites/trevenant.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "대쓰여너(수컷)",
+      "variant": "현재 목록 도트",
+      "src": "sprites/basculegion-male.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "대쓰여너(암컷)",
+      "variant": "현재 목록 도트",
+      "src": "sprites/basculegion-female.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "대여르",
+      "variant": "현재 목록 도트",
+      "src": "sprites/falinks.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "대짱이",
+      "variant": "현재 목록 도트",
+      "src": "sprites/swampert.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "더스트나",
+      "variant": "현재 목록 도트",
+      "src": "sprites/garbodor.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "더시마사리",
+      "variant": "현재 목록 도트",
+      "src": "sprites/toxapex.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "데덴네",
+      "variant": "현재 목록 도트",
+      "src": "sprites/dedenne.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "데스니칸",
+      "variant": "현재 목록 도트",
+      "src": "sprites/cofagrigus.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "데스판",
+      "variant": "현재 목록 도트",
+      "src": "sprites/runerigus.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "독개굴",
+      "variant": "현재 목록 도트",
+      "src": "sprites/toxicroak.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "독침붕",
+      "variant": "현재 목록 도트",
+      "src": "sprites/beedrill.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "돌핀맨(나이브폼)",
+      "variant": "현재 목록 도트",
+      "src": "sprites/palafin-zero.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "두드리짱",
+      "variant": "현재 목록 도트",
+      "src": "sprites/tinkaton.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "드래캄",
+      "variant": "현재 목록 도트",
+      "src": "sprites/dragalge.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "드래펄트",
+      "variant": "현재 목록 도트",
+      "src": "sprites/dragapult.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "따라큐",
+      "variant": "현재 목록 도트",
+      "src": "sprites/mimikyu-disguised.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "라우드본",
+      "variant": "현재 목록 도트",
+      "src": "sprites/skeledirge.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "라이츄",
+      "variant": "현재 목록 도트",
+      "src": "sprites/raichu.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "라플레시아",
+      "variant": "현재 목록 도트",
+      "src": "sprites/vileplume.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "란쿨루스",
+      "variant": "현재 목록 도트",
+      "src": "sprites/reuniclus.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "램펄드",
+      "variant": "현재 목록 도트",
+      "src": "sprites/rampardos.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "레파르다스",
+      "variant": "현재 목록 도트",
+      "src": "sprites/liepard.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "렌트라",
+      "variant": "현재 목록 도트",
+      "src": "sprites/luxray.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "로즈레이드",
+      "variant": "현재 목록 도트",
+      "src": "sprites/roserade.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "로토무",
+      "variant": "현재 목록 도트",
+      "src": "sprites/rotom.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "루가루암(한낮의 모습)",
+      "variant": "현재 목록 도트",
+      "src": "sprites/lycanroc-midday.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "루가루암(한밤중의 모습)",
+      "variant": "현재 목록 도트",
+      "src": "sprites/lycanroc-midnight.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "루가루암(황혼의 모습)",
+      "variant": "현재 목록 도트",
+      "src": "sprites/lycanroc-dusk.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "루차불",
+      "variant": "현재 목록 도트",
+      "src": "sprites/hawlucha.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "루카리오",
+      "variant": "현재 목록 도트",
+      "src": "sprites/lucario.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "리자몽",
+      "variant": "현재 목록 도트",
+      "src": "sprites/charizard.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "리피아",
+      "variant": "현재 목록 도트",
+      "src": "sprites/leafeon.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "마기라스",
+      "variant": "현재 목록 도트",
+      "src": "sprites/tyranitar.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "마릴리",
+      "variant": "현재 목록 도트",
+      "src": "sprites/azumarill.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "마스카나",
+      "variant": "현재 목록 도트",
+      "src": "sprites/meowscarada.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "마임꽁꽁",
+      "variant": "현재 목록 도트",
+      "src": "sprites/mr-rime.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "마폭시",
+      "variant": "현재 목록 도트",
+      "src": "sprites/delphox.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "마휘핑",
+      "variant": "현재 목록 도트",
+      "src": "sprites/alcremie.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "만마드",
+      "variant": "현재 목록 도트",
+      "src": "sprites/mudsdale.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "맘모꾸리",
+      "variant": "현재 목록 도트",
+      "src": "sprites/mamoswine.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "망나뇽",
+      "variant": "현재 목록 도트",
+      "src": "sprites/dragonite.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "메가니움",
+      "variant": "현재 목록 도트",
+      "src": "sprites/meganium.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "메더",
+      "variant": "현재 목록 도트",
+      "src": "sprites/stunfisk.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "메타그로스",
+      "variant": "현재 목록 도트",
+      "src": "sprites/metagross.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "메타몽",
+      "variant": "현재 목록 도트",
+      "src": "sprites/ditto.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "모단단게",
+      "variant": "현재 목록 도트",
+      "src": "sprites/crabominable.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "모르페코(배부른 모양)",
+      "variant": "현재 목록 도트",
+      "src": "sprites/morpeko-full-belly.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "모크나이퍼",
+      "variant": "현재 목록 도트",
+      "src": "sprites/decidueye.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "몰드류",
+      "variant": "현재 목록 도트",
+      "src": "sprites/excadrill.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "몽얌나",
+      "variant": "현재 목록 도트",
+      "src": "sprites/musharna.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "묘두기",
+      "variant": "현재 목록 도트",
+      "src": "sprites/houndstone.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "무장조",
+      "variant": "현재 목록 도트",
+      "src": "sprites/skarmory.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "미끄래곤",
+      "variant": "현재 목록 도트",
+      "src": "sprites/goodra.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "밀로틱",
+      "variant": "현재 목록 도트",
+      "src": "sprites/milotic.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "바리톱스",
+      "variant": "현재 목록 도트",
+      "src": "sprites/bastiodon.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "바오키",
+      "variant": "현재 목록 도트",
+      "src": "sprites/simisear.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "배바닐라",
+      "variant": "현재 목록 도트",
+      "src": "sprites/vanilluxe.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "번치코",
+      "variant": "현재 목록 도트",
+      "src": "sprites/blaziken.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "보르그",
+      "variant": "현재 목록 도트",
+      "src": "sprites/watchog.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "보스로라",
+      "variant": "현재 목록 도트",
+      "src": "sprites/aggron.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "부란다",
+      "variant": "현재 목록 도트",
+      "src": "sprites/pangoro.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "부스터",
+      "variant": "현재 목록 도트",
+      "src": "sprites/flareon.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "불카모스",
+      "variant": "현재 목록 도트",
+      "src": "sprites/volcarona.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "브리가론",
+      "variant": "현재 목록 도트",
+      "src": "sprites/chesnaught.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "브리두라스",
+      "variant": "현재 목록 도트",
+      "src": "sprites/archaludon.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "브리무음",
+      "variant": "현재 목록 도트",
+      "src": "sprites/hatterene.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "블래키",
+      "variant": "현재 목록 도트",
+      "src": "sprites/umbreon.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "블레이범",
+      "variant": "현재 목록 도트",
+      "src": "sprites/typhlosion.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "블로스터",
+      "variant": "현재 목록 도트",
+      "src": "sprites/clawitzer.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "비비용",
+      "variant": "현재 목록 도트",
+      "src": "sprites/vivillon.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "쁘사이저",
+      "variant": "현재 목록 도트",
+      "src": "sprites/pinsir.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "사다이사",
+      "variant": "현재 목록 도트",
+      "src": "sprites/sandaconda.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "사마자르",
+      "variant": "현재 목록 도트",
+      "src": "sprites/kleavor.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "삼삼드래",
+      "variant": "현재 목록 도트",
+      "src": "sprites/hydreigon.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "샤로다",
+      "variant": "현재 목록 도트",
+      "src": "sprites/serperior.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "샤미드",
+      "variant": "현재 목록 도트",
+      "src": "sprites/vaporeon.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "샤크니아",
+      "variant": "현재 목록 도트",
+      "src": "sprites/sharpedo.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "샹델라",
+      "variant": "현재 목록 도트",
+      "src": "sprites/chandelure.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "스코빌런",
+      "variant": "현재 목록 도트",
+      "src": "sprites/scovillain.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "스핀로토무",
+      "variant": "현재 목록 도트",
+      "src": "sprites/rotom-fan.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "신비록",
+      "variant": "현재 목록 도트",
+      "src": "sprites/wyrdeer.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "썬더볼트",
+      "variant": "현재 목록 도트",
+      "src": "sprites/manectric.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "쏘콘",
+      "variant": "현재 목록 도트",
+      "src": "sprites/forretress.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "아리아도스",
+      "variant": "현재 목록 도트",
+      "src": "sprites/ariados.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "아마루르가",
+      "variant": "현재 목록 도트",
+      "src": "sprites/aurorus.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "아머까오",
+      "variant": "현재 목록 도트",
+      "src": "sprites/corviknight.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "아보크",
+      "variant": "현재 목록 도트",
+      "src": "sprites/arbok.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "아쿠스타",
+      "variant": "현재 목록 도트",
+      "src": "sprites/starmie.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "악비아르",
+      "variant": "현재 목록 도트",
+      "src": "sprites/krookodile.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "알로라 나인테일",
+      "variant": "현재 목록 도트",
+      "src": "sprites/ninetales-alola.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "알로라 라이츄",
+      "variant": "현재 목록 도트",
+      "src": "sprites/raichu-alola.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "앗차키",
+      "variant": "현재 목록 도트",
+      "src": "sprites/simipour.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "애프룡",
+      "variant": "현재 목록 도트",
+      "src": "sprites/flapple.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "앱솔",
+      "variant": "현재 목록 도트",
+      "src": "sprites/absol.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "야나키",
+      "variant": "현재 목록 도트",
+      "src": "sprites/simisage.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "야도란",
+      "variant": "현재 목록 도트",
+      "src": "sprites/slowbro.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "야도킹",
+      "variant": "현재 목록 도트",
+      "src": "sprites/slowking.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "어흥염",
+      "variant": "현재 목록 도트",
+      "src": "sprites/incineroar.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "얼음귀신",
+      "variant": "현재 목록 도트",
+      "src": "sprites/glalie.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "에몽가",
+      "variant": "현재 목록 도트",
+      "src": "sprites/emolga.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "에브이",
+      "variant": "현재 목록 도트",
+      "src": "sprites/espeon.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "엘레이드",
+      "variant": "현재 목록 도트",
+      "src": "sprites/gallade.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "엘풍",
+      "variant": "현재 목록 도트",
+      "src": "sprites/whimsicott.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "엠페르트",
+      "variant": "현재 목록 도트",
+      "src": "sprites/empoleon.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "염뉴트",
+      "variant": "현재 목록 도트",
+      "src": "sprites/salazzle.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "염무왕",
+      "variant": "현재 목록 도트",
+      "src": "sprites/emboar.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "오롱털",
+      "variant": "현재 목록 도트",
+      "src": "sprites/grimmsnarl.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "왕구리",
+      "variant": "현재 목록 도트",
+      "src": "sprites/politoed.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "왕큰부리",
+      "variant": "현재 목록 도트",
+      "src": "sprites/toucannon.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "요가램",
+      "variant": "현재 목록 도트",
+      "src": "sprites/medicham.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "우츠보트",
+      "variant": "현재 목록 도트",
+      "src": "sprites/victreebel.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "워시로토무",
+      "variant": "현재 목록 도트",
+      "src": "sprites/rotom-wash.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "웨이니발",
+      "variant": "현재 목록 도트",
+      "src": "sprites/quaquaval.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "윈디",
+      "variant": "현재 목록 도트",
+      "src": "sprites/arcanine.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "음번",
+      "variant": "현재 목록 도트",
+      "src": "sprites/noivern.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "이상해꽃",
+      "variant": "현재 목록 도트",
+      "src": "sprites/venusaur.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "이어롭",
+      "variant": "현재 목록 도트",
+      "src": "sprites/lopunny.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "일레도리자드",
+      "variant": "현재 목록 도트",
+      "src": "sprites/heliolisk.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "입치트",
+      "variant": "현재 목록 도트",
+      "src": "sprites/mawile.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "잠만보",
+      "variant": "현재 목록 도트",
+      "src": "sprites/snorlax.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "장침바루",
+      "variant": "현재 목록 도트",
+      "src": "sprites/overqwil.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "장크로다일",
+      "variant": "현재 목록 도트",
+      "src": "sprites/feraligatr.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "저리더프",
+      "variant": "현재 목록 도트",
+      "src": "sprites/eelektross.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "저승갓숭",
+      "variant": "현재 목록 도트",
+      "src": "sprites/annihilape.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "전룡",
+      "variant": "현재 목록 도트",
+      "src": "sprites/ampharos.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "조로아크",
+      "variant": "현재 목록 도트",
+      "src": "sprites/zoroark.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "쥬피썬더",
+      "variant": "현재 목록 도트",
+      "src": "sprites/jolteon.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "짜랑고우거",
+      "variant": "현재 목록 도트",
+      "src": "sprites/kommo-o.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "찌르호크",
+      "variant": "현재 목록 도트",
+      "src": "sprites/staraptor.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "찌리배리",
+      "variant": "현재 목록 도트",
+      "src": "sprites/bellibolt.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "초염몽",
+      "variant": "현재 목록 도트",
+      "src": "sprites/infernape.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "치렁",
+      "variant": "현재 목록 도트",
+      "src": "sprites/chimecho.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "침바루",
+      "variant": "현재 목록 도트",
+      "src": "sprites/qwilfish.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "카디나르마",
+      "variant": "현재 목록 도트",
+      "src": "sprites/armarouge.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "칼라마네로",
+      "variant": "현재 목록 도트",
+      "src": "sprites/malamar.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "캐스퐁",
+      "variant": "현재 목록 도트",
+      "src": "sprites/castform.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "캥카",
+      "variant": "현재 목록 도트",
+      "src": "sprites/kangaskhan.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "커트로토무",
+      "variant": "현재 목록 도트",
+      "src": "sprites/rotom-mow.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "켄타로스",
+      "variant": "현재 목록 도트",
+      "src": "sprites/tauros.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "코터스",
+      "variant": "현재 목록 도트",
+      "src": "sprites/torkoal.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "콜로솔트",
+      "variant": "현재 목록 도트",
+      "src": "sprites/garganacl.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "크레베이스",
+      "variant": "현재 목록 도트",
+      "src": "sprites/avalugg.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "클레스퍼트라",
+      "variant": "현재 목록 도트",
+      "src": "sprites/espathra.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "클레피",
+      "variant": "현재 목록 도트",
+      "src": "sprites/klefki.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "키키링",
+      "variant": "현재 목록 도트",
+      "src": "sprites/farigiraf.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "킬가르도(실드폼)",
+      "variant": "현재 목록 도트",
+      "src": "sprites/aegislash-shield.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "킬라플로르",
+      "variant": "현재 목록 도트",
+      "src": "sprites/glimmora.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "타부자고",
+      "variant": "현재 목록 도트",
+      "src": "sprites/gholdengo.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "토대부기",
+      "variant": "현재 목록 도트",
+      "src": "sprites/torterra.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "툰베어",
+      "variant": "현재 목록 도트",
+      "src": "sprites/beartic.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "트리미앙",
+      "variant": "현재 목록 도트",
+      "src": "sprites/furfrou.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "파라블레이즈",
+      "variant": "현재 목록 도트",
+      "src": "sprites/ceruledge.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "파르토",
+      "variant": "현재 목록 도트",
+      "src": "sprites/diggersby.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "파밀리쥐",
+      "variant": "현재 목록 도트",
+      "src": "sprites/maushold-family-of-four.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "파비코리",
+      "variant": "현재 목록 도트",
+      "src": "sprites/altaria.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "파이어로",
+      "variant": "현재 목록 도트",
+      "src": "sprites/talonflame.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "팔데아 켄타로스(블레이즈종)",
+      "variant": "현재 목록 도트",
+      "src": "sprites/tauros-paldea-blaze-breed.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "팔데아 켄타로스(워터종)",
+      "variant": "현재 목록 도트",
+      "src": "sprites/tauros-paldea-aqua-breed.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "팔데아 켄타로스(컴뱃종)",
+      "variant": "현재 목록 도트",
+      "src": "sprites/tauros-paldea-combat-breed.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "패리퍼",
+      "variant": "현재 목록 도트",
+      "src": "sprites/pelipper.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "팬텀",
+      "variant": "현재 목록 도트",
+      "src": "sprites/gengar.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "펌킨인(대과종)",
+      "variant": "현재 목록 도트",
+      "src": "sprites/gourgeist-large.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "펌킨인(소과종)",
+      "variant": "현재 목록 도트",
+      "src": "sprites/gourgeist-small.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "펌킨인(중과종)",
+      "variant": "현재 목록 도트",
+      "src": "sprites/gourgeist-average.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "펌킨인(특대과종)",
+      "variant": "현재 목록 도트",
+      "src": "sprites/gourgeist-super.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "펜드라",
+      "variant": "현재 목록 도트",
+      "src": "sprites/scolipede.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "포트데스",
+      "variant": "현재 목록 도트",
+      "src": "sprites/polteageist.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "포푸니라",
+      "variant": "현재 목록 도트",
+      "src": "sprites/weavile.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "포푸니크",
+      "variant": "현재 목록 도트",
+      "src": "sprites/sneasler.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "폭타",
+      "variant": "현재 목록 도트",
+      "src": "sprites/camerupt.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "프레프티르",
+      "variant": "현재 목록 도트",
+      "src": "sprites/aromatisse.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "프로스트로토무",
+      "variant": "현재 목록 도트",
+      "src": "sprites/rotom-frost.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "프테라",
+      "variant": "현재 목록 도트",
+      "src": "sprites/aerodactyl.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "플라엣테(영원의 꽃)",
+      "variant": "현재 목록 도트",
+      "src": "sprites/floette-eternal.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "플라제스",
+      "variant": "현재 목록 도트",
+      "src": "sprites/florges.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "피죤투",
+      "variant": "현재 목록 도트",
+      "src": "sprites/pidgeot.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "피카츄",
+      "variant": "현재 목록 도트",
+      "src": "sprites/pikachu.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "픽시",
+      "variant": "현재 목록 도트",
+      "src": "sprites/clefable.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "하랑우탄",
+      "variant": "현재 목록 도트",
+      "src": "sprites/oranguru.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "하마돈",
+      "variant": "현재 목록 도트",
+      "src": "sprites/hippowdon.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "한카리아스",
+      "variant": "현재 목록 도트",
+      "src": "sprites/garchomp.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "할비롱",
+      "variant": "현재 목록 도트",
+      "src": "sprites/drampa.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "핫삼",
+      "variant": "현재 목록 도트",
+      "src": "sprites/scizor.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "헤라크로스",
+      "variant": "현재 목록 도트",
+      "src": "sprites/heracross.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "헬가",
+      "variant": "현재 목록 도트",
+      "src": "sprites/houndoom.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "화강돌",
+      "variant": "현재 목록 도트",
+      "src": "sprites/spiritomb.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "화염레오",
+      "variant": "현재 목록 도트",
+      "src": "sprites/pyroar-male.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "후딘",
+      "variant": "현재 목록 도트",
+      "src": "sprites/alakazam.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "히스이 대검귀",
+      "variant": "현재 목록 도트",
+      "src": "sprites/samurott-hisui.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "히스이 모크나이퍼",
+      "variant": "현재 목록 도트",
+      "src": "sprites/decidueye-hisui.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "히스이 미끄래곤",
+      "variant": "현재 목록 도트",
+      "src": "sprites/goodra-hisui.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "히스이 블레이범",
+      "variant": "현재 목록 도트",
+      "src": "sprites/typhlosion-hisui.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "히스이 윈디",
+      "variant": "현재 목록 도트",
+      "src": "sprites/arcanine-hisui.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "히스이 조로아크",
+      "variant": "현재 목록 도트",
+      "src": "sprites/zoroark-hisui.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "히스이 크레베이스",
+      "variant": "현재 목록 도트",
+      "src": "sprites/avalugg-hisui.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "히트로토무",
+      "variant": "현재 목록 도트",
+      "src": "sprites/rotom-heat.png",
+      "transparent": true,
+      "source": "현재 목록 기본 이미지"
+    },
+    {
+      "name": "한카리아스",
+      "variant": "일반색 화면",
+      "side": "mine",
+      "src": "recognition/sample-20260908-mine-1.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "워시로토무",
+      "variant": "일반색 화면",
+      "side": "mine",
+      "src": "recognition/sample-20260908-mine-2.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "마스카나",
+      "variant": "일반색 화면",
+      "side": "mine",
+      "src": "recognition/sample-20260908-mine-3.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "리자몽",
+      "variant": "일반색 화면",
+      "side": "mine",
+      "src": "recognition/sample-20260908-mine-4.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "나인테일",
+      "variant": "일반색 화면",
+      "side": "mine",
+      "src": "recognition/sample-20260908-mine-5.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "메타그로스",
+      "variant": "일반색 화면",
+      "side": "mine",
+      "src": "recognition/sample-20260908-mine-6.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "하마돈",
+      "variant": "일반색 화면",
+      "side": "opp",
+      "src": "recognition/sample-20260908-opp-1.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "한카리아스",
+      "variant": "일반색 화면",
+      "side": "opp",
+      "src": "recognition/sample-20260908-opp-2.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "마스카나",
+      "variant": "일반색 화면",
+      "side": "opp",
+      "src": "recognition/sample-20260908-opp-3.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "왕구리",
+      "variant": "일반색 화면",
+      "side": "opp",
+      "src": "recognition/sample-20260908-opp-4.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "브리두라스",
+      "variant": "일반색 화면",
+      "side": "opp",
+      "src": "recognition/sample-20260908-opp-5.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "찌리배리",
+      "variant": "일반색 화면",
+      "side": "opp",
+      "src": "recognition/sample-20260908-opp-6.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "그우린차",
+      "variant": "일반색 화면",
+      "side": "mine",
+      "src": "recognition/sample-20260908-en-mine-1.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "님피아",
+      "variant": "일반색 화면",
+      "side": "mine",
+      "src": "recognition/sample-20260908-en-mine-2.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "한카리아스",
+      "variant": "일반색 화면",
+      "side": "mine",
+      "src": "recognition/sample-20260908-en-mine-3.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "번치코",
+      "variant": "일반색 화면",
+      "side": "mine",
+      "src": "recognition/sample-20260908-en-mine-4.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "포푸니크",
+      "variant": "일반색 화면",
+      "side": "mine",
+      "src": "recognition/sample-20260908-en-mine-5.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "입치트",
+      "variant": "일반색 화면",
+      "side": "mine",
+      "src": "recognition/sample-20260908-en-mine-6.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "리자몽",
+      "variant": "일반색 화면",
+      "side": "opp",
+      "src": "recognition/sample-20260908-en-opp-1.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "핫삼",
+      "variant": "일반색 화면",
+      "side": "opp",
+      "src": "recognition/sample-20260908-en-opp-2.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "찌르호크",
+      "variant": "일반색 화면",
+      "side": "opp",
+      "src": "recognition/sample-20260908-en-opp-3.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "킬가르도(실드폼)",
+      "variant": "일반색 화면",
+      "side": "opp",
+      "src": "recognition/sample-20260908-en-opp-4.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "어흥염",
+      "variant": "일반색 화면",
+      "side": "opp",
+      "src": "recognition/sample-20260908-en-opp-5.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "한카리아스",
+      "variant": "일반색 화면",
+      "side": "opp",
+      "src": "recognition/sample-20260908-en-opp-6.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "바오키",
+      "variant": "일반색 화면",
+      "side": "mine",
+      "src": "recognition/sample-20260908-ko-mine-1.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "가디안",
+      "variant": "일반색 화면",
+      "side": "mine",
+      "src": "recognition/sample-20260908-ko-mine-2.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "마스카나",
+      "variant": "일반색 화면",
+      "side": "mine",
+      "src": "recognition/sample-20260908-ko-mine-3.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "부란다",
+      "variant": "일반색 화면",
+      "side": "mine",
+      "src": "recognition/sample-20260908-ko-mine-4.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "초염몽",
+      "variant": "일반색 화면",
+      "side": "mine",
+      "src": "recognition/sample-20260908-ko-mine-5.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "프테라",
+      "variant": "일반색 화면",
+      "side": "mine",
+      "src": "recognition/sample-20260908-ko-mine-6.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "마폭시",
+      "variant": "일반색 화면",
+      "side": "opp",
+      "src": "recognition/sample-20260908-ko-opp-1.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "강철톤",
+      "variant": "일반색 화면",
+      "side": "opp",
+      "src": "recognition/sample-20260908-ko-opp-2.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "우츠보트",
+      "variant": "일반색 화면",
+      "side": "opp",
+      "src": "recognition/sample-20260908-ko-opp-3.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "삼삼드래",
+      "variant": "일반색 화면",
+      "side": "opp",
+      "src": "recognition/sample-20260908-ko-opp-4.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "루차불",
+      "variant": "일반색 화면",
+      "side": "opp",
+      "src": "recognition/sample-20260908-ko-opp-5.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    },
+    {
+      "name": "썬더볼트",
+      "variant": "일반색 화면",
+      "side": "opp",
+      "src": "recognition/sample-20260908-ko-opp-6.webp",
+      "transparent": false,
+      "source": "사용자 제공 챔피언스 화면"
+    }
+  ]
+}

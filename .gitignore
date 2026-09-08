@@ -1,0 +1,4 @@
+aws/collector.zip
+__pycache__/
+*.pyc
+aws/discord.zip
