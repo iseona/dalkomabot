@@ -1,6 +1,7 @@
 import fs from 'node:fs';import os from 'node:os';import path from 'node:path';import assert from 'node:assert/strict';import {generateKeyPairSync,sign} from 'node:crypto';import {pathToFileURL} from 'node:url';
 import {draft,makeSet,validSet,validEV,recommend,empiricalCoverage,calculateStats,damageRolls,classifyKO,battleCalculation,strongestStatMove,damageScenarioResults,speedVariants} from '../dist/engine.mjs';
-import {parseStats,selectStatValues,validVisualFeature,rankVisualCandidates,confidentVisual} from '../dist/recognition.mjs';
+import {validVisualFeature,rankVisualCandidates,confidentVisual} from '../dist/recognition.mjs';
+import {validateRecognitionResult} from '../dist/ai-recognition.mjs';
 import {escapeHtml} from '../dist/ui.mjs';
 const root=path.resolve(import.meta.dirname,'..'),D=JSON.parse(fs.readFileSync(root+'/dist/data.json')),O=JSON.parse(fs.readFileSync(root+'/dist/opendata.json'));
 const sprites=JSON.parse(fs.readFileSync(root+'/dist/sprite-map.json'));
@@ -22,7 +23,7 @@ assert.deepEqual(damageRolls(100,100,100,0),Array(15).fill(0));assert.equal(clas
 {const p=D.modes.single.find(x=>x.name==='달코퀸'),custom={...draft(D.modes.single,O.modes.single,['달코퀸'],D.master)[0],moves:['10만마력']};assert(!validSet(custom,D.modes.single));assert(validSet(custom,D.modes.single,D.master));assert(p.moves.every(x=>x.name!=='10만마력'))}
 let code=fs.readFileSync(root+'/dist/app.js','utf8').replace(/\r\n/g,'\n'),recognitionCode=fs.readFileSync(root+'/dist/recognition.mjs','utf8'),uiTemplatesCode=fs.readFileSync(root+'/dist/ui-templates.mjs','utf8'),calculatorCode=fs.readFileSync(root+'/dist/calculator.mjs','utf8');
 assert.equal(escapeHtml('<b>"달콤" & 봇</b>'),'&lt;b&gt;&quot;달콤&quot; &amp; 봇&lt;/b&gt;');
-assert(code.includes('ratio<1.55||ratio>2.7'));
+assert(code.includes('runAIRecognition'));
 const feature={area:.2,...Object.fromEntries(Object.entries({hue:12,sv:16,shape:16,geom:4,rgb:3,fine:64}).map(([key,n])=>[key,Array(n).fill(1/Math.sqrt(n))]))};
 assert(validVisualFeature(feature));
 for(const invalid of [null,{}, {...feature,area:0},{...feature,fine:[NaN]},{...feature,rgb:[1,2,3]}])assert(!validVisualFeature(invalid));
@@ -32,24 +33,22 @@ assert.equal(rankVisualCandidates([feature], [{name:'test',feature}])[0].name,'t
 for(const scores of [[],[.1],[.1,.1],[.1,.11],[.3,.5],[NaN,.2],[.1,Infinity],[.2,.1]])assert(!confidentVisual(scores.map(score=>({score}))));
 assert(confidentVisual([{score:.1},{score:.2}]));
 assert(code.includes("monSprite(name,'detail')"));
-assert(code.includes("T.createWorker('kor+eng'"));
+assert(!code.includes('Tesseract'));assert(!code.includes('createWorker'));
 assert(code.includes("document.querySelectorAll('dialog')"));
 assert(code.includes("$('teammateRecommendations').innerHTML"));
 const css=fs.readFileSync(root+'/dist/style.css','utf8');assert(css.includes('.monpic.missing{background:linear-gradient'));assert(css.includes('.monpic.detail{width:112px;height:112px'));
 assert(css.includes('.ocrfallback{'));
-assert.deepEqual(parseStats('HP 149 2 특수공격 63 0\n공격 189 32 특수방어 118 0\n방어 118 0 스피드 124 32'),[2,32,0,0,0,32]);assert.deepEqual(parseStats('HP 149 99'),[null,null,null,null,null,null]);
-assert.deepEqual(parseStats('향 137 2 @ 특수공격4 161_ 32\n※ 공격* 63 0 특숭어 90 0\n열 방어 120 0 = 스피드 117-32'),[2,0,0,32,0,32]);
-assert.deepEqual(selectStatValues('149 2 63 0\n189 32 118 0\n118 0 124 32','',validEV),[2,32,0,0,0,32]);assert.deepEqual(selectStatValues('bad','HP 149 2 특수공격 63 0\n공격 189 32 특수방어 118 0\n방어 118 0 스피드 124 32',validEV),[2,32,0,0,0,32]);
-assert(code.includes("from './recognition.mjs'"));assert(code.includes("tessedit_char_whitelist:'0123456789 '"));assert(code.includes('selectStatValues(numberText,text,validEV)'));
+const aiSample={schemaVersion:1,kind:'party',slots:Array.from({length:6},(_,i)=>({slot:i+1,name:i?'':'달코퀸',item:null,ability:null,nature:null,moves:[],evs:[2,32,0,0,0,32],confidence:.9,notes:''}))};assert.equal(validateRecognitionResult(aiSample).slots[0].name,'달코퀸');assert.throws(()=>validateRecognitionResult({...aiSample,slots:aiSample.slots.slice(1)}));
+assert(code.includes("from './ai-recognition.mjs'"));assert(code.includes("kind:'party'"));
 assert(code.includes('data-detailbuild'));assert(code.includes('rankedChoices(p,k)'));assert(code.includes('performanceHtml(ts)'));
 assert(code.includes('setOcrFiles(e.target.files)'));assert(code.includes("mainDrop.addEventListener('drop'"));assert(code.includes('data-imageremove'));assert(code.includes('imageViewer'));assert(code.includes('damageBenchmark(s,target,move,evs)'));
-assert(uiTemplatesCode.includes('data-tab="lead"'));assert(code.includes("panelLayout(img,'mine')"));assert(code.includes("mode==='single'?3:4"));assert(code.includes('maxDamage(source,target'));
-assert(code.includes('const regions='));assert(code.includes('uniqueVisualRankings'));
+assert(uiTemplatesCode.includes('data-tab="lead"'));assert(code.includes("kind:'lead'"));assert(code.includes('result.sides[side]'));assert(code.includes("mode==='single'?3:4"));assert(code.includes('maxDamage(source,target'));
+assert(code.includes("recognizeImages({files:[leadFile],mode,kind:'lead'})"));assert(code.includes('AI 인식 완료'));
 assert(uiTemplatesCode.includes('data-tab="calculators"'));assert(calculatorCode.includes('export function setupCalculator'));assert(calculatorCode.includes('function runPowerSweep()'));assert(calculatorCode.includes('function runSpeedCompare()'));assert(code.includes('data-leadmatches'));assert(!code.includes('레벨 50'));
-assert(code.includes("fetch('sprite-home-map.json')"));assert(code.includes("fetch('sprite-home-shiny-map.json')"));assert(code.includes("fetch('recognition-db.json')"));assert(recognitionCode.includes('fineSilhouette'));assert(code.includes("features=crops.map(c=>visualFeature(c,false,side))"));assert(code.includes('ocrVisualCrops'));assert(code.includes('visualRankings=uniqueVisualRankings'));assert(code.includes('saveLearnedReferences'));
+assert(code.includes("fetch('sprite-home-map.json')"));assert(code.includes("fetch('sprite-home-shiny-map.json')"));assert(code.includes("fetch('recognition-db.json')"));assert(recognitionCode.includes('fineSilhouette'));assert(code.includes('saveLearnedReferences'));
 const recognition=JSON.parse(fs.readFileSync(root+'/dist/recognition-db.json')),officialRefs=recognition.references.filter(x=>x.source==='champs.pokedb.tokyo 공식 아이콘');assert.equal(recognition.schemaVersion,3);assert(officialRefs.length>=127);assert.equal(new Set(officialRefs.map(x=>x.name)).size,officialRefs.length);for(const name of ['워시로토무','히트로토무','한카리아스','따라큐','마폭시','핫삼','플라엣테(영원의 꽃)','왕큰부리','달코퀸','프테라','라이츄','포푸니크','님피아','대도각참'])assert(officialRefs.some(x=>x.name===name));assert(!recognition.references.some(x=>['PokeAPI 보조','현재 목록 기본 이미지'].includes(x.source)));for(const ref of recognition.references){assert(currentPokemon.has(ref.name));assert(fs.statSync(root+'/dist/'+ref.src).size>100)}
 const html=fs.readFileSync(root+'/dist/index.html','utf8'),manifest=JSON.parse(fs.readFileSync(root+'/dist/manifest.webmanifest')),version=JSON.parse(fs.readFileSync(root+'/dist/version.json'));assert(html.includes('<title>포챔스 달콤아 봇</title>'));assert(html.includes('assets/dalkoma-logo-192.png'));assert(html.includes('dalkoma-favicon.png?v=16'));assert(html.includes('<strong class="appversion">v16</strong>'));assert(html.includes('id="imageFile" accept="image/png,image/jpeg,image/webp" multiple'));assert(!html.includes('id="screenType"'));assert.equal(manifest.name,'포챔스 달콤아 봇');assert.equal(version.version,'v16');assert.equal(version.builtAt,'2026-09-09');assert.equal(version.name,'포챔스 달콤아 봇');for(const icon of ['dalkoma-favicon.png','dalkoma-apple-touch.png','dalkoma-logo-192.png','dalkoma-logo-512.png'])assert(fs.statSync(root+'/dist/assets/'+icon).size>100);assert(!code.includes("source:'PokeAPI 보조'"));
-const deploy=fs.readFileSync(root+'/aws/deploy.py','utf8');assert(deploy.includes("'no-cache, no-store, must-revalidate'"));assert(deploy.includes("'invalidation-completed'"));assert(deploy.includes('CloudFront cache refresh completed.'));
+const deploy=fs.readFileSync(root+'/aws/deploy.py','utf8'),recognizer=fs.readFileSync(root+'/aws/recognizer.py','utf8');assert(deploy.includes("'no-cache, no-store, must-revalidate'"));assert(deploy.includes("'invalidation-completed'"));assert(deploy.includes('OPENAI_API_KEY'));assert(deploy.includes('MaxDailyRecognitionRequests'));assert(recognizer.includes("'store':False"));assert(recognizer.includes("'max_output_tokens':1200"));assert(recognizer.includes('consume_quota()'));
 for(const m of ['single','double']){const z=D.modes[m].find(x=>x.name==='리자몽');assert.equal(z.items[0].name,'리자몽나이트Y');assert.equal(z.items[1].name,'리자몽나이트X');assert(z.items[0].rate>z.items[1].rate)}
 const spriteSync=fs.readFileSync(root+'/scripts/sync_pokeapi_sprites.py','utf8'),championsSync=fs.readFileSync(root+'/scripts/sync_champions_icons.py','utf8');assert(spriteSync.includes('pokemon/shiny'));assert(spriteSync.includes('pokemon/other/home/shiny'));assert(spriteSync.includes('sprite-home-map.json'));assert(!spriteSync.includes('RECOGNITION_DB'));assert(championsSync.includes('champs.pokedb.tokyo'));assert(championsSync.includes('SUPPLEMENTAL'));
 const temp=fs.mkdtempSync(path.join(os.tmpdir(),'champ-bot-test-'));
@@ -70,7 +69,7 @@ try{
  const help=JSON.parse((await handler(event({type:2,data:{name:'명령어',options:[]}}))).body).data;assert.equal(help.flags,undefined);assert(help.content.includes('/웹앱'));assert(help.content.includes('/결정력계산기'));assert(help.content.includes('/스피드계산기'));assert(help.content.includes('/계산기'));assert(help.content.includes('/명령어'));
  const bad=event({type:1});bad.body='{"type":2}';assert.equal((await handler(bad)).statusCode,401);
 }finally{fs.rmSync(temp,{recursive:true,force:true})}
-console.log('PASS: 470 records; 254 public teams; whitelist, frequency denominators, shared drafts, EV bounds, OCR numeric parsing, Discord signatures and ten commands with autocomplete.');
+console.log('PASS: 470 records; 254 public teams; AI response validation, shared drafts, EV bounds, Discord signatures and ten commands with autocomplete.');
 const {multiplier,assessCandidate,matchup}=await import('../dist/engine.mjs');
 assert.equal(multiplier('얼음',['드래곤','땅']),4);
 assert.equal(multiplier('땅',['비행','강철']),0);
@@ -83,8 +82,5 @@ assert(better.defense>worse.defense);
 assert(better.repaired.some(x=>x.type==='얼음'));
 assert.equal(matchup(get('누리레느'),get('한카리아스'),D.master,{moves:['명상']}).usable,false);
 assert.equal(matchup(get('누리레느'),get('한카리아스'),D.master,{moves:['문포스']}).usable,true);
-for(const file of ['tesseract.min.js','worker.min.js','tesseract-core-lstm.wasm.js','tesseract-core-simd-lstm.wasm.js'])assert(fs.statSync(root+'/dist/vendor/ocr/'+file).size>100);
-for(const lang of ['kor','eng']){const gz=fs.readFileSync(root+'/dist/vendor/ocr/'+lang+'.traineddata.gz');assert.equal(gz.readUInt16BE(0),0x1f8b)}
-console.log('PASS: type priority, actual selected moves, OCR local runtime asset integrity.');
-
-for(const f of ['tesseract-core-lstm.wasm.js','tesseract-core-simd-lstm.wasm.js'])assert(fs.readFileSync(root+'/dist/vendor/ocr/'+f,'utf8').includes('AGFzbQE'));
+assert(!fs.existsSync(root+'/dist/vendor/ocr'));
+console.log('PASS: type priority, actual selected moves, and OCR runtime removal.');

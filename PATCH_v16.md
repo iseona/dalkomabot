@@ -1,5 +1,7 @@
 # v16 이미지 인식 — WIP
 
+> 2026-09-09: 브라우저 OCR을 제거하고 서버 측 OpenAI 이미지 인식으로 교체했다. 아래 OCR 내용은 이전 WIP 기록이다. 실제 API 샘플 검증 전까지 main 병합과 AWS 배포는 금지한다.
+
 작업 브랜치: `feature/v16-recognition`
 
 OCR 샘플 검증을 통과하기 전 main 병합 및 AWS 배포 금지.

@@ -1,6 +1,0 @@
-Tesseract.js 5.1.1 and Tesseract.js-core 5.1.1 are redistributed with their licenses in this directory.
-Runtime source: https://github.com/naptha/tesseract.js
-Core source: https://github.com/naptha/tesseract.js-core
-Models: https://tessdata.projectnaptha.com/4.0.0/kor.traineddata.gz and eng.traineddata.gz
-Tesseract and trained models are under Apache License 2.0: https://github.com/tesseract-ocr/tessdata
-No Pokemon data is provided by these OCR libraries.

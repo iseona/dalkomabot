@@ -1,0 +1,1 @@
+window.DALKOMA_CONFIG=window.DALKOMA_CONFIG||{};

@@ -129,11 +129,11 @@
 <input type="file" id="imageFile" accept="image/png,image/jpeg,image/webp" multiple>
 </label>
 <img id="preview" alt="선택한 스크린샷" hidden>
-<button id="ocrBtn" class="primary" disabled>이미지 읽기</button>
-<p id="ocrStatus" role="status">파일을 선택하면 자동으로 읽습니다. 인식은 브라우저에서 실행되며 사진은 전송하지 않습니다.</p>
+<button id="ocrBtn" class="primary" disabled>AI로 이미지 읽기</button>
+<p id="ocrStatus" role="status">선택한 이미지는 크기를 줄인 뒤 OpenAI 이미지 인식 서버로 전송됩니다.</p>
 <details>
 <summary>인식 범위와 주의점</summary>
-<p>화면 전체를 자르지 않은 참고 이미지 비율을 사용하세요. 이름 대신 별명이 표시되면 도구·특성·기술 교집합과 현재 모드 리스팅 이미지 DB를 함께 비교해 후보를 찾습니다. 이미지 후보는 확정값이 아니므로 적용 전에 확인하세요. 사용자가 확정해 적용한 화면 특징은 이 기기의 인식 DB에 누적됩니다. 성격은 이 화면에서 자동 확정하지 않습니다.</p>
+<p>화면 전체를 자르지 말고 올려 주세요. AI가 화면에서 확인한 값만 반환하며, 불확실한 값은 비워 둡니다. 적용 전에 포켓몬과 각 값을 확인하세요.</p>
 <p>배분은 실능력치와 구분해 읽으며, 한 항목 32 이하·합계 66 이하만 적용합니다. 인식이 불확실한 칸은 비워 둡니다.</p>
 </details>
 </div>
@@ -209,6 +209,7 @@
 </dialog>
 <div id="toast" role="status">
 </div>
+<script src="runtime-config.js"></script>
 <script src="app.js?v=16" type="module">
 </script>
 </body>

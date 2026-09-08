@@ -2,7 +2,7 @@
 
 ## 구성
 
-웹앱은 표준 HTML/CSS/JavaScript로 동작하며 특정 호스팅 런타임에 의존하지 않습니다. `dist/`를 그대로 S3에 올려 CloudFront로 제공합니다. OCR은 사용자 브라우저에서 실행하며 서버로 스크린샷을 전송하지 않습니다. 개인 파티는 브라우저 저장소에 저장합니다. 계정 간 동기화는 현재 범위에 포함하지 않습니다.
+웹앱은 `dist/`를 S3에 올려 CloudFront로 제공합니다. 스크린샷은 브라우저에서 최대 1600px JPEG로 축소한 뒤 인식 Lambda에 전송하며, Lambda가 OpenAI Responses API를 호출합니다. API 키는 Secrets Manager에만 보관합니다. 개인 파티는 브라우저 저장소에 저장합니다.
 
 - S3: 정적 앱과 검증된 데이터 보관, 버전 관리, 버킷 직접 공개 차단
 - CloudFront: HTTPS 배포, OAC로 S3 접근, 데이터 캐시 5분
@@ -19,8 +19,12 @@ AWS CLI v2, Python 3, 본인 AWS 계정의 배포 권한을 준비합니다. 자
 ```bash
 aws sso login --profile your-profile
 export AWS_PROFILE=your-profile
-python aws/deploy.py --region ap-northeast-2 --stack champions-party-lab
+read -s -p "OpenAI API key: " OPENAI_API_KEY && export OPENAI_API_KEY && echo
+python aws/deploy.py --region ap-northeast-2 --stack champions-party-lab --max-daily-recognition-requests 100
+unset OPENAI_API_KEY
 ```
+
+인식은 UTC 기준 일일 100회로 하드 제한됩니다. OpenAI 프로젝트에서도 월 지출 한도를 설정하세요.
 
 이 스크립트는 CloudFormation 스택 생성, 정적 파일 업로드, Lambda 코드 업로드, CloudFront 캐시 갱신까지 수행하고 웹 주소를 출력합니다. `aws/collector.zip`은 자동 생성되며 소스 관리에서 제외됩니다.
 
@@ -38,7 +42,7 @@ python aws/deploy.py --region ap-northeast-2 --stack champions-party-lab
 
 ## 검증과 남은 사항
 
-로컬에서 데이터 검증, 명칭 목록 교집합, 배분 범위, JavaScript 문법과 숫자 인식 파서를 검사했습니다. AWS 계정에서 CloudFormation 스택 생성, IAM 동작 및 Lambda 호출까지 실행 검증하지는 않았습니다. OCR은 엔진을 연결한 베타 기능으로 실제 브라우저에서 참고 스크린샷 전체 인식률을 검증해야 합니다.
+로컬에서 데이터, JavaScript·Python 문법, AI 응답 스키마와 비용 제한을 검사합니다. AWS Lambda와 실제 OpenAI API 호출은 배포 전 샘플 검증이 필요합니다.
 
 한국어 명칭은 첨부 마스터를 기준으로 유지합니다. 전체 명칭의 공식 원문 대조는 별도 검수 대상으로 남아 있습니다. 참고 이미지의 별명은 아이콘만으로 자동 확정하지 않습니다.
 

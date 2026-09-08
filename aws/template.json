@@ -324,6 +324,112 @@
         }
       }
     },
+    "RecognitionSecret": {
+      "Type": "AWS::SecretsManager::Secret",
+      "Properties": {
+        "Name": { "Fn::Sub": "${AWS::StackName}-openai-api-key" },
+        "Description": "OpenAI API key for server-side screenshot recognition"
+      }
+    },
+    "RecognitionRateTable": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "BillingMode": "PAY_PER_REQUEST",
+        "AttributeDefinitions": [{ "AttributeName": "day", "AttributeType": "S" }],
+        "KeySchema": [{ "AttributeName": "day", "KeyType": "HASH" }],
+        "TimeToLiveSpecification": { "AttributeName": "expiresAt", "Enabled": true }
+      }
+    },
+    "RecognitionRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [{ "Effect": "Allow", "Principal": { "Service": "lambda.amazonaws.com" }, "Action": "sts:AssumeRole" }]
+        },
+        "Policies": [{
+          "PolicyName": "BoundedVisionAccess",
+          "PolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+              {
+                "Effect": "Allow",
+                "Action": ["logs:CreateLogGroup", "logs:CreateLogStream", "logs:PutLogEvents"],
+                "Resource": { "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/*" }
+              },
+              {
+                "Effect": "Allow",
+                "Action": "secretsmanager:GetSecretValue",
+                "Resource": { "Ref": "RecognitionSecret" }
+              },
+              {
+                "Effect": "Allow",
+                "Action": "dynamodb:UpdateItem",
+                "Resource": { "Fn::GetAtt": ["RecognitionRateTable", "Arn"] }
+              }
+            ]
+          }
+        }]
+      }
+    },
+    "RecognitionHandler": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Runtime": "python3.12",
+        "Handler": "recognizer.handler",
+        "Role": { "Fn::GetAtt": ["RecognitionRole", "Arn"] },
+        "MemorySize": 256,
+        "Timeout": 50,
+        "Environment": {
+          "Variables": {
+            "OPENAI_SECRET_ID": { "Ref": "RecognitionSecret" },
+            "OPENAI_MODEL": { "Ref": "OpenAIModel" },
+            "MAX_DAILY_REQUESTS": { "Ref": "MaxDailyRecognitionRequests" },
+            "RATE_TABLE": { "Ref": "RecognitionRateTable" }
+          }
+        },
+        "Code": { "ZipFile": "def handler(event,context):\n    return {'statusCode':503,'body':'Upload recognizer package first'}" }
+      }
+    },
+    "RecognitionLogs": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "LogGroupName": { "Fn::Sub": "/aws/lambda/${RecognitionHandler}" },
+        "RetentionInDays": 7
+      }
+    },
+    "RecognitionUrl": {
+      "Type": "AWS::Lambda::Url",
+      "Properties": {
+        "TargetFunctionArn": { "Ref": "RecognitionHandler" },
+        "AuthType": "NONE",
+        "InvokeMode": "BUFFERED",
+        "Cors": {
+          "AllowOrigins": ["*"],
+          "AllowMethods": ["POST"],
+          "AllowHeaders": ["content-type"],
+          "MaxAge": 300
+        }
+      }
+    },
+    "RecognitionUrlPermission": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": { "Ref": "RecognitionHandler" },
+        "Action": "lambda:InvokeFunctionUrl",
+        "Principal": "*",
+        "FunctionUrlAuthType": "NONE"
+      }
+    },
+    "RecognitionInvokePermission": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "FunctionName": { "Ref": "RecognitionHandler" },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "*",
+        "InvokedViaFunctionUrl": true
+      }
+    },
     "DiscordRole": {
       "Type": "AWS::IAM::Role",
       "Condition": "DiscordEnabled",
@@ -464,6 +570,15 @@
         "Fn::Sub": "https://${Distribution.DomainName}"
       }
     },
+    "RecognitionFunctionName": {
+      "Value": { "Ref": "RecognitionHandler" }
+    },
+    "RecognitionEndpoint": {
+      "Value": { "Fn::GetAtt": ["RecognitionUrl", "FunctionUrl"] }
+    },
+    "RecognitionSecretId": {
+      "Value": { "Ref": "RecognitionSecret" }
+    },
     "DiscordFunctionName": {
       "Condition": "DiscordEnabled",
       "Value": {
@@ -481,6 +596,19 @@
     }
   },
   "Parameters": {
+    "OpenAIModel": {
+      "Type": "String",
+      "Default": "gpt-4o-mini-2024-07-18",
+      "AllowedPattern": "^[a-zA-Z0-9._-]+$",
+      "Description": "OpenAI vision-capable model used by the recognition Lambda."
+    },
+    "MaxDailyRecognitionRequests": {
+      "Type": "Number",
+      "Default": 100,
+      "MinValue": 1,
+      "MaxValue": 1000,
+      "Description": "Hard UTC-day limit for OpenAI recognition calls."
+    },
     "DiscordPublicKey": {
       "Type": "String",
       "Default": "",
