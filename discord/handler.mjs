@@ -12,7 +12,7 @@ async function refreshOpen(){
 const response=(code,data)=>({statusCode:code,headers:{'content-type':'application/json'},body:JSON.stringify(data)});
 const reply=(content,ephemeral=true)=>response(200,{type:4,data:{content:content.slice(0,1950),...(ephemeral?{flags:64}:{}),allowed_mentions:{parse:[]}}});
 const baseStats=name=>{const p=D.master.pokemon.find(x=>x[0]===name);return p?`H${p[3]} A${p[4]} B${p[5]} C${p[6]} D${p[7]} S${p[8]} (합 ${p[9]})`:'정보 없음'};
-const openRate=(mode,name)=>O.modes[mode].frequency.find(x=>x.name===name)?.rate??0;
+const openRate=(mode,name)=>O.modes?.[mode]?.frequency?.find(x=>x.name===name)?.rate??0;
 export async function handler(event){
  const headers=Object.fromEntries(Object.entries(event.headers||{}).map(([k,v])=>[k.toLowerCase(),v]));
  const ts=headers['x-signature-timestamp'],sig=headers['x-signature-ed25519'];
@@ -26,14 +26,18 @@ export async function handler(event){
  let it;try{it=JSON.parse(raw)}catch{return response(400,{error:'Invalid JSON'})}
  if(it.type===1)return response(200,{type:1});
  if(it.type===4){
- const options=it.data?.options||[],mode=options.find(x=>x.name==='모드')?.value||'single',rows=D.modes[mode]||D.modes.single;
- await refreshOpen();
-  const focused=options.find(x=>x.focused),query=String(focused?.value||'').trim();let choices=[];
-  if(it.data.name==='계산기'&&focused?.name==='기술'){
-   const attacker=rows.find(p=>p.name===options.find(x=>x.name==='공격포켓몬')?.value);
-   choices=(attacker?.moves||[]).map(x=>{const m=D.master.moves.find(m=>m[0]===x.name);return m&&m[3]!=='변화'&&Number(m[4])>0?{move:m,rate:x.rate}:null}).filter(Boolean).filter(x=>!query||x.move[0].includes(query)).slice(0,25).map(x=>({name:`${x.move[0]} · ${koreanType[x.move[2]]||x.move[2]} · 위력 ${x.move[4]} · ${x.rate}%`,value:x.move[0]}));
-  }else choices=rows.filter(p=>!query||p.name.includes(query)).slice(0,25).map(p=>({name:`${p.name} · ${p.rank}위 · 공개파티 ${openRate(mode,p.name)}%`,value:p.name}));
-  return response(200,{type:8,data:{choices}});
+  // Discord autocomplete must answer within three seconds. Never wait for a
+  // network refresh here: the Lambda package already contains a validated
+  // Champions snapshot and normal command invocations refresh it later.
+  try{
+   const options=it.data?.options||[],mode=options.find(x=>x.name==='모드')?.value||'single',rows=D.modes[mode]||D.modes.single;
+   const focused=options.find(x=>x.focused),query=String(focused?.value||'').trim();let choices=[];
+   if(it.data.name==='계산기'&&focused?.name==='기술'){
+    const attacker=rows.find(p=>p.name===options.find(x=>x.name==='공격포켓몬')?.value);
+    choices=(attacker?.moves||[]).map(x=>{const m=D.master.moves.find(m=>m[0]===x.name);return m&&m[3]!=='변화'&&Number(m[4])>0?{move:m,rate:x.rate}:null}).filter(Boolean).filter(x=>!query||x.move[0].includes(query)).slice(0,25).map(x=>({name:`${x.move[0]} · ${koreanType[x.move[2]]||x.move[2]} · 위력 ${x.move[4]} · ${x.rate}%`,value:x.move[0]}));
+   }else choices=rows.filter(p=>!query||p.name.includes(query)).slice(0,25).map(p=>({name:`${p.name} · ${p.rank}위 · 공개파티 ${openRate(mode,p.name)}%`,value:p.name}));
+   return response(200,{type:8,data:{choices}});
+  }catch{return response(200,{type:8,data:{choices:[]}})}
  }
  if(it.type!==2)return reply('지원하지 않는 명령입니다.');
  const opt=Object.fromEntries((it.data.options||[]).map(x=>[x.name,x.value]));const mode=opt['모드']||'single';

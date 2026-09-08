@@ -25,7 +25,6 @@ HOME_OUT = ROOT / "dist" / "sprites-home"
 HOME_MAP = ROOT / "dist" / "sprite-home-map.json"
 HOME_SHINY_OUT = ROOT / "dist" / "sprites-home-shiny"
 HOME_SHINY_MAP = ROOT / "dist" / "sprite-home-shiny-map.json"
-RECOGNITION_DB = ROOT / "dist" / "recognition-db.json"
 API_LIST = "https://pokeapi.co/api/v2/pokemon?limit=5000"
 
 # PokeAPI uses explicit form names for these default-looking Champions labels.
@@ -155,37 +154,7 @@ def main():
     HOME_MAP.write_text(json.dumps(home_mapping, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     home_shiny_mapping = {name: path.replace("sprites/", "sprites-home-shiny/") for name, path in mapping.items() if ("home-shiny", path[8:-4]) in available}
     HOME_SHINY_MAP.write_text(json.dumps(home_shiny_mapping, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    try:
-        recognition = json.loads(RECOGNITION_DB.read_text(encoding="utf-8"))
-    except (FileNotFoundError, json.JSONDecodeError):
-        recognition = {"references": []}
-    screen_references = [
-        ref for ref in recognition.get("references", [])
-        if ref.get("source") != "현재 목록 기본 이미지" and ref.get("name") in current
-    ]
-    base_references = [
-        {
-            "name": name,
-            "variant": "현재 목록 도트",
-            "src": mapping[name],
-            "transparent": True,
-            "source": "현재 목록 기본 이미지",
-        }
-        for name in sorted(mapping)
-    ]
-    RECOGNITION_DB.write_text(
-        json.dumps(
-            {
-                "schemaVersion": 2,
-                "updatedAt": data.get("date", ""),
-                "references": base_references + screen_references,
-            },
-            ensure_ascii=False,
-            indent=2,
-        ) + "\n",
-        encoding="utf-8",
-    )
-    print(f"Cached pixel and high-resolution normal/shiny exact-form references for {len(mapping)} Champions Pokémon")
+    print(f"Cached display-only pixel and high-resolution sprites for {len(mapping)} Champions Pokémon")
 
 
 if __name__ == "__main__":

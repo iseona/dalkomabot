@@ -10,7 +10,9 @@ aws('sts','get-caller-identity')
 aws('cloudformation','deploy','--region',a.region,'--stack-name',a.stack,'--template-file',str(ROOT/'aws/template.json'),'--capabilities','CAPABILITY_IAM','--parameter-overrides','DiscordPublicKey='+a.discord_public_key)
 info=aws('cloudformation','describe-stacks','--region',a.region,'--stack-name',a.stack,capture=True)
 o={x['OutputKey']:x['OutputValue'] for x in info['Stacks'][0]['Outputs']}
-subprocess.run(['python3',str(ROOT/'scripts/sync_pokeapi_sprites.py')],check=True)
+# Image/data refreshes are maintenance jobs, not deployment jobs.  The release
+# archive contains the already validated assets so CloudShell deployment stays
+# fast and cannot silently change the recognition database.
 aws('s3','sync',str(ROOT/'dist'),'s3://'+o['BucketName'],'--region',a.region,'--cache-control','public,max-age=300')
 for file,content_type in [('index.html','text/html; charset=utf-8'),('manifest.webmanifest','application/manifest+json')]:
  aws('s3','cp',str(ROOT/'dist'/file),'s3://'+o['BucketName']+'/'+file,'--region',a.region,'--cache-control','no-cache, no-store, must-revalidate','--content-type',content_type,'--metadata-directive','REPLACE')

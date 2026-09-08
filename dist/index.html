@@ -6,9 +6,9 @@
 <title>포챔스 달콤아 봇</title>
 <meta name="description" content="포켓몬 챔피언스 전용 메타 분석, 파티 구성, 스크린샷 인식과 선출 추천 도구">
 <meta name="theme-color" content="#d94f87">
-<link rel="icon" type="image/png" href="assets/dalkoma-favicon.png?v=15">
-<link rel="apple-touch-icon" href="assets/dalkoma-apple-touch.png?v=15">
-<link rel="manifest" href="manifest.webmanifest?v=15">
+<link rel="icon" type="image/png" href="assets/dalkoma-favicon.png?v=16">
+<link rel="apple-touch-icon" href="assets/dalkoma-apple-touch.png?v=16">
+<link rel="manifest" href="manifest.webmanifest?v=16">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -123,15 +123,10 @@
 </div>
 <div class="importgrid">
 <div class="uploadpanel">
-<label>화면 종류<select id="screenType">
-<option value="ability">능력 · 도구 / 특성 / 기술</option>
-<option value="stats">스테이터스 · 능력 배분</option>
-</select>
-</label>
 <label class="dropzone">
 <strong>스크린샷 선택</strong>
-<span>PNG, JPG, WebP · 최대 15MB</span>
-<input type="file" id="imageFile" accept="image/png,image/jpeg,image/webp">
+<span>능력 화면과 스테이터스 화면을 함께 선택 · PNG, JPG, WebP · 장당 최대 15MB</span>
+<input type="file" id="imageFile" accept="image/png,image/jpeg,image/webp" multiple>
 </label>
 <img id="preview" alt="선택한 스크린샷" hidden>
 <button id="ocrBtn" class="primary" disabled>이미지 읽기</button>
@@ -169,7 +164,7 @@
 </div>
 </section>
 <footer>
-<span>포챔스 달콤아 봇 · <strong class="appversion">v15</strong> · 2026-09-08</span>
+<span>포챔스 달콤아 봇 · <strong class="appversion">v16</strong> · 2026-09-09</span>
 <span>챔피언스 자료만 사용 · 미확인 항목 추정 금지</span>
 </footer>
 </main>
@@ -214,7 +209,7 @@
 </dialog>
 <div id="toast" role="status">
 </div>
-<script src="app.js" type="module">
+<script src="app.js?v=16" type="module">
 </script>
 </body>
 </html>
