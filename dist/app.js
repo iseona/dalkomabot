@@ -1,9 +1,9 @@
-import {makeSet as sharedMakeSet,validSet as sharedValidSet,recommend,teamTypeSummary,matchup,multiplier,koreanType,calculateStats,damageRolls,classifyKO,strongestStatMove,damageScenarioResults,speedVariants} from './engine.mjs';
-import {rgbHsv,visualFeature,validVisualFeature,compactFeature,rankVisualCandidates,confidentVisual,uniqueVisualRankings,panelLayout} from './recognition.mjs';
-import {recognizeImages} from './ai-recognition.mjs';
-import {extraNav,leadTemplate,calculatorTemplate} from './ui-templates.mjs';
-import {escapeHtml as esc,showToast} from './ui.mjs';
-import {setupCalculator} from './calculator.mjs';
+import {makeSet as sharedMakeSet,validSet as sharedValidSet,recommend,teamTypeSummary,matchup,multiplier,koreanType,calculateStats,damageRolls,classifyKO,strongestStatMove,damageScenarioResults,speedVariants} from './engine.mjs?v=17';
+import {rgbHsv,visualFeature,validVisualFeature,compactFeature,rankVisualCandidates,confidentVisual,uniqueVisualRankings,panelLayout} from './recognition.mjs?v=17';
+import {recognizeImages} from './ai-recognition.mjs?v=17';
+import {extraNav,leadTemplate,calculatorTemplate} from './ui-templates.mjs?v=17';
+import {escapeHtml as esc,showToast} from './ui.mjs?v=17';
+import {setupCalculator} from './calculator.mjs?v=17';
 const $=id=>document.getElementById(id);
 let D;try{const r=await fetch('data.json');if(!r.ok)throw Error();D=await r.json()}catch{document.querySelector('main').innerHTML='<h1>데이터를 불러오지 못했습니다.</h1><p>페이지를 새로고침해 주세요.</p>';throw Error('Data unavailable')}
 let O=null;try{const r=await fetch('opendata.json');if(r.ok)O=await r.json()}catch{}
