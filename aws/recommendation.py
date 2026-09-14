@@ -4,7 +4,7 @@ from pathlib import Path
 import boto3
 
 MODEL=os.environ.get('OPENAI_MODEL','gpt-5.6-luna'); SECRET_ID=os.environ['OPENAI_SECRET_ID']; TABLE=os.environ['RATE_TABLE']; LIMIT=int(os.environ.get('MAX_DAILY_REQUESTS','50'))
-DATA=json.loads(Path(__file__).with_name('data.json').read_text(encoding='utf-8')); ALLOWED={p['name'] for group in DATA['modes'].values() for p in group}
+DATA=json.loads(Path(__file__).with_name('data.json').read_text(encoding='utf-8')); ALLOWED={p['name'] for group in DATA['modes'].values() for p in group}|{p[0] for p in DATA.get('master',{}).get('pokemon',[]) if isinstance(p,list) and p}
 ddb=boto3.client('dynamodb'); secrets=boto3.client('secretsmanager')
 SCHEMA={'type':'object','additionalProperties':False,'required':['schemaVersion','advice'],'properties':{'schemaVersion':{'type':'integer','enum':[1]},'advice':{'type':'array','maxItems':3,'items':{'type':'object','additionalProperties':False,'required':['name','summary','evidenceIds'],'properties':{'name':{'type':'string'},'summary':{'type':'string','maxLength':360},'evidenceIds':{'type':'array','minItems':1,'maxItems':8,'items':{'type':'string'}}}}}}}
 def reply(status,body): return {'statusCode':status,'headers':{'content-type':'application/json; charset=utf-8','cache-control':'no-store','access-control-allow-origin':'*'},'body':json.dumps(body,ensure_ascii=False)}
