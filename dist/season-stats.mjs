@@ -4,13 +4,13 @@ export function seasonStats({baseRows,masterRows,ranking,nameFor,settingsSeason,
  return ranking.map(item=>{
   const name=nameFor(item),base=baseByName.get(name),master=masterByName.get(name),snapshot=seasonSettings?.season===selectedSeason?seasonSettings.bySourceId?.[item.sourceId]:null,sameSeason=Boolean(snapshot)||selectedSeason===settingsSeason,details=snapshot||base
   if(!master)return null
-  return {...(base||{}),rank:item.rank,name,types:(base?.types||String(master[2]).split('/')),items:sameSeason?(details?.items||[]):[],abilities:sameSeason?(details?.abilities||[]):[],natures:sameSeason?(details?.natures||[]):[],evs:sameSeason?(details?.evs||[]):[],moves:sameSeason?(details?.moves||[]):[],teammates:sameSeason?(details?.teammates||[]):[],counters:sameSeason?(details?.counters||[]):[],settingsAvailable:Boolean(sameSeason&&details),usageRank:true}
+  return {...(base||{}),rank:item.rank,name,types:(base?.types||String(master[2]).split('/')),items:sameSeason?(details?.items||[]):[],abilities:sameSeason?(details?.abilities||[]):[],natures:sameSeason?(details?.natures||[]):[],evs:sameSeason?(details?.evs||[]):[],moves:sameSeason?(details?.moves||[]):[],teammates:sameSeason?(details?.teammates||[]):[],defeated:sameSeason?(details?.defeated||[]):[],counters:sameSeason?(details?.counters||[]):[],settingsAvailable:Boolean(sameSeason&&details),usageRank:true}
  }).filter(Boolean)
 }
 
 export function pokedexStats({masterRows,seasonRows}){
  const ranked=new Map((seasonRows||[]).map(row=>[row.name,row]))
- return (masterRows||[]).map(master=>{const current=ranked.get(master[0]);return {...(current||{}),rank:current?.rank??null,name:master[0],types:String(master[2]).split('/'),items:current?.items||[],abilities:current?.abilities||[],natures:current?.natures||[],evs:current?.evs||[],moves:current?.moves||[],teammates:current?.teammates||[],counters:current?.counters||[],settingsAvailable:Boolean(current?.settingsAvailable),isMegaForm:String(master[0]).startsWith('메가'),pokedex:true}})
+ return (masterRows||[]).map(master=>{const current=ranked.get(master[0]);return {...(current||{}),rank:current?.rank??null,name:master[0],types:String(master[2]).split('/'),items:current?.items||[],abilities:current?.abilities||[],natures:current?.natures||[],evs:current?.evs||[],moves:current?.moves||[],teammates:current?.teammates||[],defeated:current?.defeated||[],counters:current?.counters||[],settingsAvailable:Boolean(current?.settingsAvailable),isMegaForm:String(master[0]).startsWith('메가'),pokedex:true}})
 }
 
 export function pokedexDetails({master,row,abilities,typeMultiplier}){

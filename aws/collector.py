@@ -47,7 +47,20 @@ def detail_payload(page):
   if isinstance(value,dict) and all(isinstance(value.get(mode),dict) and 'usage' in value[mode] for mode in ('single','double')):return value
  raise ValueError('Pokemon detail usage payload not found')
 
-def translate_detail(value,mode,season,master):
+def champions_related(page,column,identity_by_form):
+ text=html.unescape(page.decode())
+ marker=f'pokemon-trend__column-{column}'
+ start=text.find(marker)
+ if start<0:return []
+ end=text.find('pokemon-trend__column-',start+len(marker))
+ section=text[start:end if end>=0 else len(text)]
+ result=[]
+ for source_id in re.findall(r'/pokemon/show/(\d{4}-\d{2})\?',section):
+  name=identity_by_form.get(source_id)
+  if name and name not in result:result.append(name)
+ return result[:10]
+
+def translate_detail(value,mode,season,master,related=None):
  section=value.get(mode,{})
  if section.get('season')!=season or section.get('isFallback') is not False:raise ValueError('Detail season or fallback mismatch')
  usage=section['usage'];excluded=[]
@@ -70,21 +83,35 @@ def translate_detail(value,mode,season,master):
    points={letter:int(number) for letter,number in re.findall(r'([HABCDS])(\d+)',entry['spread'])};name=' '.join(letter+str(points.get(letter,0)).zfill(2) for letter in 'HABCDS')
    if sum(points.values())<=66 and all(0<=point<=32 for point in points.values()):evs.append({'name':name,'rate':entry['pct']})
    else:excluded.append({'category':'evs','sourceName':entry['spread']})
- return {'moves':entities('moves'),'items':entities('items'),'abilities':entities('abilities'),'natures':natures,'evs':evs,'teammates':[],'counters':[]},excluded
+ related=related or {}
+ return {'moves':entities('moves'),'items':entities('items'),'abilities':entities('abilities'),'natures':natures,'evs':evs,'teammates':[],'defeated':related.get('defeated',[]),'counters':related.get('counters',[])},excluded
 
-def collect_settings(usage,season,master,limit=None):
+def collect_settings(usage,season,master,identity_ledger,limit=None):
  wanted=[]
  for mode in ('single','double'):
   rows=usage[season][mode]['ranking'] if limit is None else usage[season][mode]['ranking'][:limit]
   wanted.extend(row['sourceId'] for row in rows)
  wanted=sorted(set(wanted));pages={};errors=[]
+ identity_rows=identity_ledger.get('identities',[])
+ source_forms={row['sourceId']:f"{int(row['dex']):04d}-{str(row.get('form','00')).zfill(2)}" for row in identity_rows}
+ identity_by_form={value:next((row['name'] for row in identity_rows if row['sourceId']==key),None) for key,value in source_forms.items()}
  def fetch(source_id):
   url=f'https://pokemonics.com/pokemon/{source_id}';request=urllib.request.Request(url,headers={'User-Agent':'ChampionsPartyLab/1.0 (bounded detail import)'})
   with urllib.request.urlopen(request,timeout=12) as response:
    if response.geturl()!=url:raise ValueError('Unexpected detail redirect')
    body=response.read(1_000_001)
    if len(body)>1_000_000:raise ValueError('Detail source size exceeds limit')
-  return detail_payload(body)
+  relations={}
+  champions_id=source_forms[source_id]
+  for mode,rule in (('single',0),('double',1)):
+   related_url=f'https://champs.pokedb.tokyo/pokemon/show/{champions_id}?season={season.split("-")[1]}&rule={rule}'
+   related_request=urllib.request.Request(related_url,headers={'User-Agent':'ChampionsPartyLab/1.0 (bounded related stats import)'})
+   with urllib.request.urlopen(related_request,timeout=12) as response:
+    if response.geturl()!=related_url:raise ValueError('Unexpected Champions detail redirect')
+    related_body=response.read(1_200_001)
+    if len(related_body)>1_200_000:raise ValueError('Champions detail source size exceeds limit')
+   relations[mode]={'defeated':champions_related(related_body,'win_pokemons',identity_by_form),'counters':champions_related(related_body,'lose_pokemons',identity_by_form)}
+  return detail_payload(body),relations
  with ThreadPoolExecutor(max_workers=6) as pool:
   futures={pool.submit(fetch,source_id):source_id for source_id in wanted}
   for future in as_completed(futures):
@@ -92,14 +119,28 @@ def collect_settings(usage,season,master,limit=None):
    try:pages[source_id]=future.result()
    except Exception as error:errors.append({'sourceId':source_id,'reason':type(error).__name__})
  output={mode:{} for mode in ('single','double')};excluded=[]
- for source_id,value in pages.items():
+ for source_id,(value,relations) in pages.items():
   for mode in ('single','double'):
-   try:output[mode][source_id],missed=translate_detail(value,mode,season,master);excluded.extend({'sourceId':source_id,'mode':mode,**row} for row in missed)
+   try:output[mode][source_id],missed=translate_detail(value,mode,season,master,relations[mode]);excluded.extend({'sourceId':source_id,'mode':mode,**row} for row in missed)
    except Exception as error:errors.append({'sourceId':source_id,'mode':mode,'reason':str(error)})
  expected={mode:{row['sourceId'] for row in (usage[season][mode]['ranking'] if limit is None else usage[season][mode]['ranking'][:limit])} for mode in ('single','double')}
  missing={mode:sorted(expected[mode]-set(output[mode])) for mode in ('single','double')}
  audit={'requestedSpecies':len(wanted),'fetchedSpecies':len(pages),'failedSpecies':len(wanted)-len(pages),'failedDetails':len(errors),'missingTopDetails':missing,'excludedEntities':len(excluded),'errors':errors,'excluded':excluded}
  return output,audit
+
+def attach_teammates(settings,published,identity_ledger):
+ name_to_source={row['name']:row['sourceId'] for row in identity_ledger.get('identities',[])}
+ for mode in ('single','double'):
+  counts={}
+  for team in published['modes'][mode].get('teams',[]):
+   names=list(dict.fromkeys(member.get('name') for member in team.get('team',[]) if member.get('name')))
+   for name in names:
+    bucket=counts.setdefault(name,{})
+    for mate in names:
+     if mate!=name:bucket[mate]=bucket.get(mate,0)+1
+  for name,mates in counts.items():
+   source_id=name_to_source.get(name)
+   if source_id in settings[mode]:settings[mode][source_id]['teammates']=[mate for mate,_ in sorted(mates.items(),key=lambda row:(-row[1],row[0]))[:10]]
 
 def handler(event,context):
  import boto3
@@ -138,13 +179,15 @@ def handler(event,context):
     if len(usage_raw)>2_000_000:raise ValueError('Usage source size exceeds limit')
     usage_pages.append(usage_raw)
   usage=usage_snapshots(b'\n'.join(usage_pages));master_data=json.loads((package/'data.json').read_text(encoding='utf-8'))
-  validate_usage_identities(usage,json.loads((package/'season-usage-identities.json').read_text(encoding='utf-8')),master_data,json.loads((package/'champions-image-map.json').read_text(encoding='utf-8')))
-  latest_usage=max(usage,key=lambda value:int(value.split('-')[1]));settings,settings_audit=collect_settings(usage,latest_usage,master_data['master'])
+  identity_ledger=json.loads((package/'season-usage-identities.json').read_text(encoding='utf-8'))
+  validate_usage_identities(usage,identity_ledger,master_data,json.loads((package/'champions-image-map.json').read_text(encoding='utf-8')))
+  latest_usage=max(usage,key=lambda value:int(value.split('-')[1]));settings,settings_audit=collect_settings(usage,latest_usage,master_data['master'],identity_ledger)
   if settings_audit['fetchedSpecies']!=settings_audit['requestedSpecies'] or any(settings_audit['missingTopDetails'].values()):raise ValueError('Top usage detail gate failed: '+json.dumps(settings_audit,ensure_ascii=False))
   env=dict(os.environ,CHAMPIONS_ROOT=str(root))
   subprocess.run([sys.executable,str(Path(__file__).with_name('import_opendata.py'))],env=env,check=True,capture_output=True,timeout=30)
   data=(root/'dist/opendata.json').read_bytes()
   published=json.loads(data)
+  if published['modes']['single']['season']==latest_usage:attach_teammates(settings,published,identity_ledger)
   metadata={mode:published['modes'][mode]['metadata'] for mode in ['single','double']}
   digest=hashlib.sha256(data).hexdigest()
   # Versioned mode objects are written first. The index is the atomic commit
