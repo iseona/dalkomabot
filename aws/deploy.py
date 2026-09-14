@@ -5,15 +5,14 @@ ROOT=Path(__file__).resolve().parents[1]
 def aws(*args,capture=False):
  r=subprocess.run(['aws',*args],check=True,text=True,capture_output=capture)
  return json.loads(r.stdout) if capture else None
-p=argparse.ArgumentParser();p.add_argument('--region',default='ap-northeast-2');p.add_argument('--stack',default='champions-party-lab');p.add_argument('--discord-public-key',default='');p.add_argument('--openai-model',default='gpt-4o-mini-2024-07-18');p.add_argument('--max-daily-recognition-requests',type=int,default=100);a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--region',default='ap-northeast-2');p.add_argument('--stack',default='champions-party-lab');p.add_argument('--discord-public-key',default='');p.add_argument('--openai-model',default='gpt-5.2');p.add_argument('--max-daily-recognition-requests',type=int,default=100);a=p.parse_args()
 key=os.environ.get('OPENAI_API_KEY','').strip()
-if not key:raise SystemExit('Set OPENAI_API_KEY in the CloudShell environment before deployment.')
 if not 1<=a.max_daily_recognition_requests<=1000:raise SystemExit('Daily recognition limit must be between 1 and 1000.')
 aws('sts','get-caller-identity')
 aws('cloudformation','deploy','--region',a.region,'--stack-name',a.stack,'--template-file',str(ROOT/'aws/template.json'),'--capabilities','CAPABILITY_IAM','--parameter-overrides','DiscordPublicKey='+a.discord_public_key,'OpenAIModel='+a.openai_model,'MaxDailyRecognitionRequests='+str(a.max_daily_recognition_requests))
 info=aws('cloudformation','describe-stacks','--region',a.region,'--stack-name',a.stack,capture=True)
 o={x['OutputKey']:x['OutputValue'] for x in info['Stacks'][0]['Outputs']}
-aws('secretsmanager','put-secret-value','--region',a.region,'--secret-id',o['RecognitionSecretId'],'--secret-string',key)
+if key:aws('secretsmanager','put-secret-value','--region',a.region,'--secret-id',o['RecognitionSecretId'],'--secret-string',key)
 (ROOT/'dist/runtime-config.js').write_text('window.DALKOMA_CONFIG='+json.dumps({'recognitionEndpoint':o['RecognitionEndpoint']},separators=(',',':'))+';\n',encoding='utf-8')
 with zipfile.ZipFile(ROOT/'aws/recognizer.zip','w',zipfile.ZIP_DEFLATED) as z:
  z.write(ROOT/'aws/recognizer.py','recognizer.py');z.write(ROOT/'dist/data.json','data.json')

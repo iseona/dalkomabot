@@ -2,7 +2,7 @@
 
 ## 구성
 
-웹앱은 `dist/`를 S3에 올려 CloudFront로 제공합니다. 스크린샷은 브라우저에서 최대 1600px JPEG로 축소한 뒤 인식 Lambda에 전송하며, Lambda가 OpenAI Responses API를 호출합니다. API 키는 Secrets Manager에만 보관합니다. 개인 파티는 브라우저 저장소에 저장합니다.
+웹앱은 `dist/`를 S3에 올려 CloudFront로 제공합니다. 스크린샷은 브라우저에서 최대 2560px 고화질 JPEG로 정리한 뒤 인식 Lambda에 전송하며, Lambda가 OpenAI Responses API를 호출합니다. API 키는 Secrets Manager에만 보관합니다. 개인 파티는 브라우저 저장소에 저장합니다.
 
 - S3: 정적 앱과 검증된 데이터 보관, 버전 관리, 버킷 직접 공개 차단
 - CloudFront: HTTPS 배포, OAC로 S3 접근, 데이터 캐시 5분
@@ -19,9 +19,9 @@ AWS CLI v2, Python 3, 본인 AWS 계정의 배포 권한을 준비합니다. 자
 ```bash
 aws sso login --profile your-profile
 export AWS_PROFILE=your-profile
-read -s -p "OpenAI API key: " OPENAI_API_KEY && export OPENAI_API_KEY && echo
 python aws/deploy.py --region ap-northeast-2 --stack champions-party-lab --max-daily-recognition-requests 100
-unset OPENAI_API_KEY
+
+기존 스택은 Secrets Manager에 저장된 OpenAI API 키를 그대로 사용합니다. 키를 바꿀 때만 배포 전에 `OPENAI_API_KEY` 환경 변수를 설정하세요.
 ```
 
 인식은 UTC 기준 일일 100회로 하드 제한됩니다. OpenAI 프로젝트에서도 월 지출 한도를 설정하세요.

@@ -379,7 +379,7 @@
         "Handler": "recognizer.handler",
         "Role": { "Fn::GetAtt": ["RecognitionRole", "Arn"] },
         "MemorySize": 256,
-        "Timeout": 50,
+        "Timeout": 120,
         "Environment": {
           "Variables": {
             "OPENAI_SECRET_ID": { "Ref": "RecognitionSecret" },
@@ -598,7 +598,7 @@
   "Parameters": {
     "OpenAIModel": {
       "Type": "String",
-      "Default": "gpt-4o-mini-2024-07-18",
+      "Default": "gpt-5.2",
       "AllowedPattern": "^[a-zA-Z0-9._-]+$",
       "Description": "OpenAI vision-capable model used by the recognition Lambda."
     },
