@@ -75,33 +75,64 @@ export async function buildLeadContactSheet(file, rectDetector) {
 }
 
 export function detectedPartyCardRects(bitmap) {
-  const canvas=document.createElement('canvas');canvas.width=640;canvas.height=Math.round(640*bitmap.height/bitmap.width);
+  // Locate card bodies from pixels, not screen-relative coordinates. This also
+  // tolerates letterboxing, translated game windows and non-16:9 captures.
+  const canvas=document.createElement('canvas');
+  const scale=Math.min(1,960/Math.max(bitmap.width,bitmap.height));
+  canvas.width=Math.round(bitmap.width*scale);canvas.height=Math.round(bitmap.height*scale);
   const ctx=canvas.getContext('2d');ctx.drawImage(bitmap,0,0,canvas.width,canvas.height);
-  const pixels=ctx.getImageData(0,0,canvas.width,canvas.height).data;
-  const bandsFor=side=>{
-    const start=Math.round(canvas.width*(side===0?.11:.53)),end=Math.round(canvas.width*(side===0?.47:.89));
-    const active=Array.from({length:canvas.height},(_,y)=>{
-      if(y<canvas.height*.23||y>canvas.height*.9)return false;
-      let count=0;
-      for(let x=start;x<end;x++){const i=(y*canvas.width+x)*4,r=pixels[i],g=pixels[i+1],b=pixels[i+2];if(r>55&&b>r*1.12&&b>g*1.12)count++;}
-      return count>(end-start)*.55;
-    });
-    // Bridge thin text/line interruptions, but never the gaps between cards.
-    for(let y=1;y<active.length-1;y++)if(active[y-1]&&active[y+1])active[y]=true;
-    const bands=[];
-    for(let y=0;y<active.length;){if(!active[y]){y++;continue;}const top=y;while(active[y])y++;if(y-top>canvas.height*.12)bands.push([top,y]);}
-    if(bands.length!==3||bands.some(([a,b])=>b-a>canvas.height*.23))throw Error('파티 카드 6칸을 찾지 못했습니다. 능력 또는 스테이터스 전체 화면을 넣어 주세요.');
-    return bands;
-  };
-  const left=bandsFor(0),right=bandsFor(1),rects=[];
-  for(let row=0;row<3;row++)for(let side=0;side<2;side++){
-    const [top,bottom]=(side?right:left)[row];
-    if(Math.abs(top-(side?left:right)[row][0])>canvas.height*.025)throw Error('좌우 카드 행이 맞지 않습니다. 전체 화면을 확인해 주세요.');
-    const sy=Math.max(0,Math.floor((top-3)*bitmap.height/canvas.height));
-    const bottomPx=Math.min(bitmap.height,Math.ceil((bottom+2)*bitmap.height/canvas.height));
-    rects.push({x:Math.round(bitmap.width*(side?.503:.087)),y:sy,width:Math.round(bitmap.width*.41),height:bottomPx-sy});
+  const {width:w,height:h}=canvas,pixels=ctx.getImageData(0,0,w,h).data;
+  const mask=new Uint8Array(w*h);
+  for(let p=0;p<mask.length;p++){
+    const i=p*4,r=pixels[i],g=pixels[i+1],b=pixels[i+2];
+    mask[p]=r>55&&b>r*1.12&&b>g*1.12?1:0;
   }
-  return rects;
+  // Close small glyph/scanline holes, using a scale independent working image.
+  for(let y=0;y<h;y++)for(let x=1;x<w-1;x++){
+    if(mask[y*w+x])continue;
+    let end=x;while(end<w&&!mask[y*w+end]&&end-x<5)end++;
+    if(end<w&&mask[y*w+end]&&mask[y*w+x-1])for(let k=x;k<end;k++)mask[y*w+k]=1;
+  }
+  const seen=new Uint8Array(w*h),queue=new Int32Array(w*h),components=[];
+  for(let p=0;p<mask.length;p++){
+    if(!mask[p]||seen[p])continue;
+    let head=0,tail=1,x0=w,y0=h,x1=0,y1=0;queue[0]=p;seen[p]=1;
+    while(head<tail){
+      const q=queue[head++],x=q%w,y=Math.floor(q/w);
+      x0=Math.min(x0,x);x1=Math.max(x1,x);y0=Math.min(y0,y);y1=Math.max(y1,y);
+      for(const n of [x>0?q-1:-1,x<w-1?q+1:-1,y>0?q-w:-1,y<h-1?q+w:-1])
+        if(n>=0&&mask[n]&&!seen[n]){seen[n]=1;queue[tail++]=n;}
+    }
+    const cw=x1-x0+1;
+    // A portrait may touch the card and protrude above it. Only dense body
+    // rows define the text layout; attached artwork must not shift all crops.
+    const dense=[];
+    for(let y=y0;y<=y1;y++){let count=0;for(let x=x0;x<=x1;x++)count+=mask[y*w+x];if(count>cw*.65)dense.push(y);}
+    if(!dense.length)continue;
+    y0=dense[0];y1=dense[dense.length-1];
+    const ch=y1-y0+1,aspect=cw/ch;
+    if(cw>=60&&ch>=15&&aspect>3&&aspect<5.5&&tail/(cw*ch)>.55)
+      components.push({x:x0,y:y0,width:cw,height:ch});
+  }
+  // Require a coherent six-card grid; never silently substitute fixed crops.
+  const groups=[];
+  for(const seed of components){
+    const peers=components.filter(c=>Math.abs(c.width/seed.width-1)<.12&&Math.abs(c.height/seed.height-1)<.18);
+    if(peers.length!==6)continue;
+    const sorted=[...peers].sort((a,b)=>a.y-b.y||a.x-b.x),rows=[];
+    for(let i=0;i<6;i+=2)rows.push(sorted.slice(i,i+2).sort((a,b)=>a.x-b.x));
+    const flat=rows.flat(),height=seed.height,width=seed.width;
+    if(rows.some(r=>Math.abs(r[0].y-r[1].y)>height*.15||r[1].x-r[0].x<width*.9))continue;
+    if(rows.some(r=>Math.abs(r[0].x-rows[0][0].x)>width*.08||Math.abs(r[1].x-rows[0][1].x)>width*.08))continue;
+    if(rows.slice(1).some((r,i)=>r[0].y-rows[i][0].y<height*1.03||r[0].y-rows[i][0].y>height*1.8))continue;
+    if(!groups.some(g=>g[0]===flat[0]))groups.push(flat);
+  }
+  if(groups.length!==1)throw Error('파티 카드 6칸의 전체 배열을 확인하지 못했습니다. 카드가 모두 보이는 원본을 넣어 주세요.');
+  return groups[0].map(r=>{
+    const px=r.width*.025,py=r.height*.05;
+    const x=Math.max(0,Math.floor((r.x-px)/scale)),y=Math.max(0,Math.floor((r.y-py)/scale));
+    return {x,y,width:Math.min(bitmap.width-x,Math.ceil((r.width+2*px)/scale)),height:Math.min(bitmap.height-y,Math.ceil((r.height+2*py)/scale))};
+  });
 }
 
 export async function buildPartyContactSheet(files) {

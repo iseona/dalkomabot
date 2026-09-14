@@ -5,8 +5,13 @@ function crop(bitmap,r,left,top,width,height,scale=2,threshold=190){
  const x=Math.floor(r.x+r.width*left),y=Math.floor(r.y+r.height*top);
  const w=Math.floor(r.x+r.width*(left+width))-x,h=Math.floor(r.y+r.height*(top+height))-y;
  const c=document.createElement('canvas');c.width=w;c.height=h;const ctx=c.getContext('2d');ctx.drawImage(bitmap,x,y,w,h,0,0,w,h);
- const pixels=ctx.getImageData(0,0,w,h);for(let i=0;i<pixels.data.length;i+=4){const v=.299*pixels.data[i]+.587*pixels.data[i+1]+.114*pixels.data[i+2]>threshold?0:255;pixels.data[i]=pixels.data[i+1]=pixels.data[i+2]=v;}ctx.putImageData(pixels,0,0);
- const out=document.createElement('canvas');out.width=w*scale+40;out.height=h*scale+40;const oc=out.getContext('2d');oc.fillStyle='#fff';oc.fillRect(0,0,out.width,out.height);oc.drawImage(c,20,20,w*scale,h*scale);return out.toDataURL('image/png');
+ const pixels=ctx.getImageData(0,0,w,h);for(let i=0;i<pixels.data.length;i+=4){const light=.299*pixels.data[i]+.587*pixels.data[i+1]+.114*pixels.data[i+2],v=threshold===null?255-Math.max(0,Math.min(255,(light-140)*255/110)):light>threshold?0:255;pixels.data[i]=pixels.data[i+1]=pixels.data[i+2]=v;}ctx.putImageData(pixels,0,0);
+ // Keep the first text run. Large empty gaps separate labels from the faint
+ // decorative slot number; sending both as one word corrupts Korean OCR.
+ const ink=ctx.getImageData(0,0,w,h).data;let started=false,gap=0,end=w;
+ for(let column=0;column<w;column++){let count=0;for(let row=0;row<h;row++)if(ink[(row*w+column)*4]<100)count++;
+  if(count>=2){started=true;gap=0;}else if(started&&++gap>h*.65){end=column-gap+1;break;}}
+ const out=document.createElement('canvas');out.width=end*scale+40;out.height=h*scale+40;const oc=out.getContext('2d');oc.fillStyle='#fff';oc.fillRect(0,0,out.width,out.height);oc.drawImage(c,0,0,end,h,20,20,end*scale,h*scale);return out.toDataURL('image/png');
 }
 
 export async function readLocalPartyText(files){
@@ -46,12 +51,17 @@ export async function readLocalPartyText(files){
       for(const [field,x,y,w,h]of fields){
        const image=crop(bitmap,r,x,y,w,h),dictionary=master[field.startsWith('move')?'moves':field==='item'?'items':'abilities'].map(r=>r[0]);
        let {data}=await worker.recognize(image),match=matchRecognizedText(data.text.trim().split(/\s{2,}/)[0],dictionary);
-       if(!match){for(const threshold of [165,210]){const retry=await worker.recognize(crop(bitmap,r,x,y,w,h,4,threshold));const alternative=matchRecognizedText(retry.data.text.trim().split(/\s{2,}/)[0],dictionary);slot.observations.push({field,attempt:'contrast-'+threshold,text:retry.data.text});if(alternative){data=retry.data;match=alternative;break;}}}
+       if(!match){for(const threshold of [null,165,210]){const retry=await worker.recognize(crop(bitmap,r,x,y,w,h,4,threshold));const alternative=matchRecognizedText(retry.data.text.trim().split(/\s{2,}/)[0],dictionary);slot.observations.push({field,attempt:'contrast-'+threshold,text:retry.data.text});if(alternative){data=retry.data;match=alternative;break;}}}
+       if(!match){for(const threshold of [190,null,165]){const retry=await worker.recognize(crop(bitmap,r,x-.012,y-.035,w+.012,h+.06,3,threshold));slot.observations.push({field,attempt:'expanded-'+threshold,text:retry.data.text});const alternative=matchRecognizedText(retry.data.text.trim().split(/\s{2,}/)[0],dictionary);if(alternative){data=retry.data;match=alternative;break;}}}
+       if(!match){await worker.setParameters({tessedit_pageseg_mode:'8'});for(const threshold of [null,175,190,205]){const retry=await worker.recognize(crop(bitmap,r,x,y,w,h,3,threshold));slot.observations.push({field,attempt:'word-'+threshold,text:retry.data.text});const alternative=matchRecognizedText(retry.data.text.trim().split(/\s{2,}/)[0],dictionary);if(alternative){data=retry.data;match=alternative;break;}}await worker.setParameters({tessedit_pageseg_mode:'7'});}
        if(!match){await worker.reinitialize(['kor','eng'],1);for(const psm of ['7','8']){await worker.setParameters({tessedit_pageseg_mode:psm,tessedit_char_whitelist:''});const retry=await worker.recognize(image);slot.observations.push({field,attempt:psm,text:retry.data.text});const alternative=matchRecognizedText(retry.data.text.trim().split(/\s{2,}/)[0],dictionary);if(alternative){data=retry.data;match=alternative;break;}}await worker.reinitialize('kor',1);await worker.setParameters({tessedit_pageseg_mode:'7',tessedit_char_whitelist:''});}
        if(!match&&field==='item'){
-        const stem=data.text.trim(),variants=dictionary.filter(name=>name.slice(0,-1)===stem&&/[XY]$/.test(name));
+        const observed=[data.text,...slot.observations.filter(o=>o.field===field).map(o=>o.text)].map(t=>t.trim());
+        const stems=[...new Set(dictionary.filter(name=>/[XY]$/.test(name)&&observed.includes(name.slice(0,-1))).map(name=>name.slice(0,-1)))];
+        const stem=stems.length===1?stems[0]:'',variants=stem?dictionary.filter(name=>name.slice(0,-1)===stem&&/[XY]$/.test(name)):[];
         if(variants.length){
-         const b=await createImageBitmap(await(await fetch(image)).blob()),c=document.createElement('canvas');c.width=b.width;c.height=b.height;const cc=c.getContext('2d');cc.drawImage(b,0,0);b.close();const pixels=cc.getImageData(0,0,c.width,c.height).data,columns=[];
+         const suffixImage=crop(bitmap,r,x-.012,y-.035,w+.012,h+.06,3,165);
+         const b=await createImageBitmap(await(await fetch(suffixImage)).blob()),c=document.createElement('canvas');c.width=b.width;c.height=b.height;const cc=c.getContext('2d');cc.drawImage(b,0,0);b.close();const pixels=cc.getImageData(0,0,c.width,c.height).data,columns=[];
          for(let x=20;x<c.width-20;x++){let count=0;for(let y=20;y<c.height-20;y++)if(pixels[(y*c.width+x)*4]<128)count++;columns[x]=count;}
          let end=columns.length-1;while(end>20&&!columns[end])end--;let start=end;while(start>20&&columns[start-1])start--;
          if(end-start>=3){const glyph=document.createElement('canvas');glyph.width=end-start+41;glyph.height=c.height;const gc=glyph.getContext('2d');gc.fillStyle='#fff';gc.fillRect(0,0,glyph.width,glyph.height);gc.drawImage(c,start,0,end-start+1,c.height,20,0,end-start+1,c.height);await worker.reinitialize('eng',1);await worker.setParameters({tessedit_pageseg_mode:'10',tessedit_char_whitelist:'XY'});const tail=await worker.recognize(glyph.toDataURL('image/png'));const value=stem+tail.data.text.trim();if(variants.includes(value))match={name:value,exact:true,suffixEvidence:tail.data.text.trim()};await worker.reinitialize('kor',1);await worker.setParameters({tessedit_pageseg_mode:'7',tessedit_char_whitelist:''});}

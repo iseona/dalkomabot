@@ -8,7 +8,7 @@ import {createHash} from 'node:crypto';
 const replay=process.argv.includes('--replay');
 const candidate=process.argv.includes('--candidate');
 const localOnly=process.argv.includes('--local');
-const cross=process.argv.includes('--cross'),prefix=cross?'cross-':'';
+const cross=process.argv.includes('--cross'),prefix=process.argv.includes('--wide')?'wide-':cross?'cross-':'';
 if(!localOnly&&!replay&&!candidate&&(!process.argv.includes('--live')||!process.env.RECOGNITION_ENDPOINT))throw Error('Requires --local, --live and RECOGNITION_ENDPOINT, --candidate, or --replay');
 const endpoint=process.env.RECOGNITION_ENDPOINT||'https://recognition.invalid/';
 const {chromium}=createRequire(import.meta.url)('playwright'),root=path.resolve(import.meta.dirname,'..');
@@ -30,8 +30,17 @@ try{
  page.on('response',async r=>{if(r.url()===endpoint&&r.request().method()==='POST')try{serverResult=await r.json();}catch{}});
  await page.goto(process.env.RECOGNITION_SITE||`http://127.0.0.1:${server.address().port}/dist/index.html`);
  await page.locator('[data-tab="import"]').click();
- let inputFiles=['party-ability.jpg','party-stats.jpg'].map(name=>path.join(root,'tests/fixtures/recognition',prefix+name));
- if(process.argv.includes('--720p')){const images=await page.evaluate(async prefix=>Promise.all(['ability','stats'].map(async type=>{const b=await createImageBitmap(await(await fetch(`/tests/fixtures/recognition/${prefix}party-${type}.jpg`)).blob()),c=document.createElement('canvas');c.width=1280;c.height=720;c.getContext('2d').drawImage(b,0,0,1280,720);b.close();return c.toDataURL('image/jpeg',.85);})),prefix);inputFiles=images.map((url,i)=>({name:`source-${i}.jpg`,mimeType:'image/jpeg',buffer:Buffer.from(url.split(',')[1],'base64')}));}
+ let inputFiles=['ability','stats'].map(type=>path.join(root,'tests/fixtures/recognition',`${prefix}party-${type}.${prefix==='wide-'?'png':'jpg'}`));
+ if(process.argv.includes('--720p')||process.argv.includes('--transform')){
+  const sources=await Promise.all(inputFiles.map(async file=>'data:image/'+(file.endsWith('.png')?'png':'jpeg')+';base64,'+(await readFile(file)).toString('base64')));
+  const images=await page.evaluate(async({sources,translated})=>Promise.all(sources.map(async source=>{
+   const b=await createImageBitmap(await(await fetch(source)).blob()),c=document.createElement('canvas'),scale=translated?.73:1280/b.width,left=translated?173:0,top=translated?287:0;
+   const width=Math.round(b.width*scale),height=Math.round(b.height*scale);
+   c.width=width+left+(translated?93:0);c.height=height+top+(translated?81:0);
+   const ctx=c.getContext('2d');ctx.fillStyle='#151515';ctx.fillRect(0,0,c.width,c.height);ctx.drawImage(b,left,top,width,height);b.close();return c.toDataURL('image/jpeg',.85);
+  })),{sources,translated:process.argv.includes('--transform')});
+  inputFiles=images.map((url,i)=>({name:`source-${i}.jpg`,mimeType:'image/jpeg',buffer:Buffer.from(url.split(',')[1],'base64')}));
+ }
  await page.locator('#imageFile').setInputFiles(inputFiles);
  await page.waitForFunction(()=>!document.querySelector('#ocrBtn').disabled&&document.querySelector('#ocrStatus').textContent.includes('인식 완료'),{},{timeout:180000});
  const actual=await page.evaluate(()=>Array.from({length:6},(_,i)=>({
@@ -40,7 +49,7 @@ try{
   moves:Array.from({length:4},(_,j)=>document.querySelector(`#ocr-${i}-move-${j}`)?.value||''),
   evs:Array.from({length:6},(_,j)=>{const value=document.querySelector(`[data-ocrslot="${i}"][data-ocrstat="${j}"]`).value;return value===''?null:Number(value);}),
  })));
- const expected=cross?JSON.parse(await readFile(path.join(root,'tests/fixtures/recognition/cross-party-expected.json'))):{...JSON.parse(await readFile(path.join(root,'tests/fixtures/recognition/manifest.json'))).party,natures:['명랑','겁쟁이','명랑','고집','겁쟁이','고집']};
+ const expected=prefix?JSON.parse(await readFile(path.join(root,`tests/fixtures/recognition/${prefix}party-expected.json`))):{...JSON.parse(await readFile(path.join(root,'tests/fixtures/recognition/manifest.json'))).party,natures:['명랑','겁쟁이','명랑','고집','겁쟁이','고집']};
  const checks=[];
  for(let i=0;i<6;i++){
   checks.push({slot:i+1,field:'nature',expected:expected.natures[i],actual:actual[i].nature,pass:expected.natures[i]===actual[i].nature});
@@ -49,7 +58,7 @@ try{
   for(let j=0;j<6;j++)checks.push({slot:i+1,field:`EV${j+1}`,expected:expected.evs[i][j],actual:actual[i].evs[j],pass:expected.evs[i][j]===actual[i].evs[j]});
  }
  const report={replay,candidate,calls,actual,serverResult,checks,passed:checks.filter(c=>c.pass).length,total:checks.length};
- const reportName=(process.env.RECOGNITION_SITE?'published-':'')+prefix+(localOnly?'local-party-page':candidate?'candidate-party-page':replay?'replayed-party-page':'live-party-page')+(process.argv.includes('--720p')?'-720p':'');
+ const reportName=(process.env.RECOGNITION_SITE?'published-':'')+prefix+(localOnly?'local-party-page':candidate?'candidate-party-page':replay?'replayed-party-page':'live-party-page')+(process.argv.includes('--720p')?'-720p':'')+(process.argv.includes('--transform')?'-translated':'');
  await writeFile(path.join(root,'reports',reportName+'.json'),JSON.stringify(report,null,2)+'\n');
  await page.locator('#ocrResults').screenshot({path:path.join(root,'reports',reportName+'.png')});
  for(let i=0;i<6;i++)await page.locator('#ocrResults .ocrrow').nth(i).screenshot({path:path.join(root,'reports',`${reportName}-slot-${i+1}.png`)});
