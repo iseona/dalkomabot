@@ -20,6 +20,8 @@ spec=importlib.util.spec_from_file_location('collector',ROOT/'aws/collector.py')
 data=json.loads((ROOT/'dist/data.json').read_text(encoding='utf-8'))
 images=json.loads((ROOT/'dist/champions-image-map.json').read_text(encoding='utf-8'))
 collector.validate_usage_identities(usage,ledger,data,images)
+all_usage={'M-6':{mode:{'ranking':[{'rank':rank+1,'sourceId':entry['sourceId']} for rank,entry in enumerate(ledger['identities'])]} for mode in ('single','double')}}
+collector.validate_usage_identities(all_usage,ledger,data,images)
 broken=json.loads(json.dumps(usage));broken['M-6']['single']['ranking'][0]['sourceId']='future-unmapped-form'
 try: collector.validate_usage_identities(broken,ledger,data,images)
 except ValueError as error: assert 'publication blocked' in str(error) and 'future-unmapped-form:identity' in str(error)

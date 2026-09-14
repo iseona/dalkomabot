@@ -956,9 +956,9 @@
     },
     {
       "sourceId": "gourgeist-large",
-      "name": "펌킨인",
+      "name": "펌킨인(대과종)",
       "dex": 711,
-      "form": "00",
+      "form": "02",
       "source": [
         "パンプジン",
         "おおきいサイズ"
