@@ -1,88 +1,10 @@
 {
   "schemaVersion": 1,
   "source": "https://champs.pokedb.tokyo",
-  "collectedAt": "2026-09-14T15:17:46.253Z",
+  "collectedAt": "2026-09-14T16:14:07.629Z",
   "count": 344,
   "total": 344,
   "details": {
-    "깜까미": {
-      "sourceId": "0302-00",
-      "height": 0.5,
-      "weight": 11,
-      "abilities": [
-        "날카로운눈",
-        "시간벌기",
-        "짓궂은마음"
-      ],
-      "abilityDescriptions": {
-        "날카로운눈": "상대의 회피율 변화를 무시하고 명중률도 떨어지지 않는다.",
-        "시간벌기": "같은 우선도를 가진 기술 중 가장 마지막에 기술을 사용하게 된다.",
-        "짓궂은마음": "변화 기술의 우선도가 1단계 올라간다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 51,
-          "name": "するどいめ"
-        },
-        {
-          "id": 100,
-          "name": "あとだし"
-        },
-        {
-          "id": 158,
-          "name": "いたずらごころ"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0302-00"
-    },
-    "피카츄": {
-      "sourceId": "0025-00",
-      "height": 0.4,
-      "weight": 6,
-      "abilities": [
-        "정전기",
-        "피뢰침"
-      ],
-      "abilityDescriptions": {
-        "정전기": "접촉 기술을 받으면 30% 확률로 상대를 마비 상태로 만든다.",
-        "피뢰침": "전기타입 기술을 자신에게 끌어모은다. 그 기술의 효과를 받지 않고 특수공격이 1단계 올라간다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 9,
-          "name": "せいでんき"
-        },
-        {
-          "id": 31,
-          "name": "ひらいしん"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0025-00"
-    },
-    "메타몽": {
-      "sourceId": "0132-00",
-      "height": 0.3,
-      "weight": 4,
-      "abilities": [
-        "유연",
-        "괴짜"
-      ],
-      "abilityDescriptions": {
-        "유연": "마비 상태가 되지 않는다.",
-        "괴짜": "눈앞의 포켓몬으로 변신한다. HP 이외의 스테이터스도 똑같아진다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 7,
-          "name": "じゅうなん"
-        },
-        {
-          "id": 150,
-          "name": "かわりもの"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0132-00"
-    },
     "파오리": {
       "sourceId": "0083-00",
       "height": 0.8,
@@ -113,29 +35,113 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0083-00"
     },
-    "요가램": {
-      "sourceId": "0308-00",
-      "height": 1.3,
-      "weight": 31.5,
+    "피카츄": {
+      "sourceId": "0025-00",
+      "height": 0.4,
+      "weight": 6,
       "abilities": [
-        "순수한힘",
-        "텔레파시"
+        "정전기",
+        "피뢰침"
       ],
       "abilityDescriptions": {
-        "순수한힘": "물리 기술의 위력이 2배가 된다.",
-        "텔레파시": "같은 편의 공격을 회피한다."
+        "정전기": "접촉 기술을 받으면 30% 확률로 상대를 마비 상태로 만든다.",
+        "피뢰침": "전기타입 기술을 자신에게 끌어모은다. 그 기술의 효과를 받지 않고 특수공격이 1단계 올라간다."
       },
       "sourceAbilities": [
         {
-          "id": 74,
-          "name": "ヨガパワー"
+          "id": 9,
+          "name": "せいでんき"
         },
         {
-          "id": 140,
-          "name": "テレパシー"
+          "id": 31,
+          "name": "ひらいしん"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0308-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0025-00"
+    },
+    "깜까미": {
+      "sourceId": "0302-00",
+      "height": 0.5,
+      "weight": 11,
+      "abilities": [
+        "날카로운눈",
+        "시간벌기",
+        "짓궂은마음"
+      ],
+      "abilityDescriptions": {
+        "날카로운눈": "상대의 회피율 변화를 무시하고 명중률도 떨어지지 않는다.",
+        "시간벌기": "같은 우선도를 가진 기술 중 가장 마지막에 기술을 사용하게 된다.",
+        "짓궂은마음": "변화 기술의 우선도가 1단계 올라간다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 51,
+          "name": "するどいめ"
+        },
+        {
+          "id": 100,
+          "name": "あとだし"
+        },
+        {
+          "id": 158,
+          "name": "いたずらごころ"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0302-00"
+    },
+    "메타몽": {
+      "sourceId": "0132-00",
+      "height": 0.3,
+      "weight": 4,
+      "abilities": [
+        "유연",
+        "괴짜"
+      ],
+      "abilityDescriptions": {
+        "유연": "마비 상태가 되지 않는다.",
+        "괴짜": "눈앞의 포켓몬으로 변신한다. HP 이외의 스테이터스도 똑같아진다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 7,
+          "name": "じゅうなん"
+        },
+        {
+          "id": 150,
+          "name": "かわりもの"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0132-00"
+    },
+    "아리아도스": {
+      "sourceId": "0168-00",
+      "height": 1.1,
+      "weight": 33.5,
+      "abilities": [
+        "불면",
+        "벌레의알림",
+        "스나이퍼"
+      ],
+      "abilityDescriptions": {
+        "불면": "잠듦, 졸음 상태가 되지 않는다.",
+        "벌레의알림": "HP가 최대 HP의 1/3 이하가 되면 벌레타입 기술의 위력이 1.5배가 된다.",
+        "스나이퍼": "급소에 맞혔을 때의 위력이 1.5배가 아닌 2.25배가 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 15,
+          "name": "ふみん"
+        },
+        {
+          "id": 68,
+          "name": "むしのしらせ"
+        },
+        {
+          "id": 97,
+          "name": "スナイパー"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0168-00"
     },
     "입치트": {
       "sourceId": "0303-00",
@@ -191,35 +197,29 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0015-00"
     },
-    "아리아도스": {
-      "sourceId": "0168-00",
-      "height": 1.1,
-      "weight": 33.5,
+    "요가램": {
+      "sourceId": "0308-00",
+      "height": 1.3,
+      "weight": 31.5,
       "abilities": [
-        "불면",
-        "벌레의알림",
-        "스나이퍼"
+        "순수한힘",
+        "텔레파시"
       ],
       "abilityDescriptions": {
-        "불면": "잠듦, 졸음 상태가 되지 않는다.",
-        "벌레의알림": "HP가 최대 HP의 1/3 이하가 되면 벌레타입 기술의 위력이 1.5배가 된다.",
-        "스나이퍼": "급소에 맞혔을 때의 위력이 1.5배가 아닌 2.25배가 된다."
+        "순수한힘": "물리 기술의 위력이 2배가 된다.",
+        "텔레파시": "같은 편의 공격을 회피한다."
       },
       "sourceAbilities": [
         {
-          "id": 15,
-          "name": "ふみん"
+          "id": 74,
+          "name": "ヨガパワー"
         },
         {
-          "id": 68,
-          "name": "むしのしらせ"
-        },
-        {
-          "id": 97,
-          "name": "スナイパー"
+          "id": 140,
+          "name": "テレパシー"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0168-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0308-00"
     },
     "비비용": {
       "sourceId": "0666-18",
@@ -251,36 +251,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0666-18"
     },
-    "마릴리": {
-      "sourceId": "0184-00",
-      "height": 0.8,
-      "weight": 28.5,
-      "abilities": [
-        "천하장사",
-        "두꺼운지방",
-        "초식"
-      ],
-      "abilityDescriptions": {
-        "천하장사": "물리 기술의 위력이 2배가 된다.",
-        "두꺼운지방": "불꽃타입과 얼음타입 기술로 입는 데미지가 반감된다.",
-        "초식": "풀타입 기술의 효과를 받지 않으며 공격이 1단계 올라간다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 37,
-          "name": "ちからもち"
-        },
-        {
-          "id": 47,
-          "name": "あついしぼう"
-        },
-        {
-          "id": 157,
-          "name": "そうしょく"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0184-00"
-    },
     "시비꼬": {
       "sourceId": "0931-00",
       "height": 0.6,
@@ -310,6 +280,36 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0931-00"
+    },
+    "마릴리": {
+      "sourceId": "0184-00",
+      "height": 0.8,
+      "weight": 28.5,
+      "abilities": [
+        "천하장사",
+        "두꺼운지방",
+        "초식"
+      ],
+      "abilityDescriptions": {
+        "천하장사": "물리 기술의 위력이 2배가 된다.",
+        "두꺼운지방": "불꽃타입과 얼음타입 기술로 입는 데미지가 반감된다.",
+        "초식": "풀타입 기술의 효과를 받지 않으며 공격이 1단계 올라간다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 37,
+          "name": "ちからもち"
+        },
+        {
+          "id": 47,
+          "name": "あついしぼう"
+        },
+        {
+          "id": 157,
+          "name": "そうしょく"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0184-00"
     },
     "시비꼬(옐로깃털)": {
       "sourceId": "0931-02",
@@ -443,6 +443,30 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0351-01"
     },
+    "에몽가": {
+      "sourceId": "0587-00",
+      "height": 0.4,
+      "weight": 5,
+      "abilities": [
+        "정전기",
+        "전기엔진"
+      ],
+      "abilityDescriptions": {
+        "정전기": "접촉 기술을 받으면 30% 확률로 상대를 마비 상태로 만든다.",
+        "전기엔진": "전기타입 기술의 효과를 받지 않으며 스피드가 1단계 올라간다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 9,
+          "name": "せいでんき"
+        },
+        {
+          "id": 78,
+          "name": "でんきエンジン"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0587-00"
+    },
     "파르토": {
       "sourceId": "0660-00",
       "height": 1,
@@ -472,30 +496,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0660-00"
-    },
-    "에몽가": {
-      "sourceId": "0587-00",
-      "height": 0.4,
-      "weight": 5,
-      "abilities": [
-        "정전기",
-        "전기엔진"
-      ],
-      "abilityDescriptions": {
-        "정전기": "접촉 기술을 받으면 30% 확률로 상대를 마비 상태로 만든다.",
-        "전기엔진": "전기타입 기술의 효과를 받지 않으며 스피드가 1단계 올라간다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 9,
-          "name": "せいでんき"
-        },
-        {
-          "id": 78,
-          "name": "でんきエンジン"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0587-00"
     },
     "데덴네": {
       "sourceId": "0702-00",
@@ -527,6 +527,24 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0702-00"
     },
+    "모르페코(배부른 모양)": {
+      "sourceId": "0877-00",
+      "height": 0.3,
+      "weight": 3,
+      "abilities": [
+        "꼬르륵스위치"
+      ],
+      "abilityDescriptions": {
+        "꼬르륵스위치": "턴 종료 시 배부른 모양과 배고픈 모양을 번갈아 가며 모습을 바꾼다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 258,
+          "name": "はらぺこスイッチ"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0877-00"
+    },
     "찌르성게": {
       "sourceId": "0871-00",
       "height": 0.3,
@@ -550,24 +568,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0871-00"
-    },
-    "모르페코(배부른 모양)": {
-      "sourceId": "0877-00",
-      "height": 0.3,
-      "weight": 3,
-      "abilities": [
-        "꼬르륵스위치"
-      ],
-      "abilityDescriptions": {
-        "꼬르륵스위치": "턴 종료 시 배부른 모양과 배고픈 모양을 번갈아 가며 모습을 바꾼다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 258,
-          "name": "はらぺこスイッチ"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0877-00"
     },
     "푸크린": {
       "sourceId": "0040-00",
@@ -617,54 +617,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0877-01"
     },
-    "침바루": {
-      "sourceId": "0211-00",
-      "height": 0.5,
-      "weight": 3.9,
-      "abilities": [
-        "위협",
-        "쓱쓱",
-        "독가시"
-      ],
-      "abilityDescriptions": {
-        "위협": "등장 시 상대의 공격을 1단계 떨어뜨린다.",
-        "쓱쓱": "비 상태일 때 스피드가 2배가 된다.",
-        "독가시": "접촉 기술을 받으면 30% 확률로 상대를 독 상태로 만든다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 22,
-          "name": "いかく"
-        },
-        {
-          "id": 33,
-          "name": "すいすい"
-        },
-        {
-          "id": 38,
-          "name": "どくのトゲ"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0211-00"
-    },
-    "로토무": {
-      "sourceId": "0479-00",
-      "height": 0.3,
-      "weight": 0.3,
-      "abilities": [
-        "부유"
-      ],
-      "abilityDescriptions": {
-        "부유": "땅 위에 있지 않게 되어 땅타입 기술, 압정뿌리기, 독압정, 끈적끈적네트 상태의 효과를 받지 않는다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 26,
-          "name": "ふゆう"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0479-00"
-    },
     "나이킹": {
       "sourceId": "0863-00",
       "height": 0.8,
@@ -692,6 +644,24 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0863-00"
+    },
+    "로토무": {
+      "sourceId": "0479-00",
+      "height": 0.3,
+      "weight": 0.3,
+      "abilities": [
+        "부유"
+      ],
+      "abilityDescriptions": {
+        "부유": "땅 위에 있지 않게 되어 땅타입 기술, 압정뿌리기, 독압정, 끈적끈적네트 상태의 효과를 받지 않는다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 26,
+          "name": "ふゆう"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0479-00"
     },
     "알로라 페르시온": {
       "sourceId": "0053-01",
@@ -721,65 +691,35 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0053-01"
     },
-    "패리퍼": {
-      "sourceId": "0279-00",
-      "height": 1.2,
-      "weight": 28,
+    "침바루": {
+      "sourceId": "0211-00",
+      "height": 0.5,
+      "weight": 3.9,
       "abilities": [
-        "잔비",
-        "젖은접시",
-        "날카로운눈"
+        "위협",
+        "쓱쓱",
+        "독가시"
       ],
       "abilityDescriptions": {
-        "잔비": "등장 시 5턴 동안 비 상태로 만든다.",
-        "젖은접시": "비 상태일 때 턴 종료 시 최대 HP의 1/16만큼 회복한다.",
-        "날카로운눈": "상대의 회피율 변화를 무시하고 명중률도 떨어지지 않는다."
+        "위협": "등장 시 상대의 공격을 1단계 떨어뜨린다.",
+        "쓱쓱": "비 상태일 때 스피드가 2배가 된다.",
+        "독가시": "접촉 기술을 받으면 30% 확률로 상대를 독 상태로 만든다."
       },
       "sourceAbilities": [
         {
-          "id": 2,
-          "name": "あめふらし"
+          "id": 22,
+          "name": "いかく"
         },
         {
-          "id": 44,
-          "name": "あめうけざら"
+          "id": 33,
+          "name": "すいすい"
         },
         {
-          "id": 51,
-          "name": "するどいめ"
+          "id": 38,
+          "name": "どくのトゲ"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0279-00"
-    },
-    "페르시온": {
-      "sourceId": "0053-00",
-      "height": 1,
-      "weight": 32,
-      "abilities": [
-        "유연",
-        "테크니션",
-        "긴장감"
-      ],
-      "abilityDescriptions": {
-        "유연": "마비 상태가 되지 않는다.",
-        "테크니션": "위력이 60 이하인 기술의 위력이 1.5배가 된다.",
-        "긴장감": "상대가 나무열매를 먹지 못하게 한다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 7,
-          "name": "じゅうなん"
-        },
-        {
-          "id": 101,
-          "name": "テクニシャン"
-        },
-        {
-          "id": 127,
-          "name": "きんちょうかん"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0053-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0211-00"
     },
     "다부니": {
       "sourceId": "0531-00",
@@ -841,6 +781,66 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0510-00"
     },
+    "패리퍼": {
+      "sourceId": "0279-00",
+      "height": 1.2,
+      "weight": 28,
+      "abilities": [
+        "잔비",
+        "젖은접시",
+        "날카로운눈"
+      ],
+      "abilityDescriptions": {
+        "잔비": "등장 시 5턴 동안 비 상태로 만든다.",
+        "젖은접시": "비 상태일 때 턴 종료 시 최대 HP의 1/16만큼 회복한다.",
+        "날카로운눈": "상대의 회피율 변화를 무시하고 명중률도 떨어지지 않는다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 2,
+          "name": "あめふらし"
+        },
+        {
+          "id": 44,
+          "name": "あめうけざら"
+        },
+        {
+          "id": 51,
+          "name": "するどいめ"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0279-00"
+    },
+    "페르시온": {
+      "sourceId": "0053-00",
+      "height": 1,
+      "weight": 32,
+      "abilities": [
+        "유연",
+        "테크니션",
+        "긴장감"
+      ],
+      "abilityDescriptions": {
+        "유연": "마비 상태가 되지 않는다.",
+        "테크니션": "위력이 60 이하인 기술의 위력이 1.5배가 된다.",
+        "긴장감": "상대가 나무열매를 먹지 못하게 한다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 7,
+          "name": "じゅうなん"
+        },
+        {
+          "id": 101,
+          "name": "テクニシャン"
+        },
+        {
+          "id": 127,
+          "name": "きんちょうかん"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0053-00"
+    },
     "다크펫": {
       "sourceId": "0354-00",
       "height": 1.1,
@@ -871,29 +871,23 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0354-00"
     },
-    "깨비물거미": {
-      "sourceId": "0752-00",
-      "height": 1.8,
-      "weight": 82,
+    "치렁": {
+      "sourceId": "0358-00",
+      "height": 0.6,
+      "weight": 1,
       "abilities": [
-        "저수",
-        "수포"
+        "부유"
       ],
       "abilityDescriptions": {
-        "저수": "물타입 기술의 효과를 받지 않으며 최대 HP의 1/4만큼 회복한다.",
-        "수포": "불꽃타입 기술로 입는 데미지가 반감된다. 물타입 기술의 위력이 2배가 된다. 화상 상태가 되지 않는다."
+        "부유": "땅 위에 있지 않게 되어 땅타입 기술, 압정뿌리기, 독압정, 끈적끈적네트 상태의 효과를 받지 않는다."
       },
       "sourceAbilities": [
         {
-          "id": 11,
-          "name": "ちょすい"
-        },
-        {
-          "id": 199,
-          "name": "すいほう"
+          "id": 26,
+          "name": "ふゆう"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0752-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0358-00"
     },
     "아보크": {
       "sourceId": "0024-00",
@@ -925,91 +919,29 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0024-00"
     },
-    "치렁": {
-      "sourceId": "0358-00",
-      "height": 0.6,
-      "weight": 1,
-      "abilities": [
-        "부유"
-      ],
-      "abilityDescriptions": {
-        "부유": "땅 위에 있지 않게 되어 땅타입 기술, 압정뿌리기, 독압정, 끈적끈적네트 상태의 효과를 받지 않는다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 26,
-          "name": "ふゆう"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0358-00"
-    },
-    "폭슬라이": {
-      "sourceId": "0828-00",
-      "height": 1.2,
-      "weight": 19.9,
-      "abilities": [
-        "곡예"
-      ],
-      "abilityDescriptions": {
-        "곡예": "지니고 있는 도구가 없어지면 스피드가 2배가 된다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 50,
-          "name": "にげあし"
-        },
-        {
-          "id": 84,
-          "name": "かるわざ"
-        },
-        {
-          "id": 198,
-          "name": "はりこみ"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0828-00"
-    },
-    "샤크니아": {
-      "sourceId": "0319-00",
+    "깨비물거미": {
+      "sourceId": "0752-00",
       "height": 1.8,
-      "weight": 88.8,
+      "weight": 82,
       "abilities": [
-        "가속",
-        "까칠한피부"
+        "저수",
+        "수포"
       ],
       "abilityDescriptions": {
-        "가속": "턴 종료 시 스피드가 1단계 올라간다.",
-        "까칠한피부": "접촉 기술을 받으면 상대 최대 HP의 1/8만큼 데미지를 준다."
+        "저수": "물타입 기술의 효과를 받지 않으며 최대 HP의 1/4만큼 회복한다.",
+        "수포": "불꽃타입 기술로 입는 데미지가 반감된다. 물타입 기술의 위력이 2배가 된다. 화상 상태가 되지 않는다."
       },
       "sourceAbilities": [
         {
-          "id": 3,
-          "name": "かそく"
+          "id": 11,
+          "name": "ちょすい"
         },
         {
-          "id": 24,
-          "name": "さめはだ"
+          "id": 199,
+          "name": "すいほう"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0319-00"
-    },
-    "돌핀맨(나이브폼)": {
-      "sourceId": "0964-00",
-      "height": 1.3,
-      "weight": 60.2,
-      "abilities": [
-        "마이티체인지"
-      ],
-      "abilityDescriptions": {
-        "마이티체인지": "지닌 포켓몬으로 돌아오면 마이티폼으로 변화한다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 278,
-          "name": "マイティチェンジ"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0964-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0752-00"
     },
     "마임맨": {
       "sourceId": "0122-00",
@@ -1041,29 +973,97 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0122-00"
     },
-    "프레프티르": {
-      "sourceId": "0683-00",
-      "height": 0.8,
-      "weight": 15.5,
+    "돌핀맨(나이브폼)": {
+      "sourceId": "0964-00",
+      "height": 1.3,
+      "weight": 60.2,
       "abilities": [
-        "치유의마음",
-        "아로마베일"
+        "마이티체인지"
       ],
       "abilityDescriptions": {
-        "치유의마음": "턴 종료 시 같은 편의 상태 이상을 50% 확률로 회복시킨다.",
-        "아로마베일": "자신과 같은 편은 헤롱헤롱, 도발, 연속 불가, 기술봉인, 회복봉인, 앙코르 상태가 되지 않는다."
+        "마이티체인지": "지닌 포켓몬으로 돌아오면 마이티폼으로 변화한다."
       },
       "sourceAbilities": [
         {
-          "id": 131,
-          "name": "いやしのこころ"
-        },
-        {
-          "id": 165,
-          "name": "アロマベール"
+          "id": 278,
+          "name": "マイティチェンジ"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0683-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0964-00"
+    },
+    "샤크니아": {
+      "sourceId": "0319-00",
+      "height": 1.8,
+      "weight": 88.8,
+      "abilities": [
+        "가속",
+        "까칠한피부"
+      ],
+      "abilityDescriptions": {
+        "가속": "턴 종료 시 스피드가 1단계 올라간다.",
+        "까칠한피부": "접촉 기술을 받으면 상대 최대 HP의 1/8만큼 데미지를 준다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 3,
+          "name": "かそく"
+        },
+        {
+          "id": 24,
+          "name": "さめはだ"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0319-00"
+    },
+    "폭슬라이": {
+      "sourceId": "0828-00",
+      "height": 1.2,
+      "weight": 19.9,
+      "abilities": [
+        "곡예"
+      ],
+      "abilityDescriptions": {
+        "곡예": "지니고 있는 도구가 없어지면 스피드가 2배가 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 50,
+          "name": "にげあし"
+        },
+        {
+          "id": 84,
+          "name": "かるわざ"
+        },
+        {
+          "id": 198,
+          "name": "はりこみ"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0828-00"
+    },
+    "쏘콘": {
+      "sourceId": "0205-00",
+      "height": 1.2,
+      "weight": 125.8,
+      "abilities": [
+        "옹골참",
+        "방진"
+      ],
+      "abilityDescriptions": {
+        "옹골참": "HP가 꽉 찼을 때 일격에 기절할 듯한 기술로 데미지를 입으면 HP를 1 남기고 버틴다. 일격필살 기술의 효과도 받지 않는다.",
+        "방진": "모래바람 상태의 데미지를 입지 않는다. 가루 기술이나 특성의 효과도 받지 않는다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 5,
+          "name": "がんじょう"
+        },
+        {
+          "id": 142,
+          "name": "ぼうじん"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0205-00"
     },
     "폭타": {
       "sourceId": "0323-00",
@@ -1095,6 +1095,30 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0323-00"
     },
+    "프레프티르": {
+      "sourceId": "0683-00",
+      "height": 0.8,
+      "weight": 15.5,
+      "abilities": [
+        "치유의마음",
+        "아로마베일"
+      ],
+      "abilityDescriptions": {
+        "치유의마음": "턴 종료 시 같은 편의 상태 이상을 50% 확률로 회복시킨다.",
+        "아로마베일": "자신과 같은 편은 헤롱헤롱, 도발, 연속 불가, 기술봉인, 회복봉인, 앙코르 상태가 되지 않는다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 131,
+          "name": "いやしのこころ"
+        },
+        {
+          "id": 165,
+          "name": "アロマベール"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0683-00"
+    },
     "무장조": {
       "sourceId": "0227-00",
       "height": 1.7,
@@ -1124,58 +1148,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0227-00"
-    },
-    "쏘콘": {
-      "sourceId": "0205-00",
-      "height": 1.2,
-      "weight": 125.8,
-      "abilities": [
-        "옹골참",
-        "방진"
-      ],
-      "abilityDescriptions": {
-        "옹골참": "HP가 꽉 찼을 때 일격에 기절할 듯한 기술로 데미지를 입으면 HP를 1 남기고 버틴다. 일격필살 기술의 효과도 받지 않는다.",
-        "방진": "모래바람 상태의 데미지를 입지 않는다. 가루 기술이나 특성의 효과도 받지 않는다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 5,
-          "name": "がんじょう"
-        },
-        {
-          "id": 142,
-          "name": "ぼうじん"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0205-00"
-    },
-    "꿀꺽몬": {
-      "sourceId": "0317-00",
-      "height": 1.7,
-      "weight": 80,
-      "abilities": [
-        "점착",
-        "먹보"
-      ],
-      "abilityDescriptions": {
-        "점착": "지니고 있는 도구를 상대에게 빼앗기거나 잃어버리지 않는다.",
-        "먹보": "HP가 1/4일 때 먹는 나무열매를 HP가 1/2일 때 먹어 버린다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 60,
-          "name": "ねんちゃく"
-        },
-        {
-          "id": 64,
-          "name": "ヘドロえき"
-        },
-        {
-          "id": 82,
-          "name": "くいしんぼう"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0317-00"
     },
     "앱솔": {
       "sourceId": "0359-00",
@@ -1207,35 +1179,33 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0359-00"
     },
-    "냐오닉스(수컷)": {
-      "sourceId": "0678-00",
-      "height": 0.6,
-      "weight": 8.5,
+    "꿀꺽몬": {
+      "sourceId": "0317-00",
+      "height": 1.7,
+      "weight": 80,
       "abilities": [
-        "날카로운눈",
-        "틈새포착",
-        "짓궂은마음"
+        "점착",
+        "먹보"
       ],
       "abilityDescriptions": {
-        "날카로운눈": "상대의 회피율 변화를 무시하고 명중률도 떨어지지 않는다.",
-        "틈새포착": "상대의 빛의장막, 리플렉터, 오로라베일, 신비의부적, 대타출동을 무시하고 기술을 사용할 수 있다.",
-        "짓궂은마음": "변화 기술의 우선도가 1단계 올라간다."
+        "점착": "지니고 있는 도구를 상대에게 빼앗기거나 잃어버리지 않는다.",
+        "먹보": "HP가 1/4일 때 먹는 나무열매를 HP가 1/2일 때 먹어 버린다."
       },
       "sourceAbilities": [
         {
-          "id": 51,
-          "name": "するどいめ"
+          "id": 60,
+          "name": "ねんちゃく"
         },
         {
-          "id": 151,
-          "name": "すりぬけ"
+          "id": 64,
+          "name": "ヘドロえき"
         },
         {
-          "id": 158,
-          "name": "いたずらごころ"
+          "id": 82,
+          "name": "くいしんぼう"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0678-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0317-00"
     },
     "냐오닉스(암컷)": {
       "sourceId": "0678-01",
@@ -1266,6 +1236,36 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0678-01"
+    },
+    "냐오닉스(수컷)": {
+      "sourceId": "0678-00",
+      "height": 0.6,
+      "weight": 8.5,
+      "abilities": [
+        "날카로운눈",
+        "틈새포착",
+        "짓궂은마음"
+      ],
+      "abilityDescriptions": {
+        "날카로운눈": "상대의 회피율 변화를 무시하고 명중률도 떨어지지 않는다.",
+        "틈새포착": "상대의 빛의장막, 리플렉터, 오로라베일, 신비의부적, 대타출동을 무시하고 기술을 사용할 수 있다.",
+        "짓궂은마음": "변화 기술의 우선도가 1단계 올라간다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 51,
+          "name": "するどいめ"
+        },
+        {
+          "id": 151,
+          "name": "すりぬけ"
+        },
+        {
+          "id": 158,
+          "name": "いたずらごころ"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0678-00"
     },
     "파밀리쥐": {
       "sourceId": "0925-00",
@@ -1375,6 +1375,36 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0707-00"
     },
+    "메더": {
+      "sourceId": "0618-00",
+      "height": 0.7,
+      "weight": 11,
+      "abilities": [
+        "유연",
+        "모래숨기",
+        "정전기"
+      ],
+      "abilityDescriptions": {
+        "유연": "마비 상태가 되지 않는다.",
+        "모래숨기": "모래바람 상태일 때 회피율이 1.25배가 된다.",
+        "정전기": "접촉 기술을 받으면 30% 확률로 상대를 마비 상태로 만든다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 7,
+          "name": "じゅうなん"
+        },
+        {
+          "id": 8,
+          "name": "すながくれ"
+        },
+        {
+          "id": 9,
+          "name": "せいでんき"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0618-00"
+    },
     "대로트": {
       "sourceId": "0709-00",
       "height": 1.5,
@@ -1423,36 +1453,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0618-01"
     },
-    "메더": {
-      "sourceId": "0618-00",
-      "height": 0.7,
-      "weight": 11,
-      "abilities": [
-        "유연",
-        "모래숨기",
-        "정전기"
-      ],
-      "abilityDescriptions": {
-        "유연": "마비 상태가 되지 않는다.",
-        "모래숨기": "모래바람 상태일 때 회피율이 1.25배가 된다.",
-        "정전기": "접촉 기술을 받으면 30% 확률로 상대를 마비 상태로 만든다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 7,
-          "name": "じゅうなん"
-        },
-        {
-          "id": 8,
-          "name": "すながくれ"
-        },
-        {
-          "id": 9,
-          "name": "せいでんき"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0618-00"
-    },
     "트리미앙": {
       "sourceId": "0676-00",
       "height": 1.2,
@@ -1470,34 +1470,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0676-00"
-    },
-    "에써르": {
-      "sourceId": "0876-00",
-      "height": 0.9,
-      "weight": 28,
-      "abilities": [
-        "싱크로",
-        "정신력"
-      ],
-      "abilityDescriptions": {
-        "싱크로": "상대의 기술이나 특성에 의해 독, 맹독, 마비, 화상 상태가 되면 상대도 같은 상태로 만든다.",
-        "정신력": "상대의 공격에 풀죽지 않으며 위협의 효과도 받지 않는다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 28,
-          "name": "シンクロ"
-        },
-        {
-          "id": 39,
-          "name": "せいしんりょく"
-        },
-        {
-          "id": 227,
-          "name": "サイコメイカー"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0876-00"
     },
     "에써르(암컷)": {
       "sourceId": "0876-01",
@@ -1526,36 +1498,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0876-01"
-    },
-    "더스트나": {
-      "sourceId": "0569-00",
-      "height": 1.9,
-      "weight": 107.3,
-      "abilities": [
-        "악취",
-        "유폭",
-        "깨어진갑옷"
-      ],
-      "abilityDescriptions": {
-        "악취": "기술로 데미지를 주었을 때 10% 확률로 상대를 풀죽게 한다.",
-        "유폭": "접촉 기술을 받아 기절하면 상대 최대 HP의 1/4만큼 데미지를 준다.",
-        "깨어진갑옷": "물리 기술로 데미지를 입으면 방어가 1단계 떨어지고 스피드가 2단계 올라간다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 1,
-          "name": "あくしゅう"
-        },
-        {
-          "id": 106,
-          "name": "ゆうばく"
-        },
-        {
-          "id": 133,
-          "name": "くだけるよろい"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0569-00"
     },
     "썬더볼트": {
       "sourceId": "0310-00",
@@ -1587,6 +1529,64 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0310-00"
     },
+    "더스트나": {
+      "sourceId": "0569-00",
+      "height": 1.9,
+      "weight": 107.3,
+      "abilities": [
+        "악취",
+        "유폭",
+        "깨어진갑옷"
+      ],
+      "abilityDescriptions": {
+        "악취": "기술로 데미지를 주었을 때 10% 확률로 상대를 풀죽게 한다.",
+        "유폭": "접촉 기술을 받아 기절하면 상대 최대 HP의 1/4만큼 데미지를 준다.",
+        "깨어진갑옷": "물리 기술로 데미지를 입으면 방어가 1단계 떨어지고 스피드가 2단계 올라간다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 1,
+          "name": "あくしゅう"
+        },
+        {
+          "id": 106,
+          "name": "ゆうばく"
+        },
+        {
+          "id": 133,
+          "name": "くだけるよろい"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0569-00"
+    },
+    "에써르": {
+      "sourceId": "0876-00",
+      "height": 0.9,
+      "weight": 28,
+      "abilities": [
+        "싱크로",
+        "정신력"
+      ],
+      "abilityDescriptions": {
+        "싱크로": "상대의 기술이나 특성에 의해 독, 맹독, 마비, 화상 상태가 되면 상대도 같은 상태로 만든다.",
+        "정신력": "상대의 공격에 풀죽지 않으며 위협의 효과도 받지 않는다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 28,
+          "name": "シンクロ"
+        },
+        {
+          "id": 39,
+          "name": "せいしんりょく"
+        },
+        {
+          "id": 227,
+          "name": "サイコメイカー"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0876-00"
+    },
     "따라큐": {
       "sourceId": "0778-00",
       "height": 0.2,
@@ -1604,6 +1604,36 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0778-00"
+    },
+    "모단단게": {
+      "sourceId": "0740-00",
+      "height": 1.7,
+      "weight": 180,
+      "abilities": [
+        "괴력집게",
+        "분노의경혈",
+        "철주먹"
+      ],
+      "abilityDescriptions": {
+        "괴력집게": "상대의 기술이나 특성에 의해 공격이 떨어지지 않는다.",
+        "분노의경혈": "상대의 공격이 급소에 맞으면 자신의 공격이 6단계까지 올라간다.",
+        "철주먹": "펀치 기술의 위력이 1.2배가 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 52,
+          "name": "かいりきバサミ"
+        },
+        {
+          "id": 83,
+          "name": "いかりのつぼ"
+        },
+        {
+          "id": 89,
+          "name": "てつのこぶし"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0740-00"
     },
     "꿈트렁": {
       "sourceId": "0968-00",
@@ -1659,35 +1689,23 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0018-00"
     },
-    "모단단게": {
-      "sourceId": "0740-00",
-      "height": 1.7,
-      "weight": 180,
+    "메가깜까미": {
+      "sourceId": "0302-01",
+      "height": 0.5,
+      "weight": 161,
       "abilities": [
-        "괴력집게",
-        "분노의경혈",
-        "철주먹"
+        "매직미러"
       ],
       "abilityDescriptions": {
-        "괴력집게": "상대의 기술이나 특성에 의해 공격이 떨어지지 않는다.",
-        "분노의경혈": "상대의 공격이 급소에 맞으면 자신의 공격이 6단계까지 올라간다.",
-        "철주먹": "펀치 기술의 위력이 1.2배가 된다."
+        "매직미러": "상대의 변화 기술에 효과를 받지 않고 상대에게 되받아친다."
       },
       "sourceAbilities": [
         {
-          "id": 52,
-          "name": "かいりきバサミ"
-        },
-        {
-          "id": 83,
-          "name": "いかりのつぼ"
-        },
-        {
-          "id": 89,
-          "name": "てつのこぶし"
+          "id": 156,
+          "name": "マジックミラー"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0740-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0302-01"
     },
     "나루림": {
       "sourceId": "0685-00",
@@ -1755,23 +1773,59 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0303-01"
     },
-    "메가깜까미": {
-      "sourceId": "0302-01",
-      "height": 0.5,
-      "weight": 161,
+    "엘풍": {
+      "sourceId": "0547-00",
+      "height": 0.7,
+      "weight": 6.6,
       "abilities": [
-        "매직미러"
+        "엽록소",
+        "틈새포착",
+        "짓궂은마음"
       ],
       "abilityDescriptions": {
-        "매직미러": "상대의 변화 기술에 효과를 받지 않고 상대에게 되받아친다."
+        "엽록소": "쾌청 상태일 때 스피드가 2배가 된다.",
+        "틈새포착": "상대의 빛의장막, 리플렉터, 오로라베일, 신비의부적, 대타출동을 무시하고 기술을 사용할 수 있다.",
+        "짓궂은마음": "변화 기술의 우선도가 1단계 올라간다."
       },
       "sourceAbilities": [
         {
-          "id": 156,
-          "name": "マジックミラー"
+          "id": 34,
+          "name": "ようりょくそ"
+        },
+        {
+          "id": 151,
+          "name": "すりぬけ"
+        },
+        {
+          "id": 158,
+          "name": "いたずらごころ"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0302-01"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0547-00"
+    },
+    "염뉴트": {
+      "sourceId": "0758-00",
+      "height": 1.2,
+      "weight": 22.2,
+      "abilities": [
+        "둔감",
+        "부식"
+      ],
+      "abilityDescriptions": {
+        "둔감": "헤롱헤롱, 도발 상태가 되지 않으며 위협의 효과도 받지 않는다.",
+        "부식": "강철타입, 독타입 포켓몬도 독, 맹독 상태로 만들 수 있다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 12,
+          "name": "どんかん"
+        },
+        {
+          "id": 212,
+          "name": "ふしょく"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0758-00"
     },
     "이어롭": {
       "sourceId": "0428-00",
@@ -1833,83 +1887,35 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0362-00"
     },
-    "염뉴트": {
-      "sourceId": "0758-00",
-      "height": 1.2,
-      "weight": 22.2,
+    "클레스퍼트라": {
+      "sourceId": "0956-00",
+      "height": 1.9,
+      "weight": 90,
       "abilities": [
-        "둔감",
-        "부식"
+        "가속",
+        "통찰",
+        "편승"
       ],
       "abilityDescriptions": {
-        "둔감": "헤롱헤롱, 도발 상태가 되지 않으며 위협의 효과도 받지 않는다.",
-        "부식": "강철타입, 독타입 포켓몬도 독, 맹독 상태로 만들 수 있다."
+        "가속": "턴 종료 시 스피드가 1단계 올라간다.",
+        "통찰": "등장 시 상대가 지니고 있는 도구를 통찰할 수 있다.",
+        "편승": "상대의 능력이 올라가면 자신도 똑같이 능력이 올라간다."
       },
       "sourceAbilities": [
         {
-          "id": 12,
-          "name": "どんかん"
+          "id": 3,
+          "name": "かそく"
         },
         {
-          "id": 212,
-          "name": "ふしょく"
+          "id": 119,
+          "name": "おみとおし"
+        },
+        {
+          "id": 290,
+          "name": "びんじょう"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0758-00"
-    },
-    "엘풍": {
-      "sourceId": "0547-00",
-      "height": 0.7,
-      "weight": 6.6,
-      "abilities": [
-        "엽록소",
-        "틈새포착",
-        "짓궂은마음"
-      ],
-      "abilityDescriptions": {
-        "엽록소": "쾌청 상태일 때 스피드가 2배가 된다.",
-        "틈새포착": "상대의 빛의장막, 리플렉터, 오로라베일, 신비의부적, 대타출동을 무시하고 기술을 사용할 수 있다.",
-        "짓궂은마음": "변화 기술의 우선도가 1단계 올라간다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 34,
-          "name": "ようりょくそ"
-        },
-        {
-          "id": 151,
-          "name": "すりぬけ"
-        },
-        {
-          "id": 158,
-          "name": "いたずらごころ"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0547-00"
-    },
-    "케오퍼스": {
-      "sourceId": "0853-00",
-      "height": 1.6,
-      "weight": 39,
-      "abilities": [
-        "유연",
-        "테크니션"
-      ],
-      "abilityDescriptions": {
-        "유연": "마비 상태가 되지 않는다.",
-        "테크니션": "위력이 60 이하인 기술의 위력이 1.5배가 된다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 7,
-          "name": "じゅうなん"
-        },
-        {
-          "id": 101,
-          "name": "テクニシャン"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0853-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0956-00"
     },
     "일레도리자드": {
       "sourceId": "0695-00",
@@ -1941,36 +1947,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0695-00"
     },
-    "클레스퍼트라": {
-      "sourceId": "0956-00",
-      "height": 1.9,
-      "weight": 90,
-      "abilities": [
-        "가속",
-        "통찰",
-        "편승"
-      ],
-      "abilityDescriptions": {
-        "가속": "턴 종료 시 스피드가 1단계 올라간다.",
-        "통찰": "등장 시 상대가 지니고 있는 도구를 통찰할 수 있다.",
-        "편승": "상대의 능력이 올라가면 자신도 똑같이 능력이 올라간다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 3,
-          "name": "かそく"
-        },
-        {
-          "id": 119,
-          "name": "おみとおし"
-        },
-        {
-          "id": 290,
-          "name": "びんじょう"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0956-00"
-    },
     "칼라마네로": {
       "sourceId": "0687-00",
       "height": 1.5,
@@ -2001,6 +1977,30 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0687-00"
     },
+    "케오퍼스": {
+      "sourceId": "0853-00",
+      "height": 1.6,
+      "weight": 39,
+      "abilities": [
+        "유연",
+        "테크니션"
+      ],
+      "abilityDescriptions": {
+        "유연": "마비 상태가 되지 않는다.",
+        "테크니션": "위력이 60 이하인 기술의 위력이 1.5배가 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 7,
+          "name": "じゅうなん"
+        },
+        {
+          "id": 101,
+          "name": "テクニシャン"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0853-00"
+    },
     "픽시": {
       "sourceId": "0036-00",
       "height": 1.3,
@@ -2030,6 +2030,24 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0036-00"
+    },
+    "데스니칸": {
+      "sourceId": "0563-00",
+      "height": 1.7,
+      "weight": 76.5,
+      "abilities": [
+        "미라"
+      ],
+      "abilityDescriptions": {
+        "미라": "접촉 기술을 받으면 상대의 특성을 미라로 만든다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 152,
+          "name": "ミイラ"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0563-00"
     },
     "데스판": {
       "sourceId": "0867-00",
@@ -2079,54 +2097,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0623-00"
     },
-    "데스니칸": {
-      "sourceId": "0563-00",
-      "height": 1.7,
-      "weight": 76.5,
-      "abilities": [
-        "미라"
-      ],
-      "abilityDescriptions": {
-        "미라": "접촉 기술을 받으면 상대의 특성을 미라로 만든다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 152,
-          "name": "ミイラ"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0563-00"
-    },
-    "단지래플": {
-      "sourceId": "0842-00",
-      "height": 0.4,
-      "weight": 13,
-      "abilities": [
-        "두꺼운지방",
-        "먹보",
-        "숙성"
-      ],
-      "abilityDescriptions": {
-        "두꺼운지방": "불꽃타입과 얼음타입 기술로 입는 데미지가 반감된다.",
-        "먹보": "HP가 1/4일 때 먹는 나무열매를 HP가 1/2일 때 먹어 버린다.",
-        "숙성": "먹는 나무열매의 효과가 2배가 된다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 47,
-          "name": "あついしぼう"
-        },
-        {
-          "id": 82,
-          "name": "くいしんぼう"
-        },
-        {
-          "id": 247,
-          "name": "じゅくせい"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0842-00"
-    },
     "애프룡": {
       "sourceId": "0841-00",
       "height": 0.3,
@@ -2175,6 +2145,36 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0026-01"
     },
+    "단지래플": {
+      "sourceId": "0842-00",
+      "height": 0.4,
+      "weight": 13,
+      "abilities": [
+        "두꺼운지방",
+        "먹보",
+        "숙성"
+      ],
+      "abilityDescriptions": {
+        "두꺼운지방": "불꽃타입과 얼음타입 기술로 입는 데미지가 반감된다.",
+        "먹보": "HP가 1/4일 때 먹는 나무열매를 HP가 1/2일 때 먹어 버린다.",
+        "숙성": "먹는 나무열매의 효과가 2배가 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 47,
+          "name": "あついしぼう"
+        },
+        {
+          "id": 82,
+          "name": "くいしんぼう"
+        },
+        {
+          "id": 247,
+          "name": "じゅくせい"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0842-00"
+    },
     "라이츄": {
       "sourceId": "0026-00",
       "height": 0.8,
@@ -2198,60 +2198,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0026-00"
-    },
-    "찌르호크": {
-      "sourceId": "0398-00",
-      "height": 1.2,
-      "weight": 24.9,
-      "abilities": [
-        "위협",
-        "이판사판"
-      ],
-      "abilityDescriptions": {
-        "위협": "등장 시 상대의 공격을 1단계 떨어뜨린다.",
-        "이판사판": "자신까지 데미지를 입는 기술의 위력이 1.2배가 된다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 22,
-          "name": "いかく"
-        },
-        {
-          "id": 120,
-          "name": "すてみ"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0398-00"
-    },
-    "할비롱": {
-      "sourceId": "0780-00",
-      "height": 3,
-      "weight": 185,
-      "abilities": [
-        "날씨부정",
-        "초식",
-        "발끈"
-      ],
-      "abilityDescriptions": {
-        "날씨부정": "모든 날씨의 영향을 없앤다.",
-        "초식": "풀타입 기술의 효과를 받지 않으며 공격이 1단계 올라간다.",
-        "발끈": "상대의 공격에 HP가 1/2 이하가 되면 특수공격이 1단계 올라간다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 13,
-          "name": "ノーてんき"
-        },
-        {
-          "id": 157,
-          "name": "そうしょく"
-        },
-        {
-          "id": 201,
-          "name": "ぎゃくじょう"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0780-00"
     },
     "왕큰부리": {
       "sourceId": "0733-00",
@@ -2283,6 +2229,30 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0733-00"
     },
+    "찌르호크": {
+      "sourceId": "0398-00",
+      "height": 1.2,
+      "weight": 24.9,
+      "abilities": [
+        "위협",
+        "이판사판"
+      ],
+      "abilityDescriptions": {
+        "위협": "등장 시 상대의 공격을 1단계 떨어뜨린다.",
+        "이판사판": "자신까지 데미지를 입는 기술의 위력이 1.2배가 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 22,
+          "name": "いかく"
+        },
+        {
+          "id": 120,
+          "name": "すてみ"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0398-00"
+    },
     "펜드라": {
       "sourceId": "0545-00",
       "height": 2.5,
@@ -2313,59 +2283,35 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0545-00"
     },
-    "화강돌": {
-      "sourceId": "0442-00",
-      "height": 1,
-      "weight": 108,
+    "할비롱": {
+      "sourceId": "0780-00",
+      "height": 3,
+      "weight": 185,
       "abilities": [
-        "프레셔",
-        "틈새포착"
+        "날씨부정",
+        "초식",
+        "발끈"
       ],
       "abilityDescriptions": {
-        "프레셔": "자신에게 상대가 사용하는 기술의 PP를 추가로 1 줄인다.",
-        "틈새포착": "상대의 빛의장막, 리플렉터, 오로라베일, 신비의부적, 대타출동을 무시하고 기술을 사용할 수 있다."
+        "날씨부정": "모든 날씨의 영향을 없앤다.",
+        "초식": "풀타입 기술의 효과를 받지 않으며 공격이 1단계 올라간다.",
+        "발끈": "상대의 공격에 HP가 1/2 이하가 되면 특수공격이 1단계 올라간다."
       },
       "sourceAbilities": [
         {
-          "id": 46,
-          "name": "プレッシャー"
+          "id": 13,
+          "name": "ノーてんき"
         },
         {
-          "id": 151,
-          "name": "すりぬけ"
+          "id": 157,
+          "name": "そうしょく"
+        },
+        {
+          "id": 201,
+          "name": "ぎゃくじょう"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0442-00"
-    },
-    "루가루암(한밤중의 모습)": {
-      "sourceId": "0745-01",
-      "height": 1.1,
-      "weight": 25,
-      "abilities": [
-        "날카로운눈",
-        "의기양양",
-        "노가드"
-      ],
-      "abilityDescriptions": {
-        "날카로운눈": "상대의 회피율 변화를 무시하고 명중률도 떨어지지 않는다.",
-        "의기양양": "잠듦, 졸음 상태가 되지 않는다.",
-        "노가드": "서로가 사용하는 기술의 명중률이 100%가 된다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 51,
-          "name": "するどいめ"
-        },
-        {
-          "id": 72,
-          "name": "やるき"
-        },
-        {
-          "id": 99,
-          "name": "ノーガード"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0745-01"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0780-00"
     },
     "루가루암(한낮의 모습)": {
       "sourceId": "0745-00",
@@ -2427,23 +2373,59 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0952-00"
     },
-    "루가루암(황혼의 모습)": {
-      "sourceId": "0745-02",
-      "height": 0.8,
-      "weight": 25,
+    "화강돌": {
+      "sourceId": "0442-00",
+      "height": 1,
+      "weight": 108,
       "abilities": [
-        "단단한발톱"
+        "프레셔",
+        "틈새포착"
       ],
       "abilityDescriptions": {
-        "단단한발톱": "접촉 기술의 위력이 1.3배가 된다."
+        "프레셔": "자신에게 상대가 사용하는 기술의 PP를 추가로 1 줄인다.",
+        "틈새포착": "상대의 빛의장막, 리플렉터, 오로라베일, 신비의부적, 대타출동을 무시하고 기술을 사용할 수 있다."
       },
       "sourceAbilities": [
         {
-          "id": 181,
-          "name": "かたいツメ"
+          "id": 46,
+          "name": "プレッシャー"
+        },
+        {
+          "id": 151,
+          "name": "すりぬけ"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0745-02"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0442-00"
+    },
+    "루가루암(한밤중의 모습)": {
+      "sourceId": "0745-01",
+      "height": 1.1,
+      "weight": 25,
+      "abilities": [
+        "날카로운눈",
+        "의기양양",
+        "노가드"
+      ],
+      "abilityDescriptions": {
+        "날카로운눈": "상대의 회피율 변화를 무시하고 명중률도 떨어지지 않는다.",
+        "의기양양": "잠듦, 졸음 상태가 되지 않는다.",
+        "노가드": "서로가 사용하는 기술의 명중률이 100%가 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 51,
+          "name": "するどいめ"
+        },
+        {
+          "id": 72,
+          "name": "やるき"
+        },
+        {
+          "id": 99,
+          "name": "ノーガード"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0745-01"
     },
     "묘두기": {
       "sourceId": "0972-00",
@@ -2498,6 +2480,24 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0560-00"
+    },
+    "루가루암(황혼의 모습)": {
+      "sourceId": "0745-02",
+      "height": 0.8,
+      "weight": 25,
+      "abilities": [
+        "단단한발톱"
+      ],
+      "abilityDescriptions": {
+        "단단한발톱": "접촉 기술의 위력이 1.3배가 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 181,
+          "name": "かたいツメ"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0745-02"
     },
     "몽얌나": {
       "sourceId": "0518-00",
@@ -2643,6 +2643,30 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0454-00"
     },
+    "라플레시아": {
+      "sourceId": "0045-00",
+      "height": 1.2,
+      "weight": 18.6,
+      "abilities": [
+        "포자",
+        "엽록소"
+      ],
+      "abilityDescriptions": {
+        "포자": "접촉 기술을 받으면 30% 확률로 상대를 독, 마비, 잠듦 중 하나의 상태로 만든다.",
+        "엽록소": "쾌청 상태일 때 스피드가 2배가 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 27,
+          "name": "ほうし"
+        },
+        {
+          "id": 34,
+          "name": "ようりょくそ"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0045-00"
+    },
     "란쿨루스": {
       "sourceId": "0579-00",
       "height": 1,
@@ -2672,36 +2696,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0579-00"
-    },
-    "빠르모트": {
-      "sourceId": "0923-00",
-      "height": 0.9,
-      "weight": 41,
-      "abilities": [
-        "축전",
-        "자연회복",
-        "철주먹"
-      ],
-      "abilityDescriptions": {
-        "축전": "전기타입 기술의 효과를 받지 않으며 최대 HP의 1/4만큼 회복한다.",
-        "자연회복": "지닌 포켓몬으로 돌아오면 상태 이상이 회복된다.",
-        "철주먹": "펀치 기술의 위력이 1.2배가 된다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 10,
-          "name": "ちくでん"
-        },
-        {
-          "id": 30,
-          "name": "しぜんかいふく"
-        },
-        {
-          "id": 89,
-          "name": "てつのこぶし"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0923-00"
     },
     "야도란": {
       "sourceId": "0080-00",
@@ -2733,29 +2727,89 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0080-00"
     },
-    "라플레시아": {
-      "sourceId": "0045-00",
-      "height": 1.2,
-      "weight": 18.6,
+    "빠르모트": {
+      "sourceId": "0923-00",
+      "height": 0.9,
+      "weight": 41,
       "abilities": [
-        "포자",
-        "엽록소"
+        "축전",
+        "자연회복",
+        "철주먹"
       ],
       "abilityDescriptions": {
-        "포자": "접촉 기술을 받으면 30% 확률로 상대를 독, 마비, 잠듦 중 하나의 상태로 만든다.",
-        "엽록소": "쾌청 상태일 때 스피드가 2배가 된다."
+        "축전": "전기타입 기술의 효과를 받지 않으며 최대 HP의 1/4만큼 회복한다.",
+        "자연회복": "지닌 포켓몬으로 돌아오면 상태 이상이 회복된다.",
+        "철주먹": "펀치 기술의 위력이 1.2배가 된다."
       },
       "sourceAbilities": [
         {
-          "id": 27,
-          "name": "ほうし"
+          "id": 10,
+          "name": "ちくでん"
         },
+        {
+          "id": 30,
+          "name": "しぜんかいふく"
+        },
+        {
+          "id": 89,
+          "name": "てつのこぶし"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0923-00"
+    },
+    "우츠보트": {
+      "sourceId": "0071-00",
+      "height": 1.7,
+      "weight": 15.5,
+      "abilities": [
+        "엽록소",
+        "먹보"
+      ],
+      "abilityDescriptions": {
+        "엽록소": "쾌청 상태일 때 스피드가 2배가 된다.",
+        "먹보": "HP가 1/4일 때 먹는 나무열매를 HP가 1/2일 때 먹어 버린다."
+      },
+      "sourceAbilities": [
         {
           "id": 34,
           "name": "ようりょくそ"
+        },
+        {
+          "id": 82,
+          "name": "くいしんぼう"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0045-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0071-00"
+    },
+    "켄타로스": {
+      "sourceId": "0128-00",
+      "height": 1.4,
+      "weight": 88.4,
+      "abilities": [
+        "위협",
+        "분노의경혈",
+        "우격다짐"
+      ],
+      "abilityDescriptions": {
+        "위협": "등장 시 상대의 공격을 1단계 떨어뜨린다.",
+        "분노의경혈": "상대의 공격이 급소에 맞으면 자신의 공격이 6단계까지 올라간다.",
+        "우격다짐": "공격의 추가 효과가 없어지지만 1.3배의 위력으로 기술을 사용할 수 있다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 22,
+          "name": "いかく"
+        },
+        {
+          "id": 83,
+          "name": "いかりのつぼ"
+        },
+        {
+          "id": 125,
+          "name": "ちからずく"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0128-00"
     },
     "캥카": {
       "sourceId": "0115-00",
@@ -2817,60 +2871,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0199-00"
     },
-    "켄타로스": {
-      "sourceId": "0128-00",
-      "height": 1.4,
-      "weight": 88.4,
-      "abilities": [
-        "위협",
-        "분노의경혈",
-        "우격다짐"
-      ],
-      "abilityDescriptions": {
-        "위협": "등장 시 상대의 공격을 1단계 떨어뜨린다.",
-        "분노의경혈": "상대의 공격이 급소에 맞으면 자신의 공격이 6단계까지 올라간다.",
-        "우격다짐": "공격의 추가 효과가 없어지지만 1.3배의 위력으로 기술을 사용할 수 있다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 22,
-          "name": "いかく"
-        },
-        {
-          "id": 83,
-          "name": "いかりのつぼ"
-        },
-        {
-          "id": 125,
-          "name": "ちからずく"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0128-00"
-    },
-    "우츠보트": {
-      "sourceId": "0071-00",
-      "height": 1.7,
-      "weight": 15.5,
-      "abilities": [
-        "엽록소",
-        "먹보"
-      ],
-      "abilityDescriptions": {
-        "엽록소": "쾌청 상태일 때 스피드가 2배가 된다.",
-        "먹보": "HP가 1/4일 때 먹는 나무열매를 HP가 1/2일 때 먹어 버린다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 34,
-          "name": "ようりょくそ"
-        },
-        {
-          "id": 82,
-          "name": "くいしんぼう"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0071-00"
-    },
     "팔데아 켄타로스(블레이즈종)": {
       "sourceId": "0128-02",
       "height": 1.4,
@@ -2900,6 +2900,36 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0128-02"
+    },
+    "팔데아 켄타로스(워터종)": {
+      "sourceId": "0128-03",
+      "height": 1.4,
+      "weight": 110,
+      "abilities": [
+        "위협",
+        "분노의경혈",
+        "되새김질"
+      ],
+      "abilityDescriptions": {
+        "위협": "등장 시 상대의 공격을 1단계 떨어뜨린다.",
+        "분노의경혈": "상대의 공격이 급소에 맞으면 자신의 공격이 6단계까지 올라간다.",
+        "되새김질": "나무열매를 먹으면, 다음 턴 종료 시 같은 나무열매를 한 번 더 먹는다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 22,
+          "name": "いかく"
+        },
+        {
+          "id": 83,
+          "name": "いかりのつぼ"
+        },
+        {
+          "id": 291,
+          "name": "はんすう"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0128-03"
     },
     "팔데아 켄타로스(컴뱃종)": {
       "sourceId": "0128-01",
@@ -2955,60 +2985,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0334-00"
     },
-    "팔데아 켄타로스(워터종)": {
-      "sourceId": "0128-03",
-      "height": 1.4,
-      "weight": 110,
-      "abilities": [
-        "위협",
-        "분노의경혈",
-        "되새김질"
-      ],
-      "abilityDescriptions": {
-        "위협": "등장 시 상대의 공격을 1단계 떨어뜨린다.",
-        "분노의경혈": "상대의 공격이 급소에 맞으면 자신의 공격이 6단계까지 올라간다.",
-        "되새김질": "나무열매를 먹으면, 다음 턴 종료 시 같은 나무열매를 한 번 더 먹는다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 22,
-          "name": "いかく"
-        },
-        {
-          "id": 83,
-          "name": "いかりのつぼ"
-        },
-        {
-          "id": 291,
-          "name": "はんすう"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0128-03"
-    },
-    "눈설왕": {
-      "sourceId": "0460-00",
-      "height": 2.2,
-      "weight": 135.5,
-      "abilities": [
-        "방음",
-        "눈퍼뜨리기"
-      ],
-      "abilityDescriptions": {
-        "방음": "소리 기술의 효과를 받지 않는다.",
-        "눈퍼뜨리기": "등장 시 5턴 동안 눈 상태로 만든다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 43,
-          "name": "ぼうおん"
-        },
-        {
-          "id": 117,
-          "name": "ゆきふらし"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0460-00"
-    },
     "하랑우탄": {
       "sourceId": "0765-00",
       "height": 1.5,
@@ -3038,36 +3014,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0765-00"
-    },
-    "드래캄": {
-      "sourceId": "0691-00",
-      "height": 1.8,
-      "weight": 81.5,
-      "abilities": [
-        "독가시",
-        "적응력",
-        "독수"
-      ],
-      "abilityDescriptions": {
-        "독가시": "접촉 기술을 받으면 30% 확률로 상대를 독 상태로 만든다.",
-        "적응력": "자신과 타입이 같은 기술의 위력이 1.5배가 아닌 2배가 된다.",
-        "독수": "상대에게 접촉 기술을 맞히면 30% 확률로 독 상태로 만든다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 38,
-          "name": "どくのトゲ"
-        },
-        {
-          "id": 91,
-          "name": "てきおうりょく"
-        },
-        {
-          "id": 143,
-          "name": "どくしゅ"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0691-00"
     },
     "펌킨인(대과종)": {
       "sourceId": "0711-02",
@@ -3099,35 +3045,59 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0711-02"
     },
-    "펌킨인(소과종)": {
-      "sourceId": "0711-01",
-      "height": 0.7,
-      "weight": 9.5,
+    "눈설왕": {
+      "sourceId": "0460-00",
+      "height": 2.2,
+      "weight": 135.5,
       "abilities": [
-        "불면",
-        "픽업",
-        "통찰"
+        "방음",
+        "눈퍼뜨리기"
       ],
       "abilityDescriptions": {
-        "불면": "잠듦, 졸음 상태가 되지 않는다.",
-        "픽업": "자신이 도구를 지니고 있지 않을 때 자신을 제외한 포켓몬이 소비한 도구를 턴 종료 시에 주워 온다.",
-        "통찰": "등장 시 상대가 지니고 있는 도구를 통찰할 수 있다."
+        "방음": "소리 기술의 효과를 받지 않는다.",
+        "눈퍼뜨리기": "등장 시 5턴 동안 눈 상태로 만든다."
       },
       "sourceAbilities": [
         {
-          "id": 15,
-          "name": "ふみん"
+          "id": 43,
+          "name": "ぼうおん"
         },
         {
-          "id": 53,
-          "name": "ものひろい"
-        },
-        {
-          "id": 119,
-          "name": "おみとおし"
+          "id": 117,
+          "name": "ゆきふらし"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0711-01"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0460-00"
+    },
+    "드래캄": {
+      "sourceId": "0691-00",
+      "height": 1.8,
+      "weight": 81.5,
+      "abilities": [
+        "독가시",
+        "적응력",
+        "독수"
+      ],
+      "abilityDescriptions": {
+        "독가시": "접촉 기술을 받으면 30% 확률로 상대를 독 상태로 만든다.",
+        "적응력": "자신과 타입이 같은 기술의 위력이 1.5배가 아닌 2배가 된다.",
+        "독수": "상대에게 접촉 기술을 맞히면 30% 확률로 독 상태로 만든다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 38,
+          "name": "どくのトゲ"
+        },
+        {
+          "id": 91,
+          "name": "てきおうりょく"
+        },
+        {
+          "id": 143,
+          "name": "どくしゅ"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0691-00"
     },
     "펌킨인(특대과종)": {
       "sourceId": "0711-03",
@@ -3219,6 +3189,36 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0711-00"
     },
+    "펌킨인(소과종)": {
+      "sourceId": "0711-01",
+      "height": 0.7,
+      "weight": 9.5,
+      "abilities": [
+        "불면",
+        "픽업",
+        "통찰"
+      ],
+      "abilityDescriptions": {
+        "불면": "잠듦, 졸음 상태가 되지 않는다.",
+        "픽업": "자신이 도구를 지니고 있지 않을 때 자신을 제외한 포켓몬이 소비한 도구를 턴 종료 시에 주워 온다.",
+        "통찰": "등장 시 상대가 지니고 있는 도구를 통찰할 수 있다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 15,
+          "name": "ふみん"
+        },
+        {
+          "id": 53,
+          "name": "ものひろい"
+        },
+        {
+          "id": 119,
+          "name": "おみとおし"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0711-01"
+    },
     "램펄드": {
       "sourceId": "0409-00",
       "height": 1.6,
@@ -3309,36 +3309,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0015-01"
     },
-    "아머까오": {
-      "sourceId": "0823-00",
-      "height": 2.2,
-      "weight": 75,
-      "abilities": [
-        "프레셔",
-        "긴장감",
-        "미러아머"
-      ],
-      "abilityDescriptions": {
-        "프레셔": "자신에게 상대가 사용하는 기술의 PP를 추가로 1 줄인다.",
-        "긴장감": "상대가 나무열매를 먹지 못하게 한다.",
-        "미러아머": "자신이 받는 능력을 떨어뜨리는 효과를 받지 않으며 상대에게 되받아친다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 46,
-          "name": "プレッシャー"
-        },
-        {
-          "id": 127,
-          "name": "きんちょうかん"
-        },
-        {
-          "id": 240,
-          "name": "ミラーアーマー"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0823-00"
-    },
     "부란다": {
       "sourceId": "0675-00",
       "height": 2.1,
@@ -3368,30 +3338,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0675-00"
-    },
-    "바오키": {
-      "sourceId": "0514-00",
-      "height": 1,
-      "weight": 28,
-      "abilities": [
-        "맹화",
-        "먹보"
-      ],
-      "abilityDescriptions": {
-        "맹화": "HP가 최대 HP의 1/3 이하가 되면 불꽃타입 기술의 위력이 1.5배가 된다.",
-        "먹보": "HP가 1/4일 때 먹는 나무열매를 HP가 1/2일 때 먹어 버린다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 66,
-          "name": "もうか"
-        },
-        {
-          "id": 82,
-          "name": "くいしんぼう"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0514-00"
     },
     "찌리배리": {
       "sourceId": "0939-00",
@@ -3423,29 +3369,59 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0939-00"
     },
-    "야나키": {
-      "sourceId": "0512-00",
-      "height": 1.1,
-      "weight": 30.5,
+    "아머까오": {
+      "sourceId": "0823-00",
+      "height": 2.2,
+      "weight": 75,
       "abilities": [
-        "심록",
+        "프레셔",
+        "긴장감",
+        "미러아머"
+      ],
+      "abilityDescriptions": {
+        "프레셔": "자신에게 상대가 사용하는 기술의 PP를 추가로 1 줄인다.",
+        "긴장감": "상대가 나무열매를 먹지 못하게 한다.",
+        "미러아머": "자신이 받는 능력을 떨어뜨리는 효과를 받지 않으며 상대에게 되받아친다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 46,
+          "name": "プレッシャー"
+        },
+        {
+          "id": 127,
+          "name": "きんちょうかん"
+        },
+        {
+          "id": 240,
+          "name": "ミラーアーマー"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0823-00"
+    },
+    "바오키": {
+      "sourceId": "0514-00",
+      "height": 1,
+      "weight": 28,
+      "abilities": [
+        "맹화",
         "먹보"
       ],
       "abilityDescriptions": {
-        "심록": "HP가 최대 HP의 1/3 이하가 되면 풀타입 기술의 위력이 1.5배가 된다.",
+        "맹화": "HP가 최대 HP의 1/3 이하가 되면 불꽃타입 기술의 위력이 1.5배가 된다.",
         "먹보": "HP가 1/4일 때 먹는 나무열매를 HP가 1/2일 때 먹어 버린다."
       },
       "sourceAbilities": [
         {
-          "id": 65,
-          "name": "しんりょく"
+          "id": 66,
+          "name": "もうか"
         },
         {
           "id": 82,
           "name": "くいしんぼう"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0512-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0514-00"
     },
     "앗차키": {
       "sourceId": "0516-00",
@@ -3470,30 +3446,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0516-00"
-    },
-    "파이어로": {
-      "sourceId": "0663-00",
-      "height": 1.2,
-      "weight": 24.5,
-      "abilities": [
-        "불꽃몸",
-        "질풍날개"
-      ],
-      "abilityDescriptions": {
-        "불꽃몸": "접촉 기술을 받으면 30% 확률로 상대를 화상 상태로 만든다.",
-        "질풍날개": "HP가 꽉 찼을 때 비행타입 기술의 우선도가 1단계 올라간다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 49,
-          "name": "ほのおのからだ"
-        },
-        {
-          "id": 177,
-          "name": "はやてのつばさ"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0663-00"
     },
     "거북손데스": {
       "sourceId": "0689-00",
@@ -3525,35 +3477,83 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0689-00"
     },
-    "쁘사이저": {
-      "sourceId": "0127-00",
-      "height": 1.5,
-      "weight": 55,
+    "야나키": {
+      "sourceId": "0512-00",
+      "height": 1.1,
+      "weight": 30.5,
       "abilities": [
-        "괴력집게",
-        "틀깨기",
-        "자기과신"
+        "심록",
+        "먹보"
       ],
       "abilityDescriptions": {
-        "괴력집게": "상대의 기술이나 특성에 의해 공격이 떨어지지 않는다.",
-        "틀깨기": "상대의 특성에 상관없이 기술을 사용할 수 있다. 예외 되는 특성도 있다.",
-        "자기과신": "공격으로 상대를 쓰러뜨리면 공격이 1단계 올라간다."
+        "심록": "HP가 최대 HP의 1/3 이하가 되면 풀타입 기술의 위력이 1.5배가 된다.",
+        "먹보": "HP가 1/4일 때 먹는 나무열매를 HP가 1/2일 때 먹어 버린다."
       },
       "sourceAbilities": [
         {
-          "id": 52,
-          "name": "かいりきバサミ"
+          "id": 65,
+          "name": "しんりょく"
         },
         {
-          "id": 104,
-          "name": "かたやぶり"
-        },
-        {
-          "id": 153,
-          "name": "じしんかじょう"
+          "id": 82,
+          "name": "くいしんぼう"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0127-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0512-00"
+    },
+    "파이어로": {
+      "sourceId": "0663-00",
+      "height": 1.2,
+      "weight": 24.5,
+      "abilities": [
+        "불꽃몸",
+        "질풍날개"
+      ],
+      "abilityDescriptions": {
+        "불꽃몸": "접촉 기술을 받으면 30% 확률로 상대를 화상 상태로 만든다.",
+        "질풍날개": "HP가 꽉 찼을 때 비행타입 기술의 우선도가 1단계 올라간다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 49,
+          "name": "ほのおのからだ"
+        },
+        {
+          "id": 177,
+          "name": "はやてのつばさ"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0663-00"
+    },
+    "만마드": {
+      "sourceId": "0750-00",
+      "height": 2.5,
+      "weight": 920,
+      "abilities": [
+        "마이페이스",
+        "정신력",
+        "지구력"
+      ],
+      "abilityDescriptions": {
+        "마이페이스": "혼란 상태가 되지 않으며 위협의 효과도 받지 않는다.",
+        "정신력": "상대의 공격에 풀죽지 않으며 위협의 효과도 받지 않는다.",
+        "지구력": "기술로 데미지를 입으면 방어가 1단계 올라간다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 20,
+          "name": "マイペース"
+        },
+        {
+          "id": 39,
+          "name": "せいしんりょく"
+        },
+        {
+          "id": 192,
+          "name": "じきゅうりょく"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0750-00"
     },
     "블로스터": {
       "sourceId": "0693-00",
@@ -3603,95 +3603,35 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0701-00"
     },
-    "만마드": {
-      "sourceId": "0750-00",
-      "height": 2.5,
-      "weight": 920,
+    "쁘사이저": {
+      "sourceId": "0127-00",
+      "height": 1.5,
+      "weight": 55,
       "abilities": [
-        "마이페이스",
-        "정신력",
-        "지구력"
+        "괴력집게",
+        "틀깨기",
+        "자기과신"
       ],
       "abilityDescriptions": {
-        "마이페이스": "혼란 상태가 되지 않으며 위협의 효과도 받지 않는다.",
-        "정신력": "상대의 공격에 풀죽지 않으며 위협의 효과도 받지 않는다.",
-        "지구력": "기술로 데미지를 입으면 방어가 1단계 올라간다."
+        "괴력집게": "상대의 기술이나 특성에 의해 공격이 떨어지지 않는다.",
+        "틀깨기": "상대의 특성에 상관없이 기술을 사용할 수 있다. 예외 되는 특성도 있다.",
+        "자기과신": "공격으로 상대를 쓰러뜨리면 공격이 1단계 올라간다."
       },
       "sourceAbilities": [
         {
-          "id": 20,
-          "name": "マイペース"
+          "id": 52,
+          "name": "かいりきバサミ"
         },
         {
-          "id": 39,
-          "name": "せいしんりょく"
+          "id": 104,
+          "name": "かたやぶり"
         },
         {
-          "id": 192,
-          "name": "じきゅうりょく"
+          "id": 153,
+          "name": "じしんかじょう"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0750-00"
-    },
-    "콜로솔트": {
-      "sourceId": "0934-00",
-      "height": 2.3,
-      "weight": 240,
-      "abilities": [
-        "옹골참",
-        "클리어바디",
-        "정화의소금"
-      ],
-      "abilityDescriptions": {
-        "옹골참": "HP가 꽉 찼을 때 일격에 기절할 듯한 기술로 데미지를 입으면 HP를 1 남기고 버틴다. 일격필살 기술의 효과도 받지 않는다.",
-        "클리어바디": "상대의 기술이나 특성에 의해 능력이 떨어지지 않는다.",
-        "정화의소금": "상태 이상이 되지 않는다. 고스트타입 기술로 입는 데미지가 반감된다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 5,
-          "name": "がんじょう"
-        },
-        {
-          "id": 29,
-          "name": "クリアボディ"
-        },
-        {
-          "id": 272,
-          "name": "きよめのしお"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0934-00"
-    },
-    "사마자르": {
-      "sourceId": "0900-00",
-      "height": 1.8,
-      "weight": 89,
-      "abilities": [
-        "벌레의알림",
-        "우격다짐",
-        "예리함"
-      ],
-      "abilityDescriptions": {
-        "벌레의알림": "HP가 최대 HP의 1/3 이하가 되면 벌레타입 기술의 위력이 1.5배가 된다.",
-        "우격다짐": "공격의 추가 효과가 없어지지만 1.3배의 위력으로 기술을 사용할 수 있다.",
-        "예리함": "베는 기술의 위력이 1.5배가 된다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 68,
-          "name": "むしのしらせ"
-        },
-        {
-          "id": 125,
-          "name": "ちからずく"
-        },
-        {
-          "id": 292,
-          "name": "きれあじ"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0900-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0127-00"
     },
     "왕구리": {
       "sourceId": "0186-00",
@@ -3723,6 +3663,66 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0186-00"
     },
+    "사마자르": {
+      "sourceId": "0900-00",
+      "height": 1.8,
+      "weight": 89,
+      "abilities": [
+        "벌레의알림",
+        "우격다짐",
+        "예리함"
+      ],
+      "abilityDescriptions": {
+        "벌레의알림": "HP가 최대 HP의 1/3 이하가 되면 벌레타입 기술의 위력이 1.5배가 된다.",
+        "우격다짐": "공격의 추가 효과가 없어지지만 1.3배의 위력으로 기술을 사용할 수 있다.",
+        "예리함": "베는 기술의 위력이 1.5배가 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 68,
+          "name": "むしのしらせ"
+        },
+        {
+          "id": 125,
+          "name": "ちからずく"
+        },
+        {
+          "id": 292,
+          "name": "きれあじ"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0900-00"
+    },
+    "콜로솔트": {
+      "sourceId": "0934-00",
+      "height": 2.3,
+      "weight": 240,
+      "abilities": [
+        "옹골참",
+        "클리어바디",
+        "정화의소금"
+      ],
+      "abilityDescriptions": {
+        "옹골참": "HP가 꽉 찼을 때 일격에 기절할 듯한 기술로 데미지를 입으면 HP를 1 남기고 버틴다. 일격필살 기술의 효과도 받지 않는다.",
+        "클리어바디": "상대의 기술이나 특성에 의해 능력이 떨어지지 않는다.",
+        "정화의소금": "상태 이상이 되지 않는다. 고스트타입 기술로 입는 데미지가 반감된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 5,
+          "name": "がんじょう"
+        },
+        {
+          "id": 29,
+          "name": "クリアボディ"
+        },
+        {
+          "id": 272,
+          "name": "きよめのしお"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0934-00"
+    },
     "킬가르도(블레이드폼)": {
       "sourceId": "0681-01",
       "height": 1.7,
@@ -3740,24 +3740,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0681-01"
-    },
-    "팬텀": {
-      "sourceId": "0094-00",
-      "height": 1.5,
-      "weight": 40.5,
-      "abilities": [
-        "저주받은바디"
-      ],
-      "abilityDescriptions": {
-        "저주받은바디": "기술로 데미지를 입으면 30% 확률로 4턴 동안 상대를 기술봉인 상태로 만든다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 130,
-          "name": "のろわれボディ"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0094-00"
     },
     "킬가르도(실드폼)": {
       "sourceId": "0681-00",
@@ -3837,33 +3819,23 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0212-00"
     },
-    "스트린더": {
-      "sourceId": "0849-00",
-      "height": 1.6,
-      "weight": 40,
+    "팬텀": {
+      "sourceId": "0094-00",
+      "height": 1.5,
+      "weight": 40.5,
       "abilities": [
-        "플러스",
-        "테크니션"
+        "저주받은바디"
       ],
       "abilityDescriptions": {
-        "플러스": "플러스나 마이너스 특성을 가진 같은 편이 필드에 있으면 자신의 특수공격이 1.5배가 된다.",
-        "테크니션": "위력이 60 이하인 기술의 위력이 1.5배가 된다."
+        "저주받은바디": "기술로 데미지를 입으면 30% 확률로 4턴 동안 상대를 기술봉인 상태로 만든다."
       },
       "sourceAbilities": [
         {
-          "id": 57,
-          "name": "プラス"
-        },
-        {
-          "id": 101,
-          "name": "テクニシャン"
-        },
-        {
-          "id": 244,
-          "name": "パンクロック"
+          "id": 130,
+          "name": "のろわれボディ"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0849-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0094-00"
     },
     "스트린더(로우한 모습)": {
       "sourceId": "0849-01",
@@ -3893,35 +3865,33 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0849-01"
     },
-    "헬가": {
-      "sourceId": "0229-00",
-      "height": 1.4,
-      "weight": 35,
+    "스트린더": {
+      "sourceId": "0849-00",
+      "height": 1.6,
+      "weight": 40,
       "abilities": [
-        "타오르는불꽃",
-        "일찍기상",
-        "긴장감"
+        "플러스",
+        "테크니션"
       ],
       "abilityDescriptions": {
-        "타오르는불꽃": "불꽃타입 기술의 효과를 받지 않으며 자신은 타오르는불꽃 상태가 된다.",
-        "일찍기상": "잠듦 상태가 되어도 2배 빠르게 깨어난다.",
-        "긴장감": "상대가 나무열매를 먹지 못하게 한다."
+        "플러스": "플러스나 마이너스 특성을 가진 같은 편이 필드에 있으면 자신의 특수공격이 1.5배가 된다.",
+        "테크니션": "위력이 60 이하인 기술의 위력이 1.5배가 된다."
       },
       "sourceAbilities": [
         {
-          "id": 18,
-          "name": "もらいび"
+          "id": 57,
+          "name": "プラス"
         },
         {
-          "id": 48,
-          "name": "はやおき"
+          "id": 101,
+          "name": "テクニシャン"
         },
         {
-          "id": 127,
-          "name": "きんちょうかん"
+          "id": 244,
+          "name": "パンクロック"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0229-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0849-00"
     },
     "후딘": {
       "sourceId": "0065-00",
@@ -3953,31 +3923,35 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0065-00"
     },
-    "마피티프": {
-      "sourceId": "0943-00",
-      "height": 1.1,
-      "weight": 61,
+    "헬가": {
+      "sourceId": "0229-00",
+      "height": 1.4,
+      "weight": 35,
       "abilities": [
-        "위협"
+        "타오르는불꽃",
+        "일찍기상",
+        "긴장감"
       ],
       "abilityDescriptions": {
-        "위협": "등장 시 상대의 공격을 1단계 떨어뜨린다."
+        "타오르는불꽃": "불꽃타입 기술의 효과를 받지 않으며 자신은 타오르는불꽃 상태가 된다.",
+        "일찍기상": "잠듦 상태가 되어도 2배 빠르게 깨어난다.",
+        "긴장감": "상대가 나무열매를 먹지 못하게 한다."
       },
       "sourceAbilities": [
         {
-          "id": 22,
-          "name": "いかく"
+          "id": 18,
+          "name": "もらいび"
         },
         {
-          "id": 198,
-          "name": "はりこみ"
+          "id": 48,
+          "name": "はやおき"
         },
         {
-          "id": 275,
-          "name": "ばんけん"
+          "id": 127,
+          "name": "きんちょうかん"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0943-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0229-00"
     },
     "노보청": {
       "sourceId": "0534-00",
@@ -4009,6 +3983,56 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0534-00"
     },
+    "나인테일": {
+      "sourceId": "0038-00",
+      "height": 1.1,
+      "weight": 19.9,
+      "abilities": [
+        "타오르는불꽃",
+        "가뭄"
+      ],
+      "abilityDescriptions": {
+        "타오르는불꽃": "불꽃타입 기술의 효과를 받지 않으며 자신은 타오르는불꽃 상태가 된다.",
+        "가뭄": "등장 시 5턴 동안 쾌청 상태로 만든다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 18,
+          "name": "もらいび"
+        },
+        {
+          "id": 70,
+          "name": "ひでり"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0038-00"
+    },
+    "마피티프": {
+      "sourceId": "0943-00",
+      "height": 1.1,
+      "weight": 61,
+      "abilities": [
+        "위협"
+      ],
+      "abilityDescriptions": {
+        "위협": "등장 시 상대의 공격을 1단계 떨어뜨린다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 22,
+          "name": "いかく"
+        },
+        {
+          "id": 198,
+          "name": "はりこみ"
+        },
+        {
+          "id": 275,
+          "name": "ばんけん"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0943-00"
+    },
     "괴력몬": {
       "sourceId": "0068-00",
       "height": 1.6,
@@ -4038,84 +4062,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0068-00"
-    },
-    "나인테일": {
-      "sourceId": "0038-00",
-      "height": 1.1,
-      "weight": 19.9,
-      "abilities": [
-        "타오르는불꽃",
-        "가뭄"
-      ],
-      "abilityDescriptions": {
-        "타오르는불꽃": "불꽃타입 기술의 효과를 받지 않으며 자신은 타오르는불꽃 상태가 된다.",
-        "가뭄": "등장 시 5턴 동안 쾌청 상태로 만든다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 18,
-          "name": "もらいび"
-        },
-        {
-          "id": 70,
-          "name": "ひでり"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0038-00"
-    },
-    "알로라 나인테일": {
-      "sourceId": "0038-01",
-      "height": 1.1,
-      "weight": 19.9,
-      "abilities": [
-        "눈숨기",
-        "눈퍼뜨리기"
-      ],
-      "abilityDescriptions": {
-        "눈숨기": "눈 상태일 때 회피율이 1.25배가 된다.",
-        "눈퍼뜨리기": "등장 시 5턴 동안 눈 상태로 만든다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 81,
-          "name": "ゆきがくれ"
-        },
-        {
-          "id": 117,
-          "name": "ゆきふらし"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0038-01"
-    },
-    "툰베어": {
-      "sourceId": "0614-00",
-      "height": 2.6,
-      "weight": 260,
-      "abilities": [
-        "쓱쓱",
-        "눈숨기",
-        "눈치우기"
-      ],
-      "abilityDescriptions": {
-        "쓱쓱": "비 상태일 때 스피드가 2배가 된다.",
-        "눈숨기": "눈 상태일 때 회피율이 1.25배가 된다.",
-        "눈치우기": "눈 상태일 때 스피드가 2배가 된다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 33,
-          "name": "すいすい"
-        },
-        {
-          "id": 81,
-          "name": "ゆきがくれ"
-        },
-        {
-          "id": 202,
-          "name": "ゆきかき"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0614-00"
     },
     "두드리짱": {
       "sourceId": "0959-00",
@@ -4147,6 +4093,30 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0959-00"
     },
+    "알로라 나인테일": {
+      "sourceId": "0038-01",
+      "height": 1.1,
+      "weight": 19.9,
+      "abilities": [
+        "눈숨기",
+        "눈퍼뜨리기"
+      ],
+      "abilityDescriptions": {
+        "눈숨기": "눈 상태일 때 회피율이 1.25배가 된다.",
+        "눈퍼뜨리기": "등장 시 5턴 동안 눈 상태로 만든다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 81,
+          "name": "ゆきがくれ"
+        },
+        {
+          "id": 117,
+          "name": "ゆきふらし"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0038-01"
+    },
     "창파나이트": {
       "sourceId": "0865-00",
       "height": 0.8,
@@ -4171,35 +4141,57 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0865-00"
     },
-    "몰드류": {
-      "sourceId": "0530-00",
-      "height": 0.7,
-      "weight": 40.4,
+    "툰베어": {
+      "sourceId": "0614-00",
+      "height": 2.6,
+      "weight": 260,
       "abilities": [
-        "틀깨기",
-        "모래헤치기",
-        "모래의힘"
+        "쓱쓱",
+        "눈숨기",
+        "눈치우기"
       ],
       "abilityDescriptions": {
-        "틀깨기": "상대의 특성에 상관없이 기술을 사용할 수 있다. 예외 되는 특성도 있다.",
-        "모래헤치기": "모래바람 상태일 때 스피드가 2배가 된다.",
-        "모래의힘": "모래바람 상태일 때 바위, 땅, 강철타입 기술의 위력이 1.3배가 된다."
+        "쓱쓱": "비 상태일 때 스피드가 2배가 된다.",
+        "눈숨기": "눈 상태일 때 회피율이 1.25배가 된다.",
+        "눈치우기": "눈 상태일 때 스피드가 2배가 된다."
       },
       "sourceAbilities": [
         {
-          "id": 104,
-          "name": "かたやぶり"
+          "id": 33,
+          "name": "すいすい"
         },
         {
-          "id": 146,
-          "name": "すなかき"
+          "id": 81,
+          "name": "ゆきがくれ"
         },
         {
-          "id": 159,
-          "name": "すなのちから"
+          "id": 202,
+          "name": "ゆきかき"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0530-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0614-00"
+    },
+    "그우린차": {
+      "sourceId": "1013-00",
+      "height": 0.2,
+      "weight": 2.2,
+      "abilities": [
+        "내열"
+      ],
+      "abilityDescriptions": {
+        "내열": "불꽃타입 기술로 입는 데미지가 반감된다. 화상 상태의 데미지도 반감된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 85,
+          "name": "たいねつ"
+        },
+        {
+          "id": 299,
+          "name": "おもてなし"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/1013-00"
     },
     "화염레오": {
       "sourceId": "0668-00",
@@ -4255,57 +4247,53 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0855-00"
     },
-    "그우린차": {
-      "sourceId": "1013-00",
-      "height": 0.2,
-      "weight": 2.2,
+    "몰드류": {
+      "sourceId": "0530-00",
+      "height": 0.7,
+      "weight": 40.4,
       "abilities": [
-        "내열"
+        "틀깨기",
+        "모래헤치기",
+        "모래의힘"
       ],
       "abilityDescriptions": {
-        "내열": "불꽃타입 기술로 입는 데미지가 반감된다. 화상 상태의 데미지도 반감된다."
+        "틀깨기": "상대의 특성에 상관없이 기술을 사용할 수 있다. 예외 되는 특성도 있다.",
+        "모래헤치기": "모래바람 상태일 때 스피드가 2배가 된다.",
+        "모래의힘": "모래바람 상태일 때 바위, 땅, 강철타입 기술의 위력이 1.3배가 된다."
       },
       "sourceAbilities": [
         {
-          "id": 85,
-          "name": "たいねつ"
+          "id": 104,
+          "name": "かたやぶり"
         },
         {
-          "id": 299,
-          "name": "おもてなし"
+          "id": 146,
+          "name": "すなかき"
+        },
+        {
+          "id": 159,
+          "name": "すなのちから"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/1013-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0530-00"
     },
-    "달코퀸": {
-      "sourceId": "0763-00",
-      "height": 1.2,
-      "weight": 21.4,
+    "메가요가램": {
+      "sourceId": "0308-01",
+      "height": 1.3,
+      "weight": 31.5,
       "abilities": [
-        "리프가드",
-        "스위트베일",
-        "여왕의위엄"
+        "순수한힘"
       ],
       "abilityDescriptions": {
-        "리프가드": "쾌청 상태일 때 상태 이상이 되지 않는다.",
-        "스위트베일": "자신과 같은 편은 잠듦, 졸음 상태가 되지 않는다.",
-        "여왕의위엄": "자신과 같은 편에게 상대는 선제 기술을 사용할 수 없다."
+        "순수한힘": "물리 기술의 위력이 2배가 된다."
       },
       "sourceAbilities": [
         {
-          "id": 102,
-          "name": "リーフガード"
-        },
-        {
-          "id": 175,
-          "name": "スイートベール"
-        },
-        {
-          "id": 214,
-          "name": "じょおうのいげん"
+          "id": 74,
+          "name": "ヨガパワー"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0763-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0308-01"
     },
     "글라이온": {
       "sourceId": "0472-00",
@@ -4337,6 +4325,36 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0472-00"
     },
+    "달코퀸": {
+      "sourceId": "0763-00",
+      "height": 1.2,
+      "weight": 21.4,
+      "abilities": [
+        "리프가드",
+        "스위트베일",
+        "여왕의위엄"
+      ],
+      "abilityDescriptions": {
+        "리프가드": "쾌청 상태일 때 상태 이상이 되지 않는다.",
+        "스위트베일": "자신과 같은 편은 잠듦, 졸음 상태가 되지 않는다.",
+        "여왕의위엄": "자신과 같은 편에게 상대는 선제 기술을 사용할 수 없다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 102,
+          "name": "リーフガード"
+        },
+        {
+          "id": 175,
+          "name": "スイートベール"
+        },
+        {
+          "id": 214,
+          "name": "じょおうのいげん"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0763-00"
+    },
     "강철톤": {
       "sourceId": "0208-00",
       "height": 9.2,
@@ -4366,54 +4384,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0208-00"
-    },
-    "메가요가램": {
-      "sourceId": "0308-01",
-      "height": 1.3,
-      "weight": 31.5,
-      "abilities": [
-        "순수한힘"
-      ],
-      "abilityDescriptions": {
-        "순수한힘": "물리 기술의 위력이 2배가 된다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 74,
-          "name": "ヨガパワー"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0308-01"
-    },
-    "사다이사": {
-      "sourceId": "0844-00",
-      "height": 3.8,
-      "weight": 65.5,
-      "abilities": [
-        "모래숨기",
-        "탈피",
-        "모래뿜기"
-      ],
-      "abilityDescriptions": {
-        "모래숨기": "모래바람 상태일 때 회피율이 1.25배가 된다.",
-        "탈피": "턴 종료 시 30% 확률로 상태 이상이 회복된다.",
-        "모래뿜기": "기술로 데미지를 입으면 5턴 동안 모래바람 상태로 만든다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 8,
-          "name": "すながくれ"
-        },
-        {
-          "id": 61,
-          "name": "だっぴ"
-        },
-        {
-          "id": 245,
-          "name": "すなはき"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0844-00"
     },
     "오롱털": {
       "sourceId": "0861-00",
@@ -4475,6 +4445,36 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0858-00"
     },
+    "사다이사": {
+      "sourceId": "0844-00",
+      "height": 3.8,
+      "weight": 65.5,
+      "abilities": [
+        "모래숨기",
+        "탈피",
+        "모래뿜기"
+      ],
+      "abilityDescriptions": {
+        "모래숨기": "모래바람 상태일 때 회피율이 1.25배가 된다.",
+        "탈피": "턴 종료 시 30% 확률로 상태 이상이 회복된다.",
+        "모래뿜기": "기술로 데미지를 입으면 5턴 동안 모래바람 상태로 만든다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 8,
+          "name": "すながくれ"
+        },
+        {
+          "id": 61,
+          "name": "だっぴ"
+        },
+        {
+          "id": 245,
+          "name": "すなはき"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0844-00"
+    },
     "올리르바": {
       "sourceId": "0930-00",
       "height": 1.4,
@@ -4497,23 +4497,29 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0930-00"
     },
-    "조로아크": {
-      "sourceId": "0571-00",
-      "height": 1.6,
-      "weight": 81.1,
+    "포푸니라": {
+      "sourceId": "0461-00",
+      "height": 1.1,
+      "weight": 34,
       "abilities": [
-        "일루전"
+        "프레셔",
+        "나쁜손버릇"
       ],
       "abilityDescriptions": {
-        "일루전": "지닌 포켓몬 중 가장 마지막에 있는 포켓몬의 모습으로 등장한다. 기술로 데미지를 입으면 원래대로 돌아온다."
+        "프레셔": "자신에게 상대가 사용하는 기술의 PP를 추가로 1 줄인다.",
+        "나쁜손버릇": "자신이 도구를 지니고 있지 않을 때 접촉 기술을 받으면 상대의 도구를 훔친다."
       },
       "sourceAbilities": [
         {
-          "id": 149,
-          "name": "イリュージョン"
+          "id": 46,
+          "name": "プレッシャー"
+        },
+        {
+          "id": 124,
+          "name": "わるいてぐせ"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0571-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0461-00"
     },
     "장침바루": {
       "sourceId": "0904-00",
@@ -4545,29 +4551,23 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0904-00"
     },
-    "포푸니라": {
-      "sourceId": "0461-00",
-      "height": 1.1,
-      "weight": 34,
+    "조로아크": {
+      "sourceId": "0571-00",
+      "height": 1.6,
+      "weight": 81.1,
       "abilities": [
-        "프레셔",
-        "나쁜손버릇"
+        "일루전"
       ],
       "abilityDescriptions": {
-        "프레셔": "자신에게 상대가 사용하는 기술의 PP를 추가로 1 줄인다.",
-        "나쁜손버릇": "자신이 도구를 지니고 있지 않을 때 접촉 기술을 받으면 상대의 도구를 훔친다."
+        "일루전": "지닌 포켓몬 중 가장 마지막에 있는 포켓몬의 모습으로 등장한다. 기술로 데미지를 입으면 원래대로 돌아온다."
       },
       "sourceAbilities": [
         {
-          "id": 46,
-          "name": "プレッシャー"
-        },
-        {
-          "id": 124,
-          "name": "わるいてぐせ"
+          "id": 149,
+          "name": "イリュージョン"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0461-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0571-00"
     },
     "전룡": {
       "sourceId": "0181-00",
@@ -4623,36 +4623,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0903-00"
     },
-    "크레베이스": {
-      "sourceId": "0713-00",
-      "height": 2,
-      "weight": 505,
-      "abilities": [
-        "옹골참",
-        "마이페이스",
-        "아이스바디"
-      ],
-      "abilityDescriptions": {
-        "옹골참": "HP가 꽉 찼을 때 일격에 기절할 듯한 기술로 데미지를 입으면 HP를 1 남기고 버틴다. 일격필살 기술의 효과도 받지 않는다.",
-        "마이페이스": "혼란 상태가 되지 않으며 위협의 효과도 받지 않는다.",
-        "아이스바디": "눈 상태일 때 턴 종료 시 최대 HP의 1/16만큼 회복한다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 5,
-          "name": "がんじょう"
-        },
-        {
-          "id": 20,
-          "name": "マイペース"
-        },
-        {
-          "id": 115,
-          "name": "アイスボディ"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0713-00"
-    },
     "히스이 크레베이스": {
       "sourceId": "0713-01",
       "height": 1.4,
@@ -4683,6 +4653,36 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0713-01"
     },
+    "크레베이스": {
+      "sourceId": "0713-00",
+      "height": 2,
+      "weight": 505,
+      "abilities": [
+        "옹골참",
+        "마이페이스",
+        "아이스바디"
+      ],
+      "abilityDescriptions": {
+        "옹골참": "HP가 꽉 찼을 때 일격에 기절할 듯한 기술로 데미지를 입으면 HP를 1 남기고 버틴다. 일격필살 기술의 효과도 받지 않는다.",
+        "마이페이스": "혼란 상태가 되지 않으며 위협의 효과도 받지 않는다.",
+        "아이스바디": "눈 상태일 때 턴 종료 시 최대 HP의 1/16만큼 회복한다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 5,
+          "name": "がんじょう"
+        },
+        {
+          "id": 20,
+          "name": "マイペース"
+        },
+        {
+          "id": 115,
+          "name": "アイスボディ"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0713-00"
+    },
     "히스이 조로아크": {
       "sourceId": "0571-01",
       "height": 1.6,
@@ -4700,84 +4700,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0571-01"
-    },
-    "프테라": {
-      "sourceId": "0142-00",
-      "height": 1.8,
-      "weight": 59,
-      "abilities": [
-        "프레셔",
-        "돌머리",
-        "긴장감"
-      ],
-      "abilityDescriptions": {
-        "프레셔": "자신에게 상대가 사용하는 기술의 PP를 추가로 1 줄인다.",
-        "돌머리": "자신까지 데미지를 입는 기술을 사용해도 HP가 줄지 않는다.",
-        "긴장감": "상대가 나무열매를 먹지 못하게 한다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 46,
-          "name": "プレッシャー"
-        },
-        {
-          "id": 69,
-          "name": "いしあたま"
-        },
-        {
-          "id": 127,
-          "name": "きんちょうかん"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0142-00"
-    },
-    "로즈레이드": {
-      "sourceId": "0407-00",
-      "height": 0.9,
-      "weight": 14.5,
-      "abilities": [
-        "자연회복",
-        "독가시",
-        "테크니션"
-      ],
-      "abilityDescriptions": {
-        "자연회복": "지닌 포켓몬으로 돌아오면 상태 이상이 회복된다.",
-        "독가시": "접촉 기술을 받으면 30% 확률로 상대를 독 상태로 만든다.",
-        "테크니션": "위력이 60 이하인 기술의 위력이 1.5배가 된다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 30,
-          "name": "しぜんかいふく"
-        },
-        {
-          "id": 38,
-          "name": "どくのトゲ"
-        },
-        {
-          "id": 101,
-          "name": "テクニシャン"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0407-00"
-    },
-    "저리더프": {
-      "sourceId": "0604-00",
-      "height": 2.1,
-      "weight": 80.5,
-      "abilities": [
-        "부유"
-      ],
-      "abilityDescriptions": {
-        "부유": "땅 위에 있지 않게 되어 땅타입 기술, 압정뿌리기, 독압정, 끈적끈적네트 상태의 효과를 받지 않는다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 26,
-          "name": "ふゆう"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0604-00"
     },
     "가디안": {
       "sourceId": "0282-00",
@@ -4809,6 +4731,84 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0282-00"
     },
+    "저리더프": {
+      "sourceId": "0604-00",
+      "height": 2.1,
+      "weight": 80.5,
+      "abilities": [
+        "부유"
+      ],
+      "abilityDescriptions": {
+        "부유": "땅 위에 있지 않게 되어 땅타입 기술, 압정뿌리기, 독압정, 끈적끈적네트 상태의 효과를 받지 않는다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 26,
+          "name": "ふゆう"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0604-00"
+    },
+    "로즈레이드": {
+      "sourceId": "0407-00",
+      "height": 0.9,
+      "weight": 14.5,
+      "abilities": [
+        "자연회복",
+        "독가시",
+        "테크니션"
+      ],
+      "abilityDescriptions": {
+        "자연회복": "지닌 포켓몬으로 돌아오면 상태 이상이 회복된다.",
+        "독가시": "접촉 기술을 받으면 30% 확률로 상대를 독 상태로 만든다.",
+        "테크니션": "위력이 60 이하인 기술의 위력이 1.5배가 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 30,
+          "name": "しぜんかいふく"
+        },
+        {
+          "id": 38,
+          "name": "どくのトゲ"
+        },
+        {
+          "id": 101,
+          "name": "テクニシャン"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0407-00"
+    },
+    "프테라": {
+      "sourceId": "0142-00",
+      "height": 1.8,
+      "weight": 59,
+      "abilities": [
+        "프레셔",
+        "돌머리",
+        "긴장감"
+      ],
+      "abilityDescriptions": {
+        "프레셔": "자신에게 상대가 사용하는 기술의 PP를 추가로 1 줄인다.",
+        "돌머리": "자신까지 데미지를 입는 기술을 사용해도 HP가 줄지 않는다.",
+        "긴장감": "상대가 나무열매를 먹지 못하게 한다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 46,
+          "name": "プレッシャー"
+        },
+        {
+          "id": 69,
+          "name": "いしあたま"
+        },
+        {
+          "id": 127,
+          "name": "きんちょうかん"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0142-00"
+    },
     "엘레이드": {
       "sourceId": "0475-00",
       "height": 1.6,
@@ -4838,66 +4838,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0475-00"
-    },
-    "마임꽁꽁": {
-      "sourceId": "0866-00",
-      "height": 1.5,
-      "weight": 58.2,
-      "abilities": [
-        "갈지자걸음",
-        "아이스바디",
-        "배리어프리"
-      ],
-      "abilityDescriptions": {
-        "갈지자걸음": "혼란 상태일 때 회피율이 2배가 된다.",
-        "아이스바디": "눈 상태일 때 턴 종료 시 최대 HP의 1/16만큼 회복한다.",
-        "배리어프리": "등장 시 빛의장막, 리플렉터, 오로라베일 상태를 해제한다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 77,
-          "name": "ちどりあし"
-        },
-        {
-          "id": 115,
-          "name": "アイスボディ"
-        },
-        {
-          "id": 251,
-          "name": "バリアフリー"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0866-00"
-    },
-    "샹델라": {
-      "sourceId": "0609-00",
-      "height": 1,
-      "weight": 34.3,
-      "abilities": [
-        "타오르는불꽃",
-        "불꽃몸",
-        "틈새포착"
-      ],
-      "abilityDescriptions": {
-        "타오르는불꽃": "불꽃타입 기술의 효과를 받지 않으며 자신은 타오르는불꽃 상태가 된다.",
-        "불꽃몸": "접촉 기술을 받으면 30% 확률로 상대를 화상 상태로 만든다.",
-        "틈새포착": "상대의 빛의장막, 리플렉터, 오로라베일, 신비의부적, 대타출동을 무시하고 기술을 사용할 수 있다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 18,
-          "name": "もらいび"
-        },
-        {
-          "id": 49,
-          "name": "ほのおのからだ"
-        },
-        {
-          "id": 151,
-          "name": "すりぬけ"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0609-00"
     },
     "악비아르": {
       "sourceId": "0553-00",
@@ -4929,23 +4869,65 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0553-00"
     },
-    "워시로토무": {
-      "sourceId": "0479-02",
-      "height": 0.3,
-      "weight": 0.3,
+    "샹델라": {
+      "sourceId": "0609-00",
+      "height": 1,
+      "weight": 34.3,
       "abilities": [
-        "부유"
+        "타오르는불꽃",
+        "불꽃몸",
+        "틈새포착"
       ],
       "abilityDescriptions": {
-        "부유": "땅 위에 있지 않게 되어 땅타입 기술, 압정뿌리기, 독압정, 끈적끈적네트 상태의 효과를 받지 않는다."
+        "타오르는불꽃": "불꽃타입 기술의 효과를 받지 않으며 자신은 타오르는불꽃 상태가 된다.",
+        "불꽃몸": "접촉 기술을 받으면 30% 확률로 상대를 화상 상태로 만든다.",
+        "틈새포착": "상대의 빛의장막, 리플렉터, 오로라베일, 신비의부적, 대타출동을 무시하고 기술을 사용할 수 있다."
       },
       "sourceAbilities": [
         {
-          "id": 26,
-          "name": "ふゆう"
+          "id": 18,
+          "name": "もらいび"
+        },
+        {
+          "id": 49,
+          "name": "ほのおのからだ"
+        },
+        {
+          "id": 151,
+          "name": "すりぬけ"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0479-02"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0609-00"
+    },
+    "마임꽁꽁": {
+      "sourceId": "0866-00",
+      "height": 1.5,
+      "weight": 58.2,
+      "abilities": [
+        "갈지자걸음",
+        "아이스바디",
+        "배리어프리"
+      ],
+      "abilityDescriptions": {
+        "갈지자걸음": "혼란 상태일 때 회피율이 2배가 된다.",
+        "아이스바디": "눈 상태일 때 턴 종료 시 최대 HP의 1/16만큼 회복한다.",
+        "배리어프리": "등장 시 빛의장막, 리플렉터, 오로라베일 상태를 해제한다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 77,
+          "name": "ちどりあし"
+        },
+        {
+          "id": 115,
+          "name": "アイスボディ"
+        },
+        {
+          "id": 251,
+          "name": "バリアフリー"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0866-00"
     },
     "스핀로토무": {
       "sourceId": "0479-04",
@@ -4965,8 +4947,8 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0479-04"
     },
-    "커트로토무": {
-      "sourceId": "0479-05",
+    "워시로토무": {
+      "sourceId": "0479-02",
       "height": 0.3,
       "weight": 0.3,
       "abilities": [
@@ -4981,7 +4963,7 @@
           "name": "ふゆう"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0479-05"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0479-02"
     },
     "아쿠스타": {
       "sourceId": "0121-00",
@@ -5013,8 +4995,8 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0121-00"
     },
-    "프로스트로토무": {
-      "sourceId": "0479-03",
+    "커트로토무": {
+      "sourceId": "0479-05",
       "height": 0.3,
       "weight": 0.3,
       "abilities": [
@@ -5029,7 +5011,7 @@
           "name": "ふゆう"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0479-03"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0479-05"
     },
     "히트로토무": {
       "sourceId": "0479-01",
@@ -5048,6 +5030,48 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0479-01"
+    },
+    "견고라스": {
+      "sourceId": "0697-00",
+      "height": 2.5,
+      "weight": 270,
+      "abilities": [
+        "돌머리",
+        "옹골찬턱"
+      ],
+      "abilityDescriptions": {
+        "돌머리": "자신까지 데미지를 입는 기술을 사용해도 HP가 줄지 않는다.",
+        "옹골찬턱": "무는 기술의 위력이 1.5배가 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 69,
+          "name": "いしあたま"
+        },
+        {
+          "id": 173,
+          "name": "がんじょうあご"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0697-00"
+    },
+    "프로스트로토무": {
+      "sourceId": "0479-03",
+      "height": 0.3,
+      "weight": 0.3,
+      "abilities": [
+        "부유"
+      ],
+      "abilityDescriptions": {
+        "부유": "땅 위에 있지 않게 되어 땅타입 기술, 압정뿌리기, 독압정, 끈적끈적네트 상태의 효과를 받지 않는다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 26,
+          "name": "ふゆう"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0479-03"
     },
     "키키링": {
       "sourceId": "0981-00",
@@ -5079,30 +5103,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0981-00"
     },
-    "견고라스": {
-      "sourceId": "0697-00",
-      "height": 2.5,
-      "weight": 270,
-      "abilities": [
-        "돌머리",
-        "옹골찬턱"
-      ],
-      "abilityDescriptions": {
-        "돌머리": "자신까지 데미지를 입는 기술을 사용해도 HP가 줄지 않는다.",
-        "옹골찬턱": "무는 기술의 위력이 1.5배가 된다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 69,
-          "name": "いしあたま"
-        },
-        {
-          "id": 173,
-          "name": "がんじょうあご"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0697-00"
-    },
     "님피아": {
       "sourceId": "0700-00",
       "height": 1,
@@ -5126,36 +5126,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0700-00"
-    },
-    "렌트라": {
-      "sourceId": "0405-00",
-      "height": 1.4,
-      "weight": 42,
-      "abilities": [
-        "위협",
-        "근성",
-        "투쟁심"
-      ],
-      "abilityDescriptions": {
-        "위협": "등장 시 상대의 공격을 1단계 떨어뜨린다.",
-        "근성": "상태 이상일 때 공격이 1.5배가 된다. 화상 상태에 의한 물리 기술의 데미지가 반감되는 효과는 무시한다.",
-        "투쟁심": "기술의 위력이 성별이 같을 때는 1.25배 다를 때는 0.75배가 된다. 성별이 불명인 경우 평소의 위력이 된다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 22,
-          "name": "いかく"
-        },
-        {
-          "id": 62,
-          "name": "こんじょう"
-        },
-        {
-          "id": 79,
-          "name": "とうそうしん"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0405-00"
     },
     "글레이시아": {
       "sourceId": "0471-00",
@@ -5205,6 +5175,84 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0699-00"
     },
+    "렌트라": {
+      "sourceId": "0405-00",
+      "height": 1.4,
+      "weight": 42,
+      "abilities": [
+        "위협",
+        "근성",
+        "투쟁심"
+      ],
+      "abilityDescriptions": {
+        "위협": "등장 시 상대의 공격을 1단계 떨어뜨린다.",
+        "근성": "상태 이상일 때 공격이 1.5배가 된다. 화상 상태에 의한 물리 기술의 데미지가 반감되는 효과는 무시한다.",
+        "투쟁심": "기술의 위력이 성별이 같을 때는 1.25배 다를 때는 0.75배가 된다. 성별이 불명인 경우 평소의 위력이 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 22,
+          "name": "いかく"
+        },
+        {
+          "id": 62,
+          "name": "こんじょう"
+        },
+        {
+          "id": 79,
+          "name": "とうそうしん"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0405-00"
+    },
+    "부스터": {
+      "sourceId": "0136-00",
+      "height": 0.9,
+      "weight": 25,
+      "abilities": [
+        "타오르는불꽃",
+        "근성"
+      ],
+      "abilityDescriptions": {
+        "타오르는불꽃": "불꽃타입 기술의 효과를 받지 않으며 자신은 타오르는불꽃 상태가 된다.",
+        "근성": "상태 이상일 때 공격이 1.5배가 된다. 화상 상태에 의한 물리 기술의 데미지가 반감되는 효과는 무시한다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 18,
+          "name": "もらいび"
+        },
+        {
+          "id": 62,
+          "name": "こんじょう"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0136-00"
+    },
+    "리피아": {
+      "sourceId": "0470-00",
+      "height": 1,
+      "weight": 25.5,
+      "abilities": [
+        "엽록소",
+        "리프가드"
+      ],
+      "abilityDescriptions": {
+        "엽록소": "쾌청 상태일 때 스피드가 2배가 된다.",
+        "리프가드": "쾌청 상태일 때 상태 이상이 되지 않는다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 34,
+          "name": "ようりょくそ"
+        },
+        {
+          "id": 102,
+          "name": "リーフガード"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0470-00"
+    },
     "루카리오": {
       "sourceId": "0448-00",
       "height": 1.2,
@@ -5235,30 +5283,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0448-00"
     },
-    "부스터": {
-      "sourceId": "0136-00",
-      "height": 0.9,
-      "weight": 25,
-      "abilities": [
-        "타오르는불꽃",
-        "근성"
-      ],
-      "abilityDescriptions": {
-        "타오르는불꽃": "불꽃타입 기술의 효과를 받지 않으며 자신은 타오르는불꽃 상태가 된다.",
-        "근성": "상태 이상일 때 공격이 1.5배가 된다. 화상 상태에 의한 물리 기술의 데미지가 반감되는 효과는 무시한다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 18,
-          "name": "もらいび"
-        },
-        {
-          "id": 62,
-          "name": "こんじょう"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0136-00"
-    },
     "메가니움": {
       "sourceId": "0154-00",
       "height": 1.8,
@@ -5283,41 +5307,17 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0154-00"
     },
-    "리피아": {
-      "sourceId": "0470-00",
-      "height": 1,
-      "weight": 25.5,
-      "abilities": [
-        "엽록소",
-        "리프가드"
-      ],
-      "abilityDescriptions": {
-        "엽록소": "쾌청 상태일 때 스피드가 2배가 된다.",
-        "리프가드": "쾌청 상태일 때 상태 이상이 되지 않는다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 34,
-          "name": "ようりょくそ"
-        },
-        {
-          "id": 102,
-          "name": "リーフガード"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0470-00"
-    },
-    "블래키": {
-      "sourceId": "0197-00",
-      "height": 1,
-      "weight": 27,
+    "에브이": {
+      "sourceId": "0196-00",
+      "height": 0.9,
+      "weight": 26.5,
       "abilities": [
         "싱크로",
-        "정신력"
+        "매직미러"
       ],
       "abilityDescriptions": {
         "싱크로": "상대의 기술이나 특성에 의해 독, 맹독, 마비, 화상 상태가 되면 상대도 같은 상태로 만든다.",
-        "정신력": "상대의 공격에 풀죽지 않으며 위협의 효과도 받지 않는다."
+        "매직미러": "상대의 변화 기술에 효과를 받지 않고 상대에게 되받아친다."
       },
       "sourceAbilities": [
         {
@@ -5325,11 +5325,11 @@
           "name": "シンクロ"
         },
         {
-          "id": 39,
-          "name": "せいしんりょく"
+          "id": 156,
+          "name": "マジックミラー"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0197-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0196-00"
     },
     "신비록": {
       "sourceId": "0899-00",
@@ -5361,6 +5361,30 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0899-00"
     },
+    "블래키": {
+      "sourceId": "0197-00",
+      "height": 1,
+      "weight": 27,
+      "abilities": [
+        "싱크로",
+        "정신력"
+      ],
+      "abilityDescriptions": {
+        "싱크로": "상대의 기술이나 특성에 의해 독, 맹독, 마비, 화상 상태가 되면 상대도 같은 상태로 만든다.",
+        "정신력": "상대의 공격에 풀죽지 않으며 위협의 효과도 받지 않는다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 28,
+          "name": "シンクロ"
+        },
+        {
+          "id": 39,
+          "name": "せいしんりょく"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0197-00"
+    },
     "샤미드": {
       "sourceId": "0134-00",
       "height": 1,
@@ -5384,54 +5408,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0134-00"
-    },
-    "에브이": {
-      "sourceId": "0196-00",
-      "height": 0.9,
-      "weight": 26.5,
-      "abilities": [
-        "싱크로",
-        "매직미러"
-      ],
-      "abilityDescriptions": {
-        "싱크로": "상대의 기술이나 특성에 의해 독, 맹독, 마비, 화상 상태가 되면 상대도 같은 상태로 만든다.",
-        "매직미러": "상대의 변화 기술에 효과를 받지 않고 상대에게 되받아친다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 28,
-          "name": "シンクロ"
-        },
-        {
-          "id": 156,
-          "name": "マジックミラー"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0196-00"
-    },
-    "이상해꽃": {
-      "sourceId": "0003-00",
-      "height": 2,
-      "weight": 100,
-      "abilities": [
-        "엽록소",
-        "심록"
-      ],
-      "abilityDescriptions": {
-        "엽록소": "쾌청 상태일 때 스피드가 2배가 된다.",
-        "심록": "HP가 최대 HP의 1/3 이하가 되면 풀타입 기술의 위력이 1.5배가 된다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 34,
-          "name": "ようりょくそ"
-        },
-        {
-          "id": 65,
-          "name": "しんりょく"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0003-00"
     },
     "카디나르마": {
       "sourceId": "0936-00",
@@ -5505,6 +5481,30 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0135-00"
     },
+    "이상해꽃": {
+      "sourceId": "0003-00",
+      "height": 2,
+      "weight": 100,
+      "abilities": [
+        "엽록소",
+        "심록"
+      ],
+      "abilityDescriptions": {
+        "엽록소": "쾌청 상태일 때 스피드가 2배가 된다.",
+        "심록": "HP가 최대 HP의 1/3 이하가 되면 풀타입 기술의 위력이 1.5배가 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 34,
+          "name": "ようりょくそ"
+        },
+        {
+          "id": 65,
+          "name": "しんりょく"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0003-00"
+    },
     "하마돈": {
       "sourceId": "0450-00",
       "height": 2,
@@ -5528,30 +5528,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0450-00"
-    },
-    "토대부기": {
-      "sourceId": "0389-00",
-      "height": 2.2,
-      "weight": 310,
-      "abilities": [
-        "심록",
-        "조가비갑옷"
-      ],
-      "abilityDescriptions": {
-        "심록": "HP가 최대 HP의 1/3 이하가 되면 풀타입 기술의 위력이 1.5배가 된다.",
-        "조가비갑옷": "상대의 공격이 급소에 맞지 않는다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 65,
-          "name": "しんりょく"
-        },
-        {
-          "id": 75,
-          "name": "シェルアーマー"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0389-00"
     },
     "파라블레이즈": {
       "sourceId": "0937-00",
@@ -5601,6 +5577,48 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0503-00"
     },
+    "토대부기": {
+      "sourceId": "0389-00",
+      "height": 2.2,
+      "weight": 310,
+      "abilities": [
+        "심록",
+        "조가비갑옷"
+      ],
+      "abilityDescriptions": {
+        "심록": "HP가 최대 HP의 1/3 이하가 되면 풀타입 기술의 위력이 1.5배가 된다.",
+        "조가비갑옷": "상대의 공격이 급소에 맞지 않는다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 65,
+          "name": "しんりょく"
+        },
+        {
+          "id": 75,
+          "name": "シェルアーマー"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0389-00"
+    },
+    "갑주무사": {
+      "sourceId": "0768-00",
+      "height": 2,
+      "weight": 108,
+      "abilities": [
+        "위기회피"
+      ],
+      "abilityDescriptions": {
+        "위기회피": "HP가 절반 이하가 되면 배틀에서 물러난다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 194,
+          "name": "ききかいひ"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0768-00"
+    },
     "히스이 대검귀": {
       "sourceId": "0503-01",
       "height": 1.5,
@@ -5624,24 +5642,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0503-01"
-    },
-    "갑주무사": {
-      "sourceId": "0768-00",
-      "height": 2,
-      "weight": 108,
-      "abilities": [
-        "위기회피"
-      ],
-      "abilityDescriptions": {
-        "위기회피": "HP가 절반 이하가 되면 배틀에서 물러난다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 194,
-          "name": "ききかいひ"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0768-00"
     },
     "염무왕": {
       "sourceId": "0500-00",
@@ -5691,30 +5691,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0497-00"
     },
-    "거북왕": {
-      "sourceId": "0009-00",
-      "height": 1.6,
-      "weight": 85.5,
-      "abilities": [
-        "젖은접시",
-        "급류"
-      ],
-      "abilityDescriptions": {
-        "젖은접시": "비 상태일 때 턴 종료 시 최대 HP의 1/16만큼 회복한다.",
-        "급류": "HP가 최대 HP의 1/3 이하가 되면 물타입 기술의 위력이 1.5배가 된다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 44,
-          "name": "あめうけざら"
-        },
-        {
-          "id": 67,
-          "name": "げきりゅう"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0009-00"
-    },
     "개굴닌자": {
       "sourceId": "0658-00",
       "height": 1.5,
@@ -5760,6 +5736,30 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0812-00"
+    },
+    "거북왕": {
+      "sourceId": "0009-00",
+      "height": 1.6,
+      "weight": 85.5,
+      "abilities": [
+        "젖은접시",
+        "급류"
+      ],
+      "abilityDescriptions": {
+        "젖은접시": "비 상태일 때 턴 종료 시 최대 HP의 1/16만큼 회복한다.",
+        "급류": "HP가 최대 HP의 1/3 이하가 되면 물타입 기술의 위력이 1.5배가 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 44,
+          "name": "あめうけざら"
+        },
+        {
+          "id": 67,
+          "name": "げきりゅう"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0009-00"
     },
     "나무킹": {
       "sourceId": "0254-00",
@@ -5808,6 +5808,36 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0730-00"
+    },
+    "대쓰여너(암컷)": {
+      "sourceId": "0902-01",
+      "height": 3,
+      "weight": 110,
+      "abilities": [
+        "쓱쓱",
+        "적응력",
+        "틀깨기"
+      ],
+      "abilityDescriptions": {
+        "쓱쓱": "비 상태일 때 스피드가 2배가 된다.",
+        "적응력": "자신과 타입이 같은 기술의 위력이 1.5배가 아닌 2배가 된다.",
+        "틀깨기": "상대의 특성에 상관없이 기술을 사용할 수 있다. 예외 되는 특성도 있다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 33,
+          "name": "すいすい"
+        },
+        {
+          "id": 91,
+          "name": "てきおうりょく"
+        },
+        {
+          "id": 104,
+          "name": "かたやぶり"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0902-01"
     },
     "대쓰여너(수컷)": {
       "sourceId": "0902-00",
@@ -5863,36 +5893,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0911-00"
     },
-    "대쓰여너(암컷)": {
-      "sourceId": "0902-01",
-      "height": 3,
-      "weight": 110,
-      "abilities": [
-        "쓱쓱",
-        "적응력",
-        "틀깨기"
-      ],
-      "abilityDescriptions": {
-        "쓱쓱": "비 상태일 때 스피드가 2배가 된다.",
-        "적응력": "자신과 타입이 같은 기술의 위력이 1.5배가 아닌 2배가 된다.",
-        "틀깨기": "상대의 특성에 상관없이 기술을 사용할 수 있다. 예외 되는 특성도 있다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 33,
-          "name": "すいすい"
-        },
-        {
-          "id": 91,
-          "name": "てきおうりょく"
-        },
-        {
-          "id": 104,
-          "name": "かたやぶり"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0902-01"
-    },
     "모크나이퍼": {
       "sourceId": "0724-00",
       "height": 1.6,
@@ -5916,30 +5916,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0724-00"
-    },
-    "마스카나": {
-      "sourceId": "0908-00",
-      "height": 1.5,
-      "weight": 31.2,
-      "abilities": [
-        "심록",
-        "변환자재"
-      ],
-      "abilityDescriptions": {
-        "심록": "HP가 최대 HP의 1/3 이하가 되면 풀타입 기술의 위력이 1.5배가 된다.",
-        "변환자재": "등장할 때마다 단 한 번 자신이 사용하는 기술과 같은 타입으로 변화한다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 65,
-          "name": "しんりょく"
-        },
-        {
-          "id": 168,
-          "name": "へんげんじざい"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0908-00"
     },
     "맘모꾸리": {
       "sourceId": "0473-00",
@@ -5970,6 +5946,30 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0473-00"
+    },
+    "마스카나": {
+      "sourceId": "0908-00",
+      "height": 1.5,
+      "weight": 31.2,
+      "abilities": [
+        "심록",
+        "변환자재"
+      ],
+      "abilityDescriptions": {
+        "심록": "HP가 최대 HP의 1/3 이하가 되면 풀타입 기술의 위력이 1.5배가 된다.",
+        "변환자재": "등장할 때마다 단 한 번 자신이 사용하는 기술과 같은 타입으로 변화한다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 65,
+          "name": "しんりょく"
+        },
+        {
+          "id": 168,
+          "name": "へんげんじざい"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0908-00"
     },
     "번치코": {
       "sourceId": "0257-00",
@@ -6019,28 +6019,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0727-00"
     },
-    "에이스번": {
-      "sourceId": "0815-00",
-      "height": 1.4,
-      "weight": 33,
-      "abilities": [
-        "맹화"
-      ],
-      "abilityDescriptions": {
-        "맹화": "HP가 최대 HP의 1/3 이하가 되면 불꽃타입 기술의 위력이 1.5배가 된다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 66,
-          "name": "もうか"
-        },
-        {
-          "id": 236,
-          "name": "リベロ"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0815-00"
-    },
     "보스로라": {
       "sourceId": "0306-00",
       "height": 2.1,
@@ -6070,6 +6048,28 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0306-00"
+    },
+    "에이스번": {
+      "sourceId": "0815-00",
+      "height": 1.4,
+      "weight": 33,
+      "abilities": [
+        "맹화"
+      ],
+      "abilityDescriptions": {
+        "맹화": "HP가 최대 HP의 1/3 이하가 되면 불꽃타입 기술의 위력이 1.5배가 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 66,
+          "name": "もうか"
+        },
+        {
+          "id": 236,
+          "name": "リベロ"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0815-00"
     },
     "브리가론": {
       "sourceId": "0652-00",
@@ -6143,30 +6143,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0818-00"
     },
-    "장크로다일": {
-      "sourceId": "0160-00",
-      "height": 2.3,
-      "weight": 88.8,
-      "abilities": [
-        "급류",
-        "우격다짐"
-      ],
-      "abilityDescriptions": {
-        "급류": "HP가 최대 HP의 1/3 이하가 되면 물타입 기술의 위력이 1.5배가 된다.",
-        "우격다짐": "공격의 추가 효과가 없어지지만 1.3배의 위력으로 기술을 사용할 수 있다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 67,
-          "name": "げきりゅう"
-        },
-        {
-          "id": 125,
-          "name": "ちからずく"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0160-00"
-    },
     "웨이니발": {
       "sourceId": "0914-00",
       "height": 1.8,
@@ -6191,29 +6167,51 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0914-00"
     },
-    "리자몽": {
-      "sourceId": "0006-00",
-      "height": 1.7,
-      "weight": 90.5,
+    "장크로다일": {
+      "sourceId": "0160-00",
+      "height": 2.3,
+      "weight": 88.8,
       "abilities": [
-        "맹화",
-        "선파워"
+        "급류",
+        "우격다짐"
       ],
       "abilityDescriptions": {
-        "맹화": "HP가 최대 HP의 1/3 이하가 되면 불꽃타입 기술의 위력이 1.5배가 된다.",
-        "선파워": "쾌청 상태일 때 특수공격이 1.5배가 되지만 턴 종료 시 최대 HP의 1/8만큼 HP가 줄어든다."
+        "급류": "HP가 최대 HP의 1/3 이하가 되면 물타입 기술의 위력이 1.5배가 된다.",
+        "우격다짐": "공격의 추가 효과가 없어지지만 1.3배의 위력으로 기술을 사용할 수 있다."
       },
       "sourceAbilities": [
         {
-          "id": 66,
-          "name": "もうか"
+          "id": 67,
+          "name": "げきりゅう"
         },
         {
-          "id": 94,
-          "name": "サンパワー"
+          "id": 125,
+          "name": "ちからずく"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0006-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0160-00"
+    },
+    "고고트": {
+      "sourceId": "0673-00",
+      "height": 1.7,
+      "weight": 91,
+      "abilities": [
+        "초식"
+      ],
+      "abilityDescriptions": {
+        "초식": "풀타입 기술의 효과를 받지 않으며 공격이 1단계 올라간다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 157,
+          "name": "そうしょく"
+        },
+        {
+          "id": 179,
+          "name": "くさのけがわ"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0673-00"
     },
     "마폭시": {
       "sourceId": "0655-00",
@@ -6239,28 +6237,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0655-00"
     },
-    "고고트": {
-      "sourceId": "0673-00",
-      "height": 1.7,
-      "weight": 91,
-      "abilities": [
-        "초식"
-      ],
-      "abilityDescriptions": {
-        "초식": "풀타입 기술의 효과를 받지 않으며 공격이 1단계 올라간다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 157,
-          "name": "そうしょく"
-        },
-        {
-          "id": 179,
-          "name": "くさのけがわ"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0673-00"
-    },
     "히스이 모크나이퍼": {
       "sourceId": "0724-01",
       "height": 1.6,
@@ -6285,29 +6261,53 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0724-01"
     },
-    "블레이범": {
-      "sourceId": "0157-00",
+    "리자몽": {
+      "sourceId": "0006-00",
       "height": 1.7,
-      "weight": 79.5,
+      "weight": 90.5,
       "abilities": [
-        "타오르는불꽃",
-        "맹화"
+        "맹화",
+        "선파워"
       ],
       "abilityDescriptions": {
-        "타오르는불꽃": "불꽃타입 기술의 효과를 받지 않으며 자신은 타오르는불꽃 상태가 된다.",
-        "맹화": "HP가 최대 HP의 1/3 이하가 되면 불꽃타입 기술의 위력이 1.5배가 된다."
+        "맹화": "HP가 최대 HP의 1/3 이하가 되면 불꽃타입 기술의 위력이 1.5배가 된다.",
+        "선파워": "쾌청 상태일 때 특수공격이 1.5배가 되지만 턴 종료 시 최대 HP의 1/8만큼 HP가 줄어든다."
       },
       "sourceAbilities": [
         {
-          "id": 18,
-          "name": "もらいび"
+          "id": 66,
+          "name": "もうか"
         },
+        {
+          "id": 94,
+          "name": "サンパワー"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0006-00"
+    },
+    "히스이 블레이범": {
+      "sourceId": "0157-01",
+      "height": 1.6,
+      "weight": 69.8,
+      "abilities": [
+        "맹화",
+        "통찰"
+      ],
+      "abilityDescriptions": {
+        "맹화": "HP가 최대 HP의 1/3 이하가 되면 불꽃타입 기술의 위력이 1.5배가 된다.",
+        "통찰": "등장 시 상대가 지니고 있는 도구를 통찰할 수 있다."
+      },
+      "sourceAbilities": [
         {
           "id": 66,
           "name": "もうか"
+        },
+        {
+          "id": 119,
+          "name": "おみとおし"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0157-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0157-01"
     },
     "거대코뿌리": {
       "sourceId": "0464-00",
@@ -6339,30 +6339,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0464-00"
     },
-    "히스이 블레이범": {
-      "sourceId": "0157-01",
-      "height": 1.6,
-      "weight": 69.8,
-      "abilities": [
-        "맹화",
-        "통찰"
-      ],
-      "abilityDescriptions": {
-        "맹화": "HP가 최대 HP의 1/3 이하가 되면 불꽃타입 기술의 위력이 1.5배가 된다.",
-        "통찰": "등장 시 상대가 지니고 있는 도구를 통찰할 수 있다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 66,
-          "name": "もうか"
-        },
-        {
-          "id": 119,
-          "name": "おみとおし"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0157-01"
-    },
     "초염몽": {
       "sourceId": "0392-00",
       "height": 1.2,
@@ -6387,35 +6363,53 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0392-00"
     },
-    "저승갓숭": {
-      "sourceId": "0979-00",
-      "height": 1.2,
-      "weight": 56,
+    "블레이범": {
+      "sourceId": "0157-00",
+      "height": 1.7,
+      "weight": 79.5,
       "abilities": [
-        "정신력",
-        "의기양양",
-        "오기"
+        "타오르는불꽃",
+        "맹화"
       ],
       "abilityDescriptions": {
-        "정신력": "상대의 공격에 풀죽지 않으며 위협의 효과도 받지 않는다.",
-        "의기양양": "잠듦, 졸음 상태가 되지 않는다.",
-        "오기": "상대에 의해 능력이 떨어지면 공격이 2단계 올라간다."
+        "타오르는불꽃": "불꽃타입 기술의 효과를 받지 않으며 자신은 타오르는불꽃 상태가 된다.",
+        "맹화": "HP가 최대 HP의 1/3 이하가 되면 불꽃타입 기술의 위력이 1.5배가 된다."
       },
       "sourceAbilities": [
         {
-          "id": 39,
-          "name": "せいしんりょく"
+          "id": 18,
+          "name": "もらいび"
         },
         {
-          "id": 72,
-          "name": "やるき"
-        },
-        {
-          "id": 128,
-          "name": "まけんき"
+          "id": 66,
+          "name": "もうか"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0979-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0157-00"
+    },
+    "대짱이": {
+      "sourceId": "0260-00",
+      "height": 1.5,
+      "weight": 81.9,
+      "abilities": [
+        "습기",
+        "급류"
+      ],
+      "abilityDescriptions": {
+        "습기": "전원은 폭발 기술을 사용할 수 없고 폭발하는 특성도 발동하지 않는다.",
+        "급류": "HP가 최대 HP의 1/3 이하가 되면 물타입 기술의 위력이 1.5배가 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 6,
+          "name": "しめりけ"
+        },
+        {
+          "id": 67,
+          "name": "げきりゅう"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0260-00"
     },
     "배바닐라": {
       "sourceId": "0584-00",
@@ -6447,30 +6441,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0584-00"
     },
-    "대짱이": {
-      "sourceId": "0260-00",
-      "height": 1.5,
-      "weight": 81.9,
-      "abilities": [
-        "습기",
-        "급류"
-      ],
-      "abilityDescriptions": {
-        "습기": "전원은 폭발 기술을 사용할 수 없고 폭발하는 특성도 발동하지 않는다.",
-        "급류": "HP가 최대 HP의 1/3 이하가 되면 물타입 기술의 위력이 1.5배가 된다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 6,
-          "name": "しめりけ"
-        },
-        {
-          "id": 67,
-          "name": "げきりゅう"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0260-00"
-    },
     "음번": {
       "sourceId": "0715-00",
       "height": 1.5,
@@ -6501,33 +6471,65 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0715-00"
     },
-    "과미드라": {
-      "sourceId": "1019-00",
-      "height": 1.8,
-      "weight": 93,
+    "저승갓숭": {
+      "sourceId": "0979-00",
+      "height": 1.2,
+      "weight": 56,
       "abilities": [
-        "점착",
-        "재생력"
+        "정신력",
+        "의기양양",
+        "오기"
       ],
       "abilityDescriptions": {
-        "점착": "지니고 있는 도구를 상대에게 빼앗기거나 잃어버리지 않는다.",
-        "재생력": "지닌 포켓몬으로 돌아오면 최대 HP의 1/3만큼 회복한다."
+        "정신력": "상대의 공격에 풀죽지 않으며 위협의 효과도 받지 않는다.",
+        "의기양양": "잠듦, 졸음 상태가 되지 않는다.",
+        "오기": "상대에 의해 능력이 떨어지면 공격이 2단계 올라간다."
       },
       "sourceAbilities": [
         {
-          "id": 60,
-          "name": "ねんちゃく"
+          "id": 39,
+          "name": "せいしんりょく"
         },
         {
-          "id": 144,
-          "name": "さいせいりょく"
+          "id": 72,
+          "name": "やるき"
         },
         {
-          "id": 306,
-          "name": "かんろなミツ"
+          "id": 128,
+          "name": "まけんき"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/1019-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0979-00"
+    },
+    "밀로틱": {
+      "sourceId": "0350-00",
+      "height": 6.2,
+      "weight": 162,
+      "abilities": [
+        "헤롱헤롱바디",
+        "이상한비늘",
+        "승기"
+      ],
+      "abilityDescriptions": {
+        "헤롱헤롱바디": "이성으로부터 접촉 기술을 받으면 30% 확률로 상대를 헤롱헤롱 상태로 만든다.",
+        "이상한비늘": "상태 이상일 때 방어가 1.5배가 된다.",
+        "승기": "상대에 의해 능력이 떨어지면 특수공격이 2단계 올라간다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 56,
+          "name": "メロメロボディ"
+        },
+        {
+          "id": 63,
+          "name": "ふしぎなうろこ"
+        },
+        {
+          "id": 172,
+          "name": "かちき"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0350-00"
     },
     "갸라도스": {
       "sourceId": "0130-00",
@@ -6583,35 +6585,33 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0143-00"
     },
-    "밀로틱": {
-      "sourceId": "0350-00",
-      "height": 6.2,
-      "weight": 162,
+    "과미드라": {
+      "sourceId": "1019-00",
+      "height": 1.8,
+      "weight": 93,
       "abilities": [
-        "헤롱헤롱바디",
-        "이상한비늘",
-        "승기"
+        "점착",
+        "재생력"
       ],
       "abilityDescriptions": {
-        "헤롱헤롱바디": "이성으로부터 접촉 기술을 받으면 30% 확률로 상대를 헤롱헤롱 상태로 만든다.",
-        "이상한비늘": "상태 이상일 때 방어가 1.5배가 된다.",
-        "승기": "상대에 의해 능력이 떨어지면 특수공격이 2단계 올라간다."
+        "점착": "지니고 있는 도구를 상대에게 빼앗기거나 잃어버리지 않는다.",
+        "재생력": "지닌 포켓몬으로 돌아오면 최대 HP의 1/3만큼 회복한다."
       },
       "sourceAbilities": [
         {
-          "id": 56,
-          "name": "メロメロボディ"
+          "id": 60,
+          "name": "ねんちゃく"
         },
         {
-          "id": 63,
-          "name": "ふしぎなうろこ"
+          "id": 144,
+          "name": "さいせいりょく"
         },
         {
-          "id": 172,
-          "name": "かちき"
+          "id": 306,
+          "name": "かんろなミツ"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0350-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/1019-00"
     },
     "타부자고": {
       "sourceId": "1000-00",
@@ -6630,36 +6630,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/1000-00"
-    },
-    "대도각참": {
-      "sourceId": "0983-00",
-      "height": 2,
-      "weight": 120,
-      "abilities": [
-        "프레셔",
-        "오기",
-        "총대장"
-      ],
-      "abilityDescriptions": {
-        "프레셔": "자신에게 상대가 사용하는 기술의 PP를 추가로 1 줄인다.",
-        "오기": "상대에 의해 능력이 떨어지면 공격이 2단계 올라간다.",
-        "총대장": "등장 시 배틀 중 쓰러진 지닌 포켓몬 1마리당 기술의 위력이 10%씩 올라간다. 최대 50%까지 올라간다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 46,
-          "name": "プレッシャー"
-        },
-        {
-          "id": 128,
-          "name": "まけんき"
-        },
-        {
-          "id": 293,
-          "name": "そうだいしょう"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0983-00"
     },
     "메가다부니": {
       "sourceId": "0531-01",
@@ -6702,6 +6672,36 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0637-00"
+    },
+    "대도각참": {
+      "sourceId": "0983-00",
+      "height": 2,
+      "weight": 120,
+      "abilities": [
+        "프레셔",
+        "오기",
+        "총대장"
+      ],
+      "abilityDescriptions": {
+        "프레셔": "자신에게 상대가 사용하는 기술의 PP를 추가로 1 줄인다.",
+        "오기": "상대에 의해 능력이 떨어지면 공격이 2단계 올라간다.",
+        "총대장": "등장 시 배틀 중 쓰러진 지닌 포켓몬 1마리당 기술의 위력이 10%씩 올라간다. 최대 50%까지 올라간다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 46,
+          "name": "プレッシャー"
+        },
+        {
+          "id": 128,
+          "name": "まけんき"
+        },
+        {
+          "id": 293,
+          "name": "そうだいしょう"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0983-00"
     },
     "플라엣테(영원의 꽃)": {
       "sourceId": "0670-05",
@@ -6751,24 +6751,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0671-00"
     },
-    "메가다크펫": {
-      "sourceId": "0354-01",
-      "height": 1.2,
-      "weight": 13,
-      "abilities": [
-        "짓궂은마음"
-      ],
-      "abilityDescriptions": {
-        "짓궂은마음": "변화 기술의 우선도가 1단계 올라간다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 158,
-          "name": "いたずらごころ"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0354-01"
-    },
     "메가치렁": {
       "sourceId": "0358-01",
       "height": 1.2,
@@ -6787,23 +6769,23 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0358-01"
     },
-    "메가샤크니아": {
-      "sourceId": "0319-01",
-      "height": 2.5,
-      "weight": 130.3,
+    "메가다크펫": {
+      "sourceId": "0354-01",
+      "height": 1.2,
+      "weight": 13,
       "abilities": [
-        "옹골찬턱"
+        "짓궂은마음"
       ],
       "abilityDescriptions": {
-        "옹골찬턱": "무는 기술의 위력이 1.5배가 된다."
+        "짓궂은마음": "변화 기술의 우선도가 1단계 올라간다."
       },
       "sourceAbilities": [
         {
-          "id": 173,
-          "name": "がんじょうあご"
+          "id": 158,
+          "name": "いたずらごころ"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0319-01"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0354-01"
     },
     "메가폭타": {
       "sourceId": "0323-01",
@@ -6853,6 +6835,24 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0059-01"
     },
+    "메가샤크니아": {
+      "sourceId": "0319-01",
+      "height": 2.5,
+      "weight": 130.3,
+      "abilities": [
+        "옹골찬턱"
+      ],
+      "abilityDescriptions": {
+        "옹골찬턱": "무는 기술의 위력이 1.5배가 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 173,
+          "name": "がんじょうあご"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0319-01"
+    },
     "윈디": {
       "sourceId": "0059-00",
       "height": 1.9,
@@ -6883,23 +6883,23 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0059-00"
     },
-    "메가앱솔": {
-      "sourceId": "0359-01",
-      "height": 1.2,
-      "weight": 49,
+    "메가대여르": {
+      "sourceId": "0870-01",
+      "height": 1.6,
+      "weight": 99,
       "abilities": [
-        "매직미러"
+        "오기"
       ],
       "abilityDescriptions": {
-        "매직미러": "상대의 변화 기술에 효과를 받지 않고 상대에게 되받아친다."
+        "오기": "상대에 의해 능력이 떨어지면 공격이 2단계 올라간다."
       },
       "sourceAbilities": [
         {
-          "id": 156,
-          "name": "マジックミラー"
+          "id": 128,
+          "name": "まけんき"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0359-01"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0870-01"
     },
     "메가냐오닉스": {
       "sourceId": "0678-02",
@@ -6919,24 +6919,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0678-02"
     },
-    "메가대여르": {
-      "sourceId": "0870-01",
-      "height": 1.6,
-      "weight": 99,
-      "abilities": [
-        "오기"
-      ],
-      "abilityDescriptions": {
-        "오기": "상대에 의해 능력이 떨어지면 공격이 2단계 올라간다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 128,
-          "name": "まけんき"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0870-01"
-    },
     "메가무장조": {
       "sourceId": "0227-01",
       "height": 1.7,
@@ -6954,6 +6936,24 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0227-01"
+    },
+    "메가앱솔": {
+      "sourceId": "0359-01",
+      "height": 1.2,
+      "weight": 49,
+      "abilities": [
+        "매직미러"
+      ],
+      "abilityDescriptions": {
+        "매직미러": "상대의 변화 기술에 효과를 받지 않고 상대에게 되받아친다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 156,
+          "name": "マジックミラー"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0359-01"
     },
     "메가눈여아": {
       "sourceId": "0478-01",
@@ -6991,24 +6991,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0740-01"
     },
-    "메가썬더볼트": {
-      "sourceId": "0310-01",
-      "height": 1.8,
-      "weight": 44,
-      "abilities": [
-        "위협"
-      ],
-      "abilityDescriptions": {
-        "위협": "등장 시 상대의 공격을 1단계 떨어뜨린다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 22,
-          "name": "いかく"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0310-01"
-    },
     "메가피죤투": {
       "sourceId": "0018-01",
       "height": 2.2,
@@ -7027,41 +7009,23 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0018-01"
     },
-    "메가골루그": {
-      "sourceId": "0623-01",
-      "height": 4,
-      "weight": 330,
+    "메가썬더볼트": {
+      "sourceId": "0310-01",
+      "height": 1.8,
+      "weight": 44,
       "abilities": [
-        "보이지않는주먹"
+        "위협"
       ],
       "abilityDescriptions": {
-        "보이지않는주먹": "접촉 기술을 사용할 때 상대의 방어 효과를 무시하고 본래 데미지의 1/4만큼 데미지를 준다. 상대의 방어 효과 이외에는 발동된다."
+        "위협": "등장 시 상대의 공격을 1단계 떨어뜨린다."
       },
       "sourceAbilities": [
         {
-          "id": 260,
-          "name": "ふかしのこぶし"
+          "id": 22,
+          "name": "いかく"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0623-01"
-    },
-    "메가칼라마네로": {
-      "sourceId": "0687-01",
-      "height": 2.9,
-      "weight": 69.8,
-      "abilities": [
-        "심술꾸러기"
-      ],
-      "abilityDescriptions": {
-        "심술꾸러기": "능력 변화가 역전해서 올라갈 때는 떨어지고 떨어질 때는 올라간다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 126,
-          "name": "あまのじゃく"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0687-01"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0310-01"
     },
     "메가얼음귀신": {
       "sourceId": "0362-01",
@@ -7081,6 +7045,24 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0362-01"
     },
+    "메가칼라마네로": {
+      "sourceId": "0687-01",
+      "height": 2.9,
+      "weight": 69.8,
+      "abilities": [
+        "심술꾸러기"
+      ],
+      "abilityDescriptions": {
+        "심술꾸러기": "능력 변화가 역전해서 올라갈 때는 떨어지고 떨어질 때는 올라간다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 126,
+          "name": "あまのじゃく"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0687-01"
+    },
     "메가이어롭": {
       "sourceId": "0428-01",
       "height": 1.3,
@@ -7098,6 +7080,24 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0428-01"
+    },
+    "메가골루그": {
+      "sourceId": "0623-01",
+      "height": 4,
+      "weight": 330,
+      "abilities": [
+        "보이지않는주먹"
+      ],
+      "abilityDescriptions": {
+        "보이지않는주먹": "접촉 기술을 사용할 때 상대의 방어 효과를 무시하고 본래 데미지의 1/4만큼 데미지를 준다. 상대의 방어 효과 이외에는 발동된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 260,
+          "name": "ふかしのこぶし"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0623-01"
     },
     "메가픽시": {
       "sourceId": "0036-01",
@@ -7117,23 +7117,23 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0036-01"
     },
-    "메가라이츄Y": {
-      "sourceId": "0026-03",
-      "height": 1,
-      "weight": 26,
+    "메가라이츄X": {
+      "sourceId": "0026-02",
+      "height": 1.2,
+      "weight": 38,
       "abilities": [
-        "노가드"
+        "일렉트릭메이커"
       ],
       "abilityDescriptions": {
-        "노가드": "서로가 사용하는 기술의 명중률이 100%가 된다."
+        "일렉트릭메이커": "등장 시 5턴 동안 전체 필드를 일렉트릭필드 상태로 만든다."
       },
       "sourceAbilities": [
         {
-          "id": 99,
-          "name": "ノーガード"
+          "id": 226,
+          "name": "エレキメイカー"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0026-03"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0026-02"
     },
     "메가찌르호크": {
       "sourceId": "0398-01",
@@ -7153,23 +7153,41 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0398-01"
     },
-    "메가라이츄X": {
-      "sourceId": "0026-02",
-      "height": 1.2,
-      "weight": 38,
+    "메가라이츄Y": {
+      "sourceId": "0026-03",
+      "height": 1,
+      "weight": 26,
       "abilities": [
-        "일렉트릭메이커"
+        "노가드"
       ],
       "abilityDescriptions": {
-        "일렉트릭메이커": "등장 시 5턴 동안 전체 필드를 일렉트릭필드 상태로 만든다."
+        "노가드": "서로가 사용하는 기술의 명중률이 100%가 된다."
       },
       "sourceAbilities": [
         {
-          "id": 226,
-          "name": "エレキメイカー"
+          "id": 99,
+          "name": "ノーガード"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0026-02"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0026-03"
+    },
+    "메가곤율거니": {
+      "sourceId": "0560-01",
+      "height": 1.1,
+      "weight": 31,
+      "abilities": [
+        "위협"
+      ],
+      "abilityDescriptions": {
+        "위협": "등장 시 상대의 공격을 1단계 떨어뜨린다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 22,
+          "name": "いかく"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0560-01"
     },
     "메가펜드라": {
       "sourceId": "0545-01",
@@ -7207,24 +7225,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0780-01"
     },
-    "메가곤율거니": {
-      "sourceId": "0560-01",
-      "height": 1.1,
-      "weight": 31,
-      "abilities": [
-        "위협"
-      ],
-      "abilityDescriptions": {
-        "위협": "등장 시 상대의 공격을 1단계 떨어뜨린다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 22,
-          "name": "いかく"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0560-01"
-    },
     "메가스코빌런": {
       "sourceId": "0952-01",
       "height": 1.2,
@@ -7243,23 +7243,23 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0952-01"
     },
-    "메가파비코리": {
-      "sourceId": "0334-01",
-      "height": 1.5,
-      "weight": 20.6,
+    "메가우츠보트": {
+      "sourceId": "0071-01",
+      "height": 4.5,
+      "weight": 125.5,
       "abilities": [
-        "페어리스킨"
+        "내용물분출"
       ],
       "abilityDescriptions": {
-        "페어리스킨": "노말타입 기술이 페어리타입이 되며 위력이 1.2배가 된다."
+        "내용물분출": "기절할 듯한 기술로 데미지를 입으면 상대에게 받은 그 데미지를 돌려준다."
       },
       "sourceAbilities": [
         {
-          "id": 182,
-          "name": "フェアリースキン"
+          "id": 215,
+          "name": "とびだすなかみ"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0334-01"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0071-01"
     },
     "메가캥카": {
       "sourceId": "0115-01",
@@ -7279,23 +7279,23 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0115-01"
     },
-    "메가우츠보트": {
-      "sourceId": "0071-01",
-      "height": 4.5,
-      "weight": 125.5,
+    "메가파비코리": {
+      "sourceId": "0334-01",
+      "height": 1.5,
+      "weight": 20.6,
       "abilities": [
-        "내용물분출"
+        "페어리스킨"
       ],
       "abilityDescriptions": {
-        "내용물분출": "기절할 듯한 기술로 데미지를 입으면 상대에게 받은 그 데미지를 돌려준다."
+        "페어리스킨": "노말타입 기술이 페어리타입이 되며 위력이 1.2배가 된다."
       },
       "sourceAbilities": [
         {
-          "id": 215,
-          "name": "とびだすなかみ"
+          "id": 182,
+          "name": "フェアリースキン"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0071-01"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0334-01"
     },
     "메가야도란": {
       "sourceId": "0080-01",
@@ -7355,6 +7355,24 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0460-01"
     },
+    "메가드래캄": {
+      "sourceId": "0691-01",
+      "height": 2.1,
+      "weight": 100.3,
+      "abilities": [
+        "재생력"
+      ],
+      "abilityDescriptions": {
+        "재생력": "지닌 포켓몬으로 돌아오면 최대 HP의 1/3만큼 회복한다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 144,
+          "name": "さいせいりょく"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0691-01"
+    },
     "드래펄트": {
       "sourceId": "0887-00",
       "height": 3,
@@ -7384,24 +7402,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0887-00"
-    },
-    "메가드래캄": {
-      "sourceId": "0691-01",
-      "height": 2.1,
-      "weight": 100.3,
-      "abilities": [
-        "재생력"
-      ],
-      "abilityDescriptions": {
-        "재생력": "지닌 포켓몬으로 돌아오면 최대 HP의 1/3만큼 회복한다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 144,
-          "name": "さいせいりょく"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0691-01"
     },
     "메가거북손데스": {
       "sourceId": "0689-01",
@@ -7439,30 +7439,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0701-01"
     },
-    "망나뇽": {
-      "sourceId": "0149-00",
-      "height": 2.2,
-      "weight": 210,
-      "abilities": [
-        "정신력",
-        "멀티스케일"
-      ],
-      "abilityDescriptions": {
-        "정신력": "상대의 공격에 풀죽지 않으며 위협의 효과도 받지 않는다.",
-        "멀티스케일": "HP가 꽉 찼을 때 입는 데미지가 반감된다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 39,
-          "name": "せいしんりょく"
-        },
-        {
-          "id": 136,
-          "name": "マルチスケイル"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0149-00"
-    },
     "마기라스": {
       "sourceId": "0248-00",
       "height": 2,
@@ -7487,23 +7463,47 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0248-00"
     },
-    "메가팬텀": {
-      "sourceId": "0094-01",
-      "height": 1.4,
-      "weight": 40.5,
+    "망나뇽": {
+      "sourceId": "0149-00",
+      "height": 2.2,
+      "weight": 210,
       "abilities": [
-        "그림자밟기"
+        "정신력",
+        "멀티스케일"
       ],
       "abilityDescriptions": {
-        "그림자밟기": "상대는 교체할 수 없게 된다."
+        "정신력": "상대의 공격에 풀죽지 않으며 위협의 효과도 받지 않는다.",
+        "멀티스케일": "HP가 꽉 찼을 때 입는 데미지가 반감된다."
       },
       "sourceAbilities": [
         {
-          "id": 23,
-          "name": "かげふみ"
+          "id": 39,
+          "name": "せいしんりょく"
+        },
+        {
+          "id": 136,
+          "name": "マルチスケイル"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0094-01"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0149-00"
+    },
+    "메가쁘사이저": {
+      "sourceId": "0127-01",
+      "height": 1.7,
+      "weight": 59,
+      "abilities": [
+        "스카이스킨"
+      ],
+      "abilityDescriptions": {
+        "스카이스킨": "노말타입 기술이 비행타입이 되며 위력이 1.2배가 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 184,
+          "name": "スカイスキン"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0127-01"
     },
     "메가핫삼": {
       "sourceId": "0212-01",
@@ -7523,6 +7523,24 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0212-01"
     },
+    "메가팬텀": {
+      "sourceId": "0094-01",
+      "height": 1.4,
+      "weight": 40.5,
+      "abilities": [
+        "그림자밟기"
+      ],
+      "abilityDescriptions": {
+        "그림자밟기": "상대는 교체할 수 없게 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 23,
+          "name": "かげふみ"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0094-01"
+    },
     "메가헤라크로스": {
       "sourceId": "0214-01",
       "height": 1.7,
@@ -7541,23 +7559,23 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0214-01"
     },
-    "메가쁘사이저": {
-      "sourceId": "0127-01",
-      "height": 1.7,
-      "weight": 59,
+    "메가후딘": {
+      "sourceId": "0065-01",
+      "height": 1.2,
+      "weight": 48,
       "abilities": [
-        "스카이스킨"
+        "트레이스"
       ],
       "abilityDescriptions": {
-        "스카이스킨": "노말타입 기술이 비행타입이 되며 위력이 1.2배가 된다."
+        "트레이스": "등장 시 상대의 특성과 같은 특성이 된다."
       },
       "sourceAbilities": [
         {
-          "id": 184,
-          "name": "スカイスキン"
+          "id": 36,
+          "name": "トレース"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0127-01"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0065-01"
     },
     "메타그로스": {
       "sourceId": "0376-00",
@@ -7631,78 +7649,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0229-01"
     },
-    "메가후딘": {
-      "sourceId": "0065-01",
-      "height": 1.2,
-      "weight": 48,
-      "abilities": [
-        "트레이스"
-      ],
-      "abilityDescriptions": {
-        "트레이스": "등장 시 상대의 특성과 같은 특성이 된다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 36,
-          "name": "トレース"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0065-01"
-    },
-    "보만다": {
-      "sourceId": "0373-00",
-      "height": 1.5,
-      "weight": 102.6,
-      "abilities": [
-        "위협",
-        "자기과신"
-      ],
-      "abilityDescriptions": {
-        "위협": "등장 시 상대의 공격을 1단계 떨어뜨린다.",
-        "자기과신": "공격으로 상대를 쓰러뜨리면 공격이 1단계 올라간다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 22,
-          "name": "いかく"
-        },
-        {
-          "id": 153,
-          "name": "じしんかじょう"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0373-00"
-    },
-    "짜랑고우거": {
-      "sourceId": "0784-00",
-      "height": 1.6,
-      "weight": 78.2,
-      "abilities": [
-        "방음",
-        "방진",
-        "방탄"
-      ],
-      "abilityDescriptions": {
-        "방음": "소리 기술의 효과를 받지 않는다.",
-        "방진": "모래바람 상태의 데미지를 입지 않는다. 가루 기술이나 특성의 효과도 받지 않는다.",
-        "방탄": "구슬/폭탄 기술의 효과를 받지 않는다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 43,
-          "name": "ぼうおん"
-        },
-        {
-          "id": 142,
-          "name": "ぼうじん"
-        },
-        {
-          "id": 171,
-          "name": "ぼうだん"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0784-00"
-    },
     "브리두라스": {
       "sourceId": "1018-00",
       "height": 2,
@@ -7751,6 +7697,84 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0635-00"
     },
+    "짜랑고우거": {
+      "sourceId": "0784-00",
+      "height": 1.6,
+      "weight": 78.2,
+      "abilities": [
+        "방음",
+        "방진",
+        "방탄"
+      ],
+      "abilityDescriptions": {
+        "방음": "소리 기술의 효과를 받지 않는다.",
+        "방진": "모래바람 상태의 데미지를 입지 않는다. 가루 기술이나 특성의 효과도 받지 않는다.",
+        "방탄": "구슬/폭탄 기술의 효과를 받지 않는다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 43,
+          "name": "ぼうおん"
+        },
+        {
+          "id": 142,
+          "name": "ぼうじん"
+        },
+        {
+          "id": 171,
+          "name": "ぼうだん"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0784-00"
+    },
+    "보만다": {
+      "sourceId": "0373-00",
+      "height": 1.5,
+      "weight": 102.6,
+      "abilities": [
+        "위협",
+        "자기과신"
+      ],
+      "abilityDescriptions": {
+        "위협": "등장 시 상대의 공격을 1단계 떨어뜨린다.",
+        "자기과신": "공격으로 상대를 쓰러뜨리면 공격이 1단계 올라간다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 22,
+          "name": "いかく"
+        },
+        {
+          "id": 153,
+          "name": "じしんかじょう"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0373-00"
+    },
+    "한카리아스": {
+      "sourceId": "0445-00",
+      "height": 1.9,
+      "weight": 95,
+      "abilities": [
+        "모래숨기",
+        "까칠한피부"
+      ],
+      "abilityDescriptions": {
+        "모래숨기": "모래바람 상태일 때 회피율이 1.25배가 된다.",
+        "까칠한피부": "접촉 기술을 받으면 상대 최대 HP의 1/8만큼 데미지를 준다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 8,
+          "name": "すながくれ"
+        },
+        {
+          "id": 24,
+          "name": "さめはだ"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0445-00"
+    },
     "메가화염레오": {
       "sourceId": "0668-02",
       "height": 1.5,
@@ -7768,6 +7792,24 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0668-02"
+    },
+    "메가몰드류": {
+      "sourceId": "0530-01",
+      "height": 0.9,
+      "weight": 60,
+      "abilities": [
+        "관통드릴"
+      ],
+      "abilityDescriptions": {
+        "관통드릴": "접촉 기술을 사용할 때 상대의 방어 효과를 무시하고 본래 데미지의 1/4만큼 데미지를 준다. 상대의 방어 효과 이외에는 발동된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 313,
+          "name": "かんつうドリル"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0530-01"
     },
     "히스이 미끄래곤": {
       "sourceId": "0706-01",
@@ -7799,47 +7841,23 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0706-01"
     },
-    "메가몰드류": {
-      "sourceId": "0530-01",
-      "height": 0.9,
-      "weight": 60,
+    "메가저리더프": {
+      "sourceId": "0604-01",
+      "height": 3,
+      "weight": 180,
       "abilities": [
-        "불꽃의갈기"
+        "천정부지"
       ],
       "abilityDescriptions": {
-        "불꽃의갈기": "불꽃타입 기술의 위력이 1.5배가 된다."
+        "천정부지": "땅 위에 있지 않게 되어 땅타입 기술, 압정뿌리기, 독압정, 끈적끈적네트 상태의 효과를 받지 않는다. 공격으로 상대를 쓰러뜨리면 자신의 가장 높은 능력이 1단계 올라간다."
       },
       "sourceAbilities": [
         {
-          "id": 313,
-          "name": "かんつうドリル"
+          "id": 315,
+          "name": "うなぎのぼり"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0530-01"
-    },
-    "한카리아스": {
-      "sourceId": "0445-00",
-      "height": 1.9,
-      "weight": 95,
-      "abilities": [
-        "모래숨기",
-        "까칠한피부"
-      ],
-      "abilityDescriptions": {
-        "모래숨기": "모래바람 상태일 때 회피율이 1.25배가 된다.",
-        "까칠한피부": "접촉 기술을 받으면 상대 최대 HP의 1/8만큼 데미지를 준다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 8,
-          "name": "すながくれ"
-        },
-        {
-          "id": 24,
-          "name": "さめはだ"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0445-00"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0604-01"
     },
     "메가강철톤": {
       "sourceId": "0208-01",
@@ -7859,42 +7877,6 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0208-01"
     },
-    "메가프테라": {
-      "sourceId": "0142-01",
-      "height": 2.1,
-      "weight": 79,
-      "abilities": [
-        "단단한발톱"
-      ],
-      "abilityDescriptions": {
-        "단단한발톱": "접촉 기술의 위력이 1.3배가 된다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 181,
-          "name": "かたいツメ"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0142-01"
-    },
-    "메가저리더프": {
-      "sourceId": "0604-01",
-      "height": 3,
-      "weight": 180,
-      "abilities": [
-        "천정부지"
-      ],
-      "abilityDescriptions": {
-        "천정부지": "땅 위에 있지 않게 되어 땅타입 기술, 압정뿌리기, 독압정, 끈적끈적네트 상태의 효과를 받지 않는다. 공격으로 상대를 쓰러뜨리면 자신의 가장 높은 능력이 1단계 올라간다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 315,
-          "name": "うなぎのぼり"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0604-01"
-    },
     "메가전룡": {
       "sourceId": "0181-01",
       "height": 1.4,
@@ -7913,23 +7895,41 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0181-01"
     },
-    "메가엘레이드": {
-      "sourceId": "0475-01",
-      "height": 1.6,
-      "weight": 56.4,
+    "메가프테라": {
+      "sourceId": "0142-01",
+      "height": 2.1,
+      "weight": 79,
       "abilities": [
-        "정신력"
+        "단단한발톱"
       ],
       "abilityDescriptions": {
-        "정신력": "상대의 공격에 풀죽지 않으며 위협의 효과도 받지 않는다."
+        "단단한발톱": "접촉 기술의 위력이 1.3배가 된다."
       },
       "sourceAbilities": [
         {
-          "id": 39,
-          "name": "せいしんりょく"
+          "id": 181,
+          "name": "かたいツメ"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0475-01"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0142-01"
+    },
+    "메가가디안": {
+      "sourceId": "0282-01",
+      "height": 1.6,
+      "weight": 48.4,
+      "abilities": [
+        "페어리스킨"
+      ],
+      "abilityDescriptions": {
+        "페어리스킨": "노말타입 기술이 페어리타입이 되며 위력이 1.2배가 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 182,
+          "name": "フェアリースキン"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0282-01"
     },
     "메가샹델라": {
       "sourceId": "0609-01",
@@ -7967,41 +7967,23 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0121-01"
     },
-    "메가가디안": {
-      "sourceId": "0282-01",
+    "메가엘레이드": {
+      "sourceId": "0475-01",
       "height": 1.6,
-      "weight": 48.4,
+      "weight": 56.4,
       "abilities": [
-        "페어리스킨"
+        "정신력"
       ],
       "abilityDescriptions": {
-        "페어리스킨": "노말타입 기술이 페어리타입이 되며 위력이 1.2배가 된다."
+        "정신력": "상대의 공격에 풀죽지 않으며 위협의 효과도 받지 않는다."
       },
       "sourceAbilities": [
         {
-          "id": 182,
-          "name": "フェアリースキン"
+          "id": 39,
+          "name": "せいしんりょく"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0282-01"
-    },
-    "메가메가니움": {
-      "sourceId": "0154-01",
-      "height": 2.4,
-      "weight": 201,
-      "abilities": [
-        "하바네로분출"
-      ],
-      "abilityDescriptions": {
-        "하바네로분출": "기술로 데미지를 입으면 상대를 화상 상태로 만든다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 311,
-          "name": "メガソーラー"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0154-01"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0475-01"
     },
     "메가이상해꽃": {
       "sourceId": "0003-01",
@@ -8020,6 +8002,24 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0003-01"
+    },
+    "메가메가니움": {
+      "sourceId": "0154-01",
+      "height": 2.4,
+      "weight": 201,
+      "abilities": [
+        "하바네로분출"
+      ],
+      "abilityDescriptions": {
+        "하바네로분출": "기술로 데미지를 입으면 상대를 화상 상태로 만든다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 311,
+          "name": "メガソーラー"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0154-01"
     },
     "메가킬라플로르": {
       "sourceId": "0970-01",
@@ -8075,6 +8075,24 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0500-01"
     },
+    "메가나무킹": {
+      "sourceId": "0254-01",
+      "height": 1.9,
+      "weight": 55.2,
+      "abilities": [
+        "피뢰침"
+      ],
+      "abilityDescriptions": {
+        "피뢰침": "전기타입 기술을 자신에게 끌어모은다. 그 기술의 효과를 받지 않고 특수공격이 1단계 올라간다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 31,
+          "name": "ひらいしん"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0254-01"
+    },
     "메가거북왕": {
       "sourceId": "0009-01",
       "height": 1.6,
@@ -8110,42 +8128,6 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0658-03"
-    },
-    "메가나무킹": {
-      "sourceId": "0254-01",
-      "height": 1.9,
-      "weight": 55.2,
-      "abilities": [
-        "피뢰침"
-      ],
-      "abilityDescriptions": {
-        "피뢰침": "전기타입 기술을 자신에게 끌어모은다. 그 기술의 효과를 받지 않고 특수공격이 1단계 올라간다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 31,
-          "name": "ひらいしん"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0254-01"
-    },
-    "메가브리가론": {
-      "sourceId": "0652-01",
-      "height": 1.6,
-      "weight": 90,
-      "abilities": [
-        "방탄"
-      ],
-      "abilityDescriptions": {
-        "방탄": "구슬/폭탄 기술의 효과를 받지 않는다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 171,
-          "name": "ぼうだん"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0652-01"
     },
     "메가장크로다일": {
       "sourceId": "0160-01",
@@ -8201,41 +8183,23 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0257-01"
     },
-    "메가리자몽Y": {
-      "sourceId": "0006-02",
-      "height": 1.7,
-      "weight": 100.5,
+    "메가브리가론": {
+      "sourceId": "0652-01",
+      "height": 1.6,
+      "weight": 90,
       "abilities": [
-        "가뭄"
+        "방탄"
       ],
       "abilityDescriptions": {
-        "가뭄": "등장 시 5턴 동안 쾌청 상태로 만든다."
+        "방탄": "구슬/폭탄 기술의 효과를 받지 않는다."
       },
       "sourceAbilities": [
         {
-          "id": 70,
-          "name": "ひでり"
+          "id": 171,
+          "name": "ぼうだん"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0006-02"
-    },
-    "메가마폭시": {
-      "sourceId": "0655-01",
-      "height": 1.5,
-      "weight": 39,
-      "abilities": [
-        "부유"
-      ],
-      "abilityDescriptions": {
-        "부유": "땅 위에 있지 않게 되어 땅타입 기술, 압정뿌리기, 독압정, 끈적끈적네트 상태의 효과를 받지 않는다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 26,
-          "name": "ふゆう"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0655-01"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0652-01"
     },
     "메가대짱이": {
       "sourceId": "0260-01",
@@ -8255,6 +8219,24 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0260-01"
     },
+    "메가마폭시": {
+      "sourceId": "0655-01",
+      "height": 1.5,
+      "weight": 39,
+      "abilities": [
+        "부유"
+      ],
+      "abilityDescriptions": {
+        "부유": "땅 위에 있지 않게 되어 땅타입 기술, 압정뿌리기, 독압정, 끈적끈적네트 상태의 효과를 받지 않는다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 26,
+          "name": "ふゆう"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0655-01"
+    },
     "메가리자몽X": {
       "sourceId": "0006-01",
       "height": 1.7,
@@ -8273,23 +8255,41 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0006-01"
     },
-    "메가마기라스": {
-      "sourceId": "0248-01",
-      "height": 2.5,
-      "weight": 255,
+    "메가리자몽Y": {
+      "sourceId": "0006-02",
+      "height": 1.7,
+      "weight": 100.5,
       "abilities": [
-        "모래날림"
+        "가뭄"
       ],
       "abilityDescriptions": {
-        "모래날림": "등장 시 5턴 동안 모래바람 상태로 만든다."
+        "가뭄": "등장 시 5턴 동안 쾌청 상태로 만든다."
       },
       "sourceAbilities": [
         {
-          "id": 45,
-          "name": "すなおこし"
+          "id": 70,
+          "name": "ひでり"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0248-01"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0006-02"
+    },
+    "메가플라엣테": {
+      "sourceId": "0670-06",
+      "height": 0.2,
+      "weight": 100.8,
+      "abilities": [
+        "페어리오라"
+      ],
+      "abilityDescriptions": {
+        "페어리오라": "전원의 페어리타입 기술의 위력이 1.33배가 된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 187,
+          "name": "フェアリーオーラ"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0670-06"
     },
     "돌핀맨(마이티폼)": {
       "sourceId": "0964-01",
@@ -8327,59 +8327,23 @@
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0130-01"
     },
-    "메가플라엣테": {
-      "sourceId": "0670-06",
-      "height": 0.2,
-      "weight": 100.8,
+    "메가마기라스": {
+      "sourceId": "0248-01",
+      "height": 2.5,
+      "weight": 255,
       "abilities": [
-        "페어리오라"
+        "모래날림"
       ],
       "abilityDescriptions": {
-        "페어리오라": "전원의 페어리타입 기술의 위력이 1.33배가 된다."
+        "모래날림": "등장 시 5턴 동안 모래바람 상태로 만든다."
       },
       "sourceAbilities": [
         {
-          "id": 187,
-          "name": "フェアリーオーラ"
+          "id": 45,
+          "name": "すなおこし"
         }
       ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0670-06"
-    },
-    "메가망나뇽": {
-      "sourceId": "0149-01",
-      "height": 2.2,
-      "weight": 290,
-      "abilities": [
-        "멀티스케일"
-      ],
-      "abilityDescriptions": {
-        "멀티스케일": "HP가 꽉 찼을 때 입는 데미지가 반감된다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 136,
-          "name": "マルチスケイル"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0149-01"
-    },
-    "메가한카리아스Z": {
-      "sourceId": "0445-02",
-      "height": 1.9,
-      "weight": 99,
-      "abilities": [
-        "부유"
-      ],
-      "abilityDescriptions": {
-        "부유": "땅 위에 있지 않게 되어 땅타입 기술, 압정뿌리기, 독압정, 끈적끈적네트 상태의 효과를 받지 않는다."
-      },
-      "sourceAbilities": [
-        {
-          "id": 26,
-          "name": "ふゆう"
-        }
-      ],
-      "source": "https://champs.pokedb.tokyo/pokemon/show/0445-02"
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0248-01"
     },
     "메가메타그로스": {
       "sourceId": "0376-01",
@@ -8416,6 +8380,42 @@
         }
       ],
       "source": "https://champs.pokedb.tokyo/pokemon/show/0445-01"
+    },
+    "메가한카리아스Z": {
+      "sourceId": "0445-02",
+      "height": 1.9,
+      "weight": 99,
+      "abilities": [
+        "부유"
+      ],
+      "abilityDescriptions": {
+        "부유": "땅 위에 있지 않게 되어 땅타입 기술, 압정뿌리기, 독압정, 끈적끈적네트 상태의 효과를 받지 않는다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 26,
+          "name": "ふゆう"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0445-02"
+    },
+    "메가망나뇽": {
+      "sourceId": "0149-01",
+      "height": 2.2,
+      "weight": 290,
+      "abilities": [
+        "멀티스케일"
+      ],
+      "abilityDescriptions": {
+        "멀티스케일": "HP가 꽉 찼을 때 입는 데미지가 반감된다."
+      },
+      "sourceAbilities": [
+        {
+          "id": 136,
+          "name": "マルチスケイル"
+        }
+      ],
+      "source": "https://champs.pokedb.tokyo/pokemon/show/0149-01"
     }
   },
   "failures": []

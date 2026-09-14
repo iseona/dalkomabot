@@ -4,6 +4,7 @@ const root=new URL('../',import.meta.url),data=JSON.parse(await fs.readFile(new 
 const abilityByEnglish=new Map(data.master.abilities.map(row=>[slug(row[1]),row[0]]));
 const abilityDescription=new Map(data.master.abilities.map(row=>[row[0],row[2]]));
 const abilityOverrides=new Map([
+  [313,['관통드릴','접촉 기술을 사용할 때 상대의 방어 효과를 무시하고 본래 데미지의 1/4만큼 데미지를 준다. 상대의 방어 효과 이외에는 발동된다.']],
   [194,['위기회피','HP가 절반 이하가 되면 배틀에서 물러난다.']],
   [314,['하바네로분출','기술로 데미지를 입으면 상대를 화상 상태로 만든다.']],
   [315,['천정부지','땅타입 기술을 받지 않으며, 상대를 쓰러뜨리면 가장 높은 능력이 1랭크 오른다.']],
@@ -24,7 +25,7 @@ async function fetchOne([name,id]){
     if(!match)throw Error('basis payload not found');
     const payload=JSON.parse(decode(match[1])),form=payload.forms?.[id]||Object.values(payload.forms||{}).find(value=>value.pokemon_key===id);
     if(!form)throw Error('form not found');
-    const resolved=(form.abilities||[]).map(value=>{const id=Number(value.ability_key),known=abilityById.get(id),override=abilityOverrides.get(id),ability=known||override?.[0];return ability?{name:ability,description:abilityDescription.get(ability)||override?.[1]||null}:null}).filter(Boolean);
+    const resolved=(form.abilities||[]).map(value=>{const id=Number(value.ability_key),known=abilityById.get(id),override=abilityOverrides.get(id),ability=override?.[0]||known;return ability?{name:ability,description:abilityDescription.get(ability)||override?.[1]||null}:null}).filter(Boolean);
     details[name]={sourceId:id,height:Number.isFinite(form.height)?form.height:null,weight:Number.isFinite(form.weight)?form.weight:null,abilities:resolved.map(value=>value.name),abilityDescriptions:Object.fromEntries(resolved.map(value=>[value.name,value.description])),sourceAbilities:(form.abilities||[]).map(value=>({id:Number(value.ability_key),name:value.name})),source:`https://champs.pokedb.tokyo/pokemon/show/${id}`};
   }catch(error){failures.push({name,id,error:error.message})}
 }
