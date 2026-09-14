@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 template=json.loads((ROOT/'aws/template.json').read_text())
 collector_policy=json.dumps(template['Resources']['CollectorRole']['Properties']['Policies'],sort_keys=True)
-assert 's3:GetObject' in collector_policy and '${SiteBucket.Arn}/seasons/*' in collector_policy
+assert 's3:GetObject' in collector_policy and 's3:ListBucket' in collector_policy and '${SiteBucket.Arn}/seasons/*' in collector_policy
 class Response:
  def __init__(self,data,url):self.data=data;self.url=url
  def __enter__(self):return self

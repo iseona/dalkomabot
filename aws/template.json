@@ -210,6 +210,21 @@
                 },
                 {
                   "Effect": "Allow",
+                  "Action": "s3:ListBucket",
+                  "Resource": {
+                    "Fn::GetAtt": [
+                      "SiteBucket",
+                      "Arn"
+                    ]
+                  },
+                  "Condition": {
+                    "StringLike": {
+                      "s3:prefix": "seasons/*"
+                    }
+                  }
+                },
+                {
+                  "Effect": "Allow",
                   "Action": [
                     "logs:CreateLogGroup",
                     "logs:CreateLogStream",
