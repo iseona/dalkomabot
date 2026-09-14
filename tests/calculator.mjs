@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {battleCalculation,makeSet} from '../dist/engine.mjs';
+import {resolveMegaForm} from '../dist/mega-classification.mjs';
 
 const data=JSON.parse(fs.readFileSync(new URL('../dist/data.json',import.meta.url)));
 const attacker=data.modes.single.find(p=>p.name==='달코퀸');
@@ -17,4 +18,13 @@ assert.deepEqual(adjusted.singleHitDamage,base.damage);
 for(const bad of [{hits:0},{hits:11},{hits:1.5},{defenderHpPercent:0},{defenderHpPercent:101}])assert.equal(battleCalculation(attacker,defender,makeSet(attacker),move,[0,0,0,0,0,0],data.master,bad),null);
 const ui=fs.readFileSync(new URL('../dist/calculator.mjs',import.meta.url),'utf8');
 for(const marker of ['calcSwap','calcHpPercent','calcHits','전체 공격 기술','calcAtkSummary','calcDefSummary'])assert(ui.includes(marker),marker);
+const charizard=data.modes.single.find(p=>p.name==='리자몽');
+const megaX=resolveMegaForm(charizard,'리자몽나이트X',data.master),megaY=resolveMegaForm(charizard,'리자몽나이트Y',data.master);
+assert.equal(megaX.formName,'메가리자몽X');assert.deepEqual(megaX.types,['불꽃','드래곤']);assert.deepEqual(megaX.formStats,[78,130,111,130,85,100]);
+assert.equal(megaY.formName,'메가리자몽Y');assert.deepEqual(megaY.types,['불꽃','비행']);assert.deepEqual(megaY.formStats,[78,104,78,159,115,100]);
+assert.equal(megaX.ability,null);assert.match(megaX.abilityReason,/적용하지 않습니다/);
+assert.equal(resolveMegaForm(charizard,'가디안나이트',data.master).ok,false);
+const normalMove=data.master.moves.find(m=>m[0]==='화염방사'),target=data.modes.single.find(p=>p.name==='블래키'),normal=battleCalculation(charizard,target,{...makeSet(charizard),abilities:'',items:''},normalMove,[0,0,0,0,0,0],data.master),mega=battleCalculation({...charizard,name:megaY.formName,types:megaY.types},target,{...makeSet(charizard),abilities:'',items:''},normalMove,[0,0,0,0,0,0],data.master);
+assert(mega.attackerStats[3]>normal.attackerStats[3]);assert(mega.damage[0]>normal.damage[0]);
+for(const marker of ['calcAtkMega','calcDefMega','resolveMegaForm','메가 특성 미확인','폼 적용'])assert(ui.includes(marker),marker);
 console.log('PASS: calculator HP, fixed-hit validation, full move picker, summaries, and swap controls.');
