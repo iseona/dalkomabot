@@ -38,7 +38,10 @@ export async function handler(event){
   try{
    const options=it.data?.options||[],mode=options.find(x=>x.name==='모드')?.value||'single',rows=D.modes[mode]||D.modes.single;
    const focused=options.find(x=>x.focused),query=String(focused?.value||'').trim();let choices=[];
-   if(it.data.name==='계산기'&&focused?.name==='기술'){
+   if(focused?.name==='공격도구'||focused?.name==='방어도구'){
+    const optionName=focused.name==='공격도구'?'공격포켓몬':'방어포켓몬',pokemon=rows.find(p=>p.name===options.find(x=>x.name===optionName)?.value),prefix=pokemon?.name;
+    choices=(D.master.items||[]).filter(item=>prefix&&new RegExp('^'+prefix+'(?:이|가) 메가진화할 수 있게 되는 도구').test(String(item[2]||''))).filter(item=>!query||item[0].includes(query)).slice(0,25).map(item=>({name:item[0],value:item[0]}));
+   }else if(it.data.name==='계산기'&&focused?.name==='기술'){
     const attacker=rows.find(p=>p.name===options.find(x=>x.name==='공격포켓몬')?.value);
     choices=(attacker?.moves||[]).map(x=>{const m=D.master.moves.find(m=>m[0]===x.name);return m&&m[3]!=='변화'&&Number(m[4])>0?{move:m,rate:x.rate}:null}).filter(Boolean).filter(x=>!query||x.move[0].includes(query)).slice(0,25).map(x=>({name:`${x.move[0]} · ${koreanType[x.move[2]]||x.move[2]} · 위력 ${x.move[4]} · ${x.rate}%`,value:x.move[0]}));
    }else choices=rows.filter(p=>!query||p.name.includes(query)).slice(0,25).map(p=>({name:`${p.name} · ${p.rank}위 · 공개파티 ${openRate(mode,p.name)}%`,value:p.name}));
@@ -73,13 +76,13 @@ export async function handler(event){
   const attacker=rows.find(p=>p.name===opt['공격포켓몬']),defender=rows.find(p=>p.name===opt['방어포켓몬']),move=D.master.moves.find(m=>m[0]===opt['기술']);
   if(!attacker||!defender)return reply('공격·방어 포켓몬을 자동완성 후보에서 선택해 주세요.');
   if(!move||!attacker.moves.some(x=>x.name===move[0])||move[3]==='변화'||Number(move[4])<=0)return reply('공격 포켓몬의 통계에 등재된 공격 기술을 자동완성 후보에서 선택해 주세요.');
-  const set=makeSet(attacker),bulk={zero:[0,0,0,0,0,0],hp:[32,0,0,0,0,0],physical:[32,0,32,0,0,0],special:[32,0,0,0,32,0]},bulkLabel={zero:'H0 · B/D0',hp:'H32 · B/D0',physical:'H32 · B32',special:'H32 · D32'},bulkKey=opt['방어배분']||'zero',calc=battleCalculation(attacker,defender,set,move,bulk[bulkKey]||bulk.zero,D.master);
+  const set=makeSet(attacker);if(opt['공격도구'])set.items=opt['공격도구'];const bulk={zero:[0,0,0,0,0,0],hp:[32,0,0,0,0,0],physical:[32,0,32,0,0,0],special:[32,0,0,0,32,0]},bulkLabel={zero:'H0 · B/D0',hp:'H32 · B/D0',physical:'H32 · B32',special:'H32 · D32'},bulkKey=opt['방어배분']||'zero',calc=battleCalculation(attacker,defender,set,move,bulk[bulkKey]||bulk.zero,D.master);
   if(!calc)return reply('현재 챔피언스 데이터로 계산할 수 없는 조합입니다.');
   const r=calc.result,stats=x=>`H${x[0]} A${x[1]} B${x[2]} C${x[3]} D${x[4]} S${x[5]}`;
   return reply(evidence+`**${attacker.name} → ${defender.name}**\n${calc.mega?`적용 메가폼: **${calc.mega.name}** (${calc.mega.types.join('/')}) · 메가 특성 자료 미등재\n`:''}**${move[0]}** · ${calc.type} · ${calc.category} · 위력 ${move[4]}\n데미지 **${r.min}~${r.max} (${r.minPct}~${r.maxPct}%)** · **${r.label}**\n자속 ×${calc.stab} · 타입상성 ×${calc.typeMultiplier} · 도구 ×${calc.itemMultiplier} · 특성 ×${calc.abilityMultiplier}\n\n**공격 세팅(각 항목 통계 1위 조합)**\n${set.items||'도구 없음'} / ${calc.mega?'메가 특성 미반영':set.abilities||'특성 없음'} / ${set.natures||'성격 없음'}\n${evText(set.evs)} · ${stats(calc.attackerStats)}\n결정력 지수 ${calc.powerIndex.toLocaleString()} · 물리내구 ${calc.physicalBulk.toLocaleString()} · 특수내구 ${calc.specialBulk.toLocaleString()} · 스피드 ${calc.speed}\n\n**방어 기준** ${bulkLabel[bulkKey]||bulkLabel.zero} · 무보정 성격\n${stats(calc.defenderStats)}\n86~100의 15난수 기준. 명중률·급소·날씨·필드·랭크·벽·조건부 효과·연속기 횟수·가변 위력·더블 광역 보정은 제외합니다.`);
  }
  if(it.data.name==='결정력계산기'){
-  const attacker=rows.find(p=>p.name===opt['공격포켓몬']),defender=rows.find(p=>p.name===opt['방어포켓몬']);if(!attacker||!defender)return reply('공격·방어 포켓몬을 자동완성 후보에서 선택해 주세요.');const set=makeSet(attacker),best=strongestStatMove(attacker,defender,set,D.master);if(!best)return reply('채용률 상위 4개 기술에서 계산 가능한 공격기를 찾지 못했습니다.');const lines=damageScenarioResults(attacker,defender,set,best.move,D.master).map(({label,calc})=>{const r=calc.result;return `**${label}** — ${r.min}~${r.max} (${r.minPct}~${r.maxPct}%) · ${r.label}`});
+  const attacker=rows.find(p=>p.name===opt['공격포켓몬']),defender=rows.find(p=>p.name===opt['방어포켓몬']);if(!attacker||!defender)return reply('공격·방어 포켓몬을 자동완성 후보에서 선택해 주세요.');const set=makeSet(attacker);if(opt['공격도구'])set.items=opt['공격도구'];const best=strongestStatMove(attacker,defender,set,D.master);if(!best)return reply('채용률 상위 4개 기술에서 계산 가능한 공격기를 찾지 못했습니다.');const lines=damageScenarioResults(attacker,defender,set,best.move,D.master).map(({label,calc})=>{const r=calc.result;return `**${label}** — ${r.min}~${r.max} (${r.minPct}~${r.maxPct}%) · ${r.label}`});
   return reply(evidence+`**${attacker.name} → ${defender.name} 결정력 비교**\n${best.calc.mega?`적용 메가폼: **${best.calc.mega.name}** (${best.calc.mega.types.join('/')}) · 메가 특성 자료 미등재\n`:''}선택 기술: **${best.move[0]}** · 채용률 ${best.rate}% · ${best.calc.type}/${best.calc.category} · 위력 ${best.move[4]}\n자속 ×${best.calc.stab} · 타입상성 ×${best.calc.typeMultiplier}\n공격 세팅: ${set.items||'도구 없음'} / ${best.calc.mega?'메가 특성 미반영':set.abilities||'특성 없음'} / ${set.natures||'성격 없음'} / ${evText(set.evs)}\n\n${lines.join('\n')}\n\n채용률 상위 4개 기술 중 대상에게 최대 피해를 주는 공격기를 사용합니다. 방어 성격은 무보정이며 86~100의 15난수 기준입니다. 조건부 효과·연속기 횟수·가변 위력 등은 제외합니다.`);
  }
  if(it.data.name==='스피드계산기'){

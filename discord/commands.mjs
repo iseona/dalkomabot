@@ -11,12 +11,14 @@ export const commands=[
   {type:3,name:'공격포켓몬',description:'공격하는 포켓몬',required:true,autocomplete:true},
   {type:3,name:'방어포켓몬',description:'공격받는 포켓몬',required:true,autocomplete:true},
   {type:3,name:'기술',description:'공격 포켓몬의 통계 등재 공격 기술',required:true,autocomplete:true},
+  {type:3,name:'공격도구',description:'기본은 채용률 1위, 메가폼을 바꾸려면 메가스톤 선택',required:false,autocomplete:true},
   {type:3,name:'방어배분',description:'상대 포켓몬의 내구 투자 기준',required:false,choices:[{name:'H0 · B/D0',value:'zero'},{name:'H32 · B/D0',value:'hp'},{name:'H32 · B32',value:'physical'},{name:'H32 · D32',value:'special'}]},
   modeOption
  ]},
  {name:'결정력계산기',description:'두 포켓몬만 골라 최고 결정력 기술과 내구별 타수를 봅니다.',options:[
   {type:3,name:'공격포켓몬',description:'공격하는 포켓몬',required:true,autocomplete:true},
   {type:3,name:'방어포켓몬',description:'공격받는 포켓몬',required:true,autocomplete:true},
+  {type:3,name:'공격도구',description:'기본은 채용률 1위, 메가폼을 바꾸려면 메가스톤 선택',required:false,autocomplete:true},
   modeOption
  ]},
  {name:'스피드계산기',description:'두 포켓몬의 최속·준속·무보정과 스카프 기준을 비교합니다.',options:[

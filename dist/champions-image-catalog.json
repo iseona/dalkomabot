@@ -5572,6 +5572,23 @@
       "height": 512,
       "bytes": 35126,
       "sha256": "d3d325fd197b4dbe64b525b34277f01dc4f806280619fdf14e8aa63d9d74220c"
+    },
+    {
+      "name": "메가한카리아스Z",
+      "english": "Garchomp (Mega Garchomp Z)",
+      "key": "0445-02",
+      "sourceLabel": {
+        "pokemon_key": "0445-02",
+        "display_name": "メガガブリアスＺ",
+        "short_display_name": "メガガブリアスＺ",
+        "form_name": "メガガブリアスＺ"
+      },
+      "src": "champions-images/pokemon-0445-02.webp",
+      "sourceUrl": "https://s3-ap-northeast-1.amazonaws.com/pokedb.tokyo/champs/assets/pokemon/icons_512/pokemon-0445-02.webp",
+      "width": 512,
+      "height": 512,
+      "bytes": 23664,
+      "sha256": "a6b1b81d10a8d81fc2aebcd3749f1f9885380dd913e54637a05a73a4b546edec"
     }
   ],
   "unresolved": []

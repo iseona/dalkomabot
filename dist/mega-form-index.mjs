@@ -6,7 +6,10 @@ import {resolveMegaForm} from './engine.mjs';
 export function buildMegaFormIndex(rows,master,imageMap={}){
  const forms=[];
  for(const base of rows||[]){
-  for(const item of base.items||[]){
+  const observed=new Map((base.items||[]).map(item=>[item.name,item]));
+  const stones=(master.items||[]).filter(item=>String(item[2]||'').startsWith(base.name+'이 메가진화할 수 있게 되는 도구')||String(item[2]||'').startsWith(base.name+'가 메가진화할 수 있게 되는 도구'));
+  for(const stone of stones){
+   const item=observed.get(stone[0])||{name:stone[0],rate:null};
    const mega=resolveMegaForm(base,item.name,master);
    if(!mega.ok||forms.some(entry=>entry.name===mega.name))continue;
    forms.push({...base,name:mega.name,types:mega.types,items:[item],abilities:[],baseName:base.name,isMegaForm:true,megaStone:mega.item,image:imageMap[mega.name]||''});
