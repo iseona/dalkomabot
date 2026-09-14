@@ -20,12 +20,27 @@ def usage_snapshots(page):
    result.setdefault(season,{})[mode]={'metric':'inGameUsageRank','ranking':rows,'source':'https://pokemonics.com/usage'}
  return result
 
+def validate_usage_identities(usage, ledger, data, image_map):
+ identities={row['sourceId']:row['name'] for row in ledger.get('identities',[])}
+ master={row[0] for row in data.get('master',{}).get('pokemon',[])}
+ missing=[]
+ for season in usage.values():
+  for mode in ('single','double'):
+   for row in season[mode]['ranking']:
+    name=identities.get(row['sourceId'])
+    if not name:missing.append(f"{row['sourceId']}:identity")
+    elif name not in master:missing.append(f"{row['sourceId']}:master:{name}")
+    elif name not in image_map:missing.append(f"{row['sourceId']}:image:{name}")
+ if missing:raise ValueError('Usage publication blocked; unresolved identities: '+', '.join(sorted(set(missing))[:20]))
+ return identities
+
 def handler(event,context):
  import boto3
  bucket=os.environ['DATA_BUCKET'];s3=boto3.client('s3')
  with tempfile.TemporaryDirectory() as td:
   root=Path(td);(root/'sources').mkdir();(root/'dist').mkdir()
-  shutil.copy(Path(__file__).with_name('data.json'),root/'dist/data.json')
+  package=Path(__file__).parent
+  shutil.copy(package/'data.json',root/'dist/data.json')
   guide='https://champs.pokedb.tokyo/guide/opendata'
   req=urllib.request.Request(guide,headers={'User-Agent':'ChampionsPartyLab/1.0 (daily cached data import)'})
   with urllib.request.urlopen(req,timeout=30) as r:
@@ -56,6 +71,7 @@ def handler(event,context):
     if len(usage_raw)>2_000_000:raise ValueError('Usage source size exceeds limit')
     usage_pages.append(usage_raw)
   usage=usage_snapshots(b'\n'.join(usage_pages))
+  validate_usage_identities(usage,json.loads((package/'season-usage-identities.json').read_text(encoding='utf-8')),json.loads((package/'data.json').read_text(encoding='utf-8')),json.loads((package/'champions-image-map.json').read_text(encoding='utf-8')))
   env=dict(os.environ,CHAMPIONS_ROOT=str(root))
   subprocess.run([sys.executable,str(Path(__file__).with_name('import_opendata.py'))],env=env,check=True,capture_output=True,timeout=30)
   data=(root/'dist/opendata.json').read_bytes()

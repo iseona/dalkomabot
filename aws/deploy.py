@@ -33,11 +33,12 @@ aws('lambda','wait','function-updated','--region',a.region,'--function-name',o['
 # archive contains the already validated assets so CloudShell deployment stays
 # fast and cannot silently change the recognition database.
 aws('s3','sync',str(ROOT/'dist'),'s3://'+o['BucketName'],'--region',a.region,'--cache-control','public,max-age=300','--exclude','recognition/*','--exclude','vendor/ocr/*')
+aws('s3','cp',str(ROOT/'sources/season-usage-identities.json'),'s3://'+o['BucketName']+'/season-usage-identities.json','--region',a.region,'--cache-control','public,max-age=300','--content-type','application/json; charset=utf-8')
 aws('s3','rm','s3://'+o['BucketName']+'/vendor/ocr','--region',a.region,'--recursive')
 for file,content_type in [('index.html','text/html; charset=utf-8'),('manifest.webmanifest','application/manifest+json'),('runtime-config.js','application/javascript; charset=utf-8')]:
  aws('s3','cp',str(ROOT/'dist'/file),'s3://'+o['BucketName']+'/'+file,'--region',a.region,'--cache-control','no-cache, no-store, must-revalidate','--content-type',content_type,'--metadata-directive','REPLACE')
 with zipfile.ZipFile(ROOT/'aws/collector.zip','w',zipfile.ZIP_DEFLATED) as z:
- for src,name in [(ROOT/'aws/collector.py','collector.py'),(ROOT/'scripts/import_opendata.py','import_opendata.py'),(ROOT/'dist/data.json','data.json')]:z.write(src,name)
+ for src,name in [(ROOT/'aws/collector.py','collector.py'),(ROOT/'scripts/import_opendata.py','import_opendata.py'),(ROOT/'dist/data.json','data.json'),(ROOT/'dist/champions-image-map.json','champions-image-map.json'),(ROOT/'sources/season-usage-identities.json','season-usage-identities.json')]:z.write(src,name)
 aws('lambda','update-function-code','--region',a.region,'--function-name',o['CollectorName'],'--zip-file','fileb://'+str(ROOT/'aws/collector.zip'))
 aws('lambda','wait','function-updated','--region',a.region,'--function-name',o['CollectorName'])
 if a.run_collector:
