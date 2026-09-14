@@ -34,7 +34,7 @@
 </div>
 </div>
 <div class="source-note">
-<span>데이터 기준</span> 상위 파티 8월 19일 갱신 · 상세 세팅 7월 14일 기준 · 최신 시즌 확인 필요 <button id="sourceBtn">상세 보기</button>
+<span>데이터 기준</span> <span id="sourceSummary">현재 모드의 검증된 로컬 스냅샷을 불러오는 중입니다.</span> <button id="sourceBtn">상세 보기</button>
 </div>
 <nav aria-label="주요 기능">
 <button data-tab="builder" class="active">01 &nbsp; 파티 구성</button>
@@ -94,7 +94,12 @@
 <p id="metaCount">
 </p>
 </div>
-<input id="search" placeholder="포켓몬 이름 검색" aria-label="포켓몬 이름 검색">
+<div class="metafilters">
+<input id="search" placeholder="포켓몬·폼 이름 검색" aria-label="포켓몬 또는 폼 이름 검색">
+<select id="typeFilter" aria-label="타입 필터"><option value="">전체 타입</option></select>
+<input id="abilityFilter" placeholder="특성 검색" aria-label="특성 검색">
+<input id="moveFilter" placeholder="기술 검색" aria-label="기술 검색">
+</div>
 </div>
 <div class="tablewrap">
 <table>
@@ -105,6 +110,7 @@
 <th>타입</th>
 <th>최다 채용 도구</th>
 <th>최다 채용 특성</th>
+<th>최다 채용 기술</th>
 <th>
 </th>
 </tr>
@@ -173,7 +179,7 @@
 <h2>포켓몬 선택</h2>
 <button data-close="picker" aria-label="닫기">✕</button>
 </div>
-<input id="pickSearch" placeholder="공식 한글 이름 검색" aria-label="공식 한글 이름 검색">
+<input id="pickSearch" placeholder="전체 포켓몬·폼 검색 (예: 나인테일 알로라폼)" aria-label="전체 포켓몬 또는 폼 검색">
 <div id="pickList">
 </div>
 </dialog>
