@@ -1,0 +1,20 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {battleCalculation,makeSet} from '../dist/engine.mjs';
+
+const data=JSON.parse(fs.readFileSync(new URL('../dist/data.json',import.meta.url)));
+const attacker=data.modes.single.find(p=>p.name==='달코퀸');
+const defender=data.modes.single.find(p=>p.name==='한카리아스');
+const move=data.master.moves.find(m=>m[0]==='트리플악셀');
+const base=battleCalculation(attacker,defender,makeSet(attacker),move,[0,0,0,0,0,0],data.master);
+const adjusted=battleCalculation(attacker,defender,makeSet(attacker),move,[0,0,0,0,0,0],data.master,{defenderHpPercent:50,hits:3});
+assert(adjusted);
+assert.equal(adjusted.hits,3);
+assert.equal(adjusted.hpPercent,50);
+assert.equal(adjusted.currentHp,Math.ceil(adjusted.defenderStats[0]/2));
+assert.deepEqual(adjusted.damage,base.damage.map(value=>value*3));
+assert.deepEqual(adjusted.singleHitDamage,base.damage);
+for(const bad of [{hits:0},{hits:11},{hits:1.5},{defenderHpPercent:0},{defenderHpPercent:101}])assert.equal(battleCalculation(attacker,defender,makeSet(attacker),move,[0,0,0,0,0,0],data.master,bad),null);
+const ui=fs.readFileSync(new URL('../dist/calculator.mjs',import.meta.url),'utf8');
+for(const marker of ['calcSwap','calcHpPercent','calcHits','전체 공격 기술','calcAtkSummary','calcDefSummary'])assert(ui.includes(marker),marker);
+console.log('PASS: calculator HP, fixed-hit validation, full move picker, summaries, and swap controls.');
