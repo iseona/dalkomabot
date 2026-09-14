@@ -1,5 +1,12 @@
 import assert from 'node:assert/strict';
-import {mergeLeadRecognition,mergePartyRecognition,localLeadResult} from '../dist/recognition-merge.mjs';
+import {mergeLeadRecognition,mergePartyRecognition,localLeadResult,flagAmbiguousLeadForms} from '../dist/recognition-merge.mjs';
+const forms=[['대검귀','Samurott'],['히스이 대검귀','Samurott (Hisuian Form)'],['리자몽','Charizard'],['메가리자몽Y','Mega Charizard Y']];
+const formAI={mine:[{name:'대검귀',confidence:1},{name:'메가리자몽Y',confidence:1}],opp:[]};
+const formLocal={mine:[{candidates:[{name:'히스이 대검귀'}]},{candidates:[{name:'리자몽'}]}],opp:[]};
+const flagged=flagAmbiguousLeadForms(formAI,formLocal,forms);
+assert(flagged.mine.every(slot=>slot.name===''&&slot.confidence===0));
+assert(flagged.mine[0].candidates.includes('히스이 대검귀'));
+assert(flagged.mine[1].candidates.includes('리자몽'));
 
 const known = new Set(['알로라 나인테일','나인테일','프테라','한카리아스','왕구리','핫삼','리자몽']);
 const isKnown = name => known.has(name);
@@ -10,6 +17,12 @@ assert.equal(mergePartyRecognition([{...ai,name:'한카리아스'}],[evidence],i
 assert.equal(mergePartyRecognition([{...ai,name:'',confidence:0}],[{...evidence,evidence:''}],isKnown)[0].name,'');
 assert.equal(mergePartyRecognition([{...ai,confidence:.4}],[{}],isKnown)[0].name,'');
 assert.deepEqual(mergePartyRecognition([ai],[evidence],isKnown)[0].evs,ai.evs);
+const conflictingText={...ai,name:'한카리아스',item:'도구',ability:'특성',moves:['','더블윙','도발','방어']};
+const unresolved=mergePartyRecognition([conflictingText],[evidence],isKnown)[0];
+assert.equal(unresolved.name,'');
+assert.deepEqual(unresolved.moves,conflictingText.moves);
+assert.deepEqual(unresolved.evs,conflictingText.evs);
+assert.equal(unresolved.item,'도구');
 const slots=[...known].slice(0,6).map(name=>({...evidence,name}));
 const local={sides:{mine:structuredClone(slots),opp:structuredClone(slots)}};
 assert(localLeadResult(local,isKnown));

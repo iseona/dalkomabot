@@ -139,11 +139,11 @@
 <input type="file" id="imageFile" accept="image/png,image/jpeg,image/webp" multiple>
 </label>
 <img id="preview" alt="선택한 스크린샷" hidden>
-<button id="ocrBtn" class="primary" disabled>AI로 이미지 읽기</button>
-<p id="ocrStatus" role="status">선택한 이미지는 크기를 줄인 뒤 OpenAI 이미지 인식 서버로 전송됩니다.</p>
+<button id="ocrBtn" class="primary" disabled>미확인 값 AI 보조</button>
+<p id="ocrStatus" role="status">이미지는 먼저 이 기기에서 읽습니다. AI 보조 버튼을 누른 경우에만 미확인 값 판독을 위해 서버로 전송합니다.</p>
 <details>
 <summary>인식 범위와 주의점</summary>
-<p>화면 전체를 자르지 말고 올려 주세요. AI가 화면에서 확인한 값만 반환하며, 불확실한 값은 비워 둡니다. 적용 전에 포켓몬과 각 값을 확인하세요.</p>
+<p>능력 화면과 스테이터스 화면 전체를 함께 올려 주세요. 원본 글자를 사전과 대조하고, 능력치 6개·배분·성격 계산이 일치하는 종명을 검증합니다. 불확실한 값은 비워 두며 인기 샘플로 채우지 않습니다. 적용 전에 각 값을 확인하세요.</p>
 <p>배분은 실능력치와 구분해 읽으며, 한 항목 32 이하·합계 66 이하만 적용합니다. 인식이 불확실한 칸은 비워 둡니다.</p>
 </details>
 </div>

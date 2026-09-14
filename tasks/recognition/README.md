@@ -1,5 +1,13 @@
 # AI screenshot recognition
 
+## Validated local party reader (2026-09-14; supersedes inference-first party notes below)
+
+`local-party-text.mjs` reads source pixels with the locally hosted Tesseract worker. No external request on party upload. `recognition-text-validation.mjs` compares OCR spelling against the entire official dictionary, never a species' usage set. Nature is read from red-up/blue-down pixels. Species confirmation requires all six observed stats and EVs to uniquely satisfy the existing `calculateStats` equations; alternate OCR readings may be resolved only when the matching values were actually observed, never invented from the DB. Missing/ambiguous observations remain empty. This is arithmetic evidence, not permission to auto-confirm generic image-template rankings.
+
+Only the explicit AI assistance button may invoke the existing bounded recognition API, and fully read local results skip even that request. The fallback model remains the low-cost existing model; the unsuccessful model experiments are not a release upgrade. Browser assets live under `vendor/party-text`, not the retired `vendor/ocr` path.
+
+Release tests: `local-text-validation.mjs`, `local-party-reader.mjs` (also `--cross`, `--720p`, `--cross --erase`), and `live-party-page.mjs --local` (also `--cross`, `--720p`). Both party fixture pairs pass 84/84 actual-page fields at original and 720p JPEG size, with the inference transport blocked and zero calls. Erasing source text/stat evidence must not reproduce an answer from a fixture. `lead-candidate-page.mjs` verifies 24 known-reference slots; it is not unseen-image accuracy. `recognition-reference-labels.mjs` prevents mislabeled screen crops. Inspect saved page screenshots manually before deployment.
+
 OCR draft safety: name selection must only select a species, never fill moves/items/abilities/nature/EVs from usage statistics. `ocr-draft.mjs` also prevents apply from inheriting hidden previous-set fields or treating unread EVs as zero. Keep four move edit positions stable and render moves in a dedicated 2x2 grid on desktop and mobile. Run `node tests/ocr-draft.mjs` and `node tests/ocr-draft-browser.mjs`. These verify state/UI only, NOT actual text recognition accuracy. Actual source-image extraction must separately match the fixture's 24 moves, 6 items, 6 abilities and 36 EV values before release approval.
 
 Scope: browser image preparation, `/recognize` request/response validation, and the AWS recognition Lambda. The browser never receives the OpenAI key. Keep requests to at most four resized images, one model call, a 135 second client timeout (120 second Lambda window plus transfer), and a strict six-slot schema. Run `node tests/recognition.mjs`.

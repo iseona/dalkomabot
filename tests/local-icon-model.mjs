@@ -36,7 +36,7 @@ try {
     const {recognizeLeadOnDevice} = await import('/dist/local-icon-model.mjs');
     const manifest = await (await fetch('/tests/fixtures/recognition/manifest.json')).json();
     const screens = [];
-    for (const filename of Object.keys(manifest.lead).filter(f => f.includes('validation'))) {
+    for (const filename of Object.keys(manifest.lead).filter(f => f.includes('validation') || f === 'lead-alolan-ninetales.webp')) {
       const blob = await (await fetch('/tests/fixtures/recognition/' + filename)).blob();
       const start = performance.now();
       // Exclude ALL exact reference crops: no test screenshot leakage.
@@ -46,10 +46,14 @@ try {
         side, slot: i+1, expected: typeof manifest.lead[filename][side][i] === 'string' ? manifest.lead[filename][side][i] : null,
         confirmed: slot.name, candidates: slot.candidates.map(c => c.name),
       })));
-      screens.push({filename, elapsedMs, warning:result.warning, slots});
+      const {detectedLeadRects}=await import('/dist/local-image-recognition.mjs');
+      const bitmap=await createImageBitmap(blob);
+      const rects={mine:detectedLeadRects(bitmap,'mine'),opp:detectedLeadRects(bitmap,'opp')};bitmap.close();
+      screens.push({filename, elapsedMs, warning:result.warning, slots,rects,crops:['mine','opp'].flatMap(side=>result.sides[side].map(slot=>slot.crop))});
     }
     return {screens};
   });
+  for(const screen of report.screens){for(let i=0;i<screen.crops.length;i++)await writeFile(path.join(root,`reports/crop-${screen.filename}-${i}.webp`),Buffer.from(screen.crops[i].split(',')[1],'base64'));delete screen.crops;}
   const slots = report.screens.flatMap(s => s.slots), known = slots.filter(s => s.expected);
   assert(report.screens.every(s => !s.warning), 'Worker and icon DB must actually load');
   assert(slots.every(s => !s.confirmed), 'Uncalibrated model must never auto-confirm');
