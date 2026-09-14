@@ -9,7 +9,7 @@
 <link rel="icon" type="image/png" href="assets/dalkoma-favicon.png?v=16">
 <link rel="apple-touch-icon" href="assets/dalkoma-apple-touch.png?v=16">
 <link rel="manifest" href="manifest.webmanifest?v=16">
-<link rel="stylesheet" href="style.css?v=27">
+<link rel="stylesheet" href="style.css?v=28">
 </head>
 <body>
 <header>
@@ -40,7 +40,8 @@
 <nav aria-label="주요 기능">
 <button data-tab="builder" class="active">01 &nbsp; 파티 구성</button>
 <button data-tab="meta">02 &nbsp; 메타 탐색</button>
-<button data-tab="import">03 &nbsp; 스크린샷 입력</button>
+<button data-tab="dex">03 &nbsp; 도감</button>
+<button data-tab="import">04 &nbsp; 스크린샷 입력</button>
 </nav>
 <section id="builder">
 <div class="workspace">
@@ -91,7 +92,7 @@
 <section id="meta" hidden>
 <div class="sectionhead">
 <div>
-<h2>메타 탐색</h2>
+<h2 id="metaTitle">메타 탐색</h2>
 <p id="metaCount">
 </p>
 </div>
@@ -177,7 +178,7 @@
 </div>
 </section>
 <footer>
-<span>포챔스 달콤아 봇 · <strong class="appversion">v27</strong> · 2026-09-14</span>
+<span>포챔스 달콤아 봇 · <strong class="appversion">v28</strong> · 2026-09-15</span>
 <span>챔피언스 자료만 사용 · 미확인 항목 추정 금지</span>
 <span class="legalnotice" style="flex-basis:100%;line-height:1.7">이 사이트는 개인이 운영하는 비공식 팬 도구이며 Nintendo, Creatures, GAME FREAK, The Pokémon Company 및 관련 권리자와 제휴·승인·후원 관계가 없습니다. Pokémon 및 관련 명칭·캐릭터·이미지·상표의 권리는 각 권리자에게 있습니다.</span>
 </footer>
@@ -224,7 +225,7 @@
 <div id="toast" role="status">
 </div>
 <script src="runtime-config.js"></script>
-<script src="app.js?v=27" type="module">
+<script src="app.js?v=28" type="module">
 </script>
 </body>
 </html>

@@ -1,12 +1,12 @@
 import {validateTopMeta,metaValidationHtml} from './meta-validation.mjs?v=23';
 import {selectOcrSpecies,applyEditedRecognitionText,partySetFromRecognition} from './ocr-draft.mjs?v=1';
 import {recognizeLeadOnDevice} from './local-icon-model.mjs?v=1';
-import {makeSet as sharedMakeSet,validSet as sharedValidSet,recommendationCards,teamTypeSummary,teamDefenseMatrix,coverageDelta,matchup,multiplier,koreanType,calculateStats,damageRolls,classifyKO,strongestStatMove,damageScenarioResults,speedVariants} from './engine.mjs?v=27';
+import {makeSet as sharedMakeSet,validSet as sharedValidSet,recommendationCards,teamTypeSummary,teamDefenseMatrix,coverageDelta,matchup,multiplier,koreanType,calculateStats,damageRolls,classifyKO,strongestStatMove,damageScenarioResults,speedVariants} from './engine.mjs?v=28';
 import {rgbHsv,visualFeature,validVisualFeature,compactFeature,rankVisualCandidates,confidentVisual,uniqueVisualRankings,panelLayout} from './recognition.mjs?v=20';
 import {recognizeImages} from './ai-recognition.mjs?v=20';
-import {extraNav,coverageTemplate,libraryTemplate,leadTemplate,calculatorTemplate} from './ui-templates.mjs?v=23';
+import {extraNav,coverageTemplate,libraryTemplate,leadTemplate,calculatorTemplate} from './ui-templates.mjs?v=28';
 import {escapeHtml as esc,showToast} from './ui.mjs?v=20';
-import {setupCalculator} from './calculator.mjs?v=20';
+import {setupCalculator} from './calculator.mjs?v=28';
 import {loadSavedTeams,saveTeams,partyExport} from './party-storage.mjs?v=20';
 import {findPokemonMatches,normalizePokemonText} from './pokemon-search.mjs?v=20';
 import {renderPartyPokemonMatches} from './party-recognition-ui.mjs?v=20';
@@ -212,3 +212,4 @@ showDetails=name=>{const p=row(name),base=master(name);if(p?.settingsAvailable!=
 $('detailBody').addEventListener('change',e=>{if(e.target.name!=='detail-moves'||!e.target.checked)return;const selected=$('detailBody').querySelectorAll('input[name="detail-moves"]:checked');if(selected.length>4){e.target.checked=false;toast('기술은 최대 4개까지 선택할 수 있습니다.')}});
 $('detailBody').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.detailcustom){const name=b.dataset.detailcustom,target=team().findIndex(x=>x?.name===name);$('details').close();edit(target,name)}if(b.dataset.detailbuild){const name=b.dataset.detailbuild,p=row(name),pick=k=>$('detailBody').querySelector(`input[name="detail-${k}"]:checked`)?.value||'',moves=[...$('detailBody').querySelectorAll('input[name="detail-moves"]:checked')].map(x=>x.value),evs=evparse(pick('evs')),s={name,items:pick('items'),abilities:pick('abilities'),natures:pick('natures'),moves,evs};if(!validSet(s))return toast('도구·특성·성격·배분과 기술 1~4개를 선택해 주세요.');let target=team().findIndex(x=>x?.name===name);if(target<0)target=team().indexOf(null);if(target<0)return toast('파티가 가득 찼습니다. 먼저 한 자리를 비워 주세요.');team()[target]=s;persist();render();$('details').close();toast(`${name}의 선택한 통계 구성을 파티에 적용했습니다.`)}});
 $('sourceBtn').addEventListener('click',()=>{$('sourceBody').insertAdjacentHTML('beforeend','<p><b>이미지 인식 참조:</b> 현재 모드 리스팅 235종만 후보로 사용합니다. 사용자 제공 챔피언스 화면의 확정 아이콘과 기기에서 사용자가 확정한 화면 특징을 우선 비교하고, 챔피언스 아이콘을 기기 안에서 직접 비교하여 확인용 후보를 제시합니다. 타입색 추정은 후보 점수에 강제 반영하지 않습니다. 사용자 요청에 따라 공개 이미지 원본을 개인 사용용 로컬 DB로 보관합니다. 배포는 하지 않았으며 원본 이미지의 권리는 각 권리자에게 있습니다. 이미지 자료는 포켓몬·기술·도구·특성·메타 데이터에 사용하지 않습니다.</p>')});
+document.addEventListener('click',e=>{const button=e.target.closest('button[data-tab]'),tab=button?.dataset.tab;if(tab!=='dex'&&tab!=='meta')return;const dex=tab==='dex';$('meta').hidden=false;$('metaTitle').textContent=dex?'도감':'메타 탐색';$('dexCategory').value='pokemon';$('metaView').value=dex?'pokedex':'ranked';for(const id of ['metaView','seasonFilter','typeFilter','megaFilter','abilityFilter','moveFilter'])$(id).hidden=false;$('search').placeholder='포켓몬·폼 이름 검색';renderMeta()});
