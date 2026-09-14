@@ -84,7 +84,7 @@ def translate_detail(value,mode,season,master,related=None):
    if sum(points.values())<=66 and all(0<=point<=32 for point in points.values()):evs.append({'name':name,'rate':entry['pct']})
    else:excluded.append({'category':'evs','sourceName':entry['spread']})
  related=related or {}
- return {'moves':entities('moves'),'items':entities('items'),'abilities':entities('abilities'),'natures':natures,'evs':evs,'teammates':[],'defeated':related.get('defeated',[]),'counters':related.get('counters',[])},excluded
+ return {'moves':entities('moves'),'items':entities('items'),'abilities':entities('abilities'),'natures':natures,'evs':evs,'teammates':related.get('teammates',[]),'defeated':related.get('defeated',[]),'counters':related.get('counters',[])},excluded
 
 def collect_settings(usage,season,master,identity_ledger,limit=None):
  wanted=[]
@@ -110,7 +110,7 @@ def collect_settings(usage,season,master,identity_ledger,limit=None):
     if response.geturl()!=related_url:raise ValueError('Unexpected Champions detail redirect')
     related_body=response.read(1_200_001)
     if len(related_body)>1_200_000:raise ValueError('Champions detail source size exceeds limit')
-   relations[mode]={'defeated':champions_related(related_body,'win_pokemons',identity_by_form),'counters':champions_related(related_body,'lose_pokemons',identity_by_form)}
+   relations[mode]={'teammates':champions_related(related_body,'same_team',identity_by_form),'defeated':champions_related(related_body,'win_pokemons',identity_by_form),'counters':champions_related(related_body,'lose_pokemons',identity_by_form)}
   return detail_payload(body),relations
  with ThreadPoolExecutor(max_workers=6) as pool:
   futures={pool.submit(fetch,source_id):source_id for source_id in wanted}
@@ -140,7 +140,7 @@ def attach_teammates(settings,published,identity_ledger):
      if mate!=name:bucket[mate]=bucket.get(mate,0)+1
   for name,mates in counts.items():
    source_id=name_to_source.get(name)
-   if source_id in settings[mode]:settings[mode][source_id]['teammates']=[mate for mate,_ in sorted(mates.items(),key=lambda row:(-row[1],row[0]))[:10]]
+   if source_id in settings[mode] and not settings[mode][source_id]['teammates']:settings[mode][source_id]['teammates']=[mate for mate,_ in sorted(mates.items(),key=lambda row:(-row[1],row[0]))[:10]]
 
 def handler(event,context):
  import boto3
