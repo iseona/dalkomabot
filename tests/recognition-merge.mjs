@@ -1,23 +1,25 @@
 import assert from 'node:assert/strict';
-import {mergeLeadRecognition,mergePartyRecognition} from '../dist/recognition-merge.mjs';
+import {mergeLeadRecognition,mergePartyRecognition,localLeadResult} from '../dist/recognition-merge.mjs';
 
-const known = new Set(['알로라 나인테일', '프테라', '한카리아스']);
+const known = new Set(['알로라 나인테일','나인테일','프테라','한카리아스','왕구리','핫삼','리자몽']);
 const isKnown = name => known.has(name);
-
-const party = mergePartyRecognition(
-  [{slot: 1, name: null, evs: [2, 32, 0, 0, 0, 32], confidence: .9}],
-  [{name: '프테라', confidence: .8, candidates: [{name: '프테라'}]}],
-  isKnown,
-);
-assert.equal(party[0].name, '프테라');
-assert.deepEqual(party[0].evs, [2, 32, 0, 0, 0, 32]);
-
-const lead = mergeLeadRecognition(
-  {mine: [{slot: 1, name: '한카리아스', confidence: .7, notes: ''}], opp: [{slot: 1, name: null, confidence: .4, notes: ''}]},
-  {mine: [{name: '알로라 나인테일', confidence: .95, candidates: [{name: '알로라 나인테일'}]}], opp: [{name: '', confidence: 0, candidates: [{name: '프테라'}], reason: '불확실'}]},
-  isKnown,
-);
-assert.equal(lead.mine[0].name, '알로라 나인테일');
-assert.equal(lead.opp[0].name, '');
-assert.deepEqual(lead.opp[0].candidates, ['프테라']);
-console.log('PASS: local icon result and AI text result merge deterministically.');
+const evidence = {name:'프테라',confidence:.98,evidence:'slot-exact',candidates:[]};
+const ai = {slot:1,name:'프테라',confidence:.9,evs:[2,32,0,0,0,32]};
+assert.equal(mergePartyRecognition([ai],[evidence],isKnown)[0].name,'프테라');
+assert.equal(mergePartyRecognition([{...ai,name:'한카리아스'}],[evidence],isKnown)[0].name,'');
+assert.equal(mergePartyRecognition([{...ai,name:'',confidence:0}],[{...evidence,evidence:''}],isKnown)[0].name,'');
+assert.equal(mergePartyRecognition([{...ai,confidence:.4}],[{}],isKnown)[0].name,'');
+assert.deepEqual(mergePartyRecognition([ai],[evidence],isKnown)[0].evs,ai.evs);
+const slots=[...known].slice(0,6).map(name=>({...evidence,name}));
+const local={sides:{mine:structuredClone(slots),opp:structuredClone(slots)}};
+assert(localLeadResult(local,isKnown));
+local.sides.mine[2].evidence='';
+assert.equal(localLeadResult(local,isKnown),null);
+local.sides.mine[2].evidence='slot-exact';
+local.sides.mine[2].name=local.sides.mine[0].name;
+assert.equal(localLeadResult(local,isKnown),null);
+const merged=mergeLeadRecognition({mine:[ai],opp:[{...ai,name:'나인테일'}]},
+ {mine:[evidence],opp:[{...evidence,name:'알로라 나인테일'}]},isKnown);
+assert.equal(merged.opp[0].name,'');
+assert(merged.opp[0].notes.includes('달라'));
+console.log('PASS: slot evidence required; conflicts, low confidence and duplicate local teams rejected.');

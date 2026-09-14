@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
-CELL_WIDTH, CELL_HEIGHT, COLUMNS = 240, 100, 8
+CELL_WIDTH, CELL_HEIGHT, COLUMNS = 220, 92, 10
 
 
 def main():
@@ -16,7 +16,7 @@ def main():
     rows = (len(icon_map) + COLUMNS - 1) // COLUMNS
     canvas = Image.new("RGB", (CELL_WIDTH * COLUMNS, CELL_HEIGHT * rows), "white")
     draw = ImageDraw.Draw(canvas)
-    font = ImageFont.truetype(r"C:\Windows\Fonts\malgun.ttf", 21)
+    font = ImageFont.truetype(r"C:\Windows\Fonts\malgun.ttf", 16)
     small = ImageFont.truetype(r"C:\Windows\Fonts\malgun.ttf", 16)
 
     for index, (name, source) in enumerate(sorted(icon_map.items())):
@@ -25,8 +25,17 @@ def main():
         icon = Image.open(DIST / source).convert("RGBA")
         icon.thumbnail((70, 70), Image.Resampling.LANCZOS)
         canvas.paste(icon, (x + 4, y + 4), icon)
-        draw.text((x + 78, y + 15), str(index + 1), fill="#777", font=small)
-        draw.text((x + 78, y + 40), name, fill="#111", font=font)
+        draw.text((x + 78, y + 5), str(index + 1), fill="#777", font=small)
+        lines, line = [], ''
+        for char in name:
+            if draw.textlength(line + char, font=font) > CELL_WIDTH - 84:
+                lines.append(line)
+                line = char
+            else:
+                line += char
+        lines.append(line)
+        for row, line in enumerate(lines):
+            draw.text((x + 78, y + 25 + row * 19), line, fill="#111", font=font)
         draw.rectangle((x, y, x + CELL_WIDTH - 1, y + CELL_HEIGHT - 1), outline="#ddd")
 
     canvas.save(DIST / "pokemon-icon-legend.jpg", quality=88, optimize=True)

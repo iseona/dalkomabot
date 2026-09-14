@@ -3,6 +3,18 @@ import {buildLeadContactSheet,buildPartyContactSheet} from './recognition-contac
 // Allow the Lambda's 120-second execution window plus transfer/response time.
 const MAX_FILES=4,MAX_SOURCE_BYTES=15*1024*1024,MAX_EDGE=2560,REQUEST_TIMEOUT_MS=135000;
 
+const recognitionCache = new Map();
+const pendingRequests = new Map();
+
+async function requestKey(files, mode, kind, endpoint) {
+ const hashes=[];
+ for(const file of files){
+  const digest=await crypto.subtle.digest('SHA-256',await file.arrayBuffer());
+  hashes.push(Array.from(new Uint8Array(digest),value=>value.toString(16).padStart(2,'0')).join(''));
+ }
+ return JSON.stringify(['recognition-luna-v1',endpoint,mode,kind,hashes]);
+}
+
 let legendPromise;
 async function pokemonIconLegend(){
  if(!legendPromise)legendPromise=fetch('pokemon-icon-legend.jpg').then(async response=>{
@@ -34,10 +46,32 @@ export function validateRecognitionResult(value){
  return value;
 }
 
-export async function recognizeImages({files,mode,kind='party',endpoint=globalThis.DALKOMA_CONFIG?.recognitionEndpoint,fetchImpl=fetch,leadRectDetector}){
+async function recognizeImagesOnce({files,mode,kind='party',endpoint=globalThis.DALKOMA_CONFIG?.recognitionEndpoint,fetchImpl=fetch,leadRectDetector}){
  const selected=[...files];if(!selected.length)throw Error('인식할 이미지를 선택해 주세요.');if(selected.length>MAX_FILES)throw Error(`이미지는 최대 ${MAX_FILES}장까지 한 번에 인식합니다.`);if(!endpoint)throw Error('AI 인식 서버 주소가 설정되지 않았습니다.');
  if(kind==='lead'&&typeof leadRectDetector!=='function')throw Error('선출 카드 위치 감지기가 필요합니다.');
  const images=kind==='lead'?[...await Promise.all(selected.map(async file=>(await buildLeadContactSheet(file,leadRectDetector)).dataUrl)),await pokemonIconLegend()]:[(await buildPartyContactSheet(selected)).dataUrl];
  const response=await deadline(fetchImpl(endpoint,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({mode,kind,images})}),REQUEST_TIMEOUT_MS,'AI 이미지 인식이 135초를 초과했습니다.');
  let body;try{body=await response.json()}catch{throw Error('AI 인식 서버의 응답을 읽지 못했습니다.')}if(!response.ok)throw Error(body?.error||`AI 인식 요청이 실패했습니다 (${response.status}).`);return validateRecognitionResult(body);
+}
+
+export async function recognizeImages(options) {
+ const files=[...options.files];
+ if(!files.length || files.length>MAX_FILES || files.some(file=>!file || file.size>MAX_SOURCE_BYTES
+   || !/^image\/(png|jpeg|webp)$/.test(file.type))) throw Error('15MB 이하 이미지 1~4장을 선택해 주세요.');
+ const endpoint=options.endpoint ?? globalThis.DALKOMA_CONFIG?.recognitionEndpoint;
+ const key=await requestKey(files,options.mode,options.kind||'party',endpoint);
+ if(recognitionCache.has(key))return structuredClone(recognitionCache.get(key));
+ if(pendingRequests.has(key))return structuredClone(await pendingRequests.get(key));
+ const request=recognizeImagesOnce({...options,files,endpoint});
+ pendingRequests.set(key,request);
+ try {
+  const result=await request;
+  const slots=result.kind==='lead'?[...result.sides.mine,...result.sides.opp]:result.slots;
+  // Do not trap a partial/uncertain response in the cache.
+  if(slots.every(slot=>slot.name && slot.confidence>=.8)){
+   recognitionCache.set(key,structuredClone(result));
+   if(recognitionCache.size>16)recognitionCache.delete(recognitionCache.keys().next().value);
+  }
+  return structuredClone(result);
+ } finally {pendingRequests.delete(key);}
 }

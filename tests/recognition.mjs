@@ -38,7 +38,7 @@ const pending=Object.values(fixtureManifest.lead).flatMap(value=>[...value.mine,
 assert(pending.length>0,'확정하지 못한 슬롯은 pending으로 명시해야 합니다.');
 assert.match(recognizer,/초상화·아이콘/);
 assert.match(recognizer,/같은 위치의 동일한 6마리/);
-assert.match(recognizer,/gpt-5\.2/);
+assert.match(recognizer,/gpt-5\.6-luna/);
 assert.match(recognizer,/'reasoning':\{'effort':'none'\}/);
 assert.match(recognizer,/'verbosity':'low'/);
 assert.match(recognizer,/AI가 이 슬롯을 반환하지 않았습니다/);
@@ -48,4 +48,4 @@ assert.equal(template.Resources.RecognitionHandler.Properties.Timeout,120);
 const lead={schemaVersion:1,kind:'lead',sides:{mine:structuredClone(valid.slots),opp:structuredClone(valid.slots)}};
 assert.equal(validateRecognitionResult(lead).sides.opp.length,6);
 assert.throws(()=>validateRecognitionResult({...lead,sides:{mine:lead.sides.mine,opp:lead.sides.opp.slice(1)}}));
-console.log(`PASS: 실제 픽스처 8장, 선출 12칸 단일 contact sheet, 파티 6종/36 EV manifest. pending ${pending.length}칸.`);
+console.log(`PASS: response schema and fixture manifest consistency (not recognition accuracy). pending ${pending.length} slots.`);

@@ -1,893 +1,1649 @@
 {
   "schemaVersion": 3,
-  "source": "Pokémon Champions official icons only",
-  "coverage": 127,
+  "source": "Pokémon Champions image references",
+  "coverage": 235,
   "references": [
     {
       "name": "가디안",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0282-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "가라르 메더",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0618-01.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "가라르 야도란",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0080-02.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "가라르 야도킹",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0199-01.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "강철톤",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0208-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "개굴닌자",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0658-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "갸라도스",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0130-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "거대코뿌리",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0464-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "거북손데스",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0689-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "거북왕",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0009-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "견고라스",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0697-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "곤율거니",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0560-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "골루그",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0623-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "과미드라",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-1019-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "괴력몬",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0068-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "그우린차",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-1013-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "글라이온",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0472-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "글레이시아",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0471-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "깜까미",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0302-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "깨비물거미",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0752-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "꿈트렁",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0968-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "나루림",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0685-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "나무킹",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0254-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "나인테일",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0038-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "내던숭이",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0766-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "냐오닉스(수컷)",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0678-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "냐오닉스(암컷)",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0678-01.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "노보청",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0534-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "누리레느",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0730-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "눈설왕",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0460-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "눈여아",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0478-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "님피아",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0700-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "다부니",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0531-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "다크펫",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0354-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "단지래플",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0842-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "달코퀸",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0763-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "대검귀",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0503-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "대도각참",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0983-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "대로트",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0709-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "대쓰여너(수컷)",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0902-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "대쓰여너(암컷)",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0902-01.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "대여르",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0870-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "대짱이",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0260-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "더스트나",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0569-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "더시마사리",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0748-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "데덴네",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0702-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "데스니칸",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0563-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "데스판",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0867-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "독개굴",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0454-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "독침붕",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0015-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "돌핀맨(나이브폼)",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0964-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "두드리짱",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0959-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "드래캄",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0691-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "드래펄트",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0887-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "따라큐",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0778-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "라우드본",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0911-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "라이츄",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0026-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "라플레시아",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0045-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "란쿨루스",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0579-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "램펄드",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0409-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "레파르다스",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0510-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "렌트라",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0405-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "로즈레이드",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0407-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "로토무",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0479-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "루가루암(한낮의 모습)",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0745-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "루가루암(한밤중의 모습)",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0745-01.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "루가루암(황혼의 모습)",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0745-02.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "루차불",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0701-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "루카리오",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0448-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "리자몽",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0006-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "리피아",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0470-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "마기라스",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0248-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "마릴리",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0184-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "마스카나",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0908-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "마임꽁꽁",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0866-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "마폭시",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0655-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "마휘핑",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0869-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "만마드",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0750-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "맘모꾸리",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0473-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "망나뇽",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0149-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "메가니움",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0154-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "메더",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0618-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "메타그로스",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0376-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "메타몽",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0132-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "모단단게",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0740-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "모르페코(배부른 모양)",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0877-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "모크나이퍼",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0724-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "몰드류",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0530-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "몽얌나",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0518-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "묘두기",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0972-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "무장조",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0227-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "미끄래곤",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0706-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "밀로틱",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0350-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "바리톱스",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0411-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "바오키",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0514-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "배바닐라",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0584-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "번치코",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0257-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "보르그",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0505-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "보스로라",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0306-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "부란다",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0675-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "부스터",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0136-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "불카모스",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0637-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "브리가론",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0652-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "브리두라스",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-1018-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "브리무음",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0858-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "블래키",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0197-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "블레이범",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0157-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "블로스터",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0693-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "비비용",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0666-18.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "쁘사이저",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0127-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "사다이사",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0844-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "사마자르",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0900-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "삼삼드래",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0635-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "샤로다",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0497-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "샤미드",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0134-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "샤크니아",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0319-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "샹델라",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0609-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "스코빌런",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0952-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "스핀로토무",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0479-04.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "신비록",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0899-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "썬더볼트",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0310-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "쏘콘",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0205-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "아리아도스",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0168-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "아마루르가",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0699-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "아머까오",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0823-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "아보크",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0024-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "아쿠스타",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0121-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "악비아르",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0553-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "알로라 나인테일",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0038-01.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "알로라 라이츄",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0026-01.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "앗차키",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0516-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "애프룡",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0841-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "앱솔",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0359-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "야나키",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0512-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "야도란",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0080-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "야도킹",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0199-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "어흥염",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0727-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "얼음귀신",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0362-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "에몽가",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0587-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "에브이",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0196-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "엘레이드",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0475-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "엘풍",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0547-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "엠페르트",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0395-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "염뉴트",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0758-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "염무왕",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0500-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "오롱털",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0861-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "왕구리",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0186-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "왕큰부리",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0733-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "요가램",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0308-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "우츠보트",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0071-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "워시로토무",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0479-02.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "웨이니발",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0914-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "윈디",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0059-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "음번",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0715-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "이상해꽃",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0003-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "이어롭",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0428-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "일레도리자드",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0695-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "입치트",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0303-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "잠만보",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0143-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "장침바루",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0904-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "장크로다일",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0160-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "저리더프",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0604-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "저승갓숭",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0979-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "전룡",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0181-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "조로아크",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0571-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "쥬피썬더",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0135-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "짜랑고우거",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0784-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "찌르호크",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0398-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "찌리배리",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0939-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "초염몽",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0392-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "치렁",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0358-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "침바루",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0211-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "카디나르마",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0936-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "칼라마네로",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0687-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "캐스퐁",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0351-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "캥카",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0115-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "커트로토무",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0479-05.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "켄타로스",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0128-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "코터스",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0324-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "콜로솔트",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0934-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "크레베이스",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0713-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "클레스퍼트라",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0956-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "클레피",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0707-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "키키링",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0981-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "킬가르도(실드폼)",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0681-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "킬라플로르",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0970-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "타부자고",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-1000-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "토대부기",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0389-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "툰베어",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0614-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "트리미앙",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0676-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "파라블레이즈",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0937-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "파르토",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0660-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "파밀리쥐",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0925-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "파비코리",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0334-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "파이어로",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0663-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "팔데아 켄타로스(블레이즈종)",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0128-02.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "팔데아 켄타로스(워터종)",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0128-03.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "팔데아 켄타로스(컴뱃종)",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0128-01.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "패리퍼",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0279-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "팬텀",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0094-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "펌킨인(대과종)",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0711-02.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "펌킨인(소과종)",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0711-01.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "펌킨인(중과종)",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0711-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "펌킨인(특대과종)",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0711-03.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "펜드라",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0545-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "포트데스",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0855-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "포푸니라",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0461-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "포푸니크",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0903-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "폭타",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0323-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "프레프티르",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0683-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "프로스트로토무",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0479-03.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "프테라",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0142-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "플라엣테(영원의 꽃)",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0670-05.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "플라제스",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0671-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "피죤투",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0018-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "피카츄",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0025-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "픽시",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0036-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "하랑우탄",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0765-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "하마돈",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0450-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "한카리아스",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0445-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "할비롱",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0780-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "핫삼",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0212-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "헤라크로스",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0214-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "헬가",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0229-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
+      "name": "화강돌",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0442-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "화염레오",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0668-00.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "후딘",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0065-00.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "히스이 대검귀",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0503-01.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "히스이 모크나이퍼",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0724-01.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "히스이 미끄래곤",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0706-01.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "히스이 블레이범",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0157-01.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "히스이 윈디",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0059-01.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
       "name": "히스이 조로아크",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0571-01.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"
     },
     {
+      "name": "히스이 크레베이스",
+      "variant": "포켓몬 챔피언스 아이콘",
+      "src": "champions-icons/pokemon-0713-01.webp",
+      "transparent": true,
+      "source": "champs.pokedb.tokyo 공식 아이콘"
+    },
+    {
       "name": "히트로토무",
-      "variant": "포켓몬 챔피언스 공식 아이콘",
+      "variant": "포켓몬 챔피언스 아이콘",
       "src": "champions-icons/pokemon-0479-01.webp",
       "transparent": true,
       "source": "champs.pokedb.tokyo 공식 아이콘"

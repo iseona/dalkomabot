@@ -3,7 +3,7 @@ import base64,json,os,time,urllib.error,urllib.request
 from pathlib import Path
 import boto3
 
-MODEL=os.environ.get('OPENAI_MODEL','gpt-5.2')
+MODEL=os.environ.get('OPENAI_MODEL','gpt-5.6-luna')
 MAX_DAILY=int(os.environ.get('MAX_DAILY_REQUESTS','100'))
 SECRET_ID=os.environ['OPENAI_SECRET_ID']
 TABLE=os.environ['RATE_TABLE']
@@ -54,7 +54,7 @@ def sanitize(value,kind):
    for key in ('name','item','ability','nature'):
     if slot.get(key) not in ALLOWED[key]:slot[key]=None
    slot['moves']=[move for move in slot.get('moves',[]) if move in ALLOWED['moves']][:4]
-   evs=slot.get('evs',[]);slot['evs']=evs if len(evs)==6 and all(v is None or isinstance(v,int) and 0<=v<=32 for v in evs) else [None]*6
+   evs=slot.get('evs',[]);slot['evs']=evs if len(evs)==6 and all(v is None or type(v) is int and 0<=v<=32 for v in evs) and sum(v for v in evs if v is not None)<=66 else [None]*6
  if kind=='party':value['slots']=groups[0]
  else:value['sides']={'mine':groups[0],'opp':groups[1]}
  return value
@@ -68,10 +68,10 @@ def handler(event,context):
   for image in images:
    if not isinstance(image,str) or not image.startswith(ALLOWED_TYPES) or len(image)>2_100_000:return reply(413,{'error':'이미지 크기나 형식이 허용 범위를 벗어났습니다.'})
   consume_quota();key=secrets.get_secret_value(SecretId=SECRET_ID)['SecretString']
-  prompt=f'''포켓몬 챔피언스 {mode} 화면이다. 반드시 화면의 모든 슬롯을 빠짐없이 검사하라. lead 요청에 이미지가 두 장이면 첫 이미지는 왼쪽 내 파티 패널, 두 번째 이미지는 오른쪽 상대 파티 패널을 확대해 자른 것이다. party 요청 이미지는 같은 파티의 능력·기술·스테이터스 화면에서 카드 영역만 잘라 세로로 합친 비교표일 수 있다. 비교표의 각 구역은 새로운 슬롯이 아니라 같은 위치의 동일한 6마리이므로, 모든 구역의 정보를 합쳐 slots 6개만 반환하라.
+  prompt=f'''포켓몬 챔피언스 {mode} 화면이다. 반드시 화면의 모든 슬롯을 빠짐없이 검사하라. lead의 첫 이미지는 2열 6행 카드 비교표이며 좌/우 1~6 표식을 따른다. 마지막 이미지는 공식 아이콘 기준표다. party 요청 이미지는 같은 파티의 능력·기술·스테이터스 카드를 슬롯별로 정렬한 6행 비교표다. 각 열은 서로 다른 원본 화면이며 같은 행은 동일한 포켓몬이다. 비교표의 각 구역은 새로운 슬롯이 아니라 같은 위치의 동일한 6마리이므로, 모든 구역의 정보를 합쳐 slots 6개만 반환하라.
 포켓몬 이름 칸에는 별명이 표시될 수 있다. 별명을 종명으로 복사하지 말고, 각 슬롯 왼쪽의 포켓몬 초상화·아이콘과 화면 맥락을 보고 공식 한국어 포켓몬 종명을 판별하라. 초상화로도 판별할 수 없을 때만 name을 null로 두고 notes에 이유를 적어라.
 응답은 항상 schemaVersion, kind, slots, sides를 모두 포함한다.
-party는 화면의 2열 3행을 행 우선 순서(왼쪽 위=1, 오른쪽 위=2, 왼쪽 가운데=3, 오른쪽 가운데=4, 왼쪽 아래=5, 오른쪽 아래=6)로 slots에 기록한다. 각 슬롯에서 포켓몬 공식 종명, 도구, 특성, 성격, 기술, HABCDS 순서의 배분 숫자를 읽고 sides.mine과 sides.opp는 빈 배열로 둔다. 스테이터스 화면에서는 큰 흰색 숫자가 실능력치이고 오른쪽 작은 숫자가 배분값이다. evs에는 오른쪽 작은 배분값 여섯 개만 HABCDS 순서로 기록한다.
+party는 비교표의 위에서 아래 6행을 slots 1~6으로 기록한다. 같은 행의 좌우 열은 동일 슬롯의 정보이므로 합친다. 각 슬롯에서 포켓몬 공식 종명, 도구, 특성, 성격, 기술, HABCDS 순서의 배분 숫자를 읽고 sides.mine과 sides.opp는 빈 배열로 둔다. 스테이터스 화면에서는 큰 흰색 숫자가 실능력치이고 오른쪽 작은 숫자가 배분값이다. evs에는 오른쪽 작은 배분값 여섯 개만 HABCDS 순서로 기록한다.
 lead는 slots를 빈 배열로 두고 왼쪽 내 파티를 sides.mine, 오른쪽 상대 파티를 sides.opp에 각각 위에서 아래 슬롯 1~6으로 기록한다. 포켓몬 초상화·아이콘으로 공식 한국어 종명을 판별하고 나머지 필드는 null 또는 빈 배열로 둔다.
 읽을 수 없는 개별 값만 null 또는 빈 배열로 남기고, 다른 슬롯까지 생략하지 마라.'''
   allowed_names=', '.join(sorted(ALLOWED['name']))

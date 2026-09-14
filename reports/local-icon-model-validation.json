@@ -1,0 +1,667 @@
+{
+  "screens": [
+    {
+      "filename": "lead-validation-01.png",
+      "elapsedMs": 2270,
+      "warning": "",
+      "slots": [
+        {
+          "side": "mine",
+          "slot": 1,
+          "expected": "드래펄트",
+          "confirmed": "",
+          "candidates": [
+            "히스이 대검귀",
+            "오롱털",
+            "킬라플로르",
+            "파라블레이즈",
+            "팔데아 켄타로스(블레이즈종)"
+          ]
+        },
+        {
+          "side": "mine",
+          "slot": 2,
+          "expected": "한카리아스",
+          "confirmed": "",
+          "candidates": [
+            "한카리아스",
+            "염뉴트",
+            "펜드라",
+            "블래키",
+            "삼삼드래"
+          ]
+        },
+        {
+          "side": "mine",
+          "slot": 3,
+          "expected": "리자몽",
+          "confirmed": "",
+          "candidates": [
+            "리자몽",
+            "킬라플로르",
+            "염뉴트",
+            "오롱털",
+            "헤라크로스"
+          ]
+        },
+        {
+          "side": "mine",
+          "slot": 4,
+          "expected": "메타그로스",
+          "confirmed": "",
+          "candidates": [
+            "메타그로스",
+            "헤라크로스",
+            "킬라플로르",
+            "팬텀",
+            "램펄드"
+          ]
+        },
+        {
+          "side": "mine",
+          "slot": 5,
+          "expected": "망나뇽",
+          "confirmed": "",
+          "candidates": [
+            "망나뇽",
+            "전룡",
+            "쁘사이저",
+            "님피아",
+            "레파르다스"
+          ]
+        },
+        {
+          "side": "mine",
+          "slot": 6,
+          "expected": "킬가르도(실드폼)",
+          "confirmed": "",
+          "candidates": [
+            "킬가르도(실드폼)",
+            "워시로토무",
+            "삼삼드래",
+            "프로스트로토무",
+            "아머까오"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 1,
+          "expected": "알로라 나인테일",
+          "confirmed": "",
+          "candidates": [
+            "알로라 나인테일",
+            "대도각참",
+            "히스이 미끄래곤",
+            "신비록",
+            "쁘사이저"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 2,
+          "expected": "메타그로스",
+          "confirmed": "",
+          "candidates": [
+            "메타그로스",
+            "드래캄",
+            "조로아크",
+            "헤라크로스",
+            "삼삼드래"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 3,
+          "expected": "거북왕",
+          "confirmed": "",
+          "candidates": [
+            "거북왕",
+            "쁘사이저",
+            "강철톤",
+            "캐스퐁",
+            "다부니"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 4,
+          "expected": "하마돈",
+          "confirmed": "",
+          "candidates": [
+            "하마돈",
+            "히스이 윈디",
+            "대도각참",
+            "블래키",
+            "조로아크"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 5,
+          "expected": "한카리아스",
+          "confirmed": "",
+          "candidates": [
+            "한카리아스",
+            "염뉴트",
+            "펜드라",
+            "오롱털",
+            "삼삼드래"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 6,
+          "expected": "번치코",
+          "confirmed": "",
+          "candidates": [
+            "번치코",
+            "과미드라",
+            "드래캄",
+            "아리아도스",
+            "핫삼"
+          ]
+        }
+      ]
+    },
+    {
+      "filename": "lead-validation-02.png",
+      "elapsedMs": 273,
+      "warning": "",
+      "slots": [
+        {
+          "side": "mine",
+          "slot": 1,
+          "expected": null,
+          "confirmed": "",
+          "candidates": [
+            "쁘사이저",
+            "깜까미",
+            "헤라크로스",
+            "치렁",
+            "프테라"
+          ]
+        },
+        {
+          "side": "mine",
+          "slot": 2,
+          "expected": "찌르호크",
+          "confirmed": "",
+          "candidates": [
+            "찌르호크",
+            "염뉴트",
+            "킬라플로르",
+            "블래키",
+            "삼삼드래"
+          ]
+        },
+        {
+          "side": "mine",
+          "slot": 3,
+          "expected": "라우드본",
+          "confirmed": "",
+          "candidates": [
+            "라우드본",
+            "킬라플로르",
+            "깜까미",
+            "헤라크로스",
+            "메타그로스"
+          ]
+        },
+        {
+          "side": "mine",
+          "slot": 4,
+          "expected": "한카리아스",
+          "confirmed": "",
+          "candidates": [
+            "한카리아스",
+            "삼삼드래",
+            "블래키",
+            "펜드라",
+            "헤라크로스"
+          ]
+        },
+        {
+          "side": "mine",
+          "slot": 5,
+          "expected": "아머까오",
+          "confirmed": "",
+          "candidates": [
+            "삼삼드래",
+            "램펄드",
+            "염뉴트",
+            "펜드라",
+            "헬가"
+          ]
+        },
+        {
+          "side": "mine",
+          "slot": 6,
+          "expected": "드래펄트",
+          "confirmed": "",
+          "candidates": [
+            "킬라플로르",
+            "아머까오",
+            "파라블레이즈",
+            "오롱털",
+            "헤라크로스"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 1,
+          "expected": "라우드본",
+          "confirmed": "",
+          "candidates": [
+            "드래캄",
+            "조로아크",
+            "펜드라",
+            "핫삼",
+            "레파르다스"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 2,
+          "expected": "아머까오",
+          "confirmed": "",
+          "candidates": [
+            "블래키",
+            "펜드라",
+            "염뉴트",
+            "헬가",
+            "삼삼드래"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 3,
+          "expected": "한카리아스",
+          "confirmed": "",
+          "candidates": [
+            "한카리아스",
+            "히스이 윈디",
+            "펜드라",
+            "헬가",
+            "염뉴트"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 4,
+          "expected": "보스로라",
+          "confirmed": "",
+          "candidates": [
+            "플라엣테(영원의 꽃)",
+            "드래캄",
+            "치렁",
+            "과미드라",
+            "레파르다스"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 5,
+          "expected": "나무킹",
+          "confirmed": "",
+          "candidates": [
+            "드래캄",
+            "조로아크",
+            "아머까오",
+            "염뉴트",
+            "팔데아 켄타로스(블레이즈종)"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 6,
+          "expected": "메타그로스",
+          "confirmed": "",
+          "candidates": [
+            "드래캄",
+            "과미드라",
+            "핫삼",
+            "쁘사이저",
+            "펜드라"
+          ]
+        }
+      ]
+    },
+    {
+      "filename": "lead-validation-03.png",
+      "elapsedMs": 288,
+      "warning": "",
+      "slots": [
+        {
+          "side": "mine",
+          "slot": 1,
+          "expected": "저리더프",
+          "confirmed": "",
+          "candidates": [
+            "저리더프",
+            "킬라플로르",
+            "삼삼드래",
+            "아머까오",
+            "파라블레이즈"
+          ]
+        },
+        {
+          "side": "mine",
+          "slot": 2,
+          "expected": "파라블레이즈",
+          "confirmed": "",
+          "candidates": [
+            "플라엣테(영원의 꽃)",
+            "킬라플로르",
+            "파라블레이즈",
+            "염뉴트",
+            "아머까오"
+          ]
+        },
+        {
+          "side": "mine",
+          "slot": 3,
+          "expected": "불카모스",
+          "confirmed": "",
+          "candidates": [
+            "불카모스",
+            "삼삼드래",
+            "플라엣테(영원의 꽃)",
+            "프로스트로토무",
+            "펜드라"
+          ]
+        },
+        {
+          "side": "mine",
+          "slot": 4,
+          "expected": "하마돈",
+          "confirmed": "",
+          "candidates": [
+            "하마돈",
+            "블래키",
+            "히스이 윈디",
+            "일레도리자드",
+            "키키링"
+          ]
+        },
+        {
+          "side": "mine",
+          "slot": 5,
+          "expected": "킬가르도(실드폼)",
+          "confirmed": "",
+          "candidates": [
+            "킬가르도(실드폼)",
+            "다크펫",
+            "삼삼드래",
+            "메타그로스",
+            "펌킨인(소과종)"
+          ]
+        },
+        {
+          "side": "mine",
+          "slot": 6,
+          "expected": "워시로토무",
+          "confirmed": "",
+          "candidates": [
+            "킬라플로르",
+            "워시로토무",
+            "헤라크로스",
+            "깜까미",
+            "메타그로스"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 1,
+          "expected": "마스카나",
+          "confirmed": "",
+          "candidates": [
+            "드래캄",
+            "과미드라",
+            "염뉴트",
+            "조로아크",
+            "블래키"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 2,
+          "expected": "짜랑고우거",
+          "confirmed": "",
+          "candidates": [
+            "짜랑고우거",
+            "드래캄",
+            "펜드라",
+            "대도각참",
+            "다크펫"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 3,
+          "expected": "핫삼",
+          "confirmed": "",
+          "candidates": [
+            "드래캄",
+            "염뉴트",
+            "조로아크",
+            "펜드라",
+            "핫삼"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 4,
+          "expected": null,
+          "confirmed": "",
+          "candidates": [
+            "펜드라",
+            "대쓰여너(암컷)",
+            "다크펫",
+            "블래키",
+            "드래캄"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 5,
+          "expected": "하마돈",
+          "confirmed": "",
+          "candidates": [
+            "하마돈",
+            "블래키",
+            "히스이 윈디",
+            "키키링",
+            "사마자르"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 6,
+          "expected": "가라르 야도킹",
+          "confirmed": "",
+          "candidates": [
+            "레파르다스",
+            "드래캄",
+            "포푸니크",
+            "가라르 야도킹",
+            "과미드라"
+          ]
+        }
+      ]
+    },
+    {
+      "filename": "lead-validation-04.png",
+      "elapsedMs": 284,
+      "warning": "",
+      "slots": [
+        {
+          "side": "mine",
+          "slot": 1,
+          "expected": "엠페르트",
+          "confirmed": "",
+          "candidates": [
+            "엠페르트",
+            "아머까오",
+            "파라블레이즈",
+            "킬라플로르",
+            "오롱털"
+          ]
+        },
+        {
+          "side": "mine",
+          "slot": 2,
+          "expected": null,
+          "confirmed": "",
+          "candidates": [
+            "초염몽",
+            "레파르다스",
+            "아머까오",
+            "오롱털",
+            "삼삼드래"
+          ]
+        },
+        {
+          "side": "mine",
+          "slot": 3,
+          "expected": "밀로틱",
+          "confirmed": "",
+          "candidates": [
+            "밀로틱",
+            "헤라크로스",
+            "킬라플로르",
+            "깜까미",
+            "염뉴트"
+          ]
+        },
+        {
+          "side": "mine",
+          "slot": 4,
+          "expected": "렌트라",
+          "confirmed": "",
+          "candidates": [
+            "렌트라",
+            "팔데아 켄타로스(컴뱃종)",
+            "아머까오",
+            "염뉴트",
+            "팔데아 켄타로스(워터종)"
+          ]
+        },
+        {
+          "side": "mine",
+          "slot": 5,
+          "expected": "한카리아스",
+          "confirmed": "",
+          "candidates": [
+            "한카리아스",
+            "염뉴트",
+            "펜드라",
+            "오롱털",
+            "아머까오"
+          ]
+        },
+        {
+          "side": "mine",
+          "slot": 6,
+          "expected": "찌르호크",
+          "confirmed": "",
+          "candidates": [
+            "염뉴트",
+            "블래키",
+            "몰드류",
+            "찌르호크",
+            "킬라플로르"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 1,
+          "expected": "한카리아스",
+          "confirmed": "",
+          "candidates": [
+            "한카리아스",
+            "펜드라",
+            "염뉴트",
+            "드래캄",
+            "삼삼드래"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 2,
+          "expected": "라이츄",
+          "confirmed": "",
+          "candidates": [
+            "라이츄",
+            "드래캄",
+            "펜드라",
+            "조로아크",
+            "과미드라"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 3,
+          "expected": null,
+          "confirmed": "",
+          "candidates": [
+            "대쓰여너(수컷)",
+            "레파르다스",
+            "펜드라",
+            "염뉴트",
+            "히스이 윈디"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 4,
+          "expected": null,
+          "confirmed": "",
+          "candidates": [
+            "요가램",
+            "다크펫",
+            "드래캄",
+            "메더",
+            "프로스트로토무"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 5,
+          "expected": "따라큐",
+          "confirmed": "",
+          "candidates": [
+            "드래캄",
+            "펜드라",
+            "따라큐",
+            "대도각참",
+            "과미드라"
+          ]
+        },
+        {
+          "side": "opp",
+          "slot": 6,
+          "expected": "알로라 나인테일",
+          "confirmed": "",
+          "candidates": [
+            "대도각참",
+            "클레피",
+            "쁘사이저",
+            "캐스퐁",
+            "님피아"
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "knownSlots": 43,
+    "pendingSlots": 5,
+    "top1": 27,
+    "top5": 33,
+    "automaticConfirmations": 0,
+    "algorithm": "masked-color-template",
+    "unusedExperimentalModelBytes": 767980,
+    "paidRequests": 0,
+    "explicitOptInMockRequests": 1
+  }
+}

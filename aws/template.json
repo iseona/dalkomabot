@@ -616,7 +616,7 @@
   "Parameters": {
     "OpenAIModel": {
       "Type": "String",
-      "Default": "gpt-5.2",
+      "Default": "gpt-5.6-luna",
       "AllowedPattern": "^[a-zA-Z0-9._-]+$",
       "Description": "OpenAI vision-capable model used by the recognition Lambda."
     },

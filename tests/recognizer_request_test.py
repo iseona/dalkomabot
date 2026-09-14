@@ -33,6 +33,8 @@ assert schema['properties']['kind']['enum'] == ['party', 'lead']
 assert schema['properties']['slots']['maxItems'] == 6
 assert schema['properties']['sides']['properties']['mine']['maxItems'] == 6
 assert request['input'][0]['content'][1]['type'] == 'input_image'
+assert request['model'] == os.environ.get('OPENAI_MODEL', 'gpt-5.6-luna')
+assert request['reasoning']['effort'] == 'none'
 
 def contains_one_of(value):
     if isinstance(value, dict):
@@ -53,3 +55,8 @@ assert recognizer.sanitize({'schemaVersion': 1, 'kind': 'party', 'slots': slots(
 assert recognizer.sanitize({'schemaVersion': 1, 'kind': 'lead', 'slots': [],
                             'sides': {'mine': slots(), 'opp': slots()}}, 'lead')['sides']['opp'][5]['slot'] == 6
 print('PASS: recognition request uses a single Structured Outputs root schema without oneOf.')
+
+over_budget = slots()
+over_budget[0]['evs'] = [32,32,32,0,0,0]
+assert recognizer.sanitize({'schemaVersion':1,'kind':'party','slots':over_budget},'party')['slots'][0]['evs'] == [None]*6
+print('PASS: low-cost default and EV sum validation.')

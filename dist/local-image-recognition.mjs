@@ -344,10 +344,14 @@ function recognizeRect(image, rect, references, preparedScreen = null) {
   // Keep it ahead of the fallback ranking when the same runtime crop matches
   // almost pixel-for-pixel. This also avoids a generic icon suppressing an
   // exact regional/form match from a validated screenshot.
-  const exactScreenMatch = screenCandidates[0]?.score < .04 ? screenCandidates[0] : null;
+  const nearestOther = screenCandidates.find(candidate => candidate.name !== screenCandidates[0]?.name);
+  const exactScreenMatch = screenCandidates[0]?.score < .04
+    && (nearestOther?.score ?? 1) - screenCandidates[0].score > .04
+    ? screenCandidates[0] : null;
   if (exactScreenMatch) {
     return {
       name: exactScreenMatch.name,
+      evidence: 'slot-exact',
       confidence: Math.max(.95, 1 - exactScreenMatch.score),
       candidates: screenCandidates.slice(0, 5),
       reason: '',
@@ -432,72 +436,19 @@ export function recognizeFixedLayout(image, kind, references) {
   };
 }
 
-function recognizeRects(image, rects, references, signature) {
+function recognizeRects(image, rects, references) {
+  // Compare each actual slot against every reference for that side. Never
+  // infer its species from the background or a fixture's saved slot number.
   const screenReferences = references.filter(reference => reference.screenTemplate);
   const officialReferences = references.filter(reference => !reference.screenTemplate);
-  const groupedScreenReferences = new Map();
-  for (const reference of screenReferences) {
-    const key = reference.fixture || reference.src || 'screen';
-    const group = groupedScreenReferences.get(key) || [];
-    group.push(reference);
-    groupedScreenReferences.set(key, group);
-  }
-  const signatureDistance = group => {
-    const expected = group[0]?.fixtureSignature;
-    if (!expected || expected.length !== signature.length) return 1;
-    return expected.reduce((sum, value, index) => sum + Math.abs(value - signature[index]), 0)
-      / (expected.length * 255);
-  };
-  const rankedScreenGroups = [...groupedScreenReferences.values()]
-    .map(group => ({group, distance: signatureDistance(group)}))
-    .sort((left, right) => left.distance - right.distance);
-  const screenGroups = rankedScreenGroups.slice(0, 1).map(match => match.group);
-  const fixtureMatchIsTrusted = rankedScreenGroups[0]?.distance < .15
-    && (rankedScreenGroups[1]?.distance ?? 1) - rankedScreenGroups[0].distance > .002;
-  // Finish the cheap, exact screen-crop pass for every slot before running the
-  // heavier generic matcher. This keeps one unresolved slot from delaying or
-  // destabilizing the remaining slots in a time-limited browser request.
-  const screens = rects.map(rect => recognitionPixels(image, rect));
-  const screenResults = rects.map((rect, index) => {
-    const fixtureReference = fixtureMatchIsTrusted
-      ? screenGroups[0]?.find(reference => reference.slot === index)
-      : null;
-    if (fixtureReference) {
-      return {
-        name: fixtureReference.name,
-        confidence: Math.max(.9, 1 - rankedScreenGroups[0].distance),
-        candidates: [{
-          name: fixtureReference.name,
-          variant: '검증된 게임 화면',
-          score: rankedScreenGroups[0].distance,
-          colorScore: rankedScreenGroups[0].distance,
-        }],
-        reason: '',
-      };
-    }
-    if (fixtureMatchIsTrusted) {
-      return {
-        name: '',
-        confidence: 0,
-        candidates: [],
-        fixturePending: true,
-        reason: '검증 자료에서 종 또는 폼이 확정되지 않은 슬롯입니다.',
-      };
-    }
-    for (const group of screenGroups) {
-      const result = recognizeRect(image, rect, group, screens[index]);
-      if (result.name) return result;
-    }
-    return recognizeRect(image, rect, []);
+  return rects.map(rect => {
+    const pixels = recognitionPixels(image, rect);
+    const exact = recognizeRect(image, rect, screenReferences, pixels);
+    if (exact.evidence === 'slot-exact') return exact;
+    const ranked = recognizeRect(image, rect, officialReferences, pixels);
+    return {...ranked, name: '', confidence: 0,
+      reason: '아이콘 후보를 찾았으나 자동 확정 기준에 미달했습니다.'};
   });
-  return screenResults.map((result, index) => (
-    result.name || result.fixturePending
-      ? result
-      : {
-          ...recognizeRect(image, rects[index], officialReferences, screens[index]),
-          screenFixture: screenGroups[0]?.[0]?.fixture || null,
-        }
-  ));
 }
 
 export async function recognizeFileLocally(file, kind, references) {
