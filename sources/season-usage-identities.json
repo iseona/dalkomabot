@@ -1,0 +1,2631 @@
+{
+  "schemaVersion": 1,
+  "season": "M-6",
+  "purpose": "Stable source usage ID to local Korean master identity mapping",
+  "imagePolicy": "Images are only fetched by sync_champions_display.py from the Champions public catalog.",
+  "identities": [
+    {
+      "sourceId": "abomasnow",
+      "name": "눈설왕",
+      "dex": 460,
+      "form": "00",
+      "source": [
+        "ユキノオー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "absol",
+      "name": "앱솔",
+      "dex": 359,
+      "form": "00",
+      "source": [
+        "アブソル",
+        ""
+      ]
+    },
+    {
+      "sourceId": "aegislash",
+      "name": "킬가르도(실드폼)",
+      "dex": 681,
+      "form": "00",
+      "source": [
+        "ギルガルド",
+        ""
+      ]
+    },
+    {
+      "sourceId": "aerodactyl",
+      "name": "프테라",
+      "dex": 142,
+      "form": "00",
+      "source": [
+        "プテラ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "aggron",
+      "name": "보스로라",
+      "dex": 306,
+      "form": "00",
+      "source": [
+        "ボスゴドラ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "alakazam",
+      "name": "후딘",
+      "dex": 65,
+      "form": "00",
+      "source": [
+        "フーディン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "alcremie",
+      "name": "마휘핑",
+      "dex": 869,
+      "form": "00",
+      "source": [
+        "マホイップ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "altaria",
+      "name": "파비코리",
+      "dex": 334,
+      "form": "00",
+      "source": [
+        "チルタリス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "ampharos",
+      "name": "전룡",
+      "dex": 181,
+      "form": "00",
+      "source": [
+        "デンリュウ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "annihilape",
+      "name": "저승갓숭",
+      "dex": 979,
+      "form": "00",
+      "source": [
+        "コノヨザル",
+        ""
+      ]
+    },
+    {
+      "sourceId": "appletun",
+      "name": "단지래플",
+      "dex": 842,
+      "form": "00",
+      "source": [
+        "タルップル",
+        ""
+      ]
+    },
+    {
+      "sourceId": "araquanid",
+      "name": "깨비물거미",
+      "dex": 752,
+      "form": "00",
+      "source": [
+        "オニシズクモ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "arbok",
+      "name": "아보크",
+      "dex": 24,
+      "form": "00",
+      "source": [
+        "アーボック",
+        ""
+      ]
+    },
+    {
+      "sourceId": "arboliva",
+      "name": "올리르바",
+      "dex": 930,
+      "form": "00",
+      "source": [
+        "オリーヴァ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "arcanine",
+      "name": "윈디",
+      "dex": 59,
+      "form": "00",
+      "source": [
+        "ウインディ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "arcanine-hisui",
+      "name": "히스이 윈디",
+      "dex": 59,
+      "form": "01",
+      "source": [
+        "ウインディ",
+        "ヒスイ"
+      ]
+    },
+    {
+      "sourceId": "archaludon",
+      "name": "브리두라스",
+      "dex": 1018,
+      "form": "00",
+      "source": [
+        "ブリジュラス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "ariados",
+      "name": "아리아도스",
+      "dex": 168,
+      "form": "00",
+      "source": [
+        "アリアドス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "armarouge",
+      "name": "카디나르마",
+      "dex": 936,
+      "form": "00",
+      "source": [
+        "グレンアルマ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "aromatisse",
+      "name": "프레프티르",
+      "dex": 683,
+      "form": "00",
+      "source": [
+        "フレフワン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "audino",
+      "name": "다부니",
+      "dex": 531,
+      "form": "00",
+      "source": [
+        "タブンネ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "aurorus",
+      "name": "아마루르가",
+      "dex": 699,
+      "form": "00",
+      "source": [
+        "アマルルガ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "avalugg",
+      "name": "크레베이스",
+      "dex": 713,
+      "form": "00",
+      "source": [
+        "クレベース",
+        ""
+      ]
+    },
+    {
+      "sourceId": "avalugg-hisui",
+      "name": "히스이 크레베이스",
+      "dex": 713,
+      "form": "01",
+      "source": [
+        "クレベース",
+        "ヒスイ"
+      ]
+    },
+    {
+      "sourceId": "azumarill",
+      "name": "마릴리",
+      "dex": 184,
+      "form": "00",
+      "source": [
+        "マリルリ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "banette",
+      "name": "다크펫",
+      "dex": 354,
+      "form": "00",
+      "source": [
+        "ジュペッタ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "barbaracle",
+      "name": "거북손데스",
+      "dex": 689,
+      "form": "00",
+      "source": [
+        "ガメノデス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "basculegion",
+      "name": "대쓰여너(수컷)",
+      "dex": 902,
+      "form": "00",
+      "source": [
+        "イダイトウ",
+        "オス"
+      ]
+    },
+    {
+      "sourceId": "basculegion-f",
+      "name": "대쓰여너(암컷)",
+      "dex": 902,
+      "form": "01",
+      "source": [
+        "イダイトウ",
+        "メス"
+      ]
+    },
+    {
+      "sourceId": "bastiodon",
+      "name": "바리톱스",
+      "dex": 411,
+      "form": "00",
+      "source": [
+        "トリデプス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "baxcalibur",
+      "name": "드닐레이브",
+      "dex": 998,
+      "form": "00",
+      "source": [
+        "セグレイブ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "beartic",
+      "name": "툰베어",
+      "dex": 614,
+      "form": "00",
+      "source": [
+        "ツンベアー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "beedrill",
+      "name": "독침붕",
+      "dex": 15,
+      "form": "00",
+      "source": [
+        "スピアー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "bellibolt",
+      "name": "찌리배리",
+      "dex": 939,
+      "form": "00",
+      "source": [
+        "ハラバリー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "blastoise",
+      "name": "거북왕",
+      "dex": 9,
+      "form": "00",
+      "source": [
+        "カメックス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "blaziken",
+      "name": "번치코",
+      "dex": 257,
+      "form": "00",
+      "source": [
+        "バシャーモ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "camerupt",
+      "name": "폭타",
+      "dex": 323,
+      "form": "00",
+      "source": [
+        "バクーダ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "castform",
+      "name": "캐스퐁",
+      "dex": 351,
+      "form": "00",
+      "source": [
+        "ポワルン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "ceruledge",
+      "name": "파라블레이즈",
+      "dex": 937,
+      "form": "00",
+      "source": [
+        "ソウブレイズ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "chandelure",
+      "name": "샹델라",
+      "dex": 609,
+      "form": "00",
+      "source": [
+        "シャンデラ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "charizard",
+      "name": "리자몽",
+      "dex": 6,
+      "form": "00",
+      "source": [
+        "リザードン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "chesnaught",
+      "name": "브리가론",
+      "dex": 652,
+      "form": "00",
+      "source": [
+        "ブリガロン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "chimecho",
+      "name": "치렁",
+      "dex": 358,
+      "form": "00",
+      "source": [
+        "チリーン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "cinderace",
+      "name": "에이스번",
+      "dex": 815,
+      "form": "00",
+      "source": [
+        "エースバーン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "clawitzer",
+      "name": "블로스터",
+      "dex": 693,
+      "form": "00",
+      "source": [
+        "ブロスター",
+        ""
+      ]
+    },
+    {
+      "sourceId": "clefable",
+      "name": "픽시",
+      "dex": 36,
+      "form": "00",
+      "source": [
+        "ピクシー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "cofagrigus",
+      "name": "데스니칸",
+      "dex": 563,
+      "form": "00",
+      "source": [
+        "デスカーン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "conkeldurr",
+      "name": "노보청",
+      "dex": 534,
+      "form": "00",
+      "source": [
+        "ローブシン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "corviknight",
+      "name": "아머까오",
+      "dex": 823,
+      "form": "00",
+      "source": [
+        "アーマーガア",
+        ""
+      ]
+    },
+    {
+      "sourceId": "crabominable",
+      "name": "모단단게",
+      "dex": 740,
+      "form": "00",
+      "source": [
+        "ケケンカニ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "decidueye",
+      "name": "모크나이퍼",
+      "dex": 724,
+      "form": "00",
+      "source": [
+        "ジュナイパー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "decidueye-hisui",
+      "name": "히스이 모크나이퍼",
+      "dex": 724,
+      "form": "01",
+      "source": [
+        "ジュナイパー",
+        "ヒスイ"
+      ]
+    },
+    {
+      "sourceId": "dedenne",
+      "name": "데덴네",
+      "dex": 702,
+      "form": "00",
+      "source": [
+        "デデンネ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "delphox",
+      "name": "마폭시",
+      "dex": 655,
+      "form": "00",
+      "source": [
+        "マフォクシー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "diggersby",
+      "name": "파르토",
+      "dex": 660,
+      "form": "00",
+      "source": [
+        "ホルード",
+        ""
+      ]
+    },
+    {
+      "sourceId": "ditto",
+      "name": "메타몽",
+      "dex": 132,
+      "form": "00",
+      "source": [
+        "メタモン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "dragalge",
+      "name": "드래캄",
+      "dex": 691,
+      "form": "00",
+      "source": [
+        "ドラミドロ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "dragapult",
+      "name": "드래펄트",
+      "dex": 887,
+      "form": "00",
+      "source": [
+        "ドラパルト",
+        ""
+      ]
+    },
+    {
+      "sourceId": "dragonite",
+      "name": "망나뇽",
+      "dex": 149,
+      "form": "00",
+      "source": [
+        "カイリュー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "drampa",
+      "name": "할비롱",
+      "dex": 780,
+      "form": "00",
+      "source": [
+        "ジジーロン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "eelektross",
+      "name": "저리더프",
+      "dex": 604,
+      "form": "00",
+      "source": [
+        "シビルドン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "emboar",
+      "name": "염무왕",
+      "dex": 500,
+      "form": "00",
+      "source": [
+        "エンブオー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "emolga",
+      "name": "에몽가",
+      "dex": 587,
+      "form": "00",
+      "source": [
+        "エモンガ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "empoleon",
+      "name": "엠페르트",
+      "dex": 395,
+      "form": "00",
+      "source": [
+        "エンペルト",
+        ""
+      ]
+    },
+    {
+      "sourceId": "espathra",
+      "name": "클레스퍼트라",
+      "dex": 956,
+      "form": "00",
+      "source": [
+        "クエスパトラ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "espeon",
+      "name": "에브이",
+      "dex": 196,
+      "form": "00",
+      "source": [
+        "エーフィ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "excadrill",
+      "name": "몰드류",
+      "dex": 530,
+      "form": "00",
+      "source": [
+        "ドリュウズ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "falinks",
+      "name": "대여르",
+      "dex": 870,
+      "form": "00",
+      "source": [
+        "タイレーツ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "farfetch-d",
+      "name": "파오리",
+      "dex": 83,
+      "form": "00",
+      "source": [
+        "カモネギ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "farigiraf",
+      "name": "키키링",
+      "dex": 981,
+      "form": "00",
+      "source": [
+        "リキキリン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "feraligatr",
+      "name": "장크로다일",
+      "dex": 160,
+      "form": "00",
+      "source": [
+        "オーダイル",
+        ""
+      ]
+    },
+    {
+      "sourceId": "flapple",
+      "name": "애프룡",
+      "dex": 841,
+      "form": "00",
+      "source": [
+        "アップリュー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "flareon",
+      "name": "부스터",
+      "dex": 136,
+      "form": "00",
+      "source": [
+        "ブースター",
+        ""
+      ]
+    },
+    {
+      "sourceId": "floette-eternal",
+      "name": "플라엣테(영원의 꽃)",
+      "dex": 670,
+      "form": "05",
+      "source": [
+        "フラエッテ",
+        "えいえんのはな"
+      ]
+    },
+    {
+      "sourceId": "florges",
+      "name": "플라제스",
+      "dex": 671,
+      "form": "00",
+      "source": [
+        "フラージェス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "forretress",
+      "name": "쏘콘",
+      "dex": 205,
+      "form": "00",
+      "source": [
+        "フォレトス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "froslass",
+      "name": "눈여아",
+      "dex": 478,
+      "form": "00",
+      "source": [
+        "ユキメノコ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "furfrou",
+      "name": "트리미앙",
+      "dex": 676,
+      "form": "00",
+      "source": [
+        "トリミアン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "gallade",
+      "name": "엘레이드",
+      "dex": 475,
+      "form": "00",
+      "source": [
+        "エルレイド",
+        ""
+      ]
+    },
+    {
+      "sourceId": "garbodor",
+      "name": "더스트나",
+      "dex": 569,
+      "form": "00",
+      "source": [
+        "ダストダス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "garchomp",
+      "name": "한카리아스",
+      "dex": 445,
+      "form": "00",
+      "source": [
+        "ガブリアス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "gardevoir",
+      "name": "가디안",
+      "dex": 282,
+      "form": "00",
+      "source": [
+        "サーナイト",
+        ""
+      ]
+    },
+    {
+      "sourceId": "garganacl",
+      "name": "콜로솔트",
+      "dex": 934,
+      "form": "00",
+      "source": [
+        "キョジオーン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "gengar",
+      "name": "팬텀",
+      "dex": 94,
+      "form": "00",
+      "source": [
+        "ゲンガー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "gholdengo",
+      "name": "타부자고",
+      "dex": 1000,
+      "form": "00",
+      "source": [
+        "サーフゴー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "glaceon",
+      "name": "글레이시아",
+      "dex": 471,
+      "form": "00",
+      "source": [
+        "グレイシア",
+        ""
+      ]
+    },
+    {
+      "sourceId": "glalie",
+      "name": "얼음귀신",
+      "dex": 362,
+      "form": "00",
+      "source": [
+        "オニゴーリ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "glimmora",
+      "name": "킬라플로르",
+      "dex": 970,
+      "form": "00",
+      "source": [
+        "キラフロル",
+        ""
+      ]
+    },
+    {
+      "sourceId": "gliscor",
+      "name": "글라이온",
+      "dex": 472,
+      "form": "00",
+      "source": [
+        "グライオン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "gogoat",
+      "name": "고고트",
+      "dex": 673,
+      "form": "00",
+      "source": [
+        "ゴーゴート",
+        ""
+      ]
+    },
+    {
+      "sourceId": "golisopod",
+      "name": "갑주무사",
+      "dex": 768,
+      "form": "00",
+      "source": [
+        "グソクムシャ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "golurk",
+      "name": "골루그",
+      "dex": 623,
+      "form": "00",
+      "source": [
+        "ゴルーグ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "goodra",
+      "name": "미끄래곤",
+      "dex": 706,
+      "form": "00",
+      "source": [
+        "ヌメルゴン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "goodra-hisui",
+      "name": "히스이 미끄래곤",
+      "dex": 706,
+      "form": "01",
+      "source": [
+        "ヌメルゴン",
+        "ヒスイ"
+      ]
+    },
+    {
+      "sourceId": "gourgeist",
+      "name": "펌킨인(중과종)",
+      "dex": 711,
+      "form": "00",
+      "source": [
+        "パンプジン",
+        "ふつうのサイズ"
+      ]
+    },
+    {
+      "sourceId": "gourgeist-large",
+      "name": "펌킨인",
+      "dex": 711,
+      "form": "00",
+      "source": [
+        "パンプジン",
+        "おおきいサイズ"
+      ],
+      "generatedFrom": "PokeAPI identity metadata"
+    },
+    {
+      "sourceId": "gourgeist-small",
+      "name": "펌킨인(소과종)",
+      "dex": 711,
+      "form": "01",
+      "source": [
+        "パンプジン",
+        "ちいさいサイズ"
+      ]
+    },
+    {
+      "sourceId": "gourgeist-super",
+      "name": "펌킨인(특대과종)",
+      "dex": 711,
+      "form": "03",
+      "source": [
+        "パンプジン",
+        "とくだいサイズ"
+      ]
+    },
+    {
+      "sourceId": "grapploct",
+      "name": "케오퍼스",
+      "dex": 853,
+      "form": "00",
+      "source": [
+        "オトスパス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "greninja",
+      "name": "개굴닌자",
+      "dex": 658,
+      "form": "00",
+      "source": [
+        "ゲッコウガ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "grimmsnarl",
+      "name": "오롱털",
+      "dex": 861,
+      "form": "00",
+      "source": [
+        "オーロンゲ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "gyarados",
+      "name": "갸라도스",
+      "dex": 130,
+      "form": "00",
+      "source": [
+        "ギャラドス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "hatterene",
+      "name": "브리무음",
+      "dex": 858,
+      "form": "00",
+      "source": [
+        "ブリムオン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "hawlucha",
+      "name": "루차불",
+      "dex": 701,
+      "form": "00",
+      "source": [
+        "ルチャブル",
+        ""
+      ]
+    },
+    {
+      "sourceId": "heliolisk",
+      "name": "일레도리자드",
+      "dex": 695,
+      "form": "00",
+      "source": [
+        "エレザード",
+        ""
+      ]
+    },
+    {
+      "sourceId": "heracross",
+      "name": "헤라크로스",
+      "dex": 214,
+      "form": "00",
+      "source": [
+        "ヘラクロス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "hippowdon",
+      "name": "하마돈",
+      "dex": 450,
+      "form": "00",
+      "source": [
+        "カバルドン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "houndoom",
+      "name": "헬가",
+      "dex": 229,
+      "form": "00",
+      "source": [
+        "ヘルガー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "houndstone",
+      "name": "묘두기",
+      "dex": 972,
+      "form": "00",
+      "source": [
+        "ハカドッグ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "hydrapple",
+      "name": "과미드라",
+      "dex": 1019,
+      "form": "00",
+      "source": [
+        "カミツオロチ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "hydreigon",
+      "name": "삼삼드래",
+      "dex": 635,
+      "form": "00",
+      "source": [
+        "サザンドラ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "incineroar",
+      "name": "어흥염",
+      "dex": 727,
+      "form": "00",
+      "source": [
+        "ガオガエン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "indeedee",
+      "name": "에써르",
+      "dex": 876,
+      "form": "00",
+      "source": [
+        "イエッサン",
+        "オス"
+      ]
+    },
+    {
+      "sourceId": "indeedee-f",
+      "name": "에써르(암컷)",
+      "dex": 876,
+      "form": "01",
+      "source": [
+        "イエッサン",
+        "メス"
+      ]
+    },
+    {
+      "sourceId": "infernape",
+      "name": "초염몽",
+      "dex": 392,
+      "form": "00",
+      "source": [
+        "ゴウカザル",
+        ""
+      ]
+    },
+    {
+      "sourceId": "inteleon",
+      "name": "인텔리레온",
+      "dex": 818,
+      "form": "00",
+      "source": [
+        "インテレオン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "jolteon",
+      "name": "쥬피썬더",
+      "dex": 135,
+      "form": "00",
+      "source": [
+        "サンダース",
+        ""
+      ]
+    },
+    {
+      "sourceId": "kangaskhan",
+      "name": "캥카",
+      "dex": 115,
+      "form": "00",
+      "source": [
+        "ガルーラ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "kingambit",
+      "name": "대도각참",
+      "dex": 983,
+      "form": "00",
+      "source": [
+        "ドドゲザン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "kleavor",
+      "name": "사마자르",
+      "dex": 900,
+      "form": "00",
+      "source": [
+        "バサギリ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "klefki",
+      "name": "클레피",
+      "dex": 707,
+      "form": "00",
+      "source": [
+        "クレッフィ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "kommo-o",
+      "name": "짜랑고우거",
+      "dex": 784,
+      "form": "00",
+      "source": [
+        "ジャラランガ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "krookodile",
+      "name": "악비아르",
+      "dex": 553,
+      "form": "00",
+      "source": [
+        "ワルビアル",
+        ""
+      ]
+    },
+    {
+      "sourceId": "leafeon",
+      "name": "리피아",
+      "dex": 470,
+      "form": "00",
+      "source": [
+        "リーフィア",
+        ""
+      ]
+    },
+    {
+      "sourceId": "liepard",
+      "name": "레파르다스",
+      "dex": 510,
+      "form": "00",
+      "source": [
+        "レパルダス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "lopunny",
+      "name": "이어롭",
+      "dex": 428,
+      "form": "00",
+      "source": [
+        "ミミロップ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "lucario",
+      "name": "루카리오",
+      "dex": 448,
+      "form": "00",
+      "source": [
+        "ルカリオ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "luxray",
+      "name": "렌트라",
+      "dex": 405,
+      "form": "00",
+      "source": [
+        "レントラー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "lycanroc",
+      "name": "루가루암(한낮의 모습)",
+      "dex": 745,
+      "form": "00",
+      "source": [
+        "ルガルガン",
+        "まひるのすがた"
+      ]
+    },
+    {
+      "sourceId": "lycanroc-dusk",
+      "name": "루가루암(황혼의 모습)",
+      "dex": 745,
+      "form": "02",
+      "source": [
+        "ルガルガン",
+        "たそがれ"
+      ]
+    },
+    {
+      "sourceId": "lycanroc-midnight",
+      "name": "루가루암(한밤중의 모습)",
+      "dex": 745,
+      "form": "01",
+      "source": [
+        "ルガルガン",
+        "まよなか"
+      ]
+    },
+    {
+      "sourceId": "mabosstiff",
+      "name": "마피티프",
+      "dex": 943,
+      "form": "00",
+      "source": [
+        "マフィティフ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "machamp",
+      "name": "괴력몬",
+      "dex": 68,
+      "form": "00",
+      "source": [
+        "カイリキー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "malamar",
+      "name": "칼라마네로",
+      "dex": 687,
+      "form": "00",
+      "source": [
+        "カラマネロ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "mamoswine",
+      "name": "맘모꾸리",
+      "dex": 473,
+      "form": "00",
+      "source": [
+        "マンムー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "manectric",
+      "name": "썬더볼트",
+      "dex": 310,
+      "form": "00",
+      "source": [
+        "ライボルト",
+        ""
+      ]
+    },
+    {
+      "sourceId": "maushold",
+      "name": "파밀리쥐",
+      "dex": 925,
+      "form": "00",
+      "source": [
+        "イッカネズミ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "mawile",
+      "name": "입치트",
+      "dex": 303,
+      "form": "00",
+      "source": [
+        "クチート",
+        ""
+      ]
+    },
+    {
+      "sourceId": "medicham",
+      "name": "요가램",
+      "dex": 308,
+      "form": "00",
+      "source": [
+        "チャーレム",
+        ""
+      ]
+    },
+    {
+      "sourceId": "meganium",
+      "name": "메가니움",
+      "dex": 154,
+      "form": "00",
+      "source": [
+        "メガニウム",
+        ""
+      ]
+    },
+    {
+      "sourceId": "meowscarada",
+      "name": "마스카나",
+      "dex": 908,
+      "form": "00",
+      "source": [
+        "マスカーニャ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "meowstic",
+      "name": "냐오닉스(수컷)",
+      "dex": 678,
+      "form": "00",
+      "source": [
+        "ニャオニクス",
+        "オス"
+      ]
+    },
+    {
+      "sourceId": "meowstic-f",
+      "name": "냐오닉스(암컷)",
+      "dex": 678,
+      "form": "01",
+      "source": [
+        "ニャオニクス",
+        "メス"
+      ]
+    },
+    {
+      "sourceId": "metagross",
+      "name": "메타그로스",
+      "dex": 376,
+      "form": "00",
+      "source": [
+        "メタグロス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "milotic",
+      "name": "밀로틱",
+      "dex": 350,
+      "form": "00",
+      "source": [
+        "ミロカロス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "mimikyu",
+      "name": "따라큐",
+      "dex": 778,
+      "form": "00",
+      "source": [
+        "ミミッキュ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "morpeko",
+      "name": "모르페코(배부른 모양)",
+      "dex": 877,
+      "form": "00",
+      "source": [
+        "モルペコ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "mr-mime",
+      "name": "마임맨",
+      "dex": 122,
+      "form": "00",
+      "source": [
+        "バリヤード",
+        ""
+      ]
+    },
+    {
+      "sourceId": "mr-rime",
+      "name": "마임꽁꽁",
+      "dex": 866,
+      "form": "00",
+      "source": [
+        "バリコオル",
+        ""
+      ]
+    },
+    {
+      "sourceId": "mudsdale",
+      "name": "만마드",
+      "dex": 750,
+      "form": "00",
+      "source": [
+        "バンバドロ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "musharna",
+      "name": "몽얌나",
+      "dex": 518,
+      "form": "00",
+      "source": [
+        "ムシャーナ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "ninetales",
+      "name": "나인테일",
+      "dex": 38,
+      "form": "00",
+      "source": [
+        "キュウコン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "ninetales-alola",
+      "name": "알로라 나인테일",
+      "dex": 38,
+      "form": "01",
+      "source": [
+        "キュウコン",
+        "アローラ"
+      ]
+    },
+    {
+      "sourceId": "noivern",
+      "name": "음번",
+      "dex": 715,
+      "form": "00",
+      "source": [
+        "オンバーン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "oranguru",
+      "name": "하랑우탄",
+      "dex": 765,
+      "form": "00",
+      "source": [
+        "ヤレユータン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "orthworm",
+      "name": "꿈트렁",
+      "dex": 968,
+      "form": "00",
+      "source": [
+        "ミミズズ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "overqwil",
+      "name": "장침바루",
+      "dex": 904,
+      "form": "00",
+      "source": [
+        "ハリーマン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "palafin",
+      "name": "돌핀맨(나이브폼)",
+      "dex": 964,
+      "form": "00",
+      "source": [
+        "イルカマン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "pangoro",
+      "name": "부란다",
+      "dex": 675,
+      "form": "00",
+      "source": [
+        "ゴロンダ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "passimian",
+      "name": "내던숭이",
+      "dex": 766,
+      "form": "00",
+      "source": [
+        "ナゲツケサル",
+        ""
+      ]
+    },
+    {
+      "sourceId": "pawmot",
+      "name": "빠르모트",
+      "dex": 923,
+      "form": "00",
+      "source": [
+        "パーモット",
+        ""
+      ]
+    },
+    {
+      "sourceId": "pelipper",
+      "name": "패리퍼",
+      "dex": 279,
+      "form": "00",
+      "source": [
+        "ペリッパー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "perrserker",
+      "name": "나이킹",
+      "dex": 863,
+      "form": "00",
+      "source": [
+        "ニャイキング",
+        ""
+      ]
+    },
+    {
+      "sourceId": "persian",
+      "name": "페르시온",
+      "dex": 53,
+      "form": "00",
+      "source": [
+        "ペルシアン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "persian-alola",
+      "name": "알로라 페르시온",
+      "dex": 53,
+      "form": "01",
+      "source": [
+        "ペルシアン",
+        "アローラ"
+      ]
+    },
+    {
+      "sourceId": "pidgeot",
+      "name": "피죤투",
+      "dex": 18,
+      "form": "00",
+      "source": [
+        "ピジョット",
+        ""
+      ]
+    },
+    {
+      "sourceId": "pikachu",
+      "name": "피카츄",
+      "dex": 25,
+      "form": "00",
+      "source": [
+        "ピカチュウ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "pincurchin",
+      "name": "찌르성게",
+      "dex": 871,
+      "form": "00",
+      "source": [
+        "バチンウニ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "pinsir",
+      "name": "쁘사이저",
+      "dex": 127,
+      "form": "00",
+      "source": [
+        "カイロス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "politoed",
+      "name": "왕구리",
+      "dex": 186,
+      "form": "00",
+      "source": [
+        "ニョロトノ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "polteageist",
+      "name": "포트데스",
+      "dex": 855,
+      "form": "00",
+      "source": [
+        "ポットデス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "primarina",
+      "name": "누리레느",
+      "dex": 730,
+      "form": "00",
+      "source": [
+        "アシレーヌ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "pyroar",
+      "name": "화염레오",
+      "dex": 668,
+      "form": "00",
+      "source": [
+        "カエンジシ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "quaquaval",
+      "name": "웨이니발",
+      "dex": 914,
+      "form": "00",
+      "source": [
+        "ウェーニバル",
+        ""
+      ]
+    },
+    {
+      "sourceId": "qwilfish",
+      "name": "침바루",
+      "dex": 211,
+      "form": "00",
+      "source": [
+        "ハリーセン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "raichu",
+      "name": "라이츄",
+      "dex": 26,
+      "form": "00",
+      "source": [
+        "ライチュウ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "raichu-alola",
+      "name": "알로라 라이츄",
+      "dex": 26,
+      "form": "01",
+      "source": [
+        "ライチュウ",
+        "アローラ"
+      ]
+    },
+    {
+      "sourceId": "rampardos",
+      "name": "램펄드",
+      "dex": 409,
+      "form": "00",
+      "source": [
+        "ラムパルド",
+        ""
+      ]
+    },
+    {
+      "sourceId": "reuniclus",
+      "name": "란쿨루스",
+      "dex": 579,
+      "form": "00",
+      "source": [
+        "ランクルス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "rhyperior",
+      "name": "거대코뿌리",
+      "dex": 464,
+      "form": "00",
+      "source": [
+        "ドサイドン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "rillaboom",
+      "name": "고릴타",
+      "dex": 812,
+      "form": "00",
+      "source": [
+        "ゴリランダー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "roserade",
+      "name": "로즈레이드",
+      "dex": 407,
+      "form": "00",
+      "source": [
+        "ロズレイド",
+        ""
+      ]
+    },
+    {
+      "sourceId": "rotom",
+      "name": "로토무",
+      "dex": 479,
+      "form": "00",
+      "source": [
+        "ロトム",
+        ""
+      ]
+    },
+    {
+      "sourceId": "rotom-fan",
+      "name": "스핀로토무",
+      "dex": 479,
+      "form": "04",
+      "source": [
+        "ロトム",
+        "スピン"
+      ]
+    },
+    {
+      "sourceId": "rotom-frost",
+      "name": "프로스트로토무",
+      "dex": 479,
+      "form": "03",
+      "source": [
+        "ロトム",
+        "フロスト"
+      ]
+    },
+    {
+      "sourceId": "rotom-heat",
+      "name": "히트로토무",
+      "dex": 479,
+      "form": "01",
+      "source": [
+        "ロトム",
+        "ヒート"
+      ]
+    },
+    {
+      "sourceId": "rotom-mow",
+      "name": "커트로토무",
+      "dex": 479,
+      "form": "05",
+      "source": [
+        "ロトム",
+        "カット"
+      ]
+    },
+    {
+      "sourceId": "rotom-wash",
+      "name": "워시로토무",
+      "dex": 479,
+      "form": "02",
+      "source": [
+        "ロトム",
+        "ウォッシュ"
+      ]
+    },
+    {
+      "sourceId": "runerigus",
+      "name": "데스판",
+      "dex": 867,
+      "form": "00",
+      "source": [
+        "デスバーン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "sableye",
+      "name": "깜까미",
+      "dex": 302,
+      "form": "00",
+      "source": [
+        "ヤミラミ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "salamence",
+      "name": "보만다",
+      "dex": 373,
+      "form": "00",
+      "source": [
+        "ボーマンダ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "salazzle",
+      "name": "염뉴트",
+      "dex": 758,
+      "form": "00",
+      "source": [
+        "エンニュート",
+        ""
+      ]
+    },
+    {
+      "sourceId": "samurott",
+      "name": "대검귀",
+      "dex": 503,
+      "form": "00",
+      "source": [
+        "ダイケンキ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "samurott-hisui",
+      "name": "히스이 대검귀",
+      "dex": 503,
+      "form": "01",
+      "source": [
+        "ダイケンキ",
+        "ヒスイ"
+      ]
+    },
+    {
+      "sourceId": "sandaconda",
+      "name": "사다이사",
+      "dex": 844,
+      "form": "00",
+      "source": [
+        "サダイジャ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "sceptile",
+      "name": "나무킹",
+      "dex": 254,
+      "form": "00",
+      "source": [
+        "ジュカイン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "scizor",
+      "name": "핫삼",
+      "dex": 212,
+      "form": "00",
+      "source": [
+        "ハッサム",
+        ""
+      ]
+    },
+    {
+      "sourceId": "scolipede",
+      "name": "펜드라",
+      "dex": 545,
+      "form": "00",
+      "source": [
+        "ペンドラー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "scovillain",
+      "name": "스코빌런",
+      "dex": 952,
+      "form": "00",
+      "source": [
+        "スコヴィラン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "scrafty",
+      "name": "곤율거니",
+      "dex": 560,
+      "form": "00",
+      "source": [
+        "ズルズキン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "serperior",
+      "name": "샤로다",
+      "dex": 497,
+      "form": "00",
+      "source": [
+        "ジャローダ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "sharpedo",
+      "name": "샤크니아",
+      "dex": 319,
+      "form": "00",
+      "source": [
+        "サメハダー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "simipour",
+      "name": "앗차키",
+      "dex": 516,
+      "form": "00",
+      "source": [
+        "ヒヤッキー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "simisage",
+      "name": "야나키",
+      "dex": 512,
+      "form": "00",
+      "source": [
+        "ヤナッキー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "simisear",
+      "name": "바오키",
+      "dex": 514,
+      "form": "00",
+      "source": [
+        "バオッキー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "sinistcha",
+      "name": "그우린차",
+      "dex": 1013,
+      "form": "00",
+      "source": [
+        "ヤバソチャ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "sirfetch-d",
+      "name": "창파나이트",
+      "dex": 865,
+      "form": "00",
+      "source": [
+        "ネギガナイト",
+        ""
+      ]
+    },
+    {
+      "sourceId": "skarmory",
+      "name": "무장조",
+      "dex": 227,
+      "form": "00",
+      "source": [
+        "エアームド",
+        ""
+      ]
+    },
+    {
+      "sourceId": "skeledirge",
+      "name": "라우드본",
+      "dex": 911,
+      "form": "00",
+      "source": [
+        "ラウドボーン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "slowbro",
+      "name": "야도란",
+      "dex": 80,
+      "form": "00",
+      "source": [
+        "ヤドラン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "slowbro-galar",
+      "name": "가라르 야도란",
+      "dex": 80,
+      "form": "02",
+      "source": [
+        "ヤドラン",
+        "ガラル"
+      ]
+    },
+    {
+      "sourceId": "slowking",
+      "name": "야도킹",
+      "dex": 199,
+      "form": "00",
+      "source": [
+        "ヤドキング",
+        ""
+      ]
+    },
+    {
+      "sourceId": "slowking-galar",
+      "name": "가라르 야도킹",
+      "dex": 199,
+      "form": "01",
+      "source": [
+        "ヤドキング",
+        "ガラル"
+      ]
+    },
+    {
+      "sourceId": "slurpuff",
+      "name": "나루림",
+      "dex": 685,
+      "form": "00",
+      "source": [
+        "ペロリーム",
+        ""
+      ]
+    },
+    {
+      "sourceId": "sneasler",
+      "name": "포푸니크",
+      "dex": 903,
+      "form": "00",
+      "source": [
+        "オオニューラ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "snorlax",
+      "name": "잠만보",
+      "dex": 143,
+      "form": "00",
+      "source": [
+        "カビゴン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "spiritomb",
+      "name": "화강돌",
+      "dex": 442,
+      "form": "00",
+      "source": [
+        "ミカルゲ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "squawkabilly",
+      "name": "시비꼬",
+      "dex": 931,
+      "form": "00",
+      "source": [
+        "イキリンコ",
+        "グリーンフェザー"
+      ],
+      "generatedFrom": "PokeAPI identity metadata"
+    },
+    {
+      "sourceId": "squawkabilly-yellow",
+      "name": "시비꼬(옐로깃털)",
+      "dex": 931,
+      "form": "02",
+      "source": [
+        "イキリンコ",
+        "イエロー"
+      ]
+    },
+    {
+      "sourceId": "staraptor",
+      "name": "찌르호크",
+      "dex": 398,
+      "form": "00",
+      "source": [
+        "ムクホーク",
+        ""
+      ]
+    },
+    {
+      "sourceId": "starmie",
+      "name": "아쿠스타",
+      "dex": 121,
+      "form": "00",
+      "source": [
+        "スターミー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "steelix",
+      "name": "강철톤",
+      "dex": 208,
+      "form": "00",
+      "source": [
+        "ハガネール",
+        ""
+      ]
+    },
+    {
+      "sourceId": "stunfisk",
+      "name": "메더",
+      "dex": 618,
+      "form": "00",
+      "source": [
+        "マッギョ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "stunfisk-galar",
+      "name": "가라르 메더",
+      "dex": 618,
+      "form": "01",
+      "source": [
+        "マッギョ",
+        "ガラル"
+      ]
+    },
+    {
+      "sourceId": "swalot",
+      "name": "꿀꺽몬",
+      "dex": 317,
+      "form": "00",
+      "source": [
+        "マルノーム",
+        ""
+      ]
+    },
+    {
+      "sourceId": "swampert",
+      "name": "대짱이",
+      "dex": 260,
+      "form": "00",
+      "source": [
+        "ラグラージ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "sylveon",
+      "name": "님피아",
+      "dex": 700,
+      "form": "00",
+      "source": [
+        "ニンフィア",
+        ""
+      ]
+    },
+    {
+      "sourceId": "talonflame",
+      "name": "파이어로",
+      "dex": 663,
+      "form": "00",
+      "source": [
+        "ファイアロー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "tauros",
+      "name": "켄타로스",
+      "dex": 128,
+      "form": "00",
+      "source": [
+        "ケンタロス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "tauros-paldea-aqua",
+      "name": "팔데아 켄타로스(워터종)",
+      "dex": 128,
+      "form": "03",
+      "source": [
+        "ケンタロス",
+        "パルデア・ウォーター"
+      ]
+    },
+    {
+      "sourceId": "tauros-paldea-blaze",
+      "name": "팔데아 켄타로스(블레이즈종)",
+      "dex": 128,
+      "form": "02",
+      "source": [
+        "ケンタロス",
+        "パルデア・ブレイズ"
+      ]
+    },
+    {
+      "sourceId": "tauros-paldea-combat",
+      "name": "팔데아 켄타로스(컴뱃종)",
+      "dex": 128,
+      "form": "01",
+      "source": [
+        "ケンタロス",
+        "パルデア・コンバット"
+      ]
+    },
+    {
+      "sourceId": "thievul",
+      "name": "폭슬라이",
+      "dex": 828,
+      "form": "00",
+      "source": [
+        "フォクスライ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "tinkaton",
+      "name": "두드리짱",
+      "dex": 959,
+      "form": "00",
+      "source": [
+        "デカヌチャン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "torkoal",
+      "name": "코터스",
+      "dex": 324,
+      "form": "00",
+      "source": [
+        "コータス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "torterra",
+      "name": "토대부기",
+      "dex": 389,
+      "form": "00",
+      "source": [
+        "ドダイトス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "toucannon",
+      "name": "왕큰부리",
+      "dex": 733,
+      "form": "00",
+      "source": [
+        "ドデカバシ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "toxapex",
+      "name": "더시마사리",
+      "dex": 748,
+      "form": "00",
+      "source": [
+        "ドヒドイデ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "toxicroak",
+      "name": "독개굴",
+      "dex": 454,
+      "form": "00",
+      "source": [
+        "ドクロッグ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "toxtricity",
+      "name": "스트린더",
+      "dex": 849,
+      "form": "00",
+      "source": [
+        "ストリンダー",
+        "ハイなすがた"
+      ],
+      "generatedFrom": "PokeAPI identity metadata"
+    },
+    {
+      "sourceId": "toxtricity-low-key",
+      "name": "스트린더(로우한 모습)",
+      "dex": 849,
+      "form": "01",
+      "source": [
+        "ストリンダー",
+        "ローなすがた"
+      ]
+    },
+    {
+      "sourceId": "trevenant",
+      "name": "대로트",
+      "dex": 709,
+      "form": "00",
+      "source": [
+        "オーロット",
+        ""
+      ]
+    },
+    {
+      "sourceId": "tsareena",
+      "name": "달코퀸",
+      "dex": 763,
+      "form": "00",
+      "source": [
+        "アマージョ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "typhlosion",
+      "name": "블레이범",
+      "dex": 157,
+      "form": "00",
+      "source": [
+        "バクフーン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "typhlosion-hisui",
+      "name": "히스이 블레이범",
+      "dex": 157,
+      "form": "01",
+      "source": [
+        "バクフーン",
+        "ヒスイ"
+      ]
+    },
+    {
+      "sourceId": "tyranitar",
+      "name": "마기라스",
+      "dex": 248,
+      "form": "00",
+      "source": [
+        "バンギラス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "tyrantrum",
+      "name": "견고라스",
+      "dex": 697,
+      "form": "00",
+      "source": [
+        "ガチゴラス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "umbreon",
+      "name": "블래키",
+      "dex": 197,
+      "form": "00",
+      "source": [
+        "ブラッキー",
+        ""
+      ]
+    },
+    {
+      "sourceId": "vanilluxe",
+      "name": "배바닐라",
+      "dex": 584,
+      "form": "00",
+      "source": [
+        "バイバニラ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "vaporeon",
+      "name": "샤미드",
+      "dex": 134,
+      "form": "00",
+      "source": [
+        "シャワーズ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "venusaur",
+      "name": "이상해꽃",
+      "dex": 3,
+      "form": "00",
+      "source": [
+        "フシギバナ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "victreebel",
+      "name": "우츠보트",
+      "dex": 71,
+      "form": "00",
+      "source": [
+        "ウツボット",
+        ""
+      ]
+    },
+    {
+      "sourceId": "vileplume",
+      "name": "라플레시아",
+      "dex": 45,
+      "form": "00",
+      "source": [
+        "ラフレシア",
+        ""
+      ]
+    },
+    {
+      "sourceId": "vivillon",
+      "name": "비비용",
+      "dex": 666,
+      "form": "18",
+      "source": [
+        "ビビヨン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "volcarona",
+      "name": "불카모스",
+      "dex": 637,
+      "form": "00",
+      "source": [
+        "ウルガモス",
+        ""
+      ]
+    },
+    {
+      "sourceId": "watchog",
+      "name": "보르그",
+      "dex": 505,
+      "form": "00",
+      "source": [
+        "ミルホッグ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "weavile",
+      "name": "포푸니라",
+      "dex": 461,
+      "form": "00",
+      "source": [
+        "マニューラ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "whimsicott",
+      "name": "엘풍",
+      "dex": 547,
+      "form": "00",
+      "source": [
+        "エルフーン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "wigglytuff",
+      "name": "푸크린",
+      "dex": 40,
+      "form": "00",
+      "source": [
+        "プクリン",
+        ""
+      ]
+    },
+    {
+      "sourceId": "wyrdeer",
+      "name": "신비록",
+      "dex": 899,
+      "form": "00",
+      "source": [
+        "アヤシシ",
+        ""
+      ]
+    },
+    {
+      "sourceId": "zoroark",
+      "name": "조로아크",
+      "dex": 571,
+      "form": "00",
+      "source": [
+        "ゾロアーク",
+        ""
+      ]
+    },
+    {
+      "sourceId": "zoroark-hisui",
+      "name": "히스이 조로아크",
+      "dex": 571,
+      "form": "01",
+      "source": [
+        "ゾロアーク",
+        "ヒスイ"
+      ]
+    }
+  ]
+}

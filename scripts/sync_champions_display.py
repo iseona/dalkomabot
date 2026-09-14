@@ -83,6 +83,17 @@ def main():
     data = json.loads((DIST / 'data.json').read_text(encoding='utf-8'))
     old_map = json.loads((DIST / 'champions-icon-map.json').read_text(encoding='utf-8'))
     old_keys = {name: Path(src).stem.replace('pokemon-', '') for name, src in old_map.items()}
+    # Season rankings can introduce forms which have no recognition icon yet.
+    # Their reviewed ledger is the authoritative image identity; never infer a
+    # form key from an English display string.
+    ledger = ROOT / 'sources' / 'season-usage-identities.json'
+    if ledger.exists():
+        reviewed_forms = {'squawkabilly':'0931-00', 'squawkabilly-yellow':'0931-02', 'persian-alola':'0053-01',
+                          'indeedee':'0876-00', 'indeedee-f':'0876-01', 'lycanroc':'0745-00',
+                          'gourgeist':'0711-00', 'toxtricity':'0849-00', 'toxtricity-low-key':'0849-01',
+                          'floette-eternal':'0670-05'}
+        for identity in json.loads(ledger.read_text(encoding='utf-8')).get('identities', []):
+            old_keys[identity['name']] = reviewed_forms.get(identity['sourceId'], f"{identity['dex']:04d}-{identity['form']}")
     species = cached_json('species-identifiers.json', 'https://pokeapi.co/api/v2/pokemon-species?limit=2000')['results']
     dex = {p['name']: int(p['url'].rstrip('/').split('/')[-1]) for p in species}
     source_list = cached_json('site-image-names.json', BASE + '/api/pokemon/search')['pokemons']
@@ -90,16 +101,24 @@ def main():
     entries, failures = [], []
     for index, row in enumerate(data['master']['pokemon']):
         name, english = row[:2]
-        base_english = english.split(' (')[0]
-        slug = base_english.lower().replace('. ', '-').replace(' ', '-').replace("'", '')
-        number = dex.get(slug)
-        if not number:
-            failures.append({'name': name, 'reason': 'Unmatched species identifier', 'english': english})
-            continue
-        prefix = f'{number:04d}'
-        form = english[len(base_english)+2:-1] if english != base_english else ''
-        available = [p for p in source_list if p['pokemon_key'].startswith(prefix + '-')]
+        # A reviewed season identity has the exact Champions key, including
+        # forms whose PokeAPI English name is not a species slug.
         chosen = site_by_key.get(old_keys.get(name, ''))
+        if chosen:
+            number = int(chosen['pokemon_key'][:4])
+            prefix = f'{number:04d}'
+            form = ''
+            available = [chosen]
+        else:
+            base_english = english.split(' (')[0]
+            slug = base_english.lower().replace('. ', '-').replace(' ', '-').replace("'", '')
+            number = dex.get(slug)
+            if not number:
+                failures.append({'name': name, 'reason': 'Unmatched species identifier', 'english': english})
+                continue
+            prefix = f'{number:04d}'
+            form = english[len(base_english)+2:-1] if english != base_english else ''
+            available = [p for p in source_list if p['pokemon_key'].startswith(prefix + '-')]
         if not chosen and not form:
             chosen = site_by_key.get(prefix + '-00')
         if not chosen and form.startswith('Mega '):
