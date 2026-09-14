@@ -1,10 +1,11 @@
 """Import only downloaded Champions ranked-team JSON. Never fetch another game."""
-import json,collections
+import json,collections,re
 from pathlib import Path
 import os
 ROOT=Path(os.environ.get('CHAMPIONS_ROOT',str(Path(__file__).resolve().parents[1])))
 def mapping(text):return dict(line.split('=',1) for line in text.strip().splitlines())
 pokemon=mapping('''0003-00=이상해꽃
+0025-00=피카츄
 0006-00=리자몽
 0009-00=거북왕
 0024-00=아보크
@@ -24,6 +25,7 @@ pokemon=mapping('''0003-00=이상해꽃
 0128-02=팔데아 켄타로스(블레이즈종)
 0130-00=갸라도스
 0132-00=메타몽
+0134-00=샤미드
 0142-00=프테라
 0143-00=잠만보
 0149-00=망나뇽
@@ -49,10 +51,15 @@ pokemon=mapping('''0003-00=이상해꽃
 0282-00=가디안
 0302-00=깜까미
 0303-00=입치트
+0310-00=썬더볼트
+0319-00=샤크니아
+0323-00=폭타
 0324-00=코터스
+0334-00=파비코리
 0350-00=밀로틱
 0354-00=다크펫
 0358-00=치렁
+0407-00=로즈레이드
 0376-00=메타그로스
 0392-00=초염몽
 0395-00=엠페르트
@@ -60,22 +67,28 @@ pokemon=mapping('''0003-00=이상해꽃
 0428-00=이어롭
 0445-00=한카리아스
 0448-00=루카리오
+0442-00=화강돌
 0450-00=하마돈
 0460-00=눈설왕
 0461-00=포푸니라
 0464-00=거대코뿌리
 0471-00=글레이시아
+0470-00=리피아
+0475-00=엘레이드
 0473-00=맘모꾸리
 0478-00=눈여아
 0479-01=히트로토무
 0479-02=워시로토무
+0479-04=스핀로토무
 0497-00=샤로다
+0500-00=염무왕
 0503-01=히스이 대검귀
 0518-00=몽얌나
 0530-00=몰드류
 0531-00=다부니
 0545-00=펜드라
 0547-00=엘풍
+0553-00=악비아르
 0571-01=히스이 조로아크
 0584-00=배바닐라
 0609-00=샹델라
@@ -100,12 +113,16 @@ pokemon=mapping('''0003-00=이상해꽃
 0715-00=음번
 0727-00=어흥염
 0730-00=누리레느
+0733-00=왕큰부리
+0740-00=모단단게
 0748-00=더시마사리
 0752-00=깨비물거미
 0758-00=염뉴트
 0778-00=따라큐
+0780-00=할비롱
 0784-00=짜랑고우거
 0823-00=아머까오
+0858-00=브리무음
 0855-00=포트데스
 0861-00=오롱털
 0887-00=드래펄트
@@ -121,6 +138,7 @@ pokemon=mapping('''0003-00=이상해꽃
 0939-00=찌리배리
 0952-00=스코빌런
 0956-00=클레스퍼트라
+0959-00=두드리짱
 0964-00=돌핀맨(나이브폼)
 0968-00=꿈트렁
 0970-00=킬라플로르
@@ -223,24 +241,41 @@ items=mapping('''あついいわ=뜨거운바위
 リリバのみ=바리비열매
 リンドのみ=린드열매
 ルカリオナイト=루카리오나이트
+デンリュウナイト=전룡나이트
+ライボルトナイト=썬더볼트나이트
+サメハダナイト=샤크니아나이트
+バクーダナイト=폭타나이트
+ロゼルのみ=로셀열매
+エルレイドナイト=엘레이드나이트
+エンブオナイト=염무왕나이트
+ケケンカニナイト=모단단게나이트
+きれいなぬけがら=아름다운허물
 持ち物なし=''')
 def run():
  d=json.loads((ROOT/'dist/data.json').read_text(encoding='utf-8'));wh={k:{r[0] for r in v} for k,v in d['master'].items()};source='https://champs.pokedb.tokyo/guide/opendata';out={'source':source,'modes':{}};audit=[]
+ available={}
  for mode in ['single','double']:
-  raw=json.loads((ROOT/f'sources/s4_{mode}_ranked_teams.json').read_text(encoding='utf-8'));assert raw['season']=='M-4';result=[]
+  for path in (ROOT/'sources').glob(f's*_{mode}_ranked_teams.json'):
+   match=re.fullmatch(r's(\d+)_'+mode+r'_ranked_teams\.json',path.name)
+   if match:available.setdefault(int(match.group(1)),{})[mode]=path
+ complete=[number for number,modes in available.items() if set(modes)=={'single','double'}]
+ if not complete:raise ValueError('No complete local season')
+ season=max(complete)
+ for mode in ['single','double']:
+  raw=json.loads(available[season][mode].read_text(encoding='utf-8'));assert raw['season']==f'M-{season}';result=[];excluded=[]
   for t in raw['teams']:
    assert len(t['team'])==6;team=[]
    for m in t['team']:
     name=pokemon.get(m['id']);item=items.get(m['item'])
-    assert name in wh['pokemon'],m
-    assert item=='' or item in wh['items'],m
+    if name not in wh['pokemon'] or (item!='' and item not in wh['items']):
+     excluded.append({'rank':t['rank'],'id':m['id'],'original':m['pokemon'],'form':m['form'],'item':m['item'],'reason':'unmapped pokemon' if name not in wh['pokemon'] else 'unmapped item'});break
     team.append({'id':m['id'],'name':name,'item':item})
     audit.append({'id':m['id'],'original':m['pokemon'],'form':m['form'],'name':name,'originalItem':m['item'],'item':item})
-   result.append({'rank':t['rank'],'rating':t['rating_value'],'team':team})
+   if len(team)==6:result.append({'rank':t['rank'],'rating':t['rating_value'],'team':team})
   counts=collections.Counter(m['name'] for t in result for m in t['team']);freq=[{'name':n,'count':c,'rate':round(c/len(result)*100,1)} for n,c in counts.most_common()]
   # These figures describe this mode's published ranked-team sample only.  Do
   # not combine modes: they are separate source populations.
-  metadata={'mode':mode,'season':raw['season'],'aggregationPeriod':'published ranked-team snapshot; no cross-mode aggregation','updatedAt':raw['updated_at'],'sample':{'teams':len(result),'unit':'published teams'},'source':source}
+  metadata={'mode':mode,'season':raw['season'],'aggregationPeriod':'published ranked-team snapshot; no cross-mode aggregation','updatedAt':raw['updated_at'],'sample':{'teams':len(result),'unit':'published teams'},'excludedTeams':len(excluded),'unmapped':excluded,'source':source}
   out['modes'][mode]={'season':raw['season'],'updatedAt':raw['updated_at'],'count':len(result),'teams':result,'frequency':freq,'metadata':metadata}
  (ROOT/'dist/opendata.json').write_text(json.dumps(out,ensure_ascii=False),encoding='utf-8')
  unique={json.dumps(x,ensure_ascii=False):x for x in audit};(ROOT/'sources/translation-audit.json').write_text(json.dumps(list(unique.values()),ensure_ascii=False,indent=2),encoding='utf-8')
