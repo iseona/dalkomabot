@@ -251,8 +251,8 @@
             "Arn"
           ]
         },
-        "Timeout": 120,
-        "MemorySize": 256,
+        "Timeout": 600,
+        "MemorySize": 512,
         "Environment": {
           "Variables": {
             "DATA_BUCKET": {

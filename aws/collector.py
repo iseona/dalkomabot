@@ -72,10 +72,11 @@ def translate_detail(value,mode,season,master):
    else:excluded.append({'category':'evs','sourceName':entry['spread']})
  return {'moves':entities('moves'),'items':entities('items'),'abilities':entities('abilities'),'natures':natures,'evs':evs,'teammates':[],'counters':[]},excluded
 
-def collect_settings(usage,season,master,limit=20):
+def collect_settings(usage,season,master,limit=None):
  wanted=[]
  for mode in ('single','double'):
-  wanted.extend(row['sourceId'] for row in usage[season][mode]['ranking'][:limit])
+  rows=usage[season][mode]['ranking'] if limit is None else usage[season][mode]['ranking'][:limit]
+  wanted.extend(row['sourceId'] for row in rows)
  wanted=sorted(set(wanted));pages={};errors=[]
  def fetch(source_id):
   url=f'https://pokemonics.com/pokemon/{source_id}';request=urllib.request.Request(url,headers={'User-Agent':'ChampionsPartyLab/1.0 (bounded detail import)'})
@@ -95,7 +96,7 @@ def collect_settings(usage,season,master,limit=20):
   for mode in ('single','double'):
    try:output[mode][source_id],missed=translate_detail(value,mode,season,master);excluded.extend({'sourceId':source_id,'mode':mode,**row} for row in missed)
    except Exception as error:errors.append({'sourceId':source_id,'mode':mode,'reason':str(error)})
- expected={mode:{row['sourceId'] for row in usage[season][mode]['ranking'][:limit]} for mode in ('single','double')}
+ expected={mode:{row['sourceId'] for row in (usage[season][mode]['ranking'] if limit is None else usage[season][mode]['ranking'][:limit])} for mode in ('single','double')}
  missing={mode:sorted(expected[mode]-set(output[mode])) for mode in ('single','double')}
  audit={'requestedSpecies':len(wanted),'fetchedSpecies':len(pages),'failedSpecies':len(wanted)-len(pages),'failedDetails':len(errors),'missingTopDetails':missing,'excludedEntities':len(excluded),'errors':errors,'excluded':excluded}
  return output,audit
