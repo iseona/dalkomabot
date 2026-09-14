@@ -57,3 +57,8 @@ python aws/deploy.py --region ap-northeast-2 --stack champions-party-lab --run-c
 - S3 OAC: https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html
 - CloudFormation OAC: https://docs.aws.amazon.com/AWSCloudFormation/latest/TemplateReference/aws-resource-cloudfront-originaccesscontrol.html
 - Lambda 스케줄: https://docs.aws.amazon.com/lambda/latest/dg/with-eventbridge-scheduler.html
+기존 스택을 갱신하면서 Google OAuth 설정과 `NoEcho` 클라이언트 비밀값을 유지하려면 `--preserve-google-config`를 사용합니다. 이 옵션은 새 스택 생성에는 사용할 수 없습니다.
+
+```bash
+python aws/deploy.py --region ap-northeast-2 --preserve-google-config --run-collector --enable-collector-schedule
+```
