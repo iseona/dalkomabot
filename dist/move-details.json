@@ -1,0 +1,3210 @@
+{
+  "source": "https://pokemon.yodams.com/dex/move",
+  "builtAt": "2026-09-14T15:25:17.489Z",
+  "total": 497,
+  "count": 497,
+  "failures": [],
+  "details": {
+    "10만마력": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/high-horsepower/",
+      "performance": [],
+      "properties": []
+    },
+    "가위자르기": {
+      "effect": "상대를 기절시킨다. 명중률은 30%로 고정된다.",
+      "url": "https://pokemon.yodams.com/dex/move/guillotine/",
+      "performance": [],
+      "properties": []
+    },
+    "HP회복": {
+      "effect": "자신의 최대 HP의 1/2만큼 회복한다.",
+      "url": "https://pokemon.yodams.com/dex/move/recover/",
+      "performance": [],
+      "properties": []
+    },
+    "가드스왑": {
+      "effect": "자신의 방어, 특수방어 능력 변화를 상대의 방어, 특수방어 능력 변화와 바꾼다.",
+      "url": "https://pokemon.yodams.com/dex/move/guard-swap/",
+      "performance": [],
+      "properties": []
+    },
+    "가드셰어": {
+      "effect": "자신과 상대의 방어와 특수방어 수치를 각각 더해서 1/2씩 나눠 갖는다.",
+      "url": "https://pokemon.yodams.com/dex/move/guard-split/",
+      "performance": [],
+      "properties": []
+    },
+    "10만볼트": {
+      "effect": "10% 확률로 상대를 마비 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/thunderbolt/",
+      "performance": [],
+      "properties": []
+    },
+    "DD래리어트": {
+      "effect": "상대의 능력 변화를 무시하고 데미지를 준다.",
+      "url": "https://pokemon.yodams.com/dex/move/darkest-lariat/",
+      "performance": [],
+      "properties": []
+    },
+    "G의힘": {
+      "effect": "상대의 방어를 1단계 떨어뜨린다. 중력 상태인 경우 위력이 1.5배가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/grav-apple/",
+      "performance": [],
+      "properties": []
+    },
+    "3연화살": {
+      "effect": "50% 확률로 상대의 방어를 1단계 떨어뜨린다. 30% 확률로 상대를 풀죽게 한다. 급소업+1로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/triple-arrows/",
+      "performance": [],
+      "properties": []
+    },
+    "강철날개": {
+      "effect": "10% 확률로 자신의 방어를 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/steel-wing/",
+      "performance": [],
+      "properties": []
+    },
+    "간지르기": {
+      "effect": "상대의 공격, 방어를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/tickle/",
+      "performance": [],
+      "properties": []
+    },
+    "객기": {
+      "effect": "자신이 독, 맹독, 마비, 화상 상태일 때 위력이 2배가 된다. 화상 상태에 의한 물리 기술의 데미지가 반감되는 효과는 무시한다.",
+      "url": "https://pokemon.yodams.com/dex/move/facade/",
+      "performance": [],
+      "properties": []
+    },
+    "개척하기": {
+      "effect": "자신의 스피드를 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/trailblaze/",
+      "performance": [],
+      "properties": []
+    },
+    "거짓울음": {
+      "effect": "상대의 특수방어를 2단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/fake-tears/",
+      "performance": [],
+      "properties": []
+    },
+    "거대해머": {
+      "effect": "이 기술은 2회 연속으로 사용할 수 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/gigaton-hammer/",
+      "performance": [
+        "연격"
+      ],
+      "properties": []
+    },
+    "검은눈빛": {
+      "effect": "상대를 교체 불가 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/mean-look/",
+      "performance": [],
+      "properties": []
+    },
+    "겁나는얼굴": {
+      "effect": "상대의 스피드를 2단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/scary-face/",
+      "performance": [],
+      "properties": []
+    },
+    "경혈찌르기": {
+      "effect": "자신 또는 같은 편의 공격, 방어, 특수공격, 특수방어, 스피드, 명중률, 회피율 중 하나를 2단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/acupressure/",
+      "performance": [],
+      "properties": []
+    },
+    "게으름피우기": {
+      "effect": "자신의 최대 HP의 1/2만큼 회복한다.",
+      "url": "https://pokemon.yodams.com/dex/move/slack-off/",
+      "performance": [],
+      "properties": []
+    },
+    "고드름떨구기": {
+      "effect": "30% 확률로 상대를 풀죽게 한다.",
+      "url": "https://pokemon.yodams.com/dex/move/icicle-crash/",
+      "performance": [],
+      "properties": []
+    },
+    "고드름침": {
+      "effect": "2~5회 연속으로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/icicle-spear/",
+      "performance": [
+        "연격"
+      ],
+      "properties": []
+    },
+    "고민씨": {
+      "effect": "상대의 특성을 불면으로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/worry-seed/",
+      "performance": [],
+      "properties": []
+    },
+    "고속스핀": {
+      "effect": "자신의 바인드, 씨뿌리기 상태와 같은 편 필드의 압정뿌리기, 독압정, 끈적끈적네트, 스텔스록 상태를 해제한다. 자신의 스피드를 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/rapid-spin/",
+      "performance": [],
+      "properties": []
+    },
+    "고속이동": {
+      "effect": "자신의 스피드를 2단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/agility/",
+      "performance": [],
+      "properties": []
+    },
+    "고스트다이브": {
+      "effect": "사용한 턴에 잠복 상태가 되어 다음 턴에 공격한다. 방어, 판별 등의 효과를 해제하고 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/phantom-force/",
+      "performance": [],
+      "properties": []
+    },
+    "광합성": {
+      "effect": "자신의 최대 HP의 1/2만큼 회복한다. 쾌청 상태인 경우 2/3만큼 회복한다. 다른 날씨인 경우 1/4만큼 회복한다.",
+      "url": "https://pokemon.yodams.com/dex/move/synthesis/",
+      "performance": [],
+      "properties": []
+    },
+    "골드러시": {
+      "effect": "자신의 특수공격을 2단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/make-it-rain/",
+      "performance": [],
+      "properties": []
+    },
+    "공중날기": {
+      "effect": "사용한 턴에 공중 상태가 되어 다음 턴에 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/fly/",
+      "performance": [],
+      "properties": []
+    },
+    "구멍파기": {
+      "effect": "사용한 턴에 지중 상태가 되어 다음 턴에 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/dig/",
+      "performance": [],
+      "properties": []
+    },
+    "괴전파": {
+      "effect": "상대의 특수공격을 2단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/eerie-impulse/",
+      "performance": [],
+      "properties": []
+    },
+    "그래스슬라이더": {
+      "effect": "그래스필드 상태의 효과를 받고 있는 경우 우선도 +1이 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/grassy-glide/",
+      "performance": [
+        "선공"
+      ],
+      "properties": []
+    },
+    "그래스필드": {
+      "effect": "5턴 동안 전체 필드를 그래스필드 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/grassy-terrain/",
+      "performance": [],
+      "properties": []
+    },
+    "그림자분신": {
+      "effect": "자신의 회피율을 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/double-team/",
+      "performance": [],
+      "properties": []
+    },
+    "그림자꿰매기": {
+      "effect": "상대를 교체 불가 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/spirit-shackle/",
+      "performance": [],
+      "properties": []
+    },
+    "기가임팩트": {
+      "effect": "사용한 다음 턴에 자신은 반동 상태가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/giga-impact/",
+      "performance": [],
+      "properties": []
+    },
+    "금속음": {
+      "effect": "상대의 특수방어를 2단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/metal-sound/",
+      "performance": [],
+      "properties": [
+        "소리"
+      ]
+    },
+    "기가드레인": {
+      "effect": "상대에게 준 데미지의 1/2만큼 자신의 HP를 회복한다.",
+      "url": "https://pokemon.yodams.com/dex/move/giga-drain/",
+      "performance": [],
+      "properties": []
+    },
+    "기사회생": {
+      "effect": "자신의 남은 HP가 적을수록 위력이 올라간다. (위력은 20~200)",
+      "url": "https://pokemon.yodams.com/dex/move/reversal/",
+      "performance": [],
+      "properties": []
+    },
+    "기선제압": {
+      "effect": "상대가 선제 공격 기술을 사용하지 않은 경우 실패한다. 상대를 풀죽게 한다.",
+      "url": "https://pokemon.yodams.com/dex/move/upper-hand/",
+      "performance": [],
+      "properties": []
+    },
+    "기습": {
+      "effect": "상대가 공격 기술을 선택하였고 이 기술을 사용한 턴 동안 이미 공격하였다면 실패한다.",
+      "url": "https://pokemon.yodams.com/dex/move/sucker-punch/",
+      "performance": [
+        "선공"
+      ],
+      "properties": []
+    },
+    "기어오르기": {
+      "effect": "자신의 올라간 능력 변화 1단계당 이 기술의 위력이 20씩 올라간다.",
+      "url": "https://pokemon.yodams.com/dex/move/power-trip/",
+      "performance": [],
+      "properties": []
+    },
+    "기충전": {
+      "effect": "자신은 급소업 상태가 된다. (+2)",
+      "url": "https://pokemon.yodams.com/dex/move/focus-energy/",
+      "performance": [],
+      "properties": []
+    },
+    "기합구슬": {
+      "effect": "10% 확률로 상대의 특수방어를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/focus-blast/",
+      "performance": [],
+      "properties": [
+        "구슬·파동"
+      ]
+    },
+    "길동무": {
+      "effect": "자신은 길동무 상태가 된다. 연속해서 사용하면 실패한다.",
+      "url": "https://pokemon.yodams.com/dex/move/destiny-bond/",
+      "performance": [],
+      "properties": []
+    },
+    "깨물어부수기": {
+      "effect": "20% 확률로 상대의 방어를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/crunch/",
+      "performance": [],
+      "properties": []
+    },
+    "깜짝베기": {
+      "effect": "급소업+1로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/night-slash/",
+      "performance": [],
+      "properties": [
+        "베기"
+      ]
+    },
+    "깃털댄스": {
+      "effect": "상대의 공격을 2단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/feather-dance/",
+      "performance": [],
+      "properties": [
+        "춤"
+      ]
+    },
+    "김밥말이": {
+      "effect": "상대를 바인드 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/wrap/",
+      "performance": [],
+      "properties": []
+    },
+    "깨트리기": {
+      "effect": "상대 필드의 빛의장막, 리플렉터, 오로라베일 상태를 해제하고 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/brick-break/",
+      "performance": [],
+      "properties": []
+    },
+    "껍질깨기": {
+      "effect": "자신의 방어, 특수방어를 1단계 떨어뜨리고 공격, 특수공격, 스피드를 2단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/shell-smash/",
+      "performance": [],
+      "properties": []
+    },
+    "꽃가루경단": {
+      "effect": "같은 편에게 사용하면 데미지를 주는 대신 최대 HP의 1/2만큼 같은 편의 HP를 회복한다.",
+      "url": "https://pokemon.yodams.com/dex/move/pollen-puff/",
+      "performance": [],
+      "properties": [
+        "가루"
+      ]
+    },
+    "꼬리자르기": {
+      "effect": "자신의 최대 HP의 1/2만큼 HP를 소비하여 대타를 내보낸다. 이후 다른 지닌 포켓몬과 교체한다. 대타는 자신을 대신해 기술을 받는다. 최대 HP의 1/4의 데미지를 입으면 사라진다.",
+      "url": "https://pokemon.yodams.com/dex/move/shed-tail/",
+      "performance": [],
+      "properties": []
+    },
+    "꽃잎댄스": {
+      "effect": "자신은 난동 상태가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/petal-dance/",
+      "performance": [],
+      "properties": [
+        "춤"
+      ]
+    },
+    "꽃보라": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/petal-blizzard/",
+      "performance": [],
+      "properties": []
+    },
+    "끈적끈적네트": {
+      "effect": "상대 필드를 끈적끈적네트 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/sticky-web/",
+      "performance": [],
+      "properties": []
+    },
+    "꿀꺽": {
+      "effect": "비축하기 상태의 수치가 높을수록 HP를 많이 회복한다. 1번이라면 최대 HP의 1/4만큼 회복한다. 2번이라면 최대 HP의 1/2만큼 회복한다. 3번이라면 모두 회복한다. 비축하기 상태가 아닌 경우 이 기술은 실패한다.",
+      "url": "https://pokemon.yodams.com/dex/move/swallow/",
+      "performance": [],
+      "properties": []
+    },
+    "나비춤": {
+      "effect": "자신의 특수공격, 특수방어, 스피드를 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/quiver-dance/",
+      "performance": [],
+      "properties": [
+        "춤"
+      ]
+    },
+    "나이트헤드": {
+      "effect": "상대 HP에 50데미지를 준다.",
+      "url": "https://pokemon.yodams.com/dex/move/night-shade/",
+      "performance": [],
+      "properties": []
+    },
+    "나쁜음모": {
+      "effect": "자신의 특수공격을 2단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/nasty-plot/",
+      "performance": [],
+      "properties": []
+    },
+    "나이트버스트": {
+      "effect": "40% 확률로 상대의 명중률을 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/night-daze/",
+      "performance": [],
+      "properties": []
+    },
+    "날개쉬기": {
+      "effect": "자신의 최대 HP의 1/2만큼 회복한다. 비행타입이 사용하면 그 턴 동안 비행타입이 아니게 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/roost/",
+      "performance": [],
+      "properties": []
+    },
+    "난동부리기": {
+      "effect": "자신은 난동 상태가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/thrash/",
+      "performance": [],
+      "properties": []
+    },
+    "날려버리기": {
+      "effect": "상대에게 교체할 포켓몬이 있는 경우 랜덤한 포켓몬으로 교체시킨다.",
+      "url": "https://pokemon.yodams.com/dex/move/whirlwind/",
+      "performance": [],
+      "properties": []
+    },
+    "날따름": {
+      "effect": "상대의 기술을 모두 자신이 받는다. 상대를 선택하는 기술에만 효과가 있다.",
+      "url": "https://pokemon.yodams.com/dex/move/follow-me/",
+      "performance": [],
+      "properties": []
+    },
+    "내던지기": {
+      "effect": "지니고 있는 도구에 따라 위력과 효과가 바뀐다. 사용하면 도구는 사라진다.",
+      "url": "https://pokemon.yodams.com/dex/move/fling/",
+      "performance": [],
+      "properties": []
+    },
+    "냉동빔": {
+      "effect": "10% 확률로 상대를 얼음 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/ice-beam/",
+      "performance": [],
+      "properties": []
+    },
+    "노래하기": {
+      "effect": "상대를 잠듦 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/sing/",
+      "performance": [],
+      "properties": [
+        "소리"
+      ]
+    },
+    "냉동펀치": {
+      "effect": "10% 확률로 상대를 얼음 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/ice-punch/",
+      "performance": [],
+      "properties": [
+        "펀치"
+      ]
+    },
+    "농성": {
+      "effect": "자신의 방어를 2단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/shelter/",
+      "performance": [],
+      "properties": []
+    },
+    "녹기": {
+      "effect": "자신의 방어를 2단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/acid-armor/",
+      "performance": [],
+      "properties": []
+    },
+    "누르기": {
+      "effect": "30% 확률로 상대를 마비 상태로 만든다. 작아지기 상태인 상대에게는 위력이 2배가 되며 반드시 명중한다.",
+      "url": "https://pokemon.yodams.com/dex/move/body-slam/",
+      "performance": [],
+      "properties": []
+    },
+    "눈물그렁그렁": {
+      "effect": "상대의 공격, 특수공격을 1단계 떨어뜨린다. 상대의 회피율, 기술 방어 등을 무시하고 맞힐 수 있다.",
+      "url": "https://pokemon.yodams.com/dex/move/tearful-look/",
+      "performance": [],
+      "properties": []
+    },
+    "눈보라": {
+      "effect": "10% 확률로 상대를 얼음 상태로 만든다. 눈 상태인 경우 상대에게 반드시 명중한다.",
+      "url": "https://pokemon.yodams.com/dex/move/blizzard/",
+      "performance": [],
+      "properties": [
+        "바람"
+      ]
+    },
+    "눈사태": {
+      "effect": "이 기술을 사용하는 턴에 상대에게 기술의 데미지를 입으면 위력이 2배가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/avalanche/",
+      "performance": [],
+      "properties": []
+    },
+    "니트로차지": {
+      "effect": "자신의 스피드를 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/flame-charge/",
+      "performance": [],
+      "properties": []
+    },
+    "니들가드": {
+      "effect": "사용한 턴 동안 상대의 기술로부터 몸을 보호하며 접촉 기술로 공격한 상대 최대 HP의 1/8만큼 데미지를 준다. 연속해서 사용하면 성공률이 이전에 사용했을 때의 1/3이 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/spiky-shield/",
+      "performance": [],
+      "properties": []
+    },
+    "달려들기": {
+      "effect": "상대의 스피드를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/pounce/",
+      "performance": [],
+      "properties": []
+    },
+    "다이빙": {
+      "effect": "사용한 턴에 수중 상태가 되어 다음 턴에 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/dive/",
+      "performance": [],
+      "properties": []
+    },
+    "다과회": {
+      "effect": "필드의 전원은 각각 지니고 있는 나무열매를 먹는다.",
+      "url": "https://pokemon.yodams.com/dex/move/teatime/",
+      "performance": [],
+      "properties": []
+    },
+    "달빛": {
+      "effect": "자신의 최대 HP의 1/2만큼 회복한다. 쾌청 상태인 경우 2/3만큼 회복한다. 다른 날씨인 경우 1/4만큼 회복한다.",
+      "url": "https://pokemon.yodams.com/dex/move/moonlight/",
+      "performance": [],
+      "properties": []
+    },
+    "당신먼저": {
+      "effect": "상대의 행동 순서를 자신의 바로 다음으로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/after-you/",
+      "performance": [],
+      "properties": []
+    },
+    "달콤한향기": {
+      "effect": "상대의 회피율을 2단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/sweet-scent/",
+      "performance": [],
+      "properties": []
+    },
+    "대지의파동": {
+      "effect": "자신이 필드의 효과를 받고 있는 경우 위력이 2배가 된다. 필드의 종류에 따라 타입이 바뀐다.",
+      "url": "https://pokemon.yodams.com/dex/move/terrain-pulse/",
+      "performance": [],
+      "properties": [
+        "구슬·파동"
+      ]
+    },
+    "대격분": {
+      "effect": "자신은 난동 상태가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/raging-fury/",
+      "performance": [],
+      "properties": []
+    },
+    "대폭발": {
+      "effect": "사용하면 자신은 기절하게 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/explosion/",
+      "performance": [],
+      "properties": []
+    },
+    "대타출동": {
+      "effect": "자신의 최대 HP의 1/4만큼 HP를 소비하여 대타를 내보낸다. 대타는 자신을 대신해 기술을 받는다. 최대 HP의 1/4의 데미지를 입으면 사라진다. 소리 기술에는 대타가 무시된다.",
+      "url": "https://pokemon.yodams.com/dex/move/substitute/",
+      "performance": [],
+      "properties": []
+    },
+    "대지의힘": {
+      "effect": "10% 확률로 상대의 특수방어를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/earth-power/",
+      "performance": [],
+      "properties": []
+    },
+    "더스트슈트": {
+      "effect": "30% 확률로 상대를 독 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/gunk-shot/",
+      "performance": [],
+      "properties": []
+    },
+    "더블윙": {
+      "effect": "2회 연속으로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/dual-wingbeat/",
+      "performance": [
+        "연격"
+      ],
+      "properties": []
+    },
+    "더블어택": {
+      "effect": "2회 연속으로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/double-hit/",
+      "performance": [
+        "연격"
+      ],
+      "properties": []
+    },
+    "데코레이션": {
+      "effect": "상대의 공격, 특수공격을 2단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/decorate/",
+      "performance": [],
+      "properties": []
+    },
+    "덤벼들기": {
+      "effect": "상대의 공격을 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/lunge/",
+      "performance": [],
+      "properties": []
+    },
+    "도둑질": {
+      "effect": "자신이 도구를 지니고 있지 않은 경우 상대의 도구를 빼앗는다.",
+      "url": "https://pokemon.yodams.com/dex/move/thief/",
+      "performance": [],
+      "properties": []
+    },
+    "도깨비불": {
+      "effect": "상대를 화상 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/will-o-wisp/",
+      "performance": [],
+      "properties": []
+    },
+    "도각참": {
+      "effect": "상대에게 반드시 명중한다.",
+      "url": "https://pokemon.yodams.com/dex/move/kowtow-cleave/",
+      "performance": [],
+      "properties": []
+    },
+    "도우미": {
+      "effect": "사용한 턴 동안 같은 편의 기술 위력을 1.5배로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/helping-hand/",
+      "performance": [],
+      "properties": []
+    },
+    "독가루": {
+      "effect": "상대를 독 상태로 만든다. 풀타입 포켓몬에게는 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/poison-powder/",
+      "performance": [],
+      "properties": [
+        "가루"
+      ]
+    },
+    "도발": {
+      "effect": "상대를 도발 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/taunt/",
+      "performance": [],
+      "properties": []
+    },
+    "독압정": {
+      "effect": "상대 필드를 독압정 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/toxic-spikes/",
+      "performance": [],
+      "properties": []
+    },
+    "독실": {
+      "effect": "상대의 스피드를 2단계 떨어뜨린다. 상대를 독 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/toxic-thread/",
+      "performance": [],
+      "properties": []
+    },
+    "돌림노래": {
+      "effect": "같은 턴에 복수의 포켓몬이 이 기술을 사용하면 첫 번째가 사용한 바로 다음에 두 번째 이후가 사용한다. 두 번째 이후의 위력은 2배가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/round/",
+      "performance": [],
+      "properties": [
+        "소리"
+      ]
+    },
+    "독침천발": {
+      "effect": "50% 확률로 상대를 독 상태로 만든다. 상대가 독, 맹독 상태인 경우 위력이 2배가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/barb-barrage/",
+      "performance": [],
+      "properties": []
+    },
+    "독찌르기": {
+      "effect": "30% 확률로 상대를 독 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/poison-jab/",
+      "performance": [],
+      "properties": []
+    },
+    "드래곤다이브": {
+      "effect": "20% 확률로 상대를 풀죽게 한다. 작아지기 상태인 상대에게는 위력이 2배가 되며 반드시 명중한다.",
+      "url": "https://pokemon.yodams.com/dex/move/dragon-rush/",
+      "performance": [],
+      "properties": []
+    },
+    "뒤집어엎기": {
+      "effect": "상대의 능력 변화를 모두 반대로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/topsy-turvy/",
+      "performance": [],
+      "properties": []
+    },
+    "동료만들기": {
+      "effect": "상대의 특성을 자신과 같은 특성으로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/entrainment/",
+      "performance": [],
+      "properties": []
+    },
+    "드래곤옐": {
+      "effect": "같은 편을 급소업 상태로 만든다. (드래곤타입은 +2, 그 외 타입은 +1)",
+      "url": "https://pokemon.yodams.com/dex/move/dragon-cheer/",
+      "performance": [],
+      "properties": []
+    },
+    "드래곤애로": {
+      "effect": "2회 연속으로 공격한다. 상대가 2마리 있는 경우 각각 1회씩 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/dragon-darts/",
+      "performance": [
+        "연격"
+      ],
+      "properties": []
+    },
+    "드레인키스": {
+      "effect": "상대에게 준 데미지의 3/4만큼 자신의 HP를 회복한다.",
+      "url": "https://pokemon.yodams.com/dex/move/draining-kiss/",
+      "performance": [],
+      "properties": []
+    },
+    "드래곤클로": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/dragon-claw/",
+      "performance": [],
+      "properties": []
+    },
+    "드래곤테일": {
+      "effect": "상대에게 교체할 포켓몬이 있는 경우 랜덤한 포켓몬으로 교체시킨다.",
+      "url": "https://pokemon.yodams.com/dex/move/dragon-tail/",
+      "performance": [],
+      "properties": []
+    },
+    "드릴라이너": {
+      "effect": "급소업+1로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/drill-run/",
+      "performance": [],
+      "properties": []
+    },
+    "드레인펀치": {
+      "effect": "상대에게 준 데미지의 1/2만큼 자신의 HP를 회복한다.",
+      "url": "https://pokemon.yodams.com/dex/move/drain-punch/",
+      "performance": [],
+      "properties": [
+        "펀치"
+      ]
+    },
+    "들이받기": {
+      "effect": "자신의 방어, 특수방어를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/headlong-rush/",
+      "performance": [],
+      "properties": []
+    },
+    "땅고르기": {
+      "effect": "상대의 스피드를 1단계 떨어뜨린다. 그래스필드 상태일 때 위력이 1/2이 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/bulldoze/",
+      "performance": [],
+      "properties": []
+    },
+    "땅가르기": {
+      "effect": "상대를 기절시킨다. 명중률은 30%로 고정된다.",
+      "url": "https://pokemon.yodams.com/dex/move/fissure/",
+      "performance": [],
+      "properties": []
+    },
+    "똬리틀기": {
+      "effect": "자신의 공격, 방어, 명중률을 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/coil/",
+      "performance": [],
+      "properties": []
+    },
+    "떨어뜨리기": {
+      "effect": "땅 위에 있지 않은 상대를 추락 상태로 만든다. 공중 상태인 상대에게도 맞는다.",
+      "url": "https://pokemon.yodams.com/dex/move/smack-down/",
+      "performance": [],
+      "properties": []
+    },
+    "뛰어오르기": {
+      "effect": "사용한 턴에 공중 상태가 되어 다음 턴에 공격한다. 30% 확률로 상대를 마비 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/bounce/",
+      "performance": [],
+      "properties": []
+    },
+    "라이징볼트": {
+      "effect": "상대가 일렉트릭필드 상태의 효과를 받고 있는 경우 위력이 2배가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/rising-voltage/",
+      "performance": [],
+      "properties": []
+    },
+    "레이징불": {
+      "effect": "자신의 폼에 따라 기술의 타입이 바뀐다. 상대 필드의 리플렉터, 빛의장막, 오로라베일 상태를 해제하고 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/raging-bull/",
+      "performance": [],
+      "properties": []
+    },
+    "러스터캐논": {
+      "effect": "10% 확률로 상대의 특수방어를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/flash-cannon/",
+      "performance": [],
+      "properties": [
+        "구슬·파동"
+      ]
+    },
+    "록블라스트": {
+      "effect": "2~5회 연속으로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/rock-blast/",
+      "performance": [
+        "연격"
+      ],
+      "properties": []
+    },
+    "로킥": {
+      "effect": "상대의 스피드를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/low-sweep/",
+      "performance": [],
+      "properties": []
+    },
+    "록온": {
+      "effect": "자신은 록온 상태가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/lock-on/",
+      "performance": [],
+      "properties": []
+    },
+    "록커트": {
+      "effect": "자신의 스피드를 2단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/rock-polish/",
+      "performance": [],
+      "properties": []
+    },
+    "리사이클": {
+      "effect": "자신이 마지막으로 소비한 도구를 원래 상태로 돌려놓아 다시 지닌다.",
+      "url": "https://pokemon.yodams.com/dex/move/recycle/",
+      "performance": [],
+      "properties": []
+    },
+    "루미나콜리전": {
+      "effect": "상대의 특수방어를 2단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/lumina-crash/",
+      "performance": [],
+      "properties": []
+    },
+    "리프스톰": {
+      "effect": "자신의 특수공격을 2단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/leaf-storm/",
+      "performance": [],
+      "properties": []
+    },
+    "리프블레이드": {
+      "effect": "급소업+1로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/leaf-blade/",
+      "performance": [],
+      "properties": [
+        "베기"
+      ]
+    },
+    "마법가루": {
+      "effect": "상대의 타입을 에스퍼타입으로 바꾼다. 풀타입 포켓몬에게는 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/magic-powder/",
+      "performance": [],
+      "properties": [
+        "가루"
+      ]
+    },
+    "리플렉터": {
+      "effect": "5턴 동안 같은 편 필드를 리플렉터 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/reflect/",
+      "performance": [],
+      "properties": []
+    },
+    "마하펀치": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/mach-punch/",
+      "performance": [
+        "선공"
+      ],
+      "properties": [
+        "펀치"
+      ]
+    },
+    "마지막일침": {
+      "effect": "이 기술로 상대를 쓰러뜨리면 공격이 3단계 올라간다.",
+      "url": "https://pokemon.yodams.com/dex/move/fell-stinger/",
+      "performance": [],
+      "properties": []
+    },
+    "막치기": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/pound/",
+      "performance": [],
+      "properties": []
+    },
+    "매지컬플레임": {
+      "effect": "상대의 특수공격을 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/mystical-fire/",
+      "performance": [],
+      "properties": []
+    },
+    "막말내뱉기": {
+      "effect": "상대의 공격, 특수공격을 1단계 떨어뜨리고 자신은 다른 지닌 포켓몬과 교체한다.",
+      "url": "https://pokemon.yodams.com/dex/move/parting-shot/",
+      "performance": [],
+      "properties": []
+    },
+    "매지컬샤인": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/dazzling-gleam/",
+      "performance": [],
+      "properties": []
+    },
+    "만나자마자": {
+      "effect": "등장하고 가장 먼저 사용하지 않으면 실패한다.",
+      "url": "https://pokemon.yodams.com/dex/move/first-impression/",
+      "performance": [
+        "선공"
+      ],
+      "properties": []
+    },
+    "망각술": {
+      "effect": "자신의 특수방어를 2단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/amnesia/",
+      "performance": [],
+      "properties": []
+    },
+    "매직룸": {
+      "effect": "5턴 동안 전체 필드를 매직룸 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/magic-room/",
+      "performance": [],
+      "properties": []
+    },
+    "매혹의보이스": {
+      "effect": "사용한 턴 동안 상대의 능력이 올라간 경우 상대를 혼란 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/alluring-voice/",
+      "performance": [],
+      "properties": [
+        "소리"
+      ]
+    },
+    "맹독엄니": {
+      "effect": "50% 확률로 상대를 맹독 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/poison-fang/",
+      "performance": [],
+      "properties": []
+    },
+    "맹독": {
+      "effect": "상대를 맹독 상태로 만든다. 독타입 포켓몬이 사용하면 상대에게 반드시 명중한다.",
+      "url": "https://pokemon.yodams.com/dex/move/toxic/",
+      "performance": [],
+      "properties": []
+    },
+    "머드샷": {
+      "effect": "상대의 스피드를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/mud-shot/",
+      "performance": [],
+      "properties": []
+    },
+    "메가혼": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/megahorn/",
+      "performance": [],
+      "properties": []
+    },
+    "메가톤킥": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/mega-kick/",
+      "performance": [],
+      "properties": []
+    },
+    "메탈버스트": {
+      "effect": "사용한 턴에 상대의 기술로 입은 데미지를 1.5배로 돌려준다.",
+      "url": "https://pokemon.yodams.com/dex/move/metal-burst/",
+      "performance": [],
+      "properties": []
+    },
+    "멀리짖기": {
+      "effect": "자신과 같은 편의 공격을 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/howl/",
+      "performance": [],
+      "properties": []
+    },
+    "메테오빔": {
+      "effect": "사용한 턴에 차지 상태가 되어 다음 턴에 공격한다. 사용한 턴에 자신의 특수공격을 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/meteor-beam/",
+      "performance": [],
+      "properties": []
+    },
+    "명상": {
+      "effect": "자신의 특수공격, 특수방어를 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/calm-mind/",
+      "performance": [],
+      "properties": []
+    },
+    "멸망의노래": {
+      "effect": "필드의 전원을 멸망 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/perish-song/",
+      "performance": [],
+      "properties": [
+        "소리"
+      ]
+    },
+    "모래바람": {
+      "effect": "5턴 동안 모래바람 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/sandstorm/",
+      "performance": [],
+      "properties": [
+        "바람"
+      ]
+    },
+    "모래지옥": {
+      "effect": "상대를 바인드 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/sand-tomb/",
+      "performance": [],
+      "properties": [
+        "바람"
+      ]
+    },
+    "목화포자": {
+      "effect": "상대의 스피드를 2단계 떨어뜨린다. 풀타입 포켓몬에게는 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/cotton-spore/",
+      "performance": [],
+      "properties": [
+        "가루"
+      ]
+    },
+    "목숨걸기": {
+      "effect": "자신은 기절하게 되며 사용할 때 남은 HP만큼의 데미지를 준다.",
+      "url": "https://pokemon.yodams.com/dex/move/final-gambit/",
+      "performance": [],
+      "properties": []
+    },
+    "무릎차기": {
+      "effect": "빗나가거나 실패하면 자신의 최대 HP의 1/2만큼 데미지를 입는다.",
+      "url": "https://pokemon.yodams.com/dex/move/high-jump-kick/",
+      "performance": [],
+      "properties": []
+    },
+    "문포스": {
+      "effect": "10% 확률로 상대의 특수공격을 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/moonblast/",
+      "performance": [],
+      "properties": []
+    },
+    "물거품아리아": {
+      "effect": "상대의 화상 상태를 회복한다.",
+      "url": "https://pokemon.yodams.com/dex/move/sparkling-aria/",
+      "performance": [],
+      "properties": []
+    },
+    "물기": {
+      "effect": "30% 확률로 상대를 풀죽게 한다.",
+      "url": "https://pokemon.yodams.com/dex/move/bite/",
+      "performance": [],
+      "properties": []
+    },
+    "물수리검": {
+      "effect": "2~5회 연속으로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/water-shuriken/",
+      "performance": [
+        "선공",
+        "연격"
+      ],
+      "properties": []
+    },
+    "물붓기": {
+      "effect": "상대의 타입을 물타입으로 바꾼다.",
+      "url": "https://pokemon.yodams.com/dex/move/soak/",
+      "performance": [],
+      "properties": []
+    },
+    "물의파동": {
+      "effect": "20% 확률로 상대를 혼란 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/water-pulse/",
+      "performance": [],
+      "properties": [
+        "구슬·파동"
+      ]
+    },
+    "미러코트": {
+      "effect": "사용한 턴에 상대의 특수 기술로 입은 데미지를 2배로 돌려준다.",
+      "url": "https://pokemon.yodams.com/dex/move/mirror-coat/",
+      "performance": [],
+      "properties": []
+    },
+    "미래예지": {
+      "effect": "상대가 위치한 자리를 미래의 공격 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/future-sight/",
+      "performance": [],
+      "properties": []
+    },
+    "미러타입": {
+      "effect": "자신의 타입을 상대와 같은 타입으로 바꾼다.",
+      "url": "https://pokemon.yodams.com/dex/move/reflect-type/",
+      "performance": [],
+      "properties": []
+    },
+    "미스트버스트": {
+      "effect": "사용하면 자신은 기절하게 된다. 미스트필드 상태의 효과를 받고 있는 경우 위력이 1.5배가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/misty-explosion/",
+      "performance": [],
+      "properties": []
+    },
+    "미스트필드": {
+      "effect": "5턴 동안 전체 필드를 미스트필드 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/misty-terrain/",
+      "performance": [],
+      "properties": []
+    },
+    "바꿔치기": {
+      "effect": "상대와 자신의 지니고 있는 도구를 바꾼다.",
+      "url": "https://pokemon.yodams.com/dex/move/switcheroo/",
+      "performance": [],
+      "properties": []
+    },
+    "바늘미사일": {
+      "effect": "2~5회 연속으로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/pin-missile/",
+      "performance": [
+        "연격"
+      ],
+      "properties": []
+    },
+    "바다회오리": {
+      "effect": "상대를 바인드 상태로 만든다. 수중 상태인 상대에게는 위력이 2배가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/whirlpool/",
+      "performance": [],
+      "properties": []
+    },
+    "바둥바둥": {
+      "effect": "자신의 남은 HP가 적을수록 위력이 올라간다. (위력은 20~200)",
+      "url": "https://pokemon.yodams.com/dex/move/flail/",
+      "performance": [],
+      "properties": []
+    },
+    "바디프레스": {
+      "effect": "이 기술은 공격이 아닌 방어 수치에 따라 데미지가 결정된다.",
+      "url": "https://pokemon.yodams.com/dex/move/body-press/",
+      "performance": [],
+      "properties": []
+    },
+    "바크아웃": {
+      "effect": "상대의 특수공격을 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/snarl/",
+      "performance": [],
+      "properties": [
+        "소리"
+      ]
+    },
+    "발꿈치찍기": {
+      "effect": "30% 확률로 상대를 혼란 상태로 만든다. 빗나가거나 실패하면 자신의 최대 HP의 1/2만큼 데미지를 입는다.",
+      "url": "https://pokemon.yodams.com/dex/move/axe-kick/",
+      "performance": [],
+      "properties": []
+    },
+    "방어": {
+      "effect": "사용한 턴 동안 상대의 기술로부터 몸을 보호한다. 연속해서 사용하면 성공률이 이전에 사용했을 때의 1/3이 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/protect/",
+      "performance": [],
+      "properties": []
+    },
+    "발버둥": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/struggle/",
+      "performance": [],
+      "properties": []
+    },
+    "방전": {
+      "effect": "30% 확률로 상대를 마비 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/discharge/",
+      "performance": [],
+      "properties": []
+    },
+    "배대뒤치기": {
+      "effect": "상대에게 교체할 포켓몬이 있는 경우 랜덤한 포켓몬으로 교체시킨다.",
+      "url": "https://pokemon.yodams.com/dex/move/circle-throw/",
+      "performance": [],
+      "properties": []
+    },
+    "배북": {
+      "effect": "자신의 최대 HP의 1/2만큼 HP를 소비하여 공격을 6단계까지 올린다. 남은 HP가 부족한 경우 실패한다.",
+      "url": "https://pokemon.yodams.com/dex/move/belly-drum/",
+      "performance": [],
+      "properties": []
+    },
+    "배턴터치": {
+      "effect": "다른 지닌 포켓몬과 교체한다. 능력 변화, 대타출동 등을 그 포켓몬이 이어받는다.",
+      "url": "https://pokemon.yodams.com/dex/move/baton-pass/",
+      "performance": [],
+      "properties": []
+    },
+    "배수의진": {
+      "effect": "자신의 공격, 방어, 특수공격, 특수방어, 스피드를 1단계 올린다. 자신은 교체 불가 상태가 된다. 등장할 때마다 단 한 번 사용할 수 있다. 두 번째 이후에는 실패한다.",
+      "url": "https://pokemon.yodams.com/dex/move/no-retreat/",
+      "performance": [],
+      "properties": []
+    },
+    "배리어러시": {
+      "effect": "자신의 방어를 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/psyshield-bash/",
+      "performance": [],
+      "properties": []
+    },
+    "백귀야행": {
+      "effect": "30% 확률로 상대를 화상 상태로 만든다. 상대가 상태 이상인 경우 위력이 2배가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/infernal-parade/",
+      "performance": [],
+      "properties": []
+    },
+    "뱀눈초리": {
+      "effect": "상대를 마비 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/glare/",
+      "performance": [],
+      "properties": []
+    },
+    "버티기": {
+      "effect": "사용한 턴 동안 기절할 듯한 기술로 데미지를 입으면 HP를 1 남기고 버틴다. 연속해서 사용하면 성공률이 이전에 사용했을 때의 1/3이 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/endure/",
+      "performance": [],
+      "properties": []
+    },
+    "번개": {
+      "effect": "30% 확률로 상대를 마비 상태로 만든다. 비 상태인 경우 상대에게 반드시 명중한다. 쾌청 상태인 경우 명중률은 50%가 된다. 공중 상태인 상대에게도 맞는다.",
+      "url": "https://pokemon.yodams.com/dex/move/thunder/",
+      "performance": [],
+      "properties": []
+    },
+    "번개엄니": {
+      "effect": "10% 확률로 상대를 마비 상태로 만든다. 10% 확률로 상대를 풀죽게 한다.",
+      "url": "https://pokemon.yodams.com/dex/move/thunder-fang/",
+      "performance": [],
+      "properties": []
+    },
+    "벌레의야단법석": {
+      "effect": "10% 확률로 상대의 특수방어를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/bug-buzz/",
+      "performance": [],
+      "properties": [
+        "소리"
+      ]
+    },
+    "벌레먹기": {
+      "effect": "상대가 나무열매를 지니고 있으면 그 나무열매를 대신 먹고 자신이 효과를 받는다.",
+      "url": "https://pokemon.yodams.com/dex/move/bug-bite/",
+      "performance": [],
+      "properties": []
+    },
+    "번개펀치": {
+      "effect": "10% 확률로 상대를 마비 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/thunder-punch/",
+      "performance": [],
+      "properties": [
+        "펀치"
+      ]
+    },
+    "벌레의저항": {
+      "effect": "상대의 특수공격을 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/struggle-bug/",
+      "performance": [],
+      "properties": []
+    },
+    "벌크업": {
+      "effect": "자신의 공격, 방어를 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/bulk-up/",
+      "performance": [],
+      "properties": []
+    },
+    "베놈쇼크": {
+      "effect": "상대가 독, 맹독 상태인 경우 위력이 2배가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/venoshock/",
+      "performance": [],
+      "properties": []
+    },
+    "변신": {
+      "effect": "상대와 같은 포켓몬으로 변신한다. HP 이외의 스테이터스도 똑같아진다.",
+      "url": "https://pokemon.yodams.com/dex/move/transform/",
+      "performance": [],
+      "properties": []
+    },
+    "변덕레이저": {
+      "effect": "30% 확률로 위력이 2배가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/fickle-beam/",
+      "performance": [],
+      "properties": []
+    },
+    "본러시": {
+      "effect": "2~5회 연속으로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/bone-rush/",
+      "performance": [
+        "연격"
+      ],
+      "properties": []
+    },
+    "병상첨병": {
+      "effect": "상대가 상태 이상인 경우 위력이 2배가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/hex/",
+      "performance": [],
+      "properties": []
+    },
+    "보복": {
+      "effect": "상대보다 나중에 공격하면 위력이 2배가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/payback/",
+      "performance": [],
+      "properties": []
+    },
+    "볼가득넣기": {
+      "effect": "지니고 있는 나무열매를 먹는다. 자신의 방어를 2단계 올린다. 나무열매를 지니고 있지 않다면 이 기술을 사용할 수 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/stuff-cheeks/",
+      "performance": [],
+      "properties": []
+    },
+    "볼부비부비": {
+      "effect": "상대를 마비 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/nuzzle/",
+      "performance": [],
+      "properties": []
+    },
+    "볼트체인지": {
+      "effect": "공격한 다음 다른 지닌 포켓몬과 교체한다.",
+      "url": "https://pokemon.yodams.com/dex/move/volt-switch/",
+      "performance": [],
+      "properties": []
+    },
+    "부르짖기": {
+      "effect": "상대의 공격, 특수공격을 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/noble-roar/",
+      "performance": [],
+      "properties": [
+        "소리"
+      ]
+    },
+    "볼트태클": {
+      "effect": "준 데미지의 1/3만큼 자신도 데미지를 입는다. 10% 확률로 상대를 마비 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/volt-tackle/",
+      "performance": [],
+      "properties": []
+    },
+    "봉인": {
+      "effect": "자신은 봉인 상태가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/imprison/",
+      "performance": [],
+      "properties": []
+    },
+    "부식가스": {
+      "effect": "자신을 제외한 필드의 전원이 지니고 있는 도구를 없앤다.",
+      "url": "https://pokemon.yodams.com/dex/move/corrosive-gas/",
+      "performance": [],
+      "properties": []
+    },
+    "부리캐논": {
+      "effect": "기술을 사용하기 전에 접촉 기술을 받으면 그 상대를 화상 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/beak-blast/",
+      "performance": [],
+      "properties": [
+        "구슬·파동"
+      ]
+    },
+    "부추기기": {
+      "effect": "상대의 특수공격을 1단계 올리고 혼란 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/flatter/",
+      "performance": [],
+      "properties": []
+    },
+    "분노의앞니": {
+      "effect": "상대의 남은 HP의 절반만큼 데미지를 준다. 1만 남은 경우 1데미지를 준다.",
+      "url": "https://pokemon.yodams.com/dex/move/super-fang/",
+      "performance": [],
+      "properties": []
+    },
+    "분노가루": {
+      "effect": "상대의 기술을 모두 자신이 받는다. 상대를 선택하는 기술에만 효과가 있다. 풀타입 포켓몬에게는 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/rage-powder/",
+      "performance": [],
+      "properties": [
+        "가루"
+      ]
+    },
+    "분노의주먹": {
+      "effect": "기술로 데미지를 입을 때마다 위력이 50 올라간다. (최대 위력은 350) 지닌 포켓몬으로 돌아오면 위력이 원래대로 돌아온다.",
+      "url": "https://pokemon.yodams.com/dex/move/rage-fist/",
+      "performance": [],
+      "properties": []
+    },
+    "분연": {
+      "effect": "30% 확률로 상대를 화상 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/lava-plume/",
+      "performance": [],
+      "properties": []
+    },
+    "분풀이": {
+      "effect": "사용한 턴 동안 자신의 능력이 떨어진 경우 위력이 2배가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/lash-out/",
+      "performance": [],
+      "properties": []
+    },
+    "분화": {
+      "effect": "자신의 남은 HP가 적을수록 위력이 떨어진다. (위력은 1~150)",
+      "url": "https://pokemon.yodams.com/dex/move/eruption/",
+      "performance": [],
+      "properties": []
+    },
+    "분함의발구르기": {
+      "effect": "직전 턴에 자신이 행동하지 못했거나 기술이 빗나가거나 실패한 경우 위력이 2배가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/stomping-tantrum/",
+      "performance": [],
+      "properties": []
+    },
+    "불꽃춤": {
+      "effect": "50% 확률로 자신의 특수공격을 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/fiery-dance/",
+      "performance": [],
+      "properties": [
+        "춤"
+      ]
+    },
+    "불꽃엄니": {
+      "effect": "10% 확률로 상대를 화상 상태로 만든다. 10% 확률로 상대를 풀죽게 한다.",
+      "url": "https://pokemon.yodams.com/dex/move/fire-fang/",
+      "performance": [],
+      "properties": []
+    },
+    "불꽃채찍": {
+      "effect": "상대의 방어를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/fire-lash/",
+      "performance": [],
+      "properties": []
+    },
+    "불꽃펀치": {
+      "effect": "10% 확률로 상대를 화상 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/fire-punch/",
+      "performance": [],
+      "properties": [
+        "펀치"
+      ]
+    },
+    "불릿펀치": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/bullet-punch/",
+      "performance": [
+        "선공"
+      ],
+      "properties": [
+        "펀치"
+      ]
+    },
+    "불대문자": {
+      "effect": "10% 확률로 상대를 화상 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/fire-blast/",
+      "performance": [],
+      "properties": []
+    },
+    "불새": {
+      "effect": "사용한 턴에 차지 상태가 되어 다음 턴에 공격한다. 30% 확률로 상대를 풀죽게 한다. 급소업+1로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/sky-attack/",
+      "performance": [],
+      "properties": []
+    },
+    "불사르기": {
+      "effect": "자신의 불꽃타입이 없어진다. 사용하면 자신의 얼음 상태를 회복한다. 자신이 불꽃타입이 아닌 경우 실패한다.",
+      "url": "https://pokemon.yodams.com/dex/move/burn-up/",
+      "performance": [],
+      "properties": []
+    },
+    "브레이브버드": {
+      "effect": "준 데미지의 1/3만큼 자신도 데미지를 입는다.",
+      "url": "https://pokemon.yodams.com/dex/move/brave-bird/",
+      "performance": [],
+      "properties": []
+    },
+    "브레이크클로": {
+      "effect": "50% 확률로 상대의 방어를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/crush-claw/",
+      "performance": [],
+      "properties": []
+    },
+    "블라스트번": {
+      "effect": "사용한 다음 턴에 자신은 반동 상태가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/blast-burn/",
+      "performance": [],
+      "properties": []
+    },
+    "블레이즈킥": {
+      "effect": "10% 확률로 상대를 화상 상태로 만든다. 급소업+1로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/blaze-kick/",
+      "performance": [],
+      "properties": []
+    },
+    "비검천중파": {
+      "effect": "상대 필드를 압정뿌리기 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/ceaseless-edge/",
+      "performance": [],
+      "properties": []
+    },
+    "블록": {
+      "effect": "상대를 교체 불가 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/block/",
+      "performance": [],
+      "properties": []
+    },
+    "비바라기": {
+      "effect": "5턴 동안 비 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/rain-dance/",
+      "performance": [],
+      "properties": []
+    },
+    "비장의무기": {
+      "effect": "다른 배운 기술을 모두 사용하지 않은 경우 실패한다.",
+      "url": "https://pokemon.yodams.com/dex/move/last-resort/",
+      "performance": [],
+      "properties": []
+    },
+    "비축하기": {
+      "effect": "자신의 방어, 특수방어를 1단계 올린다. 비축하기 상태를 1회 추가한다. 비축하기 상태는 최대 3회까지 추가할 수 있다.",
+      "url": "https://pokemon.yodams.com/dex/move/stockpile/",
+      "performance": [],
+      "properties": []
+    },
+    "빙산바람": {
+      "effect": "30% 확률로 상대를 풀죽게 한다.",
+      "url": "https://pokemon.yodams.com/dex/move/mountain-gale/",
+      "performance": [],
+      "properties": [
+        "바람"
+      ]
+    },
+    "빛의장막": {
+      "effect": "5턴 동안 같은 편 필드를 빛의장막 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/light-screen/",
+      "performance": [],
+      "properties": []
+    },
+    "뽐내기": {
+      "effect": "상대의 공격을 2단계 올리고 혼란 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/swagger/",
+      "performance": [],
+      "properties": []
+    },
+    "뿌리박기": {
+      "effect": "자신은 뿌리박기 상태가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/ingrain/",
+      "performance": [],
+      "properties": []
+    },
+    "뿔드릴": {
+      "effect": "상대를 기절시킨다. 명중률은 30%로 고정된다.",
+      "url": "https://pokemon.yodams.com/dex/move/horn-drill/",
+      "performance": [],
+      "properties": []
+    },
+    "사과산": {
+      "effect": "상대의 특수방어를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/apple-acid/",
+      "performance": [],
+      "properties": []
+    },
+    "사념의박치기": {
+      "effect": "20% 확률로 상대를 풀죽게 한다.",
+      "url": "https://pokemon.yodams.com/dex/move/zen-headbutt/",
+      "performance": [],
+      "properties": []
+    },
+    "사슬묶기": {
+      "effect": "4턴 동안 상대를 기술봉인 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/disable/",
+      "performance": [],
+      "properties": []
+    },
+    "사이드체인지": {
+      "effect": "자신과 같은 편의 자리를 바꾼다. 연속해서 사용하면 성공률이 이전에 사용했을 때의 1/3이 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/ally-switch/",
+      "performance": [],
+      "properties": []
+    },
+    "사이코노이즈": {
+      "effect": "2턴 동안 상대를 회복봉인 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/psychic-noise/",
+      "performance": [],
+      "properties": []
+    },
+    "사이코쇼크": {
+      "effect": "이 기술은 특수 기술이나 상대의 방어를 기준으로 데미지를 계산한다.",
+      "url": "https://pokemon.yodams.com/dex/move/psyshock/",
+      "performance": [],
+      "properties": []
+    },
+    "사이코커터": {
+      "effect": "급소업+1로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/psycho-cut/",
+      "performance": [],
+      "properties": [
+        "베기"
+      ]
+    },
+    "사이코키네시스": {
+      "effect": "10% 확률로 상대의 특수방어를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/psychic/",
+      "performance": [],
+      "properties": []
+    },
+    "사이코필드": {
+      "effect": "5턴 동안 전체 필드를 사이코필드 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/psychic-terrain/",
+      "performance": [],
+      "properties": []
+    },
+    "사이코팽": {
+      "effect": "상대 필드의 빛의장막, 리플렉터, 오로라베일 상태를 해제하고 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/psychic-fangs/",
+      "performance": [],
+      "properties": []
+    },
+    "생명의물방울": {
+      "effect": "자신과 같은 편의 HP를 각각 최대 HP의 1/4만큼 회복한다.",
+      "url": "https://pokemon.yodams.com/dex/move/life-dew/",
+      "performance": [],
+      "properties": []
+    },
+    "섀도볼": {
+      "effect": "20% 확률로 상대의 특수방어를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/shadow-ball/",
+      "performance": [],
+      "properties": [
+        "구슬·파동"
+      ]
+    },
+    "섀도클로": {
+      "effect": "급소업+1로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/shadow-claw/",
+      "performance": [],
+      "properties": []
+    },
+    "섀도펀치": {
+      "effect": "상대에게 반드시 명중한다.",
+      "url": "https://pokemon.yodams.com/dex/move/shadow-punch/",
+      "performance": [],
+      "properties": [
+        "펀치"
+      ]
+    },
+    "설경": {
+      "effect": "5턴 동안 눈 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/snowscape/",
+      "performance": [],
+      "properties": []
+    },
+    "섬뜩한주문": {
+      "effect": "상대가 마지막으로 사용한 기술의 PP를 3 줄인다.",
+      "url": "https://pokemon.yodams.com/dex/move/eerie-spell/",
+      "performance": [],
+      "properties": []
+    },
+    "성묘": {
+      "effect": "지닌 포켓몬이 1마리 기절할 때마다 위력이 50 올라간다.",
+      "url": "https://pokemon.yodams.com/dex/move/last-respects/",
+      "performance": [],
+      "properties": []
+    },
+    "성스러운칼": {
+      "effect": "상대의 능력 변화를 무시하고 데미지를 준다.",
+      "url": "https://pokemon.yodams.com/dex/move/sacred-sword/",
+      "performance": [],
+      "properties": [
+        "베기"
+      ]
+    },
+    "성장": {
+      "effect": "자신의 공격, 특수공격을 1단계 올린다. 쾌청 상태인 경우 2단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/growth/",
+      "performance": [],
+      "properties": []
+    },
+    "세차게휘두르기": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/brutal-swing/",
+      "performance": [],
+      "properties": []
+    },
+    "소금절이": {
+      "effect": "상대를 소금절이 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/salt-cure/",
+      "performance": [],
+      "properties": []
+    },
+    "셸암즈": {
+      "effect": "20% 확률로 상대를 독 상태로 만든다. 물리 기술일 때 데미지가 더 높은 경우 물리 기술이 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/shell-side-arm/",
+      "performance": [],
+      "properties": []
+    },
+    "셸블레이드": {
+      "effect": "50% 확률로 상대의 방어를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/razor-shell/",
+      "performance": [],
+      "properties": [
+        "베기"
+      ]
+    },
+    "소란피기": {
+      "effect": "자신은 소란피기 상태가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/uproar/",
+      "performance": [],
+      "properties": []
+    },
+    "소울비트": {
+      "effect": "자신의 최대 HP의 1/3만큼 HP를 소비하여 자신의 공격, 방어, 특수공격, 특수방어, 스피드를 1단계 올린다. 남은 HP가 부족한 경우 실패한다.",
+      "url": "https://pokemon.yodams.com/dex/move/clangorous-soul/",
+      "performance": [],
+      "properties": []
+    },
+    "소울크래시": {
+      "effect": "상대의 특수공격을 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/spirit-break/",
+      "performance": [],
+      "properties": []
+    },
+    "속이기": {
+      "effect": "상대를 풀죽게 한다. 등장하고 가장 먼저 사용하지 않으면 실패한다.",
+      "url": "https://pokemon.yodams.com/dex/move/fake-out/",
+      "performance": [
+        "선공"
+      ],
+      "properties": []
+    },
+    "속임수": {
+      "effect": "자신의 공격이 아닌 상대의 공격 수치에 따라 데미지가 결정된다.",
+      "url": "https://pokemon.yodams.com/dex/move/foul-play/",
+      "performance": [],
+      "properties": []
+    },
+    "솔라빔": {
+      "effect": "사용한 턴에 차지 상태가 되어 다음 턴에 공격한다. 쾌청 상태인 경우 차지 상태를 생략하고 바로 공격할 수 있다. 다른 날씨인 경우 위력이 1/2이 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/solar-beam/",
+      "performance": [],
+      "properties": []
+    },
+    "솔라블레이드": {
+      "effect": "사용한 턴에 차지 상태가 되어 다음 턴에 공격한다. 쾌청 상태인 경우 차지 상태를 생략하고 바로 공격할 수 있다. 다른 날씨인 경우 위력이 1/2이 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/solar-blade/",
+      "performance": [],
+      "properties": [
+        "베기"
+      ]
+    },
+    "송전": {
+      "effect": "상대가 기술을 사용하기 전에 이 기술이 명중하면 그 턴 동안 상대의 기술은 전기타입이 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/electrify/",
+      "performance": [],
+      "properties": []
+    },
+    "수면가루": {
+      "effect": "상대를 잠듦 상태로 만든다. 풀타입 포켓몬에게는 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/sleep-powder/",
+      "performance": [],
+      "properties": [
+        "가루"
+      ]
+    },
+    "순서미루기": {
+      "effect": "상대의 행동 순서를 사용한 턴의 가장 마지막으로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/quash/",
+      "performance": [],
+      "properties": []
+    },
+    "숲의저주": {
+      "effect": "상대를 숲의저주 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/forests-curse/",
+      "performance": [],
+      "properties": []
+    },
+    "순풍": {
+      "effect": "4턴 동안 같은 편 필드를 순풍 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/tailwind/",
+      "performance": [],
+      "properties": [
+        "바람"
+      ]
+    },
+    "스마트혼": {
+      "effect": "상대에게 반드시 명중한다.",
+      "url": "https://pokemon.yodams.com/dex/move/smart-strike/",
+      "performance": [],
+      "properties": []
+    },
+    "스위프뺨치기": {
+      "effect": "2~5회 연속으로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/tail-slap/",
+      "performance": [
+        "연격"
+      ],
+      "properties": []
+    },
+    "스케일노이즈": {
+      "effect": "자신의 방어를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/clanging-scales/",
+      "performance": [],
+      "properties": [
+        "소리"
+      ]
+    },
+    "스텔스록": {
+      "effect": "상대 필드를 스텔스록 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/stealth-rock/",
+      "performance": [],
+      "properties": []
+    },
+    "스케일샷": {
+      "effect": "2~5회 연속으로 공격한다. 자신의 방어를 1단계 떨어뜨리고 스피드를 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/scale-shot/",
+      "performance": [
+        "연격"
+      ],
+      "properties": []
+    },
+    "스킬스왑": {
+      "effect": "자신과 상대의 특성을 바꾼다.",
+      "url": "https://pokemon.yodams.com/dex/move/skill-swap/",
+      "performance": [],
+      "properties": []
+    },
+    "스톤에지": {
+      "effect": "급소업+1로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/stone-edge/",
+      "performance": [],
+      "properties": []
+    },
+    "스톤샤워": {
+      "effect": "30% 확률로 상대를 풀죽게 한다.",
+      "url": "https://pokemon.yodams.com/dex/move/rock-slide/",
+      "performance": [],
+      "properties": []
+    },
+    "스피드스왑": {
+      "effect": "자신과 상대의 스피드를 바꾼다.",
+      "url": "https://pokemon.yodams.com/dex/move/speed-swap/",
+      "performance": [],
+      "properties": []
+    },
+    "시저크로스": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/x-scissor/",
+      "performance": [],
+      "properties": [
+        "베기"
+      ]
+    },
+    "승부굳히기": {
+      "effect": "사용한 턴 동안 상대가 이미 데미지를 입었다면 위력이 2배가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/assurance/",
+      "performance": [],
+      "properties": []
+    },
+    "시럽봄": {
+      "effect": "3턴 동안 상대를 물엿범벅 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/syrup-bomb/",
+      "performance": [],
+      "properties": []
+    },
+    "신비의부적": {
+      "effect": "5턴 동안 같은 편 필드를 신비의부적 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/safeguard/",
+      "performance": [],
+      "properties": []
+    },
+    "신속": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/extreme-speed/",
+      "performance": [
+        "선공"
+      ],
+      "properties": []
+    },
+    "실뿜기": {
+      "effect": "상대의 스피드를 2단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/string-shot/",
+      "performance": [],
+      "properties": []
+    },
+    "신통력": {
+      "effect": "10% 확률로 상대를 풀죽게 한다.",
+      "url": "https://pokemon.yodams.com/dex/move/extrasensory/",
+      "performance": [],
+      "properties": []
+    },
+    "싫은소리": {
+      "effect": "상대의 방어를 2단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/screech/",
+      "performance": [],
+      "properties": [
+        "소리"
+      ]
+    },
+    "심플빔": {
+      "effect": "상대의 특성을 단순으로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/simple-beam/",
+      "performance": [],
+      "properties": []
+    },
+    "썰렁개그": {
+      "effect": "5턴 동안 눈 상태로 만든다. 다른 지닌 포켓몬과 교체한다.",
+      "url": "https://pokemon.yodams.com/dex/move/chilly-reception/",
+      "performance": [],
+      "properties": []
+    },
+    "썬더다이브": {
+      "effect": "빗나가거나 실패하면 자신의 최대 HP의 1/2만큼 데미지를 입는다. 작아지기 상태인 상대에게는 위력이 2배가 되며 반드시 명중한다.",
+      "url": "https://pokemon.yodams.com/dex/move/supercell-slam/",
+      "performance": [],
+      "properties": []
+    },
+    "씨뿌리기": {
+      "effect": "상대를 씨뿌리기 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/leech-seed/",
+      "performance": [],
+      "properties": []
+    },
+    "씨기관총": {
+      "effect": "2~5회 연속으로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/bullet-seed/",
+      "performance": [
+        "연격"
+      ],
+      "properties": []
+    },
+    "씨폭탄": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/seed-bomb/",
+      "performance": [],
+      "properties": [
+        "구슬·파동"
+      ]
+    },
+    "아로마미스트": {
+      "effect": "자신의 특수방어를 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/aromatic-mist/",
+      "performance": [],
+      "properties": []
+    },
+    "아머캐논": {
+      "effect": "자신의 방어, 특수방어를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/armor-cannon/",
+      "performance": [],
+      "properties": [
+        "구슬·파동"
+      ]
+    },
+    "아이스스피너": {
+      "effect": "필드를 해제한다.",
+      "url": "https://pokemon.yodams.com/dex/move/ice-spinner/",
+      "performance": [],
+      "properties": []
+    },
+    "아이언헤드": {
+      "effect": "20% 확률로 상대를 풀죽게 한다.",
+      "url": "https://pokemon.yodams.com/dex/move/iron-head/",
+      "performance": [],
+      "properties": []
+    },
+    "아이스해머": {
+      "effect": "자신의 스피드를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/ice-hammer/",
+      "performance": [],
+      "properties": []
+    },
+    "아이언롤러": {
+      "effect": "필드가 전개되어 있지 않은 경우 실패한다. 필드를 해제한다.",
+      "url": "https://pokemon.yodams.com/dex/move/steel-roller/",
+      "performance": [],
+      "properties": []
+    },
+    "아침햇살": {
+      "effect": "자신의 최대 HP의 1/2만큼 회복한다. 쾌청 상태인 경우 2/3만큼 회복한다. 다른 날씨인 경우 1/4만큼 회복한다.",
+      "url": "https://pokemon.yodams.com/dex/move/morning-sun/",
+      "performance": [],
+      "properties": []
+    },
+    "아이언테일": {
+      "effect": "30% 확률로 상대의 방어를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/iron-tail/",
+      "performance": [],
+      "properties": []
+    },
+    "아쿠아링": {
+      "effect": "자신은 아쿠아링 상태가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/aqua-ring/",
+      "performance": [],
+      "properties": []
+    },
+    "아쿠아브레이크": {
+      "effect": "20% 확률로 상대의 방어를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/liquidation/",
+      "performance": [],
+      "properties": []
+    },
+    "아쿠아제트": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/aqua-jet/",
+      "performance": [
+        "선공"
+      ],
+      "properties": []
+    },
+    "아쿠아스텝": {
+      "effect": "자신의 스피드를 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/aqua-step/",
+      "performance": [],
+      "properties": []
+    },
+    "아쿠아커터": {
+      "effect": "급소업+1로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/aqua-cutter/",
+      "performance": [],
+      "properties": [
+        "베기"
+      ]
+    },
+    "악의파동": {
+      "effect": "20% 확률로 상대를 풀죽게 한다.",
+      "url": "https://pokemon.yodams.com/dex/move/dark-pulse/",
+      "performance": [],
+      "properties": [
+        "구슬·파동"
+      ]
+    },
+    "아쿠아테일": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/aqua-tail/",
+      "performance": [],
+      "properties": []
+    },
+    "아픔나누기": {
+      "effect": "자신과 상대의 남은 HP를 더한 다음 1/2씩 나눠 갖는다.",
+      "url": "https://pokemon.yodams.com/dex/move/pain-split/",
+      "performance": [],
+      "properties": []
+    },
+    "안개제거": {
+      "effect": "상대의 회피율을 1단계 떨어뜨린다. 리플렉터, 압정뿌리기, 신비의부적, 필드 등을 해제한다.",
+      "url": "https://pokemon.yodams.com/dex/move/defog/",
+      "performance": [],
+      "properties": []
+    },
+    "안다리걸기": {
+      "effect": "상대가 무거울수록 위력이 올라간다. (위력은 20~120)",
+      "url": "https://pokemon.yodams.com/dex/move/low-kick/",
+      "performance": [],
+      "properties": []
+    },
+    "암석액스": {
+      "effect": "상대 필드를 스텔스록 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/stone-axe/",
+      "performance": [],
+      "properties": []
+    },
+    "암석봉인": {
+      "effect": "상대의 스피드를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/rock-tomb/",
+      "performance": [],
+      "properties": []
+    },
+    "암해머": {
+      "effect": "자신의 스피드를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/hammer-arm/",
+      "performance": [],
+      "properties": [
+        "펀치"
+      ]
+    },
+    "압정뿌리기": {
+      "effect": "상대 필드를 압정뿌리기 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/spikes/",
+      "performance": [],
+      "properties": []
+    },
+    "암석포": {
+      "effect": "사용한 다음 턴에 자신은 반동 상태가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/rock-wrecker/",
+      "performance": [],
+      "properties": []
+    },
+    "앙갚음": {
+      "effect": "사용한 턴에 상대의 기술로 입은 데미지를 1.5배로 돌려준다.",
+      "url": "https://pokemon.yodams.com/dex/move/comeuppance/",
+      "performance": [],
+      "properties": []
+    },
+    "앙코르": {
+      "effect": "상대를 앙코르 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/encore/",
+      "performance": [],
+      "properties": []
+    },
+    "애교부리기": {
+      "effect": "상대의 공격을 2단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/charm/",
+      "performance": [],
+      "properties": []
+    },
+    "애크러뱃": {
+      "effect": "자신이 도구를 지니고 있지 않은 경우 위력이 2배가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/acrobatics/",
+      "performance": [],
+      "properties": []
+    },
+    "애시드봄": {
+      "effect": "상대의 특수방어를 2단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/acid-spray/",
+      "performance": [],
+      "properties": []
+    },
+    "야습": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/shadow-sneak/",
+      "performance": [
+        "선공"
+      ],
+      "properties": []
+    },
+    "양날박치기": {
+      "effect": "준 데미지의 1/2만큼 자신도 데미지를 입는다.",
+      "url": "https://pokemon.yodams.com/dex/move/head-smash/",
+      "performance": [],
+      "properties": []
+    },
+    "액셀록": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/accelerock/",
+      "performance": [
+        "선공"
+      ],
+      "properties": []
+    },
+    "어시스트파워": {
+      "effect": "자신의 올라간 능력 변화 1단계당 이 기술의 위력이 20씩 올라간다.",
+      "url": "https://pokemon.yodams.com/dex/move/stored-power/",
+      "performance": [],
+      "properties": []
+    },
+    "얼어붙은바람": {
+      "effect": "상대의 스피드를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/icy-wind/",
+      "performance": [],
+      "properties": [
+        "바람"
+      ]
+    },
+    "얼음뭉치": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/ice-shard/",
+      "performance": [
+        "선공"
+      ],
+      "properties": []
+    },
+    "얼음엄니": {
+      "effect": "10% 확률로 상대를 얼음 상태로 만든다. 10% 확률로 상대를 풀죽게 한다.",
+      "url": "https://pokemon.yodams.com/dex/move/ice-fang/",
+      "performance": [],
+      "properties": []
+    },
+    "얼음숨결": {
+      "effect": "반드시 급소에 맞는다.",
+      "url": "https://pokemon.yodams.com/dex/move/frost-breath/",
+      "performance": [],
+      "properties": []
+    },
+    "엄청난힘": {
+      "effect": "자신의 공격, 방어를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/superpower/",
+      "performance": [],
+      "properties": []
+    },
+    "엉겨붙기": {
+      "effect": "상대를 바인드 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/infestation/",
+      "performance": [],
+      "properties": []
+    },
+    "엄습하는일격": {
+      "effect": "상대의 특수공격을 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/skitter-smack/",
+      "performance": [],
+      "properties": []
+    },
+    "업어후리기": {
+      "effect": "반드시 급소에 맞는다.",
+      "url": "https://pokemon.yodams.com/dex/move/storm-throw/",
+      "performance": [],
+      "properties": []
+    },
+    "에너지볼": {
+      "effect": "10% 확률로 상대의 특수방어를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/energy-ball/",
+      "performance": [],
+      "properties": [
+        "구슬·파동"
+      ]
+    },
+    "에어슬래시": {
+      "effect": "30% 확률로 상대를 풀죽게 한다.",
+      "url": "https://pokemon.yodams.com/dex/move/air-slash/",
+      "performance": [],
+      "properties": [
+        "바람",
+        "베기"
+      ]
+    },
+    "역린": {
+      "effect": "자신은 난동 상태가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/outrage/",
+      "performance": [],
+      "properties": []
+    },
+    "에어커터": {
+      "effect": "급소업+1로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/air-cutter/",
+      "performance": [],
+      "properties": [
+        "바람",
+        "베기"
+      ]
+    },
+    "연옥": {
+      "effect": "상대를 화상 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/inferno/",
+      "performance": [],
+      "properties": []
+    },
+    "열불내기": {
+      "effect": "직전 턴에 자신이 행동하지 못했거나 기술이 빗나가거나 실패한 경우 위력이 2배가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/temper-flare/",
+      "performance": [],
+      "properties": []
+    },
+    "열사의대지": {
+      "effect": "30% 확률로 상대를 화상 상태로 만든다. 상대의 얼음 상태를 회복한다. 사용하면 자신의 얼음 상태를 회복한다.",
+      "url": "https://pokemon.yodams.com/dex/move/scorching-sands/",
+      "performance": [],
+      "properties": []
+    },
+    "역할": {
+      "effect": "자신의 특성을 상대와 같은 특성으로 바꾼다.",
+      "url": "https://pokemon.yodams.com/dex/move/role-play/",
+      "performance": [],
+      "properties": []
+    },
+    "열탕": {
+      "effect": "30% 확률로 상대를 화상 상태로 만든다. 상대의 얼음 상태를 회복한다. 사용하면 자신의 얼음 상태를 회복한다.",
+      "url": "https://pokemon.yodams.com/dex/move/scald/",
+      "performance": [],
+      "properties": []
+    },
+    "열풍": {
+      "effect": "10% 확률로 상대를 화상 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/heat-wave/",
+      "performance": [],
+      "properties": [
+        "바람"
+      ]
+    },
+    "오로라베일": {
+      "effect": "5턴 동안 같은 편 필드를 오로라베일 상태로 만든다. 눈 상태인 경우에만 사용할 수 있다.",
+      "url": "https://pokemon.yodams.com/dex/move/aurora-veil/",
+      "performance": [],
+      "properties": []
+    },
+    "오라휠": {
+      "effect": "자신의 스피드를 1단계 올린다. 모르페코의 폼에 따라 타입이 바뀐다.",
+      "url": "https://pokemon.yodams.com/dex/move/aura-wheel/",
+      "performance": [],
+      "properties": []
+    },
+    "오물웨이브": {
+      "effect": "10% 확률로 상대를 독 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/sludge-wave/",
+      "performance": [],
+      "properties": []
+    },
+    "오물폭탄": {
+      "effect": "30% 확률로 상대를 독 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/sludge-bomb/",
+      "performance": [],
+      "properties": [
+        "구슬·파동"
+      ]
+    },
+    "와이드가드": {
+      "effect": "사용한 턴 동안 같은 편 전원을 공격하는 기술로부터 몸을 보호한다.",
+      "url": "https://pokemon.yodams.com/dex/move/wide-guard/",
+      "performance": [],
+      "properties": []
+    },
+    "오버히트": {
+      "effect": "자신의 특수공격을 2단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/overheat/",
+      "performance": [],
+      "properties": []
+    },
+    "와이드브레이커": {
+      "effect": "상대의 공격을 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/breaking-swipe/",
+      "performance": [],
+      "properties": []
+    },
+    "와이드포스": {
+      "effect": "사이코필드 상태의 효과를 받고 있는 경우 위력이 1.5배가 되며 상대 전체를 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/expanding-force/",
+      "performance": [
+        "광역"
+      ],
+      "properties": []
+    },
+    "와일드볼트": {
+      "effect": "준 데미지의 1/4만큼 자신도 데미지를 입는다.",
+      "url": "https://pokemon.yodams.com/dex/move/wild-charge/",
+      "performance": [],
+      "properties": []
+    },
+    "용성군": {
+      "effect": "자신의 특수공격을 2단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/draco-meteor/",
+      "performance": [],
+      "properties": []
+    },
+    "용의춤": {
+      "effect": "자신의 공격, 스피드를 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/dragon-dance/",
+      "performance": [],
+      "properties": [
+        "춤"
+      ]
+    },
+    "용의파동": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/dragon-pulse/",
+      "performance": [],
+      "properties": [
+        "구슬·파동"
+      ]
+    },
+    "울부짖기": {
+      "effect": "상대에게 교체할 포켓몬이 있는 경우 랜덤한 포켓몬으로 교체시킨다.",
+      "url": "https://pokemon.yodams.com/dex/move/roar/",
+      "performance": [],
+      "properties": [
+        "소리"
+      ]
+    },
+    "우드혼": {
+      "effect": "상대에게 준 데미지의 1/2만큼 자신의 HP를 회복한다.",
+      "url": "https://pokemon.yodams.com/dex/move/horn-leech/",
+      "performance": [],
+      "properties": []
+    },
+    "우드해머": {
+      "effect": "준 데미지의 1/3만큼 자신도 데미지를 입는다.",
+      "url": "https://pokemon.yodams.com/dex/move/wood-hammer/",
+      "performance": [],
+      "properties": []
+    },
+    "원념의칼": {
+      "effect": "상대에게 준 데미지의 1/2만큼 자신의 HP를 회복한다.",
+      "url": "https://pokemon.yodams.com/dex/move/bitter-blade/",
+      "performance": [],
+      "properties": [
+        "베기"
+      ]
+    },
+    "원시의힘": {
+      "effect": "10% 확률로 자신의 공격, 방어, 특수공격, 특수방어, 스피드를 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/ancient-power/",
+      "performance": [],
+      "properties": []
+    },
+    "원더룸": {
+      "effect": "5턴 동안 전체 필드를 원더룸 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/wonder-room/",
+      "performance": [],
+      "properties": []
+    },
+    "원한": {
+      "effect": "상대가 마지막으로 사용한 기술의 PP를 4 줄인다.",
+      "url": "https://pokemon.yodams.com/dex/move/spite/",
+      "performance": [],
+      "properties": []
+    },
+    "웨더볼": {
+      "effect": "날씨가 바뀐 경우 위력이 2배가 되며 기술의 타입도 바뀐다. 쾌청 상태: 불꽃 비 상태: 물 눈 상태: 얼음 모래바람 상태: 바위",
+      "url": "https://pokemon.yodams.com/dex/move/weather-ball/",
+      "performance": [],
+      "properties": [
+        "구슬·파동"
+      ]
+    },
+    "이상한빛": {
+      "effect": "상대를 혼란 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/confuse-ray/",
+      "performance": [],
+      "properties": []
+    },
+    "유턴": {
+      "effect": "공격한 다음 다른 지닌 포켓몬과 교체한다.",
+      "url": "https://pokemon.yodams.com/dex/move/u-turn/",
+      "performance": [],
+      "properties": []
+    },
+    "위액": {
+      "effect": "상대를 특성 없음 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/gastro-acid/",
+      "performance": [],
+      "properties": []
+    },
+    "이판사판태클": {
+      "effect": "준 데미지의 1/3만큼 자신도 데미지를 입는다.",
+      "url": "https://pokemon.yodams.com/dex/move/double-edge/",
+      "performance": [],
+      "properties": []
+    },
+    "인파이트": {
+      "effect": "자신의 방어, 특수방어를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/close-combat/",
+      "performance": [],
+      "properties": []
+    },
+    "웨이브태클": {
+      "effect": "준 데미지의 1/3만큼 자신도 데미지를 입는다.",
+      "url": "https://pokemon.yodams.com/dex/move/wave-crash/",
+      "performance": [],
+      "properties": []
+    },
+    "일렉트로빔": {
+      "effect": "사용한 턴에 차지 상태가 되어 다음 턴에 공격한다. 비 상태인 경우 차지 상태를 생략하고 바로 공격할 수 있다. 사용한 턴에 자신의 특수공격을 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/electro-shot/",
+      "performance": [],
+      "properties": []
+    },
+    "일렉트릭네트": {
+      "effect": "상대의 스피드를 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/electroweb/",
+      "performance": [],
+      "properties": []
+    },
+    "자기장조작": {
+      "effect": "특성이 플러스, 마이너스인 자신과 같은 편의 방어, 특수방어를 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/magnetic-flux/",
+      "performance": [],
+      "properties": []
+    },
+    "자이로볼": {
+      "effect": "자신의 스피드가 상대보다 느릴수록 위력이 올라간다. (위력은 1~150)",
+      "url": "https://pokemon.yodams.com/dex/move/gyro-ball/",
+      "performance": [],
+      "properties": [
+        "구슬·파동"
+      ]
+    },
+    "일렉트릭볼": {
+      "effect": "자신의 스피드가 상대보다 빠를수록 위력이 올라간다. (위력은 40~150)",
+      "url": "https://pokemon.yodams.com/dex/move/electro-ball/",
+      "performance": [],
+      "properties": [
+        "구슬·파동"
+      ]
+    },
+    "자기암시": {
+      "effect": "상대의 능력 변화를 자신도 똑같이 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/psych-up/",
+      "performance": [],
+      "properties": []
+    },
+    "일렉트릭필드": {
+      "effect": "5턴 동안 전체 필드를 일렉트릭필드 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/electric-terrain/",
+      "performance": [],
+      "properties": []
+    },
+    "작아지기": {
+      "effect": "자신의 회피율을 2단계 올린다. 자신은 작아지기 상태가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/minimize/",
+      "performance": [],
+      "properties": []
+    },
+    "자폭": {
+      "effect": "사용하면 자신은 기절하게 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/self-destruct/",
+      "performance": [],
+      "properties": []
+    },
+    "잠꼬대": {
+      "effect": "자신이 잠듦 상태인 경우 사용할 수 있다. 자신이 배운 다른 기술 중에서 무작위로 기술을 사용한다.",
+      "url": "https://pokemon.yodams.com/dex/move/sleep-talk/",
+      "performance": [],
+      "properties": []
+    },
+    "저주": {
+      "effect": "자신의 최대 HP의 1/2만큼 HP를 소비하여 상대를 저주 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/curse/",
+      "performance": [],
+      "properties": []
+    },
+    "저리가루": {
+      "effect": "상대를 마비 상태로 만든다. 풀타입 포켓몬에게는 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/stun-spore/",
+      "performance": [],
+      "properties": [
+        "가루"
+      ]
+    },
+    "잠자기": {
+      "effect": "자신의 HP와 상태 이상을 모두 회복한다. 2턴 동안 잠듦 상태가 된다. HP가 꽉 찬 상태면 실패한다.",
+      "url": "https://pokemon.yodams.com/dex/move/rest/",
+      "performance": [],
+      "properties": []
+    },
+    "전기자석파": {
+      "effect": "상대를 마비 상태로 만든다. 땅타입 포켓몬에게는 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/thunder-wave/",
+      "performance": [],
+      "properties": []
+    },
+    "전광석화": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/quick-attack/",
+      "performance": [
+        "선공"
+      ],
+      "properties": []
+    },
+    "전자포": {
+      "effect": "상대를 마비 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/zap-cannon/",
+      "performance": [],
+      "properties": []
+    },
+    "전자부유": {
+      "effect": "자신은 전자부유 상태가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/magnet-rise/",
+      "performance": [],
+      "properties": []
+    },
+    "절대영도": {
+      "effect": "상대를 기절시킨다. 명중률은 30%로 고정된다. 얼음타입인 상대에게는 맞지 않는다. 얼음타입 이외의 포켓몬이 사용하면 명중률이 20%가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/sheer-cold/",
+      "performance": [],
+      "properties": []
+    },
+    "제트펀치": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/jet-punch/",
+      "performance": [
+        "선공"
+      ],
+      "properties": [
+        "펀치"
+      ]
+    },
+    "제비반환": {
+      "effect": "상대에게 반드시 명중한다.",
+      "url": "https://pokemon.yodams.com/dex/move/aerial-ace/",
+      "performance": [],
+      "properties": []
+    },
+    "정리정돈": {
+      "effect": "전체 필드의 끈적끈적네트, 스텔스록, 대타출동, 압정뿌리기, 독압정 상태를 해제한다. 자신의 공격, 스피드를 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/tidy-up/",
+      "performance": [],
+      "properties": []
+    },
+    "조이기": {
+      "effect": "상대를 바인드 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/bind/",
+      "performance": [],
+      "properties": []
+    },
+    "중력": {
+      "effect": "5턴 동안 전체 필드를 중력 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/gravity/",
+      "performance": [],
+      "properties": []
+    },
+    "죽기살기": {
+      "effect": "상대의 남은 HP에서 자신의 남은 HP를 뺀 수치만큼 데미지를 준다. 상대의 HP가 자신의 HP 이하면 실패한다.",
+      "url": "https://pokemon.yodams.com/dex/move/endeavor/",
+      "performance": [],
+      "properties": []
+    },
+    "지구던지기": {
+      "effect": "상대 HP에 50데미지를 준다.",
+      "url": "https://pokemon.yodams.com/dex/move/seismic-toss/",
+      "performance": [],
+      "properties": []
+    },
+    "지옥찌르기": {
+      "effect": "상대를 지옥찌르기 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/throat-chop/",
+      "performance": [],
+      "properties": []
+    },
+    "지휘": {
+      "effect": "상대가 직전에 사용한 기술을 한 번 더 사용하게 한다.",
+      "url": "https://pokemon.yodams.com/dex/move/instruct/",
+      "performance": [],
+      "properties": []
+    },
+    "지진": {
+      "effect": "지중 상태인 상대에게는 위력이 2배가 된다. 그래스필드 상태일 때 위력이 1/2이 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/earthquake/",
+      "performance": [],
+      "properties": []
+    },
+    "진공파": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/vacuum-wave/",
+      "performance": [
+        "선공"
+      ],
+      "properties": []
+    },
+    "진흙뿌리기": {
+      "effect": "상대의 명중률을 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/mud-slap/",
+      "performance": [],
+      "properties": []
+    },
+    "질투의불꽃": {
+      "effect": "사용한 턴 동안 상대의 능력이 올라간 경우 상대를 화상 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/burning-jealousy/",
+      "performance": [],
+      "properties": []
+    },
+    "집게해머": {
+      "effect": "급소업+1로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/crabhammer/",
+      "performance": [],
+      "properties": [
+        "펀치"
+      ]
+    },
+    "집게덫": {
+      "effect": "상대를 바인드 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/snap-trap/",
+      "performance": [],
+      "properties": []
+    },
+    "집단구타": {
+      "effect": "지닌 포켓몬의 수만큼 상대를 공격한다. 기절했거나 상태 이상에 걸린 포켓몬은 포함하지 않는다. 기술의 위력은 지닌 포켓몬의 공격으로 계산된다.",
+      "url": "https://pokemon.yodams.com/dex/move/beat-up/",
+      "performance": [],
+      "properties": []
+    },
+    "쪼아대기": {
+      "effect": "상대가 나무열매를 지니고 있으면 그 나무열매를 대신 먹고 자신이 효과를 받는다.",
+      "url": "https://pokemon.yodams.com/dex/move/pluck/",
+      "performance": [],
+      "properties": []
+    },
+    "차지빔": {
+      "effect": "70% 확률로 자신의 특수공격을 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/charge-beam/",
+      "performance": [],
+      "properties": []
+    },
+    "찍찍베기": {
+      "effect": "1~10회 연속으로 공격한다. 도중에 빗나가면 공격이 끝난다.",
+      "url": "https://pokemon.yodams.com/dex/move/population-bomb/",
+      "performance": [
+        "연격"
+      ],
+      "properties": [
+        "베기"
+      ]
+    },
+    "찬물끼얹기": {
+      "effect": "상대의 공격을 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/chilling-water/",
+      "performance": [],
+      "properties": []
+    },
+    "천사의키스": {
+      "effect": "상대를 혼란 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/sweet-kiss/",
+      "performance": [],
+      "properties": []
+    },
+    "천추지한": {
+      "effect": "상대의 공격을 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/bitter-malice/",
+      "performance": [],
+      "properties": []
+    },
+    "철벽": {
+      "effect": "자신의 방어를 2단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/iron-defense/",
+      "performance": [],
+      "properties": []
+    },
+    "철제광선": {
+      "effect": "공격한 다음 자신의 최대 HP의 1/2만큼 데미지를 입는다.",
+      "url": "https://pokemon.yodams.com/dex/move/steel-beam/",
+      "performance": [],
+      "properties": []
+    },
+    "초롱초롱눈동자": {
+      "effect": "상대의 공격을 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/baby-doll-eyes/",
+      "performance": [],
+      "properties": []
+    },
+    "최면술": {
+      "effect": "상대를 잠듦 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/hypnosis/",
+      "performance": [],
+      "properties": []
+    },
+    "추억의선물": {
+      "effect": "자신은 기절하게 되지만 상대의 공격, 특수공격을 2단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/memento/",
+      "performance": [],
+      "properties": []
+    },
+    "충전": {
+      "effect": "자신의 특수방어를 1단계 올린다. 전기위력업 상태가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/charge/",
+      "performance": [],
+      "properties": []
+    },
+    "치근거리기": {
+      "effect": "10% 확률로 상대의 공격을 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/play-rough/",
+      "performance": [],
+      "properties": []
+    },
+    "치료방울": {
+      "effect": "자신과 같은 편과 지닌 포켓몬 전원의 상태 이상을 회복한다.",
+      "url": "https://pokemon.yodams.com/dex/move/heal-bell/",
+      "performance": [],
+      "properties": []
+    },
+    "치유소원": {
+      "effect": "자신은 기절하게 되지만 다음에 내보내는 포켓몬의 HP를 모두 회복하고 상태 이상을 회복한다.",
+      "url": "https://pokemon.yodams.com/dex/move/healing-wish/",
+      "performance": [],
+      "properties": []
+    },
+    "카운터": {
+      "effect": "사용한 턴에 상대의 물리 기술로 입은 데미지를 2배로 돌려준다.",
+      "url": "https://pokemon.yodams.com/dex/move/counter/",
+      "performance": [],
+      "properties": []
+    },
+    "치유파동": {
+      "effect": "상대의 HP를 최대 HP의 1/2만큼 회복시킨다.",
+      "url": "https://pokemon.yodams.com/dex/move/heal-pulse/",
+      "performance": [],
+      "properties": [
+        "구슬·파동"
+      ]
+    },
+    "칼춤": {
+      "effect": "자신의 공격을 2단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/swords-dance/",
+      "performance": [],
+      "properties": [
+        "춤"
+      ]
+    },
+    "코골기": {
+      "effect": "자신이 잠듦 상태인 경우 사용할 수 있다. 30% 확률로 상대를 풀죽게 한다.",
+      "url": "https://pokemon.yodams.com/dex/move/snore/",
+      "performance": [],
+      "properties": []
+    },
+    "코멧펀치": {
+      "effect": "20% 확률로 자신의 공격을 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/meteor-mash/",
+      "performance": [],
+      "properties": [
+        "펀치"
+      ]
+    },
+    "코칭": {
+      "effect": "같은 편의 공격, 방어를 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/coaching/",
+      "performance": [],
+      "properties": []
+    },
+    "코튼가드": {
+      "effect": "자신의 방어를 3단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/cotton-guard/",
+      "performance": [],
+      "properties": []
+    },
+    "코스믹파워": {
+      "effect": "자신의 방어, 특수방어를 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/cosmic-power/",
+      "performance": [],
+      "properties": []
+    },
+    "쾌청": {
+      "effect": "5턴 동안 쾌청 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/sunny-day/",
+      "performance": [],
+      "properties": []
+    },
+    "퀵턴": {
+      "effect": "공격한 다음 다른 지닌 포켓몬과 교체한다.",
+      "url": "https://pokemon.yodams.com/dex/move/flip-turn/",
+      "performance": [],
+      "properties": []
+    },
+    "크로스촙": {
+      "effect": "급소업+1로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/cross-chop/",
+      "performance": [],
+      "properties": []
+    },
+    "크로스포이즌": {
+      "effect": "10% 확률로 상대를 독 상태로 만든다. 급소업+1로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/cross-poison/",
+      "performance": [],
+      "properties": []
+    },
+    "클리어스모그": {
+      "effect": "상대의 능력 변화를 원래대로 되돌린다. 상대에게 반드시 명중한다.",
+      "url": "https://pokemon.yodams.com/dex/move/clear-smog/",
+      "performance": [],
+      "properties": []
+    },
+    "킬러스핀": {
+      "effect": "자신의 바인드, 씨뿌리기 상태와 같은 편 필드의 압정뿌리기, 독압정, 끈적끈적네트, 스텔스록 상태를 해제한다. 상대를 독 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/mortal-spin/",
+      "performance": [],
+      "properties": []
+    },
+    "킹실드": {
+      "effect": "사용한 턴 동안 상대의 공격으로부터 몸을 보호하며 접촉 기술을 받으면 상대의 공격을 1단계 떨어뜨린다. 실드폼으로 폼체인지한다. 연속해서 사용하면 성공률이 이전에 사용했을 때의 1/3이 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/kings-shield/",
+      "performance": [],
+      "properties": []
+    },
+    "탁류": {
+      "effect": "30% 확률로 상대의 명중률을 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/muddy-water/",
+      "performance": [],
+      "properties": []
+    },
+    "탁쳐서떨구기": {
+      "effect": "상대가 도구를 지니고 있으면 위력이 1.5배가 된다. 상대의 도구를 없앤다.",
+      "url": "https://pokemon.yodams.com/dex/move/knock-off/",
+      "performance": [],
+      "properties": []
+    },
+    "탐내기": {
+      "effect": "자신이 도구를 지니고 있지 않은 경우 상대의 도구를 빼앗는다.",
+      "url": "https://pokemon.yodams.com/dex/move/covet/",
+      "performance": [],
+      "properties": []
+    },
+    "토치카": {
+      "effect": "사용한 턴 동안 상대의 기술로부터 몸을 보호한다. 접촉 기술을 받으면 상대를 독 상태로 만든다. 연속해서 사용하면 성공률이 이전에 사용했을 때의 1/3이 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/baneful-bunker/",
+      "performance": [],
+      "properties": []
+    },
+    "토해내기": {
+      "effect": "비축하기 상태의 수치가 높을수록 위력이 올라간다. (위력은 100~300) 비축하기 상태가 아닌 경우 이 기술은 실패한다.",
+      "url": "https://pokemon.yodams.com/dex/move/spit-up/",
+      "performance": [],
+      "properties": []
+    },
+    "트라이어택": {
+      "effect": "20% 확률로 상대를 마비, 화상, 얼음 중 하나의 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/tri-attack/",
+      "performance": [],
+      "properties": []
+    },
+    "트로피컬킥": {
+      "effect": "상대의 공격을 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/trop-kick/",
+      "performance": [],
+      "properties": []
+    },
+    "트리플악셀": {
+      "effect": "첫 번째는 위력 20, 두 번째는 위력 40, 세 번째는 위력 60으로 3회 연속 공격한다. 도중에 빗나가면 공격이 끝난다.",
+      "url": "https://pokemon.yodams.com/dex/move/triple-axel/",
+      "performance": [
+        "연격"
+      ],
+      "properties": []
+    },
+    "트릭": {
+      "effect": "상대와 자신의 지니고 있는 도구를 바꾼다.",
+      "url": "https://pokemon.yodams.com/dex/move/trick/",
+      "performance": [],
+      "properties": []
+    },
+    "트릭룸": {
+      "effect": "5턴 동안 전체 필드를 트릭룸 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/trick-room/",
+      "performance": [],
+      "properties": []
+    },
+    "트림": {
+      "effect": "배틀 중에 나무열매를 먹지 않은 경우 이 기술은 실패한다.",
+      "url": "https://pokemon.yodams.com/dex/move/belch/",
+      "performance": [],
+      "properties": []
+    },
+    "트윈빔": {
+      "effect": "2회 연속으로 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/twin-beam/",
+      "performance": [
+        "연격"
+      ],
+      "properties": []
+    },
+    "트릭플라워": {
+      "effect": "상대에게 반드시 명중한다. 반드시 급소에 맞는다.",
+      "url": "https://pokemon.yodams.com/dex/move/flower-trick/",
+      "performance": [],
+      "properties": []
+    },
+    "트집": {
+      "effect": "상대를 연속 불가 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/torment/",
+      "performance": [],
+      "properties": []
+    },
+    "파괴광선": {
+      "effect": "사용한 다음 턴에 자신은 반동 상태가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/hyper-beam/",
+      "performance": [],
+      "properties": []
+    },
+    "파도타기": {
+      "effect": "수중 상태인 상대에게는 위력이 2배가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/surf/",
+      "performance": [],
+      "properties": []
+    },
+    "파동탄": {
+      "effect": "상대에게 반드시 명중한다.",
+      "url": "https://pokemon.yodams.com/dex/move/aura-sphere/",
+      "performance": [],
+      "properties": [
+        "구슬·파동"
+      ]
+    },
+    "파워젬": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/power-gem/",
+      "performance": [],
+      "properties": []
+    },
+    "파라볼라차지": {
+      "effect": "상대에게 준 데미지의 1/2만큼 자신의 HP를 회복한다.",
+      "url": "https://pokemon.yodams.com/dex/move/parabolic-charge/",
+      "performance": [],
+      "properties": []
+    },
+    "파멸의빛": {
+      "effect": "준 데미지의 1/2만큼 자신도 데미지를 입는다.",
+      "url": "https://pokemon.yodams.com/dex/move/light-of-ruin/",
+      "performance": [],
+      "properties": []
+    },
+    "파워스왑": {
+      "effect": "자신의 공격, 특수공격 능력 변화를 상대의 공격, 특수공격 능력 변화와 바꾼다.",
+      "url": "https://pokemon.yodams.com/dex/move/power-swap/",
+      "performance": [],
+      "properties": []
+    },
+    "파워셰어": {
+      "effect": "자신과 상대의 공격과 특수공격 수치를 각각 더해서 1/2씩 나눠 갖는다.",
+      "url": "https://pokemon.yodams.com/dex/move/power-split/",
+      "performance": [],
+      "properties": []
+    },
+    "파워트릭": {
+      "effect": "자신은 공방반전 상태가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/power-trick/",
+      "performance": [],
+      "properties": []
+    },
+    "파워휩": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/power-whip/",
+      "performance": [],
+      "properties": []
+    },
+    "판별": {
+      "effect": "사용한 턴 동안 상대의 기술로부터 몸을 보호한다. 연속해서 사용하면 성공률이 이전에 사용했을 때의 1/3이 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/detect/",
+      "performance": [],
+      "properties": []
+    },
+    "패스트가드": {
+      "effect": "사용한 턴 동안 자신과 같은 편을 선제 기술로부터 보호한다.",
+      "url": "https://pokemon.yodams.com/dex/move/quick-guard/",
+      "performance": [],
+      "properties": []
+    },
+    "페이탈클로": {
+      "effect": "30% 확률로 상대를 독, 마비, 잠듦 중 하나의 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/dire-claw/",
+      "performance": [],
+      "properties": []
+    },
+    "페어리록": {
+      "effect": "필드의 전원을 페어리록 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/fairy-lock/",
+      "performance": [],
+      "properties": []
+    },
+    "폭발펀치": {
+      "effect": "상대를 혼란 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/dynamic-punch/",
+      "performance": [],
+      "properties": [
+        "펀치"
+      ]
+    },
+    "페인트": {
+      "effect": "방어, 판별 등의 효과를 해제하고 공격한다.",
+      "url": "https://pokemon.yodams.com/dex/move/feint/",
+      "performance": [],
+      "properties": []
+    },
+    "폭포오르기": {
+      "effect": "20% 확률로 상대를 풀죽게 한다.",
+      "url": "https://pokemon.yodams.com/dex/move/waterfall/",
+      "performance": [],
+      "properties": []
+    },
+    "폭음파": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/boomburst/",
+      "performance": [],
+      "properties": [
+        "소리"
+      ]
+    },
+    "폭풍": {
+      "effect": "30% 확률로 상대를 혼란 상태로 만든다. 비 상태인 경우 상대에게 반드시 명중한다. 쾌청 상태인 경우 명중률은 50%가 된다. 공중 상태인 상대에게도 맞는다.",
+      "url": "https://pokemon.yodams.com/dex/move/hurricane/",
+      "performance": [],
+      "properties": [
+        "바람"
+      ]
+    },
+    "풀묶기": {
+      "effect": "상대가 무거울수록 위력이 올라간다. (위력은 20~120)",
+      "url": "https://pokemon.yodams.com/dex/move/grass-knot/",
+      "performance": [],
+      "properties": []
+    },
+    "폴터가이스트": {
+      "effect": "상대가 도구를 지니고 있지 않은 경우 실패한다.",
+      "url": "https://pokemon.yodams.com/dex/move/poltergeist/",
+      "performance": [],
+      "properties": []
+    },
+    "프리즈드라이": {
+      "effect": "물타입인 상대에게도 효과가 굉장해진다.",
+      "url": "https://pokemon.yodams.com/dex/move/freeze-dry/",
+      "performance": [],
+      "properties": []
+    },
+    "플라잉프레스": {
+      "effect": "이 기술의 타입과 비행타입 두 타입의 상성을 종합하여 데미지가 결정된다. 작아지기 상태인 상대에게는 위력이 2배가 되며 반드시 명중한다.",
+      "url": "https://pokemon.yodams.com/dex/move/flying-press/",
+      "performance": [],
+      "properties": []
+    },
+    "플레어드라이브": {
+      "effect": "준 데미지의 1/3만큼 자신도 데미지를 입는다. 10% 확률로 상대를 화상 상태로 만든다. 사용하면 자신의 얼음 상태를 회복한다.",
+      "url": "https://pokemon.yodams.com/dex/move/flare-blitz/",
+      "performance": [],
+      "properties": []
+    },
+    "하드프레스": {
+      "effect": "상대의 남은 HP가 많을수록 위력이 올라간다. (위력은 1~100)",
+      "url": "https://pokemon.yodams.com/dex/move/hard-press/",
+      "performance": [],
+      "properties": []
+    },
+    "플레어송": {
+      "effect": "자신의 특수공격을 1단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/torch-song/",
+      "performance": [],
+      "properties": []
+    },
+    "하드플랜트": {
+      "effect": "사용한 다음 턴에 자신은 반동 상태가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/frenzy-plant/",
+      "performance": [],
+      "properties": []
+    },
+    "하이드로캐논": {
+      "effect": "사용한 다음 턴에 자신은 반동 상태가 된다.",
+      "url": "https://pokemon.yodams.com/dex/move/hydro-cannon/",
+      "performance": [],
+      "properties": [
+        "구슬·파동"
+      ]
+    },
+    "하바네로엑기스": {
+      "effect": "상대의 방어를 2단계 떨어뜨리고 공격을 2단계 올린다.",
+      "url": "https://pokemon.yodams.com/dex/move/spicy-extract/",
+      "performance": [],
+      "properties": []
+    },
+    "하이퍼보이스": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/hyper-voice/",
+      "performance": [],
+      "properties": [
+        "소리"
+      ]
+    },
+    "하이드로펌프": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/hydro-pump/",
+      "performance": [],
+      "properties": []
+    },
+    "하품": {
+      "effect": "상대를 졸음 상태로 만든다. 상대에게 반드시 명중한다.",
+      "url": "https://pokemon.yodams.com/dex/move/yawn/",
+      "performance": [],
+      "properties": []
+    },
+    "핼러윈": {
+      "effect": "상대를 핼러윈 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/trick-or-treat/",
+      "performance": [],
+      "properties": []
+    },
+    "해수스파우팅": {
+      "effect": "자신의 남은 HP가 적을수록 위력이 떨어진다. (위력은 1~150)",
+      "url": "https://pokemon.yodams.com/dex/move/water-spout/",
+      "performance": [],
+      "properties": []
+    },
+    "헤롱헤롱": {
+      "effect": "상대를 헤롱헤롱 상태로 만든다. 성별이 같거나 불명인 상대에게는 실패한다.",
+      "url": "https://pokemon.yodams.com/dex/move/attract/",
+      "performance": [],
+      "properties": []
+    },
+    "화염방사": {
+      "effect": "10% 확률로 상대를 화상 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/flamethrower/",
+      "performance": [],
+      "properties": []
+    },
+    "헤비봄버": {
+      "effect": "자신이 상대보다 무거울수록 위력이 올라간다. (위력은 40~120) 작아지기 상태인 상대에게는 위력이 2배가 되며 반드시 명중한다.",
+      "url": "https://pokemon.yodams.com/dex/move/heavy-slam/",
+      "performance": [],
+      "properties": []
+    },
+    "회전부리": {
+      "effect": "통상 공격 기술. 별도의 추가 효과가 없다.",
+      "url": "https://pokemon.yodams.com/dex/move/drill-peck/",
+      "performance": [],
+      "properties": []
+    },
+    "휘적휘적포": {
+      "effect": "상대에게 준 데미지의 1/2만큼 자신의 HP를 회복한다. 20% 확률로 상대를 화상 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/matcha-gotcha/",
+      "performance": [],
+      "properties": []
+    },
+    "회오리불꽃": {
+      "effect": "상대를 바인드 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/fire-spin/",
+      "performance": [],
+      "properties": []
+    },
+    "흑안개": {
+      "effect": "전체 필드의 능력 변화를 없앤다.",
+      "url": "https://pokemon.yodams.com/dex/move/haze/",
+      "performance": [],
+      "properties": []
+    },
+    "흉내쟁이": {
+      "effect": "마지막으로 사용된 기술을 사용한다. 사용된 기술이 없는 경우 실패한다.",
+      "url": "https://pokemon.yodams.com/dex/move/copycat/",
+      "performance": [],
+      "properties": []
+    },
+    "흔들흔들댄스": {
+      "effect": "자신을 제외한 필드의 전원을 혼란 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/teeter-dance/",
+      "performance": [],
+      "properties": [
+        "춤"
+      ]
+    },
+    "희망사항": {
+      "effect": "자신이 위치한 자리를 희망사항 상태로 만든다.",
+      "url": "https://pokemon.yodams.com/dex/move/wish/",
+      "performance": [],
+      "properties": []
+    },
+    "흡혈": {
+      "effect": "상대에게 준 데미지의 1/2만큼 자신의 HP를 회복한다.",
+      "url": "https://pokemon.yodams.com/dex/move/leech-life/",
+      "performance": [],
+      "properties": []
+    },
+    "힘껏펀치": {
+      "effect": "자신이 기술을 사용하는 턴에 상대로부터 먼저 기술로 데미지를 입으면 실패한다.",
+      "url": "https://pokemon.yodams.com/dex/move/focus-punch/",
+      "performance": [],
+      "properties": [
+        "펀치"
+      ]
+    },
+    "힘흡수": {
+      "effect": "상대의 공격 수치만큼 자신의 HP를 회복한다. 상대의 공격을 1단계 떨어뜨린다.",
+      "url": "https://pokemon.yodams.com/dex/move/strength-sap/",
+      "performance": [],
+      "properties": []
+    },
+    "히트스탬프": {
+      "effect": "자신이 상대보다 무거울수록 위력이 올라간다. (위력은 40~120) 작아지기 상태인 상대에게는 위력이 2배가 되며 반드시 명중한다.",
+      "url": "https://pokemon.yodams.com/dex/move/heat-crash/",
+      "performance": [],
+      "properties": []
+    }
+  }
+}

@@ -16,5 +16,5 @@ export function pokedexStats({masterRows,seasonRows}){
 export function pokedexDetails({master,row,abilities,typeMultiplier}){
  const types=String(master?.[2]||'').split('/').filter(Boolean),stats=(master||[]).slice(3,9).map(Number),allTypes=['노말','불꽃','물','전기','풀','얼음','격투','독','땅','비행','에스퍼','벌레','바위','고스트','드래곤','악','강철','페어리']
  const defense=allTypes.map(type=>[type,typeMultiplier(type,types)]),offense=allTypes.filter(target=>types.some(type=>typeMultiplier(type,[target])>1))
- return {height:null,weight:null,stats,total:stats.reduce((sum,value)=>sum+value,0),abilities:(row?.abilities||[]).map(value=>({name:value.name,description:(abilities||[]).find(item=>item[0]===value.name)?.[2]||null})),offense,weak:defense.filter(([,value])=>value>1),resist:defense.filter(([,value])=>value<1)}
+ return {height:null,weight:null,stats,total:stats.reduce((sum,value)=>sum+value,0),abilities:(row?.abilities||[]).map(value=>({name:value.name,description:value.description||(abilities||[]).find(item=>item[0]===value.name)?.[2]||null})),offense,weak:defense.filter(([,value])=>value>1),resist:defense.filter(([,value])=>value<1)}
 }
