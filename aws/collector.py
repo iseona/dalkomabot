@@ -184,7 +184,7 @@ def handler(event,context):
   # to the older season and blank its teammate/matchup sections.
   try:
    prior_index=json.loads(s3.get_object(Bucket=bucket,Key='seasons/index.json')['Body'].read())
-   prior_latest=prior_index.get('latest')
+   prior_latest=max((row.get('season') for row in prior_index.get('seasons',[]) if row.get('season')),key=lambda value:int(value.split('-')[1]),default=prior_index.get('latest'))
    if prior_latest and int(prior_latest.split('-')[1])>max(int(value.split('-')[1]) for value in usage):
     restored={}
     for mode in ('single','double'):
