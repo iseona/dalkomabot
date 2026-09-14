@@ -8,8 +8,10 @@ import {loadSavedTeams,partyExport} from '../dist/party-storage.mjs';
 import {renderPartyPokemonMatches} from '../dist/party-recognition-ui.mjs';
 import {renderLeadPokemonMatches} from '../dist/lead-ui.mjs';
 import {loadSetLibrary,addSetsToLibrary,removeSetFromLibrary} from '../dist/set-library.mjs';
+import {megaStoneNames,megaItems,hasMegaOption,isMegaItem,filterMegaPokemon} from '../dist/mega-classification.mjs';
 const root=path.resolve(import.meta.dirname,'..'),D=JSON.parse(fs.readFileSync(root+'/dist/data.json')),O=JSON.parse(fs.readFileSync(root+'/dist/opendata.json'));
 const sprites=JSON.parse(fs.readFileSync(root+'/dist/sprite-map.json'));
+{const stones=megaStoneNames(D.master),charizard=D.modes.single.find(x=>x.name==='리자몽'),umbreon=D.modes.single.find(x=>x.name==='블래키');assert(stones.has('리자몽나이트Y'));assert(isMegaItem('리자몽나이트Y',D.master));assert(!isMegaItem('메가안경',D.master));assert(hasMegaOption(charizard,D.master));assert(megaItems(charizard,D.master).every(x=>stones.has(x.name)));assert(!hasMegaOption(umbreon,D.master));assert(filterMegaPokemon(D.modes.single,'mega',D.master).includes(charizard));assert(filterMegaPokemon(D.modes.single,'normal',D.master).includes(umbreon));}
 const currentPokemon=new Set(Object.values(D.modes).flatMap(rows=>rows.map(p=>p.name)));
 assert.equal(currentPokemon.size,235);assert.equal(Object.keys(sprites).length,235);
 for(const name of currentPokemon){assert(sprites[name]);const file=root+'/dist/'+sprites[name];assert(fs.statSync(file).size>100);assert.equal(fs.readFileSync(file).subarray(1,4).toString(),'PNG')}
