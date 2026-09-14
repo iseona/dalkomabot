@@ -179,6 +179,20 @@ def handler(event,context):
     if len(usage_raw)>2_000_000:raise ValueError('Usage source size exceeds limit')
     usage_pages.append(usage_raw)
   usage=usage_snapshots(b'\n'.join(usage_pages));master_data=json.loads((package/'data.json').read_text(encoding='utf-8'))
+  # pokemonics can temporarily expose an older season than the already-published
+  # catalogue. Keep the newer ranking snapshot so detail refreshes never regress
+  # to the older season and blank its teammate/matchup sections.
+  try:
+   prior_index=json.loads(s3.get_object(Bucket=bucket,Key='seasons/index.json')['Body'].read())
+   prior_latest=prior_index.get('latest')
+   if prior_latest and int(prior_latest.split('-')[1])>max(int(value.split('-')[1]) for value in usage):
+    restored={}
+    for mode in ('single','double'):
+     key=next(row['modes'][mode] for row in prior_index.get('seasons',[]) if row.get('season')==prior_latest)
+     restored[mode]=json.loads(s3.get_object(Bucket=bucket,Key=key)['Body'].read()).get('usageRanking',[])
+    if all(restored.values()):usage[prior_latest]=restored
+  except Exception:
+   pass
   identity_ledger=json.loads((package/'season-usage-identities.json').read_text(encoding='utf-8'))
   validate_usage_identities(usage,identity_ledger,master_data,json.loads((package/'champions-image-map.json').read_text(encoding='utf-8')))
   latest_usage=max(usage,key=lambda value:int(value.split('-')[1]));settings,settings_audit=collect_settings(usage,latest_usage,master_data['master'],identity_ledger)
