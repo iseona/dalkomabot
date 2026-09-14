@@ -25,14 +25,16 @@ class Missing(Exception):
 s3=S3();fake=types.ModuleType('boto3');fake.client=lambda _:s3;sys.modules['boto3']=fake
 with tempfile.TemporaryDirectory() as directory:
  package=Path(directory)
- for source,target in [('aws/collector.py','collector.py'),('scripts/import_opendata.py','import_opendata.py'),('dist/data.json','data.json')]:shutil.copy(ROOT/source,package/target)
+ for source,target in [('aws/collector.py','collector.py'),('scripts/import_opendata.py','import_opendata.py'),('dist/data.json','data.json'),('sources/season-usage-identities.json','season-usage-identities.json'),('dist/champions-image-map.json','champions-image-map.json')]:shutil.copy(ROOT/source,package/target)
  spec=importlib.util.spec_from_file_location('collector',package/'collector.py');collector=importlib.util.module_from_spec(spec);spec.loader.exec_module(collector)
  source={mode:(ROOT/f'sources/s5_{mode}_ranked_teams.json').read_bytes() for mode in ('single','double')}
  guide=b'<a href="/opendata/s4_single_ranked_teams.json"><a href="/opendata/s4_double_ranked_teams.json"><a href="/opendata/s5_single_ranked_teams.json"><a href="/opendata/s5_double_ranked_teams.json">'
  usage=(r'x\"table\":{\"seasons\":[\"M-5\",\"M-6\"],\"format\":\"single\",\"rows\":[{\"id\":\"salamence\",\"name\":\"ボーマンダ\",\"ranks\":[null,1]},{\"id\":\"garchomp\",\"name\":\"ガブリアス\",\"ranks\":[1,2]}]} y \"table\":{\"seasons\":[\"M-5\",\"M-6\"],\"format\":\"double\",\"rows\":[{\"id\":\"sneasler\",\"name\":\"オオニューラ\",\"ranks\":[1,1]}]}').encode()
+ detail_value={'single':{'season':'M-6','isFallback':False,'usage':{'moves':[{'id':'earthquake','name':'じしん','pct':70}],'abilities':[{'id':'intimidate','name':'いかく','pct':99}],'items':[{'id':'life-orb','name':'いのちのたま','pct':10}],'natures':[{'name':'いじっぱり','up':'atk','down':'spa','pct':50}],'evGroups':[{'spreads':[{'spread':'A32 S32 H2','pct':40}]}]}},'double':{'season':'M-6','isFallback':False,'usage':{'moves':[],'abilities':[],'items':[],'natures':[],'evGroups':[]}}};detail=('x\\"data\\":'+json.dumps(detail_value,ensure_ascii=False,separators=(',',':')).replace('"','\\"')).encode()
  def fetch(request,timeout):
   if request.full_url.endswith('/guide/opendata'):return Response(guide,request.full_url)
   if request.full_url.endswith('/usage'):return Response(usage,request.full_url)
+  if '/pokemon/' in request.full_url:return Response(detail,request.full_url)
   return Response(source['single' if 'single' in request.full_url else 'double'],request.full_url)
  collector.urllib.request.urlopen=fetch
  os.environ['DATA_BUCKET']='test-bucket';result=collector.handler({},None)
@@ -42,14 +44,17 @@ with tempfile.TemporaryDirectory() as directory:
  assert index['latest']=='M-6' and index['latestPublishedTeams']=='M-5'
  assert index['seasons'][0]['regulation']=='M-C' and index['seasons'][0]['metrics']==['inGameUsageRank']
  m6=json.loads(s3.objects['seasons/M-6/single.json']['Body'])
- assert m6['usageRanking']['ranking'][0]['sourceId']=='salamence' and m6['settings']['status']=='unavailable'
+ assert m6['usageRanking']['ranking'][0]['sourceId']=='salamence' and m6['settings']['status']=='available'
+ assert m6['settings']['bySourceId']['salamence']['moves'][0]=={'name':'지진','rate':70}
+ assert m6['settings']['audit']['requestedSpecies']==3 and m6['settings']['audit']['excludedEntities']==0
+ assert m6['settings']['audit']['missingTopDetails']=={'single':[],'double':[]}
  for mode in ('single','double'):
   meta=saved['modes'][mode]['metadata'];assert meta['mode']==mode and meta['season']=='M-5';assert meta['sample']['teams']==saved['modes'][mode]['count'];assert meta['source'].startswith('https://champs.pokedb.tokyo')
  assert saved['modes']['single']['metadata']['excludedTeams']==1
  first_snapshot_writes=len(s3.writes);collector.handler({},None)
  assert len([write for write in s3.writes[first_snapshot_writes:] if write['Key'].startswith('seasons/M-5/')])==0
  previous_index=s3.objects['seasons/index.json']['Body'];s3.writes.clear();bad=json.loads(source['single']);bad['season']='M-4'
- collector.urllib.request.urlopen=lambda request,timeout:Response(guide,request.full_url) if request.full_url.endswith('/guide/opendata') else Response(usage,request.full_url) if request.full_url.endswith('/usage') else Response(json.dumps(bad).encode(),request.full_url)
+ collector.urllib.request.urlopen=lambda request,timeout:Response(guide,request.full_url) if request.full_url.endswith('/guide/opendata') else Response(usage,request.full_url) if request.full_url.endswith('/usage') else Response(detail,request.full_url) if '/pokemon/' in request.full_url else Response(json.dumps(bad).encode(),request.full_url)
  try:collector.handler({},None);raise AssertionError('invalid source should fail')
  except (AssertionError,ValueError):pass
  assert not s3.writes

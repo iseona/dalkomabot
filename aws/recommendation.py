@@ -7,7 +7,9 @@ MODEL=os.environ.get('OPENAI_MODEL','gpt-5.6-luna'); SECRET_ID=os.environ['OPENA
 DATA=json.loads(Path(__file__).with_name('data.json').read_text(encoding='utf-8')); ALLOWED={p['name'] for group in DATA['modes'].values() for p in group}|{p[0] for p in DATA.get('master',{}).get('pokemon',[]) if isinstance(p,list) and p}
 ddb=boto3.client('dynamodb'); secrets=boto3.client('secretsmanager')
 SCHEMA={'type':'object','additionalProperties':False,'required':['schemaVersion','advice'],'properties':{'schemaVersion':{'type':'integer','enum':[1]},'advice':{'type':'array','maxItems':3,'items':{'type':'object','additionalProperties':False,'required':['name','summary','evidenceIds'],'properties':{'name':{'type':'string'},'summary':{'type':'string','maxLength':360},'evidenceIds':{'type':'array','minItems':1,'maxItems':8,'items':{'type':'string'}}}}}}}
-def reply(status,body): return {'statusCode':status,'headers':{'content-type':'application/json; charset=utf-8','cache-control':'no-store','access-control-allow-origin':'*'},'body':json.dumps(body,ensure_ascii=False)}
+def reply(status,body):
+ # Lambda Function URL owns CORS. Duplicating this header makes browsers reject the response.
+ return {'statusCode':status,'headers':{'content-type':'application/json; charset=utf-8','cache-control':'no-store'},'body':json.dumps(body,ensure_ascii=False)}
 def quota():
  day=time.strftime('%Y-%m-%d',time.gmtime()); ddb.update_item(TableName=TABLE,Key={'day':{'S':day}},UpdateExpression='SET expiresAt = :ttl ADD requests :one',ConditionExpression='attribute_not_exists(requests) OR requests < :limit',ExpressionAttributeValues={':ttl':{'N':str(int(time.time())+172800)},':one':{'N':'1'},':limit':{'N':str(LIMIT)}})
 def output_text(value):

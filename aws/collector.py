@@ -1,5 +1,6 @@
 """AWS Lambda collector: fetch each approved Champions file once, validate, then publish atomically."""
 import hashlib,html,json,os,re,shutil,subprocess,sys,tempfile,urllib.request
+from concurrent.futures import ThreadPoolExecutor,as_completed
 from pathlib import Path
 
 def usage_snapshots(page):
@@ -33,6 +34,71 @@ def validate_usage_identities(usage, ledger, data, image_map):
     elif name not in image_map:missing.append(f"{row['sourceId']}:image:{name}")
  if missing:raise ValueError('Usage publication blocked; unresolved identities: '+', '.join(sorted(set(missing))[:20]))
  return identities
+
+def _slug(value):return re.sub(r'[^a-z0-9]+','-',str(value).lower()).strip('-')
+def detail_payload(page):
+ text=html.unescape(page.decode()).replace('\\"','"');decoder=json.JSONDecoder();cursor=0
+ while True:
+  cursor=text.find('"data":',cursor)
+  if cursor<0:break
+  try:value,end=decoder.raw_decode(text,cursor+7)
+  except json.JSONDecodeError:cursor+=7;continue
+  cursor=end
+  if isinstance(value,dict) and all(isinstance(value.get(mode),dict) and 'usage' in value[mode] for mode in ('single','double')):return value
+ raise ValueError('Pokemon detail usage payload not found')
+
+def translate_detail(value,mode,season,master):
+ section=value.get(mode,{})
+ if section.get('season')!=season or section.get('isFallback') is not False:raise ValueError('Detail season or fallback mismatch')
+ usage=section['usage'];excluded=[]
+ indexes={key:{_slug(row[1]):row[0] for row in master[key]} for key in ('moves','items','abilities')}
+ def entities(key):
+  result=[]
+  for entry in usage.get(key,[]):
+   name=indexes[key].get(_slug(entry.get('id')))
+   if name:result.append({'name':name,'rate':entry['pct']})
+   else:excluded.append({'category':key,'sourceId':entry.get('id'),'sourceName':entry.get('name')})
+  return result
+ nature_index={(row[2],row[3]):row[0] for row in master['natures']};natures=[]
+ for entry in usage.get('natures',[]):
+  key=(entry.get('up') or '(무보정)',entry.get('down') or '(무보정)');name=nature_index.get(key)
+  if name:natures.append({'name':name,'rate':entry['pct']})
+  else:excluded.append({'category':'natures','sourceName':entry.get('name'),'up':entry.get('up'),'down':entry.get('down')})
+ evs=[]
+ for group in usage.get('evGroups',[]):
+  for entry in group.get('spreads',[]):
+   points={letter:int(number) for letter,number in re.findall(r'([HABCDS])(\d+)',entry['spread'])};name=' '.join(letter+str(points.get(letter,0)).zfill(2) for letter in 'HABCDS')
+   if sum(points.values())<=66 and all(0<=point<=32 for point in points.values()):evs.append({'name':name,'rate':entry['pct']})
+   else:excluded.append({'category':'evs','sourceName':entry['spread']})
+ return {'moves':entities('moves'),'items':entities('items'),'abilities':entities('abilities'),'natures':natures,'evs':evs,'teammates':[],'counters':[]},excluded
+
+def collect_settings(usage,season,master,limit=20):
+ wanted=[]
+ for mode in ('single','double'):
+  wanted.extend(row['sourceId'] for row in usage[season][mode]['ranking'][:limit])
+ wanted=sorted(set(wanted));pages={};errors=[]
+ def fetch(source_id):
+  url=f'https://pokemonics.com/pokemon/{source_id}';request=urllib.request.Request(url,headers={'User-Agent':'ChampionsPartyLab/1.0 (bounded detail import)'})
+  with urllib.request.urlopen(request,timeout=12) as response:
+   if response.geturl()!=url:raise ValueError('Unexpected detail redirect')
+   body=response.read(1_000_001)
+   if len(body)>1_000_000:raise ValueError('Detail source size exceeds limit')
+  return detail_payload(body)
+ with ThreadPoolExecutor(max_workers=6) as pool:
+  futures={pool.submit(fetch,source_id):source_id for source_id in wanted}
+  for future in as_completed(futures):
+   source_id=futures[future]
+   try:pages[source_id]=future.result()
+   except Exception as error:errors.append({'sourceId':source_id,'reason':type(error).__name__})
+ output={mode:{} for mode in ('single','double')};excluded=[]
+ for source_id,value in pages.items():
+  for mode in ('single','double'):
+   try:output[mode][source_id],missed=translate_detail(value,mode,season,master);excluded.extend({'sourceId':source_id,'mode':mode,**row} for row in missed)
+   except Exception as error:errors.append({'sourceId':source_id,'mode':mode,'reason':str(error)})
+ expected={mode:{row['sourceId'] for row in usage[season][mode]['ranking'][:limit]} for mode in ('single','double')}
+ missing={mode:sorted(expected[mode]-set(output[mode])) for mode in ('single','double')}
+ audit={'requestedSpecies':len(wanted),'fetchedSpecies':len(pages),'failedSpecies':len(wanted)-len(pages),'failedDetails':len(errors),'missingTopDetails':missing,'excludedEntities':len(excluded),'errors':errors,'excluded':excluded}
+ return output,audit
 
 def handler(event,context):
  import boto3
@@ -70,8 +136,10 @@ def handler(event,context):
     usage_raw=r.read(2_000_001)
     if len(usage_raw)>2_000_000:raise ValueError('Usage source size exceeds limit')
     usage_pages.append(usage_raw)
-  usage=usage_snapshots(b'\n'.join(usage_pages))
-  validate_usage_identities(usage,json.loads((package/'season-usage-identities.json').read_text(encoding='utf-8')),json.loads((package/'data.json').read_text(encoding='utf-8')),json.loads((package/'champions-image-map.json').read_text(encoding='utf-8')))
+  usage=usage_snapshots(b'\n'.join(usage_pages));master_data=json.loads((package/'data.json').read_text(encoding='utf-8'))
+  validate_usage_identities(usage,json.loads((package/'season-usage-identities.json').read_text(encoding='utf-8')),master_data,json.loads((package/'champions-image-map.json').read_text(encoding='utf-8')))
+  latest_usage=max(usage,key=lambda value:int(value.split('-')[1]));settings,settings_audit=collect_settings(usage,latest_usage,master_data['master'])
+  if settings_audit['fetchedSpecies']!=settings_audit['requestedSpecies'] or any(settings_audit['missingTopDetails'].values()):raise ValueError('Top usage detail gate failed: '+json.dumps(settings_audit,ensure_ascii=False))
   env=dict(os.environ,CHAMPIONS_ROOT=str(root))
   subprocess.run([sys.executable,str(Path(__file__).with_name('import_opendata.py'))],env=env,check=True,capture_output=True,timeout=30)
   data=(root/'dist/opendata.json').read_bytes()
@@ -85,7 +153,8 @@ def handler(event,context):
   latest_usage=all_seasons[-1]
   for saved_season in all_seasons:
    for mode in ('single','double'):
-    snapshot={'schemaVersion':1,'season':saved_season,'mode':mode,'usageRanking':usage[saved_season][mode],'settings':{'status':'unavailable','reason':'No validated same-season settings snapshot'}}
+    current_settings=settings.get(mode,{}) if saved_season==latest_usage else {}
+    snapshot={'schemaVersion':1,'season':saved_season,'mode':mode,'usageRanking':usage[saved_season][mode],'settings':{'status':'available' if current_settings else 'unavailable','season':saved_season,'bySourceId':current_settings,'audit':settings_audit} if saved_season==latest_usage else {'status':'unavailable','reason':'No validated same-season settings snapshot'}}
     if saved_season==season_name:snapshot['publishedTeams']=published['modes'][mode]
     body=json.dumps(snapshot,ensure_ascii=False,separators=(',',':')).encode()
     key=f'seasons/{saved_season}/{mode}.json'
@@ -115,4 +184,4 @@ def handler(event,context):
   # Keep the legacy latest alias, then publish the catalogue last.
   s3.put_object(Bucket=bucket,Key='opendata.json',Body=data,ContentType='application/json; charset=utf-8',CacheControl='public,max-age=300',Metadata={'sha256':digest})
   s3.put_object(Bucket=bucket,Key='seasons/index.json',Body=index_data,ContentType='application/json; charset=utf-8',CacheControl='public,max-age=300')
-  return {'status':'updated','sha256':digest,'season':season_name,'modes':metadata}
+  return {'status':'updated','sha256':digest,'season':season_name,'modes':metadata,'settingsAudit':settings_audit}

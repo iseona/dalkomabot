@@ -9,7 +9,7 @@
 <link rel="icon" type="image/png" href="assets/dalkoma-favicon.png?v=16">
 <link rel="apple-touch-icon" href="assets/dalkoma-apple-touch.png?v=16">
 <link rel="manifest" href="manifest.webmanifest?v=16">
-<link rel="stylesheet" href="style.css?v=24">
+<link rel="stylesheet" href="style.css?v=25">
 </head>
 <body>
 <header>
@@ -17,7 +17,7 @@
 <img class="brandlogo" src="assets/dalkoma-logo-192.png" alt=""> <span>포챔스 <b>달콤아 봇</b></span>
 </a>
 <div class="headright">
-<span class="snapshot">최신 시즌 · 상위 파티 데이터</span>
+<span class="snapshot">최신 시즌 · 랭킹·상세 데이터</span>
 <button id="accountBtn" hidden>Google 로그인</button>
 <a href="https://champs.pokedb.tokyo" target="_blank" rel="noreferrer">메타 출처 ↗</a>
 </div>
@@ -41,7 +41,6 @@
 <button data-tab="builder" class="active">01 &nbsp; 파티 구성</button>
 <button data-tab="meta">02 &nbsp; 메타 탐색</button>
 <button data-tab="import">03 &nbsp; 스크린샷 입력</button>
-<button data-tab="ranked">04 &nbsp; 상위 파티</button>
 </nav>
 <section id="builder">
 <div class="workspace">
@@ -88,6 +87,7 @@
 </aside>
 </div>
 </section>
+<style>.dex-stat-bars{display:grid;gap:7px}.dex-stat-bars>div{display:grid;grid-template-columns:48px 1fr 36px;gap:8px;align-items:center}.dex-stat-bars span{height:8px;background:#edf1f6;border-radius:6px;overflow:hidden}.dex-stat-bars i{display:block;height:100%;background:#6389e8}.dex-stat-bars b{text-align:right;font-size:12px}</style>
 <section id="meta" hidden>
 <div class="sectionhead">
 <div>
@@ -96,6 +96,8 @@
 </p>
 </div>
 <div class="metafilters">
+<select id="dexCategory" aria-label="도감 분류"><option value="pokemon">포켓몬</option><option value="moves">기술</option><option value="abilities">특성</option><option value="items">도구</option></select>
+<select id="metaView" aria-label="메타 탐색 보기"><option value="ranked">선택 시즌 순위</option><option value="pokedex">전체 도감</option></select>
 <select id="seasonFilter" aria-label="시즌 선택"><option value="">최신 시즌</option></select>
 <input id="search" placeholder="포켓몬·폼 이름 검색" aria-label="포켓몬 또는 폼 이름 검색">
 <select id="typeFilter" aria-label="타입 필터"><option value="">전체 타입</option></select>
@@ -107,7 +109,7 @@
 <div id="usageRanking" class="usage-ranking" aria-live="polite"></div>
 <div class="tablewrap">
 <table>
-<thead>
+<thead id="metaHead">
 <tr>
 <th>순위</th>
 <th>포켓몬</th>
@@ -175,7 +177,7 @@
 </div>
 </section>
 <footer>
-<span>포챔스 달콤아 봇 · <strong class="appversion">v24</strong> · 2026-09-14</span>
+<span>포챔스 달콤아 봇 · <strong class="appversion">v25</strong> · 2026-09-14</span>
 <span>챔피언스 자료만 사용 · 미확인 항목 추정 금지</span>
 <span class="legalnotice" style="flex-basis:100%;line-height:1.7">이 사이트는 개인이 운영하는 비공식 팬 도구이며 Nintendo, Creatures, GAME FREAK, The Pokémon Company 및 관련 권리자와 제휴·승인·후원 관계가 없습니다. Pokémon 및 관련 명칭·캐릭터·이미지·상표의 권리는 각 권리자에게 있습니다.</span>
 </footer>
@@ -222,7 +224,7 @@
 <div id="toast" role="status">
 </div>
 <script src="runtime-config.js"></script>
-<script src="app.js?v=24" type="module">
+<script src="app.js?v=25" type="module">
 </script>
 </body>
 </html>
