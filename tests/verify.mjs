@@ -1,5 +1,6 @@
 import fs from 'node:fs';import os from 'node:os';import path from 'node:path';import assert from 'node:assert/strict';import {generateKeyPairSync,sign} from 'node:crypto';import {pathToFileURL} from 'node:url';
-import {draft,makeSet,validSet,validEV,recommend,empiricalCoverage,calculateStats,damageRolls,classifyKO,battleCalculation,strongestStatMove,damageScenarioResults,speedVariants,teamDefenseMatrix,coverageDelta,resolveMegaForm,applyMegaForm} from '../dist/engine.mjs';
+import {draft,makeSet,validSet,validEV,recommend,empiricalCoverage,recommendationCards,calculateStats,damageRolls,classifyKO,battleCalculation,strongestStatMove,damageScenarioResults,speedVariants,teamDefenseMatrix,coverageDelta,resolveMegaForm,applyMegaForm} from '../dist/engine.mjs';
+import {buildAdviceInput,validateAdviceResponse} from '../dist/party-advice.mjs';
 import {commandPayload} from '../discord/commands.mjs';
 import {validVisualFeature,rankVisualCandidates,confidentVisual} from '../dist/recognition.mjs';
 import {validateRecognitionResult} from '../dist/ai-recognition.mjs';
@@ -107,5 +108,7 @@ assert(better.defense>worse.defense);
 assert(better.repaired.some(x=>x.type==='얼음'));
 assert.equal(matchup(get('누리레느'),get('한카리아스'),D.master,{moves:['명상']}).usable,false);
 assert.equal(matchup(get('누리레느'),get('한카리아스'),D.master,{moves:['문포스']}).usable,true);
+const cards=recommendationCards(single,O.modes.single,['한카리아스'],D.master,[makeSet(get('한카리아스'))]);assert(cards.length&&cards.every(x=>Number.isInteger(x.score)&&x.score>=0&&x.score<=100));assert.deepEqual(cards.map(x=>x.score),[...cards].map(x=>x.score).sort((a,b)=>b-a));const adviceInput=buildAdviceInput({mode:'single',season:'M-6',selected:['한카리아스'],candidates:cards});const advice={schemaVersion:1,advice:[{name:adviceInput.candidates[0].name,summary:'검증된 근거만 사용한 제언',evidenceIds:[adviceInput.candidates[0].evidenceIds[0]]}]};assert.equal(validateAdviceResponse(advice,adviceInput)[0].name,adviceInput.candidates[0].name);assert.throws(()=>validateAdviceResponse({schemaVersion:1,advice:[{...advice.advice[0],evidenceIds:['invalid']}]},adviceInput));
+assert(fs.readFileSync(root+'/dist/app.js','utf8').includes('recommendationEndpoint'));assert(fs.readFileSync(root+'/aws/recommendation.py','utf8').includes('unsupported model claim'));
 assert(!fs.existsSync(root+'/dist/vendor/ocr'));
 console.log('PASS: type priority, actual selected moves, and OCR runtime removal.');

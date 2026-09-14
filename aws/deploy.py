@@ -5,23 +5,27 @@ ROOT=Path(__file__).resolve().parents[1]
 def aws(*args,capture=False):
  r=subprocess.run(['aws',*args],check=True,text=True,capture_output=capture)
  return json.loads(r.stdout) if capture else None
-p=argparse.ArgumentParser();p.add_argument('--region',default='ap-northeast-2');p.add_argument('--stack',default='champions-party-lab');p.add_argument('--discord-public-key',default='');p.add_argument('--openai-model',default='gpt-5.6-luna');p.add_argument('--max-daily-recognition-requests',type=int,default=100);p.add_argument('--enable-collector-schedule',action='store_true',help='Enable daily collection after manual verification.');p.add_argument('--run-collector',action='store_true',help='Invoke collector synchronously and verify its published object.');p.add_argument('--google-client-id',default=os.environ.get('GOOGLE_CLIENT_ID',''));p.add_argument('--cognito-domain-prefix',default=os.environ.get('COGNITO_DOMAIN_PREFIX',''));p.add_argument('--preserve-google-config',action='store_true',help='On an existing stack, keep the current Google OAuth parameters, including the NoEcho secret.');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--region',default='ap-northeast-2');p.add_argument('--stack',default='champions-party-lab');p.add_argument('--discord-public-key',default='');p.add_argument('--openai-model',default='gpt-5.6-luna');p.add_argument('--max-daily-recognition-requests',type=int,default=100);p.add_argument('--max-daily-recommendation-requests',type=int,default=50);p.add_argument('--enable-collector-schedule',action='store_true',help='Enable daily collection after manual verification.');p.add_argument('--run-collector',action='store_true',help='Invoke collector synchronously and verify its published object.');p.add_argument('--google-client-id',default=os.environ.get('GOOGLE_CLIENT_ID',''));p.add_argument('--cognito-domain-prefix',default=os.environ.get('COGNITO_DOMAIN_PREFIX',''));p.add_argument('--preserve-google-config',action='store_true',help='On an existing stack, keep the current Google OAuth parameters, including the NoEcho secret.');a=p.parse_args()
 key=os.environ.get('OPENAI_API_KEY','').strip()
 google_secret=os.environ.get('GOOGLE_CLIENT_SECRET','').strip()
 if not 1<=a.max_daily_recognition_requests<=1000:raise SystemExit('Daily recognition limit must be between 1 and 1000.')
 if not a.preserve_google_config and (not a.google_client_id or not google_secret or not a.cognito_domain_prefix):raise SystemExit('Set GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, and COGNITO_DOMAIN_PREFIX before deploying, or use --preserve-google-config for an existing stack.')
 aws('sts','get-caller-identity')
-overrides=['DiscordPublicKey='+a.discord_public_key,'OpenAIModel='+a.openai_model,'MaxDailyRecognitionRequests='+str(a.max_daily_recognition_requests),'EnableCollectorSchedule='+str(a.enable_collector_schedule).lower()]
+overrides=['DiscordPublicKey='+a.discord_public_key,'OpenAIModel='+a.openai_model,'MaxDailyRecognitionRequests='+str(a.max_daily_recognition_requests),'MaxDailyRecommendationRequests='+str(a.max_daily_recommendation_requests),'EnableCollectorSchedule='+str(a.enable_collector_schedule).lower()]
 if not a.preserve_google_config:overrides+=['GoogleClientId='+a.google_client_id,'GoogleClientSecret='+google_secret,'CognitoDomainPrefix='+a.cognito_domain_prefix]
 aws('cloudformation','deploy','--region',a.region,'--stack-name',a.stack,'--template-file',str(ROOT/'aws/template.json'),'--capabilities','CAPABILITY_IAM','--parameter-overrides',*overrides)
 info=aws('cloudformation','describe-stacks','--region',a.region,'--stack-name',a.stack,capture=True)
 o={x['OutputKey']:x['OutputValue'] for x in info['Stacks'][0]['Outputs']}
 if key:aws('secretsmanager','put-secret-value','--region',a.region,'--secret-id',o['RecognitionSecretId'],'--secret-string',key)
-(ROOT/'dist/runtime-config.js').write_text('window.DALKOMA_CONFIG='+json.dumps({'recognitionEndpoint':o['RecognitionEndpoint'],'cloudEndpoint':o['CloudWorkspaceEndpoint'],'cognitoClientId':o['CognitoClientId'],'cognitoDomain':o['CognitoDomain']},separators=(',',':'))+';\n',encoding='utf-8')
+(ROOT/'dist/runtime-config.js').write_text('window.DALKOMA_CONFIG='+json.dumps({'recognitionEndpoint':o['RecognitionEndpoint'],'recommendationEndpoint':o['RecommendationEndpoint'],'cloudEndpoint':o['CloudWorkspaceEndpoint'],'cognitoClientId':o['CognitoClientId'],'cognitoDomain':o['CognitoDomain']},separators=(',',':'))+';\n',encoding='utf-8')
 with zipfile.ZipFile(ROOT/'aws/recognizer.zip','w',zipfile.ZIP_DEFLATED) as z:
  z.write(ROOT/'aws/recognizer.py','recognizer.py');z.write(ROOT/'dist/data.json','data.json')
 aws('lambda','update-function-code','--region',a.region,'--function-name',o['RecognitionFunctionName'],'--zip-file','fileb://'+str(ROOT/'aws/recognizer.zip'))
 aws('lambda','wait','function-updated','--region',a.region,'--function-name',o['RecognitionFunctionName'])
+with zipfile.ZipFile(ROOT/'aws/recommendation.zip','w',zipfile.ZIP_DEFLATED) as z:
+ for src,name in [(ROOT/'aws/recommendation.py','recommendation.py'),(ROOT/'dist/data.json','data.json')]:z.write(src,name)
+aws('lambda','update-function-code','--region',a.region,'--function-name',o['RecommendationFunctionName'],'--zip-file','fileb://'+str(ROOT/'aws/recommendation.zip'))
+aws('lambda','wait','function-updated','--region',a.region,'--function-name',o['RecommendationFunctionName'])
 with zipfile.ZipFile(ROOT/'aws/cloud_storage.zip','w',zipfile.ZIP_DEFLATED) as z:z.write(ROOT/'aws/cloud_storage.py','cloud_storage.py')
 aws('lambda','update-function-code','--region',a.region,'--function-name',o['WorkspaceFunctionName'],'--zip-file','fileb://'+str(ROOT/'aws/cloud_storage.zip'))
 aws('lambda','wait','function-updated','--region',a.region,'--function-name',o['WorkspaceFunctionName'])
