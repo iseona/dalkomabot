@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import {selectOcrSpecies,applyEditedRecognitionText,partySetFromRecognition} from '../dist/ocr-draft.mjs';
+const empty={name:'',items:'',abilities:'',natures:'',moves:[],evs:Array(6).fill(null),fallback:[]};
+const named=selectOcrSpecies(empty,'라이츄');
+assert.deepEqual(named,{...empty,name:'라이츄'});
+assert.throws(()=>partySetFromRecognition(named),/미인식/);
+const read={...empty,name:'라이츄',items:'라이츄나이트Y',abilities:'피뢰침',moves:['전자포','기합구슬','방어','속이기'],evs:[30,0,31,0,0,5]};
+assert.deepEqual(selectOcrSpecies(read,'라이츄').moves,read.moves);
+assert.deepEqual(partySetFromRecognition(read).moves,read.moves);
+const partial={...read,items:'',abilities:'',moves:['전자포','','방어']};
+assert.deepEqual(partySetFromRecognition(partial).moves,['전자포','방어']);
+assert.equal(partySetFromRecognition(partial).items,'');
+assert.equal(partySetFromRecognition(partial).abilities,'');
+const edited=applyEditedRecognitionText(read,{name:'라이츄',matched:{items:[],abilities:[],moves:['전자포']}});
+assert.deepEqual(edited.moves,['전자포']);assert.equal(edited.items,'');
+assert.deepEqual(read.moves,['전자포','기합구슬','방어','속이기']);
+console.log('PASS: species selection preserves read text; no popular-set completion or implicit zero EVs; edited text replaces stale fields.');

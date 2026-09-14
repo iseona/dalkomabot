@@ -23,6 +23,8 @@ Display-image update: after explicit user instructions to download for personal 
 
 ## Checks
 
+Follow-up user report: found remaining statistical fill in setOcrName when selecting/reselecting a species or reparsing text. Removed it via ocr-draft.mjs. Applying recognition now builds only from the visible draft, not a prior same-species set; unread EVs require confirmation, not zero-fill. Empty move edit positions are preserved. OCR moves now have their own desktop/mobile 2x2 grid. tests/ocr-draft.mjs and tests/ocr-draft-browser.mjs PASS, including selecting Raichu without any fields being guessed, preserving sparse moves on reselection, and both 1280px/390px layout order. These are UI/state regression tests, not real OCR text acceptance. Full verify in this follow-up stopped on the main task's concurrent version update versus a stale v22 assertion; main was notified. Actual image-to-move/item/ability/EV accuracy has NOT been certified. Current local runtime-config has no recognitionEndpoint; main must supply the active endpoint or run the real text acceptance before deployment.
+
 Passed: recognition schema/manifest, merge policy, real-image cost-routing browser test, both-mode top-20 validation, Python request/EV checks, full tests/verify.mjs, JS syntax.
 
 The browser test decodes a real fixture, prepares the contact sheet, verifies cache/dedup behavior using stubbed inference and erases an icon to verify that its old species is not inferred from the background.

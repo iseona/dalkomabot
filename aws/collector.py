@@ -1,9 +1,9 @@
 """AWS Lambda collector: fetch each approved Champions file once, validate, then publish atomically."""
-import hashlib,json,os,re,shutil,subprocess,sys,tempfile,urllib.request
+import hashlib,html,json,os,re,shutil,subprocess,sys,tempfile,urllib.request
 from pathlib import Path
 
 def usage_snapshots(page):
- text=page.decode().replace('\\"','"');decoder=json.JSONDecoder();tables=[];cursor=0
+ text=html.unescape(page.decode()).replace('\\"','"');decoder=json.JSONDecoder();tables=[];cursor=0
  while True:
   cursor=text.find('"table":',cursor)
   if cursor<0:break
@@ -47,12 +47,15 @@ def handler(event,context):
    if value.get('season')!=f'M-{season}' or value.get('rule')!=('シングル' if mode=='single' else 'ダブル'):raise ValueError('Season or mode mismatch')
    if not isinstance(value.get('teams'),list) or not value['teams']:raise ValueError('Empty source')
    (root/f'sources/s{season}_{mode}_ranked_teams.json').write_bytes(raw)
-  usage_url='https://pokemonics.com/usage';req=urllib.request.Request(usage_url,headers={'User-Agent':'ChampionsPartyLab/1.0 (daily cached rank import)'})
-  with urllib.request.urlopen(req,timeout=30) as r:
-   if r.geturl()!=usage_url:raise ValueError('Unexpected usage redirect')
-   usage_raw=r.read(2_000_001)
-   if len(usage_raw)>2_000_000:raise ValueError('Usage source size exceeds limit')
-  usage=usage_snapshots(usage_raw)
+  usage_pages=[]
+  for usage_url in ('https://pokemonics.com/usage','https://pokemonics.com/usage/double'):
+   req=urllib.request.Request(usage_url,headers={'User-Agent':'ChampionsPartyLab/1.0 (daily cached rank import)'})
+   with urllib.request.urlopen(req,timeout=30) as r:
+    if r.geturl()!=usage_url:raise ValueError('Unexpected usage redirect')
+    usage_raw=r.read(2_000_001)
+    if len(usage_raw)>2_000_000:raise ValueError('Usage source size exceeds limit')
+    usage_pages.append(usage_raw)
+  usage=usage_snapshots(b'\n'.join(usage_pages))
   env=dict(os.environ,CHAMPIONS_ROOT=str(root))
   subprocess.run([sys.executable,str(Path(__file__).with_name('import_opendata.py'))],env=env,check=True,capture_output=True,timeout=30)
   data=(root/'dist/opendata.json').read_bytes()

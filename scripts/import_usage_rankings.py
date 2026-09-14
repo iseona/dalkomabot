@@ -6,6 +6,7 @@ conditional move/item percentages on individual Pokemon pages as usage rate.
 import html,json,re,urllib.request
 
 SOURCE='https://pokemonics.com/usage'
+SOURCES=(SOURCE,SOURCE+'/double')
 
 def parse_tables(page):
  text=html.unescape(page.decode('utf-8') if isinstance(page,bytes) else page).replace('\\"','"')
@@ -31,11 +32,14 @@ def snapshots(tables):
  return seasons
 
 def fetch():
- request=urllib.request.Request(SOURCE,headers={'User-Agent':'ChampionsPartyLab/1.0 (daily cached rank import)'})
- with urllib.request.urlopen(request,timeout=30) as response:
-  if response.geturl()!=SOURCE:raise ValueError('Unexpected usage source redirect')
-  body=response.read(2_000_001)
-  if len(body)>2_000_000:raise ValueError('Usage source exceeds limit')
- return snapshots(parse_tables(body))
+ pages=[]
+ for source in SOURCES:
+  request=urllib.request.Request(source,headers={'User-Agent':'ChampionsPartyLab/1.0 (daily cached rank import)'})
+  with urllib.request.urlopen(request,timeout=30) as response:
+   if response.geturl()!=source:raise ValueError('Unexpected usage source redirect')
+   body=response.read(2_000_001)
+   if len(body)>2_000_000:raise ValueError('Usage source exceeds limit')
+   pages.append(body)
+ return snapshots(parse_tables(b'\n'.join(pages)))
 
 if __name__=='__main__':print(json.dumps(fetch(),ensure_ascii=False,separators=(',',':')))
