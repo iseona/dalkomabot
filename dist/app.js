@@ -11,6 +11,7 @@ import {renderLeadPokemonMatches} from './lead-ui.mjs?v=20';
 import {detectedLeadRects,loadOfficialIconReferences,loadScreenIconReferences,recognizeFileLocally} from './local-image-recognition.mjs?v=20';
 import {mergeLeadRecognition,mergePartyRecognition} from './recognition-merge.mjs?v=20';
 import {loadSetLibrary,saveSetLibrary,addSetsToLibrary,removeSetFromLibrary} from './set-library.mjs?v=22';
+import {cloudConfig,takeLoginToken,signedIn,signOut,loginUrl,loadCloudWorkspace,saveCloudWorkspace,validWorkspace} from './cloud-storage.mjs?v=1';
 const $=id=>document.getElementById(id);
 let D;try{const r=await fetch('data.json');if(!r.ok)throw Error();D=await r.json()}catch{document.querySelector('main').innerHTML='<h1>데이터를 불러오지 못했습니다.</h1><p>페이지를 새로고침해 주세요.</p>';throw Error('Data unavailable')}
 let O=null;try{const r=await fetch('opendata.json');if(r.ok)O=await r.json()}catch{}
@@ -42,7 +43,11 @@ function makeSet(p,used=[]){return sharedMakeSet(p,used)}
 function validSet(s){return sharedValidSet(s,stats(),D.master)}
 let setLibrary=loadSetLibrary(localStorage,(set,savedMode)=>sharedValidSet(set,D.modes[savedMode]||[],D.master));
 try{const restored=loadSavedTeams(localStorage,(set,savedMode)=>sharedValidSet(set,D.modes[savedMode],D.master));teams=restored.teams;storageRepaired=restored.repaired}catch{}
-function persist(){try{saveTeams(localStorage,teams);$('saveState').textContent='이 브라우저에 자동 저장됨'}catch{$('saveState').textContent='자동 저장 불가 · 파티 내보내기를 이용하세요'}}
+const cloud=cloudConfig();takeLoginToken();let cloudSaveTimer=0;
+function workspace(){return {teams,library:setLibrary}}
+function updateAccount(){const button=$('accountBtn');if(!cloud)return;button.hidden=false;button.textContent=signedIn()?'로그아웃':'Google 로그인';$('cloudStorageNote').textContent=signedIn()?'Google 계정에 자동 저장됩니다. 이 기기의 기존 파티와 세팅은 첫 로그인 때 안전하게 이전됩니다.':'로그인 전에는 이 브라우저에만 저장됩니다. Google 로그인 후 계정별 클라우드 저장을 사용할 수 있습니다.'}
+async function syncCloud(){if(!cloud||!signedIn())return;try{await saveCloudWorkspace(cloud,workspace());$('saveState').textContent='Google 계정에 자동 저장됨'}catch{$('saveState').textContent='오프라인 저장됨 · 클라우드 동기화 대기'}}
+function persist(){try{saveTeams(localStorage,teams);$('saveState').textContent=signedIn()?'Google 계정에 동기화 중…':'이 브라우저에 자동 저장됨';clearTimeout(cloudSaveTimer);cloudSaveTimer=setTimeout(syncCloud,400)}catch{$('saveState').textContent='자동 저장 불가 · 파티 내보내기를 이용하세요'}}
 function candidates(){return recommend(stats(),O?.modes[mode],team().filter(Boolean).map(x=>x.name),D.master,team().filter(Boolean))}
 function teammateCandidates(){const selected=team().filter(Boolean).map(x=>x.name),found=new Map();for(const source of selected){const p=row(source);p?.teammates.forEach((name,index)=>{if(selected.includes(name)||!row(name))return;const item=found.get(name)||{p:row(name),sources:[],score:0};item.sources.push({name:source,rank:index+1});item.score+=10-index;found.set(name,item)})}return [...found.values()].sort((a,b)=>b.sources.length-a.sources.length||b.score-a.score||a.p.rank-b.p.rank)}
 function add(n,i=team().indexOf(null)){if(i<0)return toast('파티가 가득 찼습니다. 슬롯을 편집해 주세요.');if(team().some(x=>x?.name===n))return toast('이미 파티에 있는 포켓몬입니다.');const p=row(n);if(!p)return;team()[i]=makeSet(p,team().filter(Boolean).map(x=>x.items));persist();render()}
@@ -68,7 +73,8 @@ $('saveMember').onclick=()=>{const name=editing<0?$('editorTitle').textContent.s
 $('removeMember').onclick=()=>{team()[editing]=null;persist();render();$('editor').close()};
 document.addEventListener('click',e=>{let b=e.target.closest('button');if(!b)return;if(b.dataset.tab){document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('active',x===b));['builder','meta','import','ranked','coverage','library','lead','calculators'].forEach(t=>$(t).hidden=t!==b.dataset.tab)}if(b.dataset.close)$(b.dataset.close).close();if(b.dataset.pick!==undefined){slot=+b.dataset.pick;$('pickSearch').value='';picker();$('picker').showModal()}if(b.dataset.select){add(b.dataset.select,slot);$('picker').close()}if(b.dataset.add)add(b.dataset.add);if(b.dataset.edit!==undefined)edit(+b.dataset.edit);if(b.dataset.detail)showDetails(b.dataset.detail);if(b.dataset.coverageapply){const p=row(b.dataset.coverageapply),d=p&&coverageDelta(p,stats(),team().filter(Boolean).map(x=>x.name));if(!p||!d)return;const target=d.replaced===null?team().findIndex(x=>!x):team().findIndex(x=>x?.name===d.replaced);if(target<0)return toast('적용할 파티 슬롯을 찾지 못했습니다.');team()[target]=makeSet(p,team().filter((_,i)=>i!==target).filter(Boolean).map(x=>x.items));persist();render();toast(d.replaced?`${d.replaced} 대신 ${p.name}을 적용했습니다.`:`${p.name}을 파티에 추가했습니다.`)}if(b.dataset.libraryapply){const entry=setLibrary.find(x=>x.id===b.dataset.libraryapply),target=team().findIndex(x=>!x);if(!entry)return;if(target<0)return toast('파티가 가득 찼습니다. 먼저 한 자리를 비워 주세요.');if(team().some(x=>x?.name===entry.set.name))return toast('같은 포켓몬이 이미 파티에 있습니다.');team()[target]=JSON.parse(JSON.stringify(entry.set));persist();render();toast(entry.set.name+' 세팅을 파티에 적용했습니다.')}if(b.dataset.libraryremove){setLibrary=removeSetFromLibrary(setLibrary,b.dataset.libraryremove);saveSetLibrary(localStorage,setLibrary);renderLibrary()}});
 $('coverageLoad').onclick=()=>{renderCoverage();toast('현재 파티를 상성표에 반영했습니다.')};$('coverageReset').onclick=()=>document.querySelector('[data-tab="builder"]').click();
-$('librarySave').onclick=()=>{const sets=team().filter(Boolean);if(!sets.length)return toast('저장할 파티 세팅이 없습니다.');setLibrary=addSetsToLibrary(setLibrary,sets,mode);saveSetLibrary(localStorage,setLibrary);renderLibrary();toast(sets.length+'개 세팅을 내 세팅에 저장했습니다.')};
+$('librarySave').onclick=()=>{const sets=team().filter(Boolean);if(!sets.length)return toast('저장할 파티 세팅이 없습니다.');setLibrary=addSetsToLibrary(setLibrary,sets,mode);saveSetLibrary(localStorage,setLibrary);renderLibrary();syncCloud();toast(sets.length+'개 세팅을 내 세팅에 저장했습니다.')};
+$('libraryList').addEventListener('click',e=>{if(e.target.closest('[data-libraryremove]'))setTimeout(syncCloud,0)});
 for(const m of ['single','double'])$(m).onclick=()=>{mode=m;spriteFeaturePromise=null;['single','double'].forEach(k=>$(k).classList.toggle('active',k===m));ocr=Array.from({length:6},()=>({name:'',items:'',abilities:'',natures:'',moves:[],evs:Array(6).fill(null),raw:''}));renderOcr();render();renderSourceSummary();calculator.renderNames()};for(const id of ['search','typeFilter','abilityFilter','moveFilter'])$(id).oninput=renderMeta;$('pickSearch').oninput=picker;
 $('fill').onclick=()=>{if(!team().includes(null))return toast('이미 여섯 자리가 채워져 있습니다.');while(team().includes(null)){const c=candidates().find(({p})=>p.items.length&&p.abilities.length&&p.natures.length&&p.evs.length&&p.moves.length>=4);if(!c)break;add(c.p.name)}toast('타입 보완과 메타 대응 기준으로 채웠습니다. 세팅을 검토해 주세요.')};$('clear').onclick=()=>{if(confirm('현재 모드의 파티를 초기화할까요?')){teams[mode]=Array(6).fill(null);persist();render()}};
 $('export').onclick=()=>{const b=new Blob([JSON.stringify(partyExport(mode,D.date,team()),null,2)],{type:'application/json'});const u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='champions-party-'+mode+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),5000)};
@@ -137,6 +143,20 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-ranked]');
 const calculator=setupCalculator({$,stats,row,team,makeSet,data:D,toast,damageBenchmark,actualStats,master,itemPower,abilityPower,esc,evtext,koreanType,multiplier,strongestStatMove,damageScenarioResults,speedVariants});
 const typeOptions=[...new Set([...D.modes.single,...D.modes.double].flatMap(p=>p.types))].sort();$('typeFilter').insertAdjacentHTML('beforeend',typeOptions.map(type=>`<option value="${esc(type)}">${esc(type)}</option>`).join(''));renderSourceSummary();
 render();renderOcr();calculator.renderNames();
+updateAccount();
+$('accountBtn').onclick=()=>{if(!cloud)return;if(signedIn()){signOut();updateAccount();toast('로그아웃했습니다. 이 기기의 저장 내용은 그대로 남아 있습니다.');return}location.assign(loginUrl(cloud))};
+async function restoreCloud(){
+ if(!cloud||!signedIn())return;
+ try{
+  const remote=await loadCloudWorkspace(cloud);
+  if(remote===undefined){await saveCloudWorkspace(cloud,workspace());$('saveState').textContent='기존 브라우저 저장을 Google 계정으로 이전했습니다.';return}
+  if(remote===null){$('saveState').textContent='오프라인 저장됨 · 클라우드에 연결하면 동기화합니다.';return}
+  const restored=validWorkspace(remote,(set,savedMode)=>sharedValidSet(set,D.modes[savedMode]||[],D.master));
+  if(!restored)throw Error('저장된 클라우드 데이터 형식이 올바르지 않습니다.');
+  teams=restored.teams;setLibrary=restored.library.filter(entry=>entry&&typeof entry.id==='string'&&typeof entry.mode==='string'&&sharedValidSet(entry.set,D.modes[entry.mode]||[],D.master));saveTeams(localStorage,teams);saveSetLibrary(localStorage,setLibrary);render();$('saveState').textContent='Google 계정 저장을 불러왔습니다.';toast('Google 계정의 파티와 내 세팅을 불러왔습니다.');
+ }catch(error){$('saveState').textContent='오프라인 저장됨 · 클라우드 동기화 대기';toast(error.message||'클라우드 저장을 불러오지 못했습니다.')}
+}
+restoreCloud();
 if(storageRepaired)toast('저장된 파티의 확인할 수 없는 슬롯만 비웠습니다. 이전 원본은 브라우저 자동 백업에 보관했습니다.');
 
 $('ocrResults').addEventListener('input',e=>{const i=e.target.dataset.ocrquery;if(i===undefined)return;const query=e.target.value,target=document.querySelector(`[data-ocrmatches="${i}"]`),list=query.trim()?pokemonMatches(query):[];target.innerHTML='';if(query.trim())renderPartyPokemonMatches(target,list,i,esc)});

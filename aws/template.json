@@ -430,6 +430,20 @@
         "InvokedViaFunctionUrl": true
       }
     },
+    "UserPool": {"Type":"AWS::Cognito::UserPool","Properties":{"UserPoolName":{"Fn::Sub":"${AWS::StackName}-users"},"AutoVerifiedAttributes":["email"],"UsernameAttributes":["email"],"MfaConfiguration":"OFF","Policies":{"PasswordPolicy":{"MinimumLength":12,"RequireLowercase":true,"RequireUppercase":true,"RequireNumbers":true,"RequireSymbols":true}}}},
+    "GoogleIdentityProvider": {"Type":"AWS::Cognito::UserPoolIdentityProvider","Properties":{"ProviderName":"Google","ProviderType":"Google","UserPoolId":{"Ref":"UserPool"},"ProviderDetails":{"client_id":{"Ref":"GoogleClientId"},"client_secret":{"Ref":"GoogleClientSecret"},"authorize_scopes":"openid email profile"},"AttributeMapping":{"email":"email","name":"name","username":"sub"}}},
+    "UserPoolClient": {"Type":"AWS::Cognito::UserPoolClient","DependsOn":"GoogleIdentityProvider","Properties":{"UserPoolId":{"Ref":"UserPool"},"ClientName":"dalkoma-web","GenerateSecret":false,"AllowedOAuthFlowsUserPoolClient":true,"AllowedOAuthFlows":["implicit"],"AllowedOAuthScopes":["openid","email","profile"],"SupportedIdentityProviders":["Google"],"CallbackURLs":[{"Fn::Sub":"https://${Distribution.DomainName}/"}],"LogoutURLs":[{"Fn::Sub":"https://${Distribution.DomainName}/"}],"PreventUserExistenceErrors":"ENABLED"}},
+    "UserPoolDomain": {"Type":"AWS::Cognito::UserPoolDomain","Properties":{"Domain":{"Ref":"CognitoDomainPrefix"},"UserPoolId":{"Ref":"UserPool"}}},
+    "WorkspaceTable": {"Type":"AWS::DynamoDB::Table","Properties":{"BillingMode":"PAY_PER_REQUEST","AttributeDefinitions":[{"AttributeName":"userId","AttributeType":"S"},{"AttributeName":"document","AttributeType":"S"}],"KeySchema":[{"AttributeName":"userId","KeyType":"HASH"},{"AttributeName":"document","KeyType":"RANGE"}],"SSESpecification":{"SSEEnabled":true},"PointInTimeRecoverySpecification":{"PointInTimeRecoveryEnabled":true}}},
+    "WorkspaceRole": {"Type":"AWS::IAM::Role","Properties":{"AssumeRolePolicyDocument":{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Principal":{"Service":"lambda.amazonaws.com"},"Action":"sts:AssumeRole"}]},"Policies":[{"PolicyName":"WorkspaceByAuthorizedSubject","PolicyDocument":{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Action":["logs:CreateLogGroup","logs:CreateLogStream","logs:PutLogEvents"],"Resource":{"Fn::Sub":"arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/*"}},{"Effect":"Allow","Action":["dynamodb:GetItem","dynamodb:PutItem"],"Resource":{"Fn::GetAtt":["WorkspaceTable","Arn"]}}]}}]}},
+    "WorkspaceHandler": {"Type":"AWS::Lambda::Function","Properties":{"Runtime":"python3.12","Handler":"cloud_storage.handler","Role":{"Fn::GetAtt":["WorkspaceRole","Arn"]},"Timeout":10,"MemorySize":128,"Environment":{"Variables":{"WORKSPACE_TABLE":{"Ref":"WorkspaceTable"}}},"Code":{"ZipFile":"def handler(event,context):\n    return {'statusCode':503,'body':'Upload cloud storage package first'}"}}},
+    "WorkspaceLogs": {"Type":"AWS::Logs::LogGroup","Properties":{"LogGroupName":{"Fn::Sub":"/aws/lambda/${WorkspaceHandler}"},"RetentionInDays":14}},
+    "WorkspaceApi": {"Type":"AWS::ApiGatewayV2::Api","Properties":{"Name":{"Fn::Sub":"${AWS::StackName}-workspace"},"ProtocolType":"HTTP","CorsConfiguration":{"AllowOrigins":[{"Fn::Sub":"https://${Distribution.DomainName}"}],"AllowHeaders":["authorization","content-type"],"AllowMethods":["GET","PUT","OPTIONS"],"MaxAge":300}}},
+    "WorkspaceIntegration": {"Type":"AWS::ApiGatewayV2::Integration","Properties":{"ApiId":{"Ref":"WorkspaceApi"},"IntegrationType":"AWS_PROXY","IntegrationUri":{"Fn::GetAtt":["WorkspaceHandler","Arn"]},"PayloadFormatVersion":"2.0"}},
+    "WorkspaceAuthorizer": {"Type":"AWS::ApiGatewayV2::Authorizer","Properties":{"ApiId":{"Ref":"WorkspaceApi"},"AuthorizerType":"JWT","IdentitySource":["$request.header.Authorization"],"JwtConfiguration":{"Audience":[{"Ref":"UserPoolClient"}],"Issuer":{"Fn::Sub":"https://cognito-idp.${AWS::Region}.amazonaws.com/${UserPool}"}},"Name":"CognitoJwt"}},
+    "WorkspaceRoute": {"Type":"AWS::ApiGatewayV2::Route","Properties":{"ApiId":{"Ref":"WorkspaceApi"},"RouteKey":"ANY /v1/workspace","AuthorizationType":"JWT","AuthorizerId":{"Ref":"WorkspaceAuthorizer"},"Target":{"Fn::Join":["/",["integrations",{"Ref":"WorkspaceIntegration"}]]}}},
+    "WorkspaceStage": {"Type":"AWS::ApiGatewayV2::Stage","Properties":{"ApiId":{"Ref":"WorkspaceApi"},"StageName":"$default","AutoDeploy":true}},
+    "WorkspaceInvokePermission": {"Type":"AWS::Lambda::Permission","Properties":{"FunctionName":{"Ref":"WorkspaceHandler"},"Action":"lambda:InvokeFunction","Principal":"apigateway.amazonaws.com","SourceArn":{"Fn::Sub":"arn:${AWS::Partition}:execute-api:${AWS::Region}:${AWS::AccountId}:${WorkspaceApi}/*/*"}}},
     "DiscordRole": {
       "Type": "AWS::IAM::Role",
       "Condition": "DiscordEnabled",
@@ -579,6 +593,10 @@
     "RecognitionSecretId": {
       "Value": { "Ref": "RecognitionSecret" }
     },
+    "CloudWorkspaceEndpoint": {"Value":{"Fn::GetAtt":["WorkspaceApi","ApiEndpoint"]}},
+    "WorkspaceFunctionName": {"Value":{"Ref":"WorkspaceHandler"}},
+    "CognitoClientId": {"Value":{"Ref":"UserPoolClient"}},
+    "CognitoDomain": {"Value":{"Fn::Sub":"${CognitoDomainPrefix}.auth.${AWS::Region}.amazoncognito.com"}},
     "DiscordFunctionName": {
       "Condition": "DiscordEnabled",
       "Value": {
@@ -620,7 +638,10 @@
       "Default": "false",
       "AllowedValues": ["true", "false"],
       "Description": "Set true only after a successful manual collector invocation has been verified."
-    }
+    },
+    "GoogleClientId": {"Type":"String","AllowedPattern":"^[0-9A-Za-z._-]+$","Description":"Google OAuth web client ID."},
+    "GoogleClientSecret": {"Type":"String","NoEcho":true,"AllowedPattern":"^.+$","Description":"Google OAuth web client secret. Supply only through a secure deployment environment."},
+    "CognitoDomainPrefix": {"Type":"String","AllowedPattern":"^[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$","Description":"Globally unique Cognito hosted UI domain prefix."}
   },
   "Conditions": {
     "DiscordEnabled": {
