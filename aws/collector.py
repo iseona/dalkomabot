@@ -22,7 +22,9 @@ def handler(event,context):
   env=dict(os.environ,CHAMPIONS_ROOT=str(root))
   subprocess.run([sys.executable,str(Path(__file__).with_name('import_opendata.py'))],env=env,check=True,capture_output=True,timeout=30)
   data=(root/'dist/opendata.json').read_bytes()
+  published=json.loads(data)
+  metadata={mode:published['modes'][mode]['metadata'] for mode in ['single','double']}
   digest=hashlib.sha256(data).hexdigest()
   # No write occurs before both modes and every name pass validation.
   boto3.client('s3').put_object(Bucket=bucket,Key='opendata.json',Body=data,ContentType='application/json; charset=utf-8',CacheControl='public,max-age=300',Metadata={'sha256':digest})
-  return {'status':'updated','sha256':digest}
+  return {'status':'updated','sha256':digest,'modes':metadata}

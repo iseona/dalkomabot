@@ -28,7 +28,13 @@ python aws/deploy.py --region ap-northeast-2 --stack champions-party-lab --max-d
 
 이 스크립트는 CloudFormation 스택 생성, 정적 파일 업로드, Lambda 코드 업로드, CloudFront 캐시 갱신까지 수행하고 웹 주소를 출력합니다. `aws/collector.zip`은 자동 생성되며 소스 관리에서 제외됩니다.
 
-정상 배포 후 반환된 CollectorName으로 Lambda를 한 번 수동 실행하고 로그와 데이터 결과를 확인합니다. 그다음 Scheduler 콘솔에서 해당 스케줄을 활성화하면 됩니다. 요청하지 않은 자동 갱신을 만들거나 실행하지 않도록 기본값은 비활성으로 준비했습니다.
+요청하지 않은 자동 갱신을 만들거나 실행하지 않도록 기본값은 비활성입니다. 먼저 아래처럼 배포된 Collector를 동기 실행합니다. 이 경로는 Lambda 응답의 SHA-256과 S3 `opendata.json` 객체 메타데이터를 대조하고, 모드별 메타데이터(모드·시즌·집계 기준·원문 갱신 시각·표본·출처)를 출력합니다.
+
+```bash
+python aws/deploy.py --region ap-northeast-2 --stack champions-party-lab --run-collector
+```
+
+성공 응답과 CloudWatch 로그를 검토한 뒤에만 같은 배포 명령에 `--enable-collector-schedule`을 더해 스케줄을 명시적으로 활성화합니다. 실패하면 Lambda는 S3 쓰기 전에 종료하므로 기존 `opendata.json`은 유지됩니다. 승인된 M-4 싱글·더블 원본 각각을 한 번만 요청하며, 표본은 서로 합산하지 않습니다.
 
 ## 데이터 수집 계약
 

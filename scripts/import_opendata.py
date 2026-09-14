@@ -225,9 +225,9 @@ items=mapping('''あついいわ=뜨거운바위
 ルカリオナイト=루카리오나이트
 持ち物なし=''')
 def run():
- d=json.loads((ROOT/'dist/data.json').read_text());wh={k:{r[0] for r in v} for k,v in d['master'].items()};out={'source':'https://champs.pokedb.tokyo/guide/opendata','modes':{}};audit=[]
+ d=json.loads((ROOT/'dist/data.json').read_text(encoding='utf-8'));wh={k:{r[0] for r in v} for k,v in d['master'].items()};source='https://champs.pokedb.tokyo/guide/opendata';out={'source':source,'modes':{}};audit=[]
  for mode in ['single','double']:
-  raw=json.loads((ROOT/f'sources/s4_{mode}_ranked_teams.json').read_text());assert raw['season']=='M-4';result=[]
+  raw=json.loads((ROOT/f'sources/s4_{mode}_ranked_teams.json').read_text(encoding='utf-8'));assert raw['season']=='M-4';result=[]
   for t in raw['teams']:
    assert len(t['team'])==6;team=[]
    for m in t['team']:
@@ -238,9 +238,12 @@ def run():
     audit.append({'id':m['id'],'original':m['pokemon'],'form':m['form'],'name':name,'originalItem':m['item'],'item':item})
    result.append({'rank':t['rank'],'rating':t['rating_value'],'team':team})
   counts=collections.Counter(m['name'] for t in result for m in t['team']);freq=[{'name':n,'count':c,'rate':round(c/len(result)*100,1)} for n,c in counts.most_common()]
-  out['modes'][mode]={'season':raw['season'],'updatedAt':raw['updated_at'],'count':len(result),'teams':result,'frequency':freq}
- (ROOT/'dist/opendata.json').write_text(json.dumps(out,ensure_ascii=False))
- unique={json.dumps(x,ensure_ascii=False):x for x in audit};(ROOT/'sources/translation-audit.json').write_text(json.dumps(list(unique.values()),ensure_ascii=False,indent=2))
+  # These figures describe this mode's published ranked-team sample only.  Do
+  # not combine modes: they are separate source populations.
+  metadata={'mode':mode,'season':raw['season'],'aggregationPeriod':'published ranked-team snapshot; no cross-mode aggregation','updatedAt':raw['updated_at'],'sample':{'teams':len(result),'unit':'published teams'},'source':source}
+  out['modes'][mode]={'season':raw['season'],'updatedAt':raw['updated_at'],'count':len(result),'teams':result,'frequency':freq,'metadata':metadata}
+ (ROOT/'dist/opendata.json').write_text(json.dumps(out,ensure_ascii=False),encoding='utf-8')
+ unique={json.dumps(x,ensure_ascii=False):x for x in audit};(ROOT/'sources/translation-audit.json').write_text(json.dumps(list(unique.values()),ensure_ascii=False,indent=2),encoding='utf-8')
  print({m:{'teams':v['count'],'species':len(v['frequency']),'updated':v['updatedAt']} for m,v in out['modes'].items()})
 
 if __name__=='__main__':

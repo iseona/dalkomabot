@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Champions Party Lab: private S3 origin, CloudFront, validated Champions collector (schedule disabled).",
+  "Description": "Champions Party Lab: private S3 origin, CloudFront, validated Champions collector.",
   "Resources": {
     "SiteBucket": {
       "Type": "AWS::S3::Bucket",
@@ -296,8 +296,8 @@
     "DailyRefresh": {
       "Type": "AWS::Scheduler::Schedule",
       "Properties": {
-        "Description": "Disabled until operator verifies first ingestion. One download per mode per day.",
-        "State": "DISABLED",
+        "Description": "One approved download per mode per day; enable only after a successful manual verification.",
+        "State": { "Fn::If": ["ScheduleEnabled", "ENABLED", "DISABLED"] },
         "ScheduleExpression": "cron(15 6 * * ? *)",
         "ScheduleExpressionTimezone": "Asia/Seoul",
         "FlexibleTimeWindow": {
@@ -614,6 +614,12 @@
       "Default": "",
       "AllowedPattern": "^$|^[0-9a-fA-F]{64}$",
       "Description": "Discord application public key; empty disables bot resources."
+    },
+    "EnableCollectorSchedule": {
+      "Type": "String",
+      "Default": "false",
+      "AllowedValues": ["true", "false"],
+      "Description": "Set true only after a successful manual collector invocation has been verified."
     }
   },
   "Conditions": {
@@ -628,6 +634,9 @@
           ]
         }
       ]
+    },
+    "ScheduleEnabled": {
+      "Fn::Equals": [{ "Ref": "EnableCollectorSchedule" }, "true"]
     }
   }
 }
