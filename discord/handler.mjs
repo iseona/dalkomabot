@@ -1,15 +1,19 @@
 import {createPublicKey,verify} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import {recommend,draft,makeSet,evText,total,validSet,battleCalculation,koreanType,strongestStatMove,damageScenarioResults,speedVariants} from './engine.mjs';
-const D=JSON.parse(readFileSync(new URL('./data.json',import.meta.url)));
+let D=JSON.parse(readFileSync(new URL('./data.json',import.meta.url)));
 let O=JSON.parse(readFileSync(new URL('./opendata.json',import.meta.url)));
 let loadedAt=0;
 const seasonNumber=value=>{const match=/^M-(\d+)$/.exec(String(value||''));return match?Number(match[1]):null};
 const packagedSeason=seasonNumber(O.modes?.single?.season);
-async function refreshOpen(){
- // Only our own cached app file is read, never the upstream data provider.
- if(!process.env.APP_URL||Date.now()-loadedAt<300000)return;
- try{const url=new URL('opendata.json',process.env.APP_URL);const r=await fetch(url,{signal:AbortSignal.timeout(700),redirect:'error'});if(!r.ok)return;const next=await r.json();const allowed=new Set(D.master.pokemon.map(p=>p[0])),nextSeason=seasonNumber(next.modes?.single?.season);if(nextSeason===null||nextSeason<packagedSeason||next.modes?.double?.season!==next.modes?.single?.season||!['single','double'].every(m=>Array.isArray(next.modes[m]?.teams)&&next.modes[m].teams.every(t=>Array.isArray(t.team)&&t.team.length===6&&t.team.every(p=>allowed.has(p.name)))))return;O=next;loadedAt=Date.now()}catch{}
+const modes=['single','double'];
+const validDetailed=next=>Array.isArray(next?.master?.pokemon)&&Array.isArray(next.master.moves)&&modes.every(mode=>Array.isArray(next.modes?.[mode])&&next.modes[mode].every(p=>typeof p?.name==='string'&&Number.isInteger(p.rank)&&['items','abilities','natures','moves','evs'].every(key=>Array.isArray(p[key]))));
+const validOpen=(next,detailed)=>{const allowed=new Set(detailed.master.pokemon.map(p=>p[0])),nextSeason=seasonNumber(next?.modes?.single?.season);return nextSeason!==null&&nextSeason>=packagedSeason&&next.modes?.double?.season===next.modes.single.season&&modes.every(mode=>Array.isArray(next.modes[mode]?.teams)&&next.modes[mode].teams.every(t=>Array.isArray(t.team)&&t.team.length===6&&t.team.every(p=>allowed.has(p.name))))};
+async function refreshData(){
+ // Read only the web app's validated cache, never the upstream data provider.
+ if(!process.env.APP_URL||Date.now()-loadedAt<3600000)return;
+ loadedAt=Date.now();
+ try{const [detailResponse,openResponse]=await Promise.all(['data.json','opendata.json'].map(file=>fetch(new URL(file,process.env.APP_URL),{signal:AbortSignal.timeout(900),redirect:'error'})));const nextD=detailResponse.ok?await detailResponse.json():null,candidateD=validDetailed(nextD)?nextD:D,nextO=openResponse.ok?await openResponse.json():null;if(validOpen(nextO,candidateD)){D=candidateD;O=nextO}}catch{}
 }
 const response=(code,data)=>({statusCode:code,headers:{'content-type':'application/json'},body:JSON.stringify(data)});
 const reply=(content,ephemeral=true)=>response(200,{type:4,data:{content:content.slice(0,1950),...(ephemeral?{flags:64}:{}),allowed_mentions:{parse:[]}}});
@@ -44,8 +48,8 @@ export async function handler(event){
  if(it.type!==2)return reply('지원하지 않는 명령입니다.');
  const opt=Object.fromEntries((it.data.options||[]).map(x=>[x.name,x.value]));const mode=opt['모드']||'single';
  if(!['single','double'].includes(mode))return reply('싱글 또는 더블을 선택해 주세요.');
+ await refreshData();
  const rows=D.modes[mode],label=mode==='single'?'싱글':'더블';
- await refreshOpen();
  const evidence=`상세 세팅 ${D.date} · 공개 파티 ${O.modes[mode].updatedAt} (JST)\n`;
  if(it.data.name==='웹앱')return reply('**포챔스 달콤아 봇**\n'+(process.env.APP_URL||'웹앱 주소가 아직 설정되지 않았습니다.'));
  if(it.data.name==='명령어')return reply('**포챔스 달콤아 봇 명령어**\n`/메타` 메타 순위·포켓몬 상세 통계\n`/샘플` 포켓몬의 최상위 통계 세팅\n`/추천` 현재 멤버와 함께 쓸 후보 추천\n`/파티` 고정 멤버를 포함한 6마리 파티 초안\n`/결정력계산기` 최고 결정력 기술의 내구별 타수\n`/스피드계산기` 최속·준속·무보정·스카프 비교\n`/계산기` 기술·방어 배분 직접 선택 계산\n`/웹앱` 포챔스 달콤아 봇 웹앱 링크\n`/스크린샷` 이미지 인식 기능 안내\n`/명령어` 이 목록을 채널에 공개',false);
