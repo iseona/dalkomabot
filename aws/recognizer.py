@@ -41,6 +41,14 @@ def output_text(value):
 def build_request(images,prompt):
  content=[{'type':'input_text','text':prompt}]+[{'type':'input_image','image_url':image,'detail':'high'} for image in images]
  return {'model':MODEL,'store':False,'max_output_tokens':1600,'reasoning':{'effort':'none'},'input':[{'role':'user','content':content}],'text':{'verbosity':'low','format':{'type':'json_schema','name':'champions_screen','strict':True,'schema':SCHEMA}}}
+def canonical_text(value, field):
+ # Whitespace-only normalization, never fuzzy/statistical replacement.
+ if not isinstance(value,str):return None
+ if value in ALLOWED[field]:return value
+ compact=''.join(value.split())
+ matches=[name for name in ALLOWED[field] if ''.join(name.split())==compact]
+ return matches[0] if compact and len(matches)==1 else None
+
 def sanitize(value,kind):
  if value.get('schemaVersion')!=1 or value.get('kind')!=kind:raise ValueError('invalid recognition schema')
  groups=[value.get('slots',[])] if kind=='party' else [value.get('sides',{}).get('mine',[]),value.get('sides',{}).get('opp',[])]
@@ -52,8 +60,8 @@ def sanitize(value,kind):
   for index,slot in enumerate(group):
    slot['slot']=index+1
    for key in ('name','item','ability','nature'):
-    if slot.get(key) not in ALLOWED[key]:slot[key]=None
-   slot['moves']=[move for move in slot.get('moves',[]) if move in ALLOWED['moves']][:4]
+    slot[key]=canonical_text(slot.get(key),key)
+   slot['moves']=[canonical_text(move,'moves') or '' for move in slot.get('moves',[])][:4]
    evs=slot.get('evs',[]);slot['evs']=evs if len(evs)==6 and all(v is None or type(v) is int and 0<=v<=32 for v in evs) and sum(v for v in evs if v is not None)<=66 else [None]*6
  if kind=='party':value['slots']=groups[0]
  else:value['sides']={'mine':groups[0],'opp':groups[1]}

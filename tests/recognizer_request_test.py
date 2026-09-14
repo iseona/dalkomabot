@@ -35,6 +35,7 @@ assert schema['properties']['sides']['properties']['mine']['maxItems'] == 6
 assert request['input'][0]['content'][1]['type'] == 'input_image'
 assert request['model'] == os.environ.get('OPENAI_MODEL', 'gpt-5.6-luna')
 assert request['reasoning']['effort'] == 'none'
+assert request['max_output_tokens'] == 1600
 
 def contains_one_of(value):
     if isinstance(value, dict):
@@ -60,3 +61,15 @@ over_budget = slots()
 over_budget[0]['evs'] = [32,32,32,0,0,0]
 assert recognizer.sanitize({'schemaVersion':1,'kind':'party','slots':over_budget},'party')['slots'][0]['evs'] == [None]*6
 print('PASS: low-cost default and EV sum validation.')
+
+assert recognizer.canonical_text('프테라 나이트','item') == '프테라나이트'
+assert recognizer.canonical_text('스톤 샤워','moves') == '스톤샤워'
+assert recognizer.canonical_text('없는 기술','moves') is None
+assert recognizer.canonical_text(None,'moves') is None
+assert recognizer.canonical_text('   ','moves') is None
+assert recognizer.canonical_text('라이츄 나이트 Y','item') == '라이츄나이트Y'
+assert recognizer.canonical_text('라이츄 나이트','item') is None
+sparse=slots()
+sparse[0]['moves']=['없는 기술','더블윙','도발','방어']
+assert recognizer.sanitize({'schemaVersion':1,'kind':'party','slots':sparse},'party')['slots'][0]['moves'] == ['', '더블윙','도발','방어']
+print('PASS: exact whitespace normalization and missing move positions preserved without guessing.')

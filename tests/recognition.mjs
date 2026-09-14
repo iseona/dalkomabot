@@ -6,6 +6,8 @@ const valid={schemaVersion:1,kind:'party',slots:Array.from({length:6},(_,index)=
 const result=validateRecognitionResult(structuredClone(valid));
 assert.equal(result.slots.length,6);
 assert.equal(result.slots[0].name,'달코퀸');
+const sparse=structuredClone(valid);sparse.slots[0].moves=['','더블윙','도발','방어'];
+assert.deepEqual(validateRecognitionResult(sparse).slots[0].moves,['','더블윙','도발','방어']);
 assert.deepEqual(result.slots[0].evs,[2,32,0,0,0,32]);
 assert.throws(()=>validateRecognitionResult({...valid,slots:valid.slots.slice(1)}));
 assert.throws(()=>validateRecognitionResult({...valid,slots:valid.slots.map((slot,index)=>index?slot:{...slot,evs:[33,0,0,0,0,0]})}));

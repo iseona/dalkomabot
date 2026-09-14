@@ -23,3 +23,16 @@
 Only `recognition-contact-sheet.mjs` and `local-party-text.mjs` are in the release package. Dependency graph and production master hash are checked before writes; prior static objects are backed up. Published-site checks recorded after deployment below.
 
 The detector supports this card visual layout across resolution, scale and surrounding margins. Completely different UI themes/layouts, missing cards, or text too degraded to read are not guaranteed and must not silently produce invented values.
+
+## Published verification
+
+- Static files uploaded with backup `/home/cloudshell-user/recognition-release-backup-rniolpz8`; invalidation `I26PMUQY3VFTJ7NIWHXBXMKK9I` confirmed Completed.
+- Public HTTP hashes match the tested manifest for both modules.
+- Actual Edge browser: uploaded the user's original PNGs in reverse order (stats then ability); all 84 DOM values manually checked against source, local completion and zero-AI status displayed. Result tab left open without applying changes to the user's saved party.
+- Published automated original/cross party checks and ultrawide reduced/translated checks each passed 84/84, zero POST requests.
+- The first automated full-size ultrawide run immediately after deployment timed out. The test did not capture its status, so its cause is unconfirmed; it is not counted as a pass. Added timeout-status reporting and reran after cache invalidation completion.
+- Fresh full-size ultrawide rerun passed 84/84 with zero POST requests. The queued reduced/translated runs also passed. Published verification therefore covers all three original source pairs plus ultrawide reduced and translated versions.
+
+## Subsequent integration cleanup (no new deployment)
+
+The earlier full-suite blocker is resolved by excluding the unsuccessful AI prompt/schema/budget experiments, not by relaxing the test. The existing 1600-token/no-reasoning fallback contract is preserved. Only deterministic whitespace normalization and preservation of unread move positions remain in the backend diff. `node tests/verify.mjs`, recognition schema and Python request tests now pass. Optional real AI inference accuracy is not claimed; this cleanup makes no API calls and performs no AWS deployment.

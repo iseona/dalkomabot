@@ -42,7 +42,8 @@ try{
   inputFiles=images.map((url,i)=>({name:`source-${i}.jpg`,mimeType:'image/jpeg',buffer:Buffer.from(url.split(',')[1],'base64')}));
  }
  await page.locator('#imageFile').setInputFiles(inputFiles);
- await page.waitForFunction(()=>!document.querySelector('#ocrBtn').disabled&&document.querySelector('#ocrStatus').textContent.includes('인식 완료'),{},{timeout:180000});
+ try{await page.waitForFunction(()=>!document.querySelector('#ocrBtn').disabled&&document.querySelector('#ocrStatus').textContent.includes('인식 완료'),{},{timeout:180000});}
+ catch(error){console.error('Recognition status:',await page.locator('#ocrStatus').textContent());throw error;}
  const actual=await page.evaluate(()=>Array.from({length:6},(_,i)=>({
   name:document.querySelector(`[data-ocrquery="${i}"]`).value,
   item:document.querySelector(`#ocr-${i}-items`)?.value||'',ability:document.querySelector(`#ocr-${i}-abilities`)?.value||'',nature:document.querySelector(`#ocr-${i}-natures`)?.value||'',
