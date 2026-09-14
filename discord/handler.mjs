@@ -4,10 +4,12 @@ import {recommend,draft,makeSet,evText,total,validSet,battleCalculation,koreanTy
 const D=JSON.parse(readFileSync(new URL('./data.json',import.meta.url)));
 let O=JSON.parse(readFileSync(new URL('./opendata.json',import.meta.url)));
 let loadedAt=0;
+const seasonNumber=value=>{const match=/^M-(\d+)$/.exec(String(value||''));return match?Number(match[1]):null};
+const packagedSeason=seasonNumber(O.modes?.single?.season);
 async function refreshOpen(){
  // Only our own cached app file is read, never the upstream data provider.
  if(!process.env.APP_URL||Date.now()-loadedAt<300000)return;
- try{const url=new URL('opendata.json',process.env.APP_URL);const r=await fetch(url,{signal:AbortSignal.timeout(700),redirect:'error'});if(!r.ok)return;const next=await r.json();const allowed=new Set(D.master.pokemon.map(p=>p[0]));if(!['single','double'].every(m=>next.modes?.[m]?.season==='M-4'&&Array.isArray(next.modes[m].teams)&&next.modes[m].teams.every(t=>Array.isArray(t.team)&&t.team.length===6&&t.team.every(p=>allowed.has(p.name)))))return;O=next;loadedAt=Date.now()}catch{}
+ try{const url=new URL('opendata.json',process.env.APP_URL);const r=await fetch(url,{signal:AbortSignal.timeout(700),redirect:'error'});if(!r.ok)return;const next=await r.json();const allowed=new Set(D.master.pokemon.map(p=>p[0])),nextSeason=seasonNumber(next.modes?.single?.season);if(nextSeason===null||nextSeason<packagedSeason||next.modes?.double?.season!==next.modes?.single?.season||!['single','double'].every(m=>Array.isArray(next.modes[m]?.teams)&&next.modes[m].teams.every(t=>Array.isArray(t.team)&&t.team.length===6&&t.team.every(p=>allowed.has(p.name)))))return;O=next;loadedAt=Date.now()}catch{}
 }
 const response=(code,data)=>({statusCode:code,headers:{'content-type':'application/json'},body:JSON.stringify(data)});
 const reply=(content,ephemeral=true)=>response(200,{type:4,data:{content:content.slice(0,1950),...(ephemeral?{flags:64}:{}),allowed_mentions:{parse:[]}}});

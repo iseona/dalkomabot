@@ -36,6 +36,13 @@ python aws/deploy.py --region ap-northeast-2 --discord-public-key YOUR_PUBLIC_KE
 node discord/register.mjs
 ```
 
+등록 뒤에는 같은 환경 변수로 진단을 실행합니다. 명령 목록, 토큰과 Application ID의 일치 여부를 확인하며, `DISCORD_ENDPOINT_URL`도 지정하면 AWS 엔드포인트 도달 여부까지 검사합니다. 토큰 값은 출력하지 않습니다.
+
+```bash
+export DISCORD_ENDPOINT_URL=https://YOUR_FUNCTION_URL.lambda-url.ap-northeast-2.on.aws/
+node discord/doctor.mjs
+```
+
 필요한 환경 변수는 `DISCORD_APPLICATION_ID`, `DISCORD_BOT_TOKEN`입니다. 서버 한 곳에는 `DISCORD_GUILD_ID`, 여러 서버에는 쉼표로 구분한 `DISCORD_GUILD_IDS`를 지정합니다. 등록 스크립트는 Discord의 일괄 덮어쓰기 API를 한 번 호출하므로 429 요청 제한을 피하고, 제한 응답을 받으면 자동으로 기다렸다가 다시 시도합니다. 지정한 범위에서 이 앱이 전에 등록했던 명령은 위 목록으로 교체됩니다.
 
 ```bash
@@ -54,7 +61,7 @@ Discord → 서명 검증 Lambda Function URL → 공유 추천 엔진 → 비�
 
 초기 응답 제한을 고려해 계산은 동기적으로 수행합니다. 기본 통계는 배포 패키지에 포함하고 오픈데이터는 자체 웹앱의 캐시 파일에서만 최대 0.7초 동안 확인합니다. 원본 데이터 제공 사이트에 명령마다 요청하지 않습니다. 정상적인 자체 데이터 조회가 실패하면 마지막 정상 스냅샷을 사용하며 응답에 데이터 기준일을 표시합니다.
 
-AWS와 Discord 계정 연결은 아직 실행하지 않았습니다. 실제 서버에서 연결, 응답 지연, 공개키 설정을 확인해야 합니다. 웹의 개인 파티와 디스코드 계정의 영구 동기화는 현재 지원하지 않습니다.
+새 환경에 처음 설치할 때는 AWS 배포와 Discord 계정 연결을 모두 완료해야 합니다. `node discord/doctor.mjs`가 통과하더라도 Developer Portal의 Interactions Endpoint URL 저장과 서버 설치가 빠지면 명령을 사용할 수 없습니다. 웹의 개인 파티와 디스코드 계정의 영구 동기화는 현재 지원하지 않습니다.
 
 공식 문서:
 - https://docs.discord.com/developers/interactions/overview
