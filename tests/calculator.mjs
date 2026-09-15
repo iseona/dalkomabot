@@ -19,7 +19,7 @@ assert.deepEqual(adjusted.singleHitDamage,base.damage);
 for(const bad of [{hits:0},{hits:11},{hits:1.5},{defenderHpPercent:0},{defenderHpPercent:101}])assert.equal(battleCalculation(attacker,defender,makeSet(attacker),move,[0,0,0,0,0,0],data.master,bad),null);
 const ui=fs.readFileSync(new URL('../dist/calculator.mjs',import.meta.url),'utf8');
 const calculatorMegaCode=fs.readFileSync(new URL('../dist/calculator-mega.mjs',import.meta.url),'utf8');
-for(const marker of ['calcSwap','calcHpPercent','calcHits','전체 공격 기술','calcAtkSummary','calcDefSummary'])assert(ui.includes(marker),marker);
+for(const marker of ['calcSwap','calcHpPercent','calcHits','전체 기술','calcAtkSummary','calcDefSummary'])assert(ui.includes(marker),marker);
 const charizard=data.modes.single.find(p=>p.name==='리자몽');
 const megaX=resolveMegaForm(charizard,'리자몽나이트X',data.master),megaY=resolveMegaForm(charizard,'리자몽나이트Y',data.master);
 assert.equal(megaX.formName,'메가리자몽X');assert.deepEqual(megaX.types,['불꽃','드래곤']);assert.deepEqual(megaX.formStats,[78,130,111,130,85,100]);

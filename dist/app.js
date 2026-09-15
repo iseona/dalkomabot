@@ -6,7 +6,7 @@ import {rgbHsv,visualFeature,validVisualFeature,compactFeature,rankVisualCandida
 import {recognizeImages} from './ai-recognition.mjs?v=20';
 import {extraNav,coverageTemplate,libraryTemplate,leadTemplate,calculatorTemplate} from './ui-templates.mjs?v=28';
 import {escapeHtml as esc,showToast} from './ui.mjs?v=20';
-import {setupCalculator} from './calculator.mjs?v=28';
+import {setupCalculator} from './calculator.mjs?v=29';
 import {loadSavedTeams,saveTeams,partyExport} from './party-storage.mjs?v=20';
 import {findPokemonMatches,normalizePokemonText} from './pokemon-search.mjs?v=20';
 import {renderPartyPokemonMatches} from './party-recognition-ui.mjs?v=20';
