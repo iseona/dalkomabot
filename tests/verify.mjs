@@ -1,5 +1,5 @@
 import fs from 'node:fs';import os from 'node:os';import path from 'node:path';import assert from 'node:assert/strict';import {generateKeyPairSync,sign} from 'node:crypto';import {pathToFileURL} from 'node:url';
-import {draft,makeSet,validSet,validEV,recommend,empiricalCoverage,recommendationCards,calculateStats,damageRolls,classifyKO,battleCalculation,strongestStatMove,damageScenarioResults,speedVariants,teamDefenseMatrix,coverageDelta,resolveMegaForm,applyMegaForm} from '../dist/engine.mjs';
+import {draft,makeSet,validSet,validEV,recommend,empiricalCoverage,recommendationCards,calculateStats,damageRolls,classifyKO,battleCalculation,strongestStatMove,damageScenarioResults,speedVariants,teamDefenseMatrix,teamRoleSummary,roleProfile,coverageDelta,resolveMegaForm,applyMegaForm} from '../dist/engine.mjs';
 import {buildAdviceInput,validateAdviceResponse} from '../dist/party-advice.mjs';
 import {commandPayload} from '../discord/commands.mjs';
 import {validVisualFeature,rankVisualCandidates,confidentVisual} from '../dist/recognition.mjs';
@@ -112,6 +112,7 @@ const empirical=empiricalCoverage(get('브리두라스'),single,O.modes.single,[
 const double=D.modes.double;const mate=recommend(double,O.modes.double,['달코퀸'],D.master).find(x=>x.p.name==='한카리아스');assert.equal(mate.teammateEvidence[0].direct,1);
 const better=assessCandidate(get('메타그로스'),single,O.modes.single,['한카리아스'],D.master);
 const worse=assessCandidate(get('하마돈'),single,O.modes.single,['한카리아스'],D.master);
+const physicalSweeper=roleProfile(get('한카리아스'),D.master,{...makeSet(get('한카리아스')),evs:[0,32,0,0,0,32]});assert(physicalSweeper.roles.includes('물리 고속 스위퍼'));const roleSummary=teamRoleSummary(single,['한카리아스'],D.master,[makeSet(get('한카리아스'))]);assert.equal(roleSummary.profiles.length,1);assert(Array.isArray(roleSummary.gaps));
 assert(better.defense>worse.defense);
 assert(better.repaired.some(x=>x.type==='얼음'));
 assert.equal(matchup(get('누리레느'),get('한카리아스'),D.master,{moves:['명상']}).usable,false);

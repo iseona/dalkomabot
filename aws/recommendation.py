@@ -36,7 +36,7 @@ def handler(event,context):
   raw=event.get('body') or '{}'
   if len(raw.encode())>24000:return reply(413,{'error':'AI 제언 요청이 너무 큽니다.'})
   body,names,candidate_ids=validate_input(json.loads(raw)); quota()
-  prompt='제공된 후보, 점수, 근거만 사용해 한국어로 간결히 설명하라. 수치, 기술, 상성, 시즌을 만들거나 점수와 순서를 변경하지 마라. evidenceIds만 인용하라.\n'+json.dumps(body,ensure_ascii=False,separators=(',',':'))
+  prompt='포켓몬 파티 코치로서 제공된 후보, 점수, 근거만 사용해 한국어로 설명하라. 단순 점수 반복을 피하고 현재 파티의 물리/특수 공격 비중, 물리/특수 내구, 스피드, 변화기와 도구/특성 기반 역할 공백 중 후보가 실제로 메우는 부분과 남는 위험을 2~3문장으로 말하라. 느린 고화력 포켓몬의 장점을 더 빠른 1타 조건으로만 부정하지 마라. 수치, 기술, 상성, 시즌을 만들거나 점수와 순서를 변경하지 말고 evidenceIds만 인용하라.\n'+json.dumps(body,ensure_ascii=False,separators=(',',':'))
   key=secrets.get_secret_value(SecretId=SECRET_ID)['SecretString']; request={'model':MODEL,'store':False,'max_output_tokens':700,'reasoning':{'effort':'low'},'input':[{'role':'user','content':[{'type':'input_text','text':prompt}]}],'text':{'verbosity':'low','format':{'type':'json_schema','name':'party_advice','strict':True,'schema':SCHEMA}}}
   req=urllib.request.Request('https://api.openai.com/v1/responses',data=json.dumps(request).encode(),headers={'authorization':'Bearer '+key,'content-type':'application/json'})
   with urllib.request.urlopen(req,timeout=25) as response: output=json.loads(output_text(json.loads(response.read())))
