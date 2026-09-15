@@ -3,6 +3,10 @@ export const modeOption={type:3,name:'모드',description:'배틀 모드',requir
 export const commands=[
  {name:'메타',description:'챔피언스 메타 또는 포켓몬 세팅 통계를 확인합니다.',options:[{type:3,name:'포켓몬',description:'공식 한글 이름 (생략하면 표본 내 순위)',required:false},modeOption]},
  {name:'샘플',description:'포켓몬의 최상위 통계 세팅을 확인합니다.',options:[{type:3,name:'포켓몬',description:'이름으로 검색하면 순위와 공개파티 채용률 표시',required:true,autocomplete:true},modeOption]},
+ {name:'도감',description:'포켓몬·기술·특성·도구의 도감 정보를 검색합니다.',options:[
+  {type:3,name:'분류',description:'검색할 도감 분류',required:true,choices:[{name:'포켓몬',value:'pokemon'},{name:'기술',value:'moves'},{name:'특성',value:'abilities'},{name:'도구',value:'items'}]},
+  {type:3,name:'검색어',description:'이름 또는 효과 내용으로 검색',required:true,autocomplete:true}
+ ]},
  {name:'추천',description:'현재 멤버와 함께 쓸 후보를 찾습니다.',options:[{type:3,name:'포켓몬',description:'공식 한글 이름을 쉼표로 구분',required:false},modeOption]},
  {name:'파티',description:'고정 멤버를 포함해 여섯 마리 파티 초안을 만듭니다.',options:[{type:3,name:'포켓몬',description:'고정할 포켓몬 이름을 쉼표로 구분',required:false},modeOption]},
  {name:'웹앱',description:'포챔스 달콤아 봇 웹앱 주소를 확인합니다.'},

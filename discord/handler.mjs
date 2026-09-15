@@ -3,6 +3,9 @@ import {readFileSync} from 'node:fs';
 import {recommend,draft,makeSet,evText,total,validSet,battleCalculation,koreanType,strongestStatMove,damageScenarioResults,speedVariants} from './engine.mjs';
 let D=JSON.parse(readFileSync(new URL('./data.json',import.meta.url)));
 let O=JSON.parse(readFileSync(new URL('./opendata.json',import.meta.url)));
+let POKEDEX=JSON.parse(readFileSync(new URL('./pokedex-details.json',import.meta.url)));
+let LEARNSETS=JSON.parse(readFileSync(new URL('./learnsets.json',import.meta.url)));
+let MOVE_DETAILS=JSON.parse(readFileSync(new URL('./move-details.json',import.meta.url)));
 let loadedAt=0;
 const seasonNumber=value=>{const match=/^M-(\d+)$/.exec(String(value||''));return match?Number(match[1]):null};
 const packagedSeason=seasonNumber(O.modes?.single?.season);
@@ -19,6 +22,8 @@ const response=(code,data)=>({statusCode:code,headers:{'content-type':'applicati
 const reply=(content,ephemeral=true)=>response(200,{type:4,data:{content:content.slice(0,1950),...(ephemeral?{flags:64}:{}),allowed_mentions:{parse:[]}}});
 const baseStats=name=>{const p=D.master.pokemon.find(x=>x[0]===name);return p?`H${p[3]} A${p[4]} B${p[5]} C${p[6]} D${p[7]} S${p[8]} (합 ${p[9]})`:'정보 없음'};
 const openRate=(mode,name)=>O.modes?.[mode]?.frequency?.find(x=>x.name===name)?.rate??0;
+const dexRows=category=>D.master?.[category]||[];
+const dexDescription=(category,row)=>category==='moves'?(MOVE_DETAILS.details?.[row[0]]?.effect||row[7]||'효과 정보 없음'):category==='pokemon'?'':(row[2]||'효과 정보 없음');
 export async function handler(event){
  const headers=Object.fromEntries(Object.entries(event.headers||{}).map(([k,v])=>[k.toLowerCase(),v]));
  const ts=headers['x-signature-timestamp'],sig=headers['x-signature-ed25519'];
@@ -44,6 +49,9 @@ export async function handler(event){
    }else if(it.data.name==='계산기'&&focused?.name==='기술'){
     const attacker=rows.find(p=>p.name===options.find(x=>x.name==='공격포켓몬')?.value);
     choices=(attacker?.moves||[]).map(x=>{const m=D.master.moves.find(m=>m[0]===x.name);return m&&m[3]!=='변화'&&Number(m[4])>0?{move:m,rate:x.rate}:null}).filter(Boolean).filter(x=>!query||x.move[0].includes(query)).slice(0,25).map(x=>({name:`${x.move[0]} · ${koreanType[x.move[2]]||x.move[2]} · 위력 ${x.move[4]} · ${x.rate}%`,value:x.move[0]}));
+   }else if(it.data.name==='도감'&&focused?.name==='검색어'){
+    const category=options.find(x=>x.name==='분류')?.value||'pokemon';
+    choices=dexRows(category).filter(row=>!query||row[0].includes(query)||dexDescription(category,row).includes(query)).slice(0,25).map(row=>({name:(category==='pokemon'?`${row[0]} · ${row[2]}`:`${row[0]} · ${dexDescription(category,row)}`).slice(0,100),value:row[0]}));
    }else choices=rows.filter(p=>!query||p.name.includes(query)).slice(0,25).map(p=>({name:`${p.name} · ${p.rank}위 · 공개파티 ${openRate(mode,p.name)}%`,value:p.name}));
    return response(200,{type:8,data:{choices}});
   }catch{return response(200,{type:8,data:{choices:[]}})}
@@ -55,7 +63,13 @@ export async function handler(event){
  const rows=D.modes[mode],label=mode==='single'?'싱글':'더블';
  const evidence=`상세 세팅 ${D.date} · 공개 파티 ${O.modes[mode].updatedAt} (JST)\n`;
  if(it.data.name==='웹앱')return reply('**포챔스 달콤아 봇**\n'+(process.env.APP_URL||'웹앱 주소가 아직 설정되지 않았습니다.'));
- if(it.data.name==='명령어')return reply('**포챔스 달콤아 봇 명령어**\n`/메타` 메타 순위·포켓몬 상세 통계\n`/샘플` 포켓몬의 최상위 통계 세팅\n`/추천` 현재 멤버와 함께 쓸 후보 추천\n`/파티` 고정 멤버를 포함한 6마리 파티 초안\n`/결정력계산기` 최고 결정력 기술의 내구별 타수\n`/스피드계산기` 최속·준속·무보정·스카프 비교\n`/계산기` 기술·방어 배분 직접 선택 계산\n`/웹앱` 포챔스 달콤아 봇 웹앱 링크\n`/스크린샷` 이미지 인식 기능 안내\n`/명령어` 이 목록을 채널에 공개',false);
+ if(it.data.name==='도감'){
+  const category=opt['분류'],name=opt['검색어'],row=dexRows(category).find(x=>x[0]===name);if(!row)return reply('도감 자동완성 후보에서 항목을 선택해 주세요.');
+  if(category==='pokemon'){const info=POKEDEX.details?.[name]||{},learn=LEARNSETS.details?.[name]?.moves||[],abilities=(info.abilities||[]).map(ability=>{const found=D.master.abilities.find(x=>x[0]===ability);return `**${ability}** — ${found?.[2]||'효과 정보 없음'}`});return reply(`**${name} · 포켓몬 도감**\n타입: ${row[2]}\n키/몸무게: ${info.height??'—'}m / ${info.weight??'—'}kg\n종족값: ${baseStats(name)}\n특성:\n${abilities.join('\n')||'정보 없음'}\n\n배울 수 있는 기술 ${learn.length}개\n${learn.slice(0,30).join(' / ')}${learn.length>30?' 외 '+(learn.length-30)+'개':''}`)}
+  if(category==='moves'){const type=koreanType[row[2]]||row[2],learners=Object.entries(LEARNSETS.details||{}).filter(([,value])=>value.moves?.includes(name)).map(([pokemon])=>pokemon);return reply(`**${name} · 기술 도감**\n타입 ${type} · ${row[3]} · 위력 ${row[4]} · 명중 ${row[5]} · PP ${row[6]}\n${dexDescription(category,row)}\n\n배울 수 있는 포켓몬 ${learners.length}종\n${learners.slice(0,30).join(' / ')}${learners.length>30?' 외 '+(learners.length-30)+'종':''}`)}
+  const owners=category==='abilities'?Object.entries(POKEDEX.details||{}).filter(([,value])=>value.abilities?.includes(name)).map(([pokemon])=>pokemon):[];return reply(`**${name} · ${category==='abilities'?'특성':'도구'} 도감**\n${dexDescription(category,row)}${owners.length?`\n\n이 특성을 가진 포켓몬 ${owners.length}종\n${owners.slice(0,30).join(' / ')}${owners.length>30?' 외 '+(owners.length-30)+'종':''}`:''}`);
+ }
+ if(it.data.name==='명령어')return reply('**포챔스 달콤아 봇 명령어**\n`/도감` 포켓몬·기술·특성·도구 검색\n`/메타` 메타 순위·포켓몬 상세 통계\n`/샘플` 포켓몬의 최상위 통계 세팅\n`/추천` 현재 멤버와 함께 쓸 후보 추천\n`/파티` 고정 멤버를 포함한 6마리 파티 초안\n`/결정력계산기` 최고 결정력 기술의 내구별 타수\n`/스피드계산기` 최속·준속·무보정·스카프 비교\n`/계산기` 기술·방어 배분 직접 선택 계산\n`/웹앱` 포챔스 달콤아 봇 웹앱 링크\n`/스크린샷` 이미지 인식 기능 안내\n`/명령어` 이 목록을 채널에 공개',false);
  if(it.data.name==='메타'){
   const name=opt['포켓몬'];if(!name){return reply(evidence+`**${label} 공개 파티 표본 내 채용 비율**\n`+O.modes[mode].frequency.slice(0,8).map(f=>`${f.name}: ${f.rate}% (${f.count}/${O.modes[mode].count}파티)`).join('\n')+'\n전체 랭크배틀 사용률이 아닙니다.')}
   const p=rows.find(p=>p.name===name);if(!p)return reply('첨부 데이터에 해당 정보가 없습니다. 공식 한글 이름을 확인해 주세요.');
@@ -89,5 +103,5 @@ export async function handler(event){
   const attacker=rows.find(p=>p.name===opt['공격포켓몬']),defender=rows.find(p=>p.name===opt['방어포켓몬']);if(!attacker||!defender)return reply('비교할 두 포켓몬을 자동완성 후보에서 선택해 주세요.');const attackerSet=makeSet(attacker),defenderSet=makeSet(defender),left=speedVariants(attacker,D.master,attackerSet),right=speedVariants(defender,D.master,defenderSet);if(!left||!right)return reply('현재 챔피언스 데이터로 스피드를 계산할 수 없습니다.');const leftName=left[0].mega?.name||attacker.name,rightName=right[0].mega?.name||defender.name,lines=left.map((a,i)=>{const b=right[i],mark=a.value===b.value?'＝':a.value>b.value?'＞':'＜',winner=a.value===b.value?'동속':a.value>b.value?leftName:rightName;return `**${a.label}** — ${leftName} ${a.value} ${mark} ${b.value} ${rightName} · ${winner}`});return reply(evidence+`**${attacker.name} ↔ ${defender.name} 스피드 비교**\n${left[0].mega?`공격 측 적용 메가폼: **${leftName}**\n`:''}${right[0].mega?`방어 측 적용 메가폼: **${rightName}**\n`:''}${lines.join('\n')}\n\n최속은 S32+스피드 상승 성격, 준속은 S32 무보정 성격, 무보정은 S0 기준입니다. 스카프 줄은 비교용 가정이며 메가스톤과 동시에 장착할 수 없습니다.`);
  }
  if(it.data.name==='스크린샷')return reply('스크린샷은 웹앱의 「스크린샷 입력」에서 인식 결과를 확인한 후 적용하세요. 디스코드 첨부 자동 인식은 아직 지원하지 않습니다.\n'+(process.env.APP_URL||'웹앱 주소가 아직 설정되지 않았습니다.'));
- return reply('지원 명령: /메타, /샘플, /추천, /파티, /결정력계산기, /스피드계산기, /계산기, /웹앱, /스크린샷, /명령어');
+ return reply('지원 명령: /도감, /메타, /샘플, /추천, /파티, /결정력계산기, /스피드계산기, /계산기, /웹앱, /스크린샷, /명령어');
 }

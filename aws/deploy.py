@@ -61,7 +61,7 @@ if not a.enable_collector_schedule:print('After a successful manual verification
 
 if 'DiscordFunctionName' in o:
  with zipfile.ZipFile(ROOT/'aws/discord.zip','w',zipfile.ZIP_DEFLATED) as z:
-  for src,name in [(ROOT/'discord/handler.mjs','handler.mjs'),(ROOT/'dist/engine.mjs','engine.mjs'),(ROOT/'dist/types.mjs','types.mjs'),(ROOT/'dist/data.json','data.json'),(ROOT/'dist/opendata.json','opendata.json')]:z.write(src,name)
+  for src,name in [(ROOT/'discord/handler.mjs','handler.mjs'),(ROOT/'dist/engine.mjs','engine.mjs'),(ROOT/'dist/types.mjs','types.mjs'),(ROOT/'dist/data.json','data.json'),(ROOT/'dist/opendata.json','opendata.json'),(ROOT/'dist/pokedex-details.json','pokedex-details.json'),(ROOT/'dist/learnsets.json','learnsets.json'),(ROOT/'dist/move-details.json','move-details.json')]:z.write(src,name)
  aws('lambda','update-function-code','--region',a.region,'--function-name',o['DiscordFunctionName'],'--zip-file','fileb://'+str(ROOT/'aws/discord.zip'))
  aws('lambda','wait','function-updated','--region',a.region,'--function-name',o['DiscordFunctionName'])
  print('Discord Interactions Endpoint: '+o['DiscordEndpoint'])
