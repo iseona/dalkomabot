@@ -5,12 +5,12 @@ import path from 'node:path';
 import {chromium} from 'playwright';
 
 const root=path.resolve(import.meta.dirname,'..'),types=new Map([['.html','text/html'],['.js','text/javascript'],['.mjs','text/javascript'],['.json','application/json'],['.css','text/css'],['.png','image/png'],['.webp','image/webp']]);
-const server=createServer(async(request,response)=>{try{const url=new URL(request.url,'http://localhost'),relative=decodeURIComponent(url.pathname).replace(/^\/+/, '')||'dist/index.html',file=path.resolve(root,relative.startsWith('dist/')?relative:`dist/${relative}`);if(!file.startsWith(path.join(root,'dist')+path.sep))throw Error('outside dist');response.setHeader('content-type',types.get(path.extname(file))||'application/octet-stream');response.end(await readFile(file))}catch{response.statusCode=404;response.end('not found')}});
-await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
+const target=process.env.TEST_SITE;let server;
+if(!target){server=createServer(async(request,response)=>{try{const url=new URL(request.url,'http://localhost'),relative=decodeURIComponent(url.pathname).replace(/^\/+/, '')||'dist/index.html',file=path.resolve(root,relative.startsWith('dist/')?relative:`dist/${relative}`);if(!file.startsWith(path.join(root,'dist')+path.sep))throw Error('outside dist');response.setHeader('content-type',types.get(path.extname(file))||'application/octet-stream');response.end(await readFile(file))}catch{response.statusCode=404;response.end('not found')}});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve))}
 const browser=await chromium.launch({headless:true});
 try{
  const page=await browser.newPage(),errors=[];page.on('pageerror',error=>errors.push(error.message));
- await page.goto(`http://127.0.0.1:${server.address().port}`,{waitUntil:'networkidle'});
+ await page.goto(target||`http://127.0.0.1:${server.address().port}`,{waitUntil:'networkidle'});
  await page.locator('[data-tab="dex"]').click();
  await page.locator('#pokemonDexSortKey').selectOption('atk');
  await page.locator('#pokemonDexSortDirection').selectOption('desc');
@@ -32,4 +32,4 @@ try{
  assert.equal(await page.locator('[data-catalogsort="items"]').isVisible(),true,'도구 정렬 누락');
  assert.deepEqual(errors,[]);
  console.log('PASS: meta, Pokemon, move, ability, and item list sorting controls.');
-}finally{await browser.close();server.close()}
+}finally{await browser.close();server?.close()}
