@@ -105,6 +105,8 @@
 <select id="megaFilter" aria-label="메가진화 분류"><option value="">전체 (일반폼·메가폼)</option><option value="mega">메가폼</option><option value="normal">일반폼</option></select>
 <input id="abilityFilter" placeholder="특성 검색" aria-label="특성 검색">
 <input id="moveFilter" placeholder="기술 검색" aria-label="기술 검색">
+<select id="pokemonDexSortKey" aria-label="포켓몬 도감 정렬 기준" hidden><option value="dex">도감번호</option><option value="rank">현재 시즌 순위</option><option value="hp">HP 종족값</option><option value="atk">공격 종족값</option><option value="def">방어 종족값</option><option value="spa">특공 종족값</option><option value="spd">특방 종족값</option><option value="spe">스피드 종족값</option><option value="total">종족값 총합</option></select>
+<select id="pokemonDexSortDirection" aria-label="포켓몬 도감 정렬 방향" hidden><option value="asc">오름차순</option><option value="desc">내림차순</option></select>
 </div>
 </div>
 <div class="dex-category-tabs" aria-label="도감 목록"><button class="active" data-dexcategory="pokemon">포켓몬 목록</button><button data-dexcategory="moves">기술 목록</button><button data-dexcategory="abilities">특성 목록</button><button data-dexcategory="items">도구 목록</button></div>
@@ -226,7 +228,7 @@
 <div id="toast" role="status">
 </div>
 <script src="runtime-config.js"></script>
-<script src="app.js?v=33" type="module">
+<script src="app.js?v=33-sort2" type="module">
 </script>
 </body>
 </html>

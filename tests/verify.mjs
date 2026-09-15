@@ -124,5 +124,5 @@ const calculatorTemplateCode=fs.readFileSync(root+'/dist/ui-templates.mjs','utf8
 assert(code.includes('recommendationStats=()=>stats()'));assert(code.includes('renderSourceSummary();render()}'));
 assert(!fs.existsSync(root+'/dist/vendor/ocr'));
 const learnsets=JSON.parse(fs.readFileSync(root+'/dist/learnsets.json','utf8'));assert.equal(learnsets.count,D.master.pokemon.length);assert.equal(learnsets.total,D.master.pokemon.length);assert.equal(learnsets.failures.length,0);for(const row of D.master.pokemon)assert(learnsets.details[row[0]]?.moves.length>0);assert(code.includes("fetch('learnsets.json')"));assert(code.includes('data-movelearners'));assert(code.includes('배울 수 있는 기술 ${learnset.length}개'));assert(code.includes('배울 수 있는 포켓몬 ${filtered.length}/${all.length}종'));
-assert(learnsets.details['보만다'].moves.length>24);assert(learnsets.details['야나키'].moves.length>24);for(const marker of ['data-detail-tab="stats"','data-learnerfilter','pokemonDexSort'])assert(code.includes(marker));
+assert(learnsets.details['보만다'].moves.length>24);assert(learnsets.details['야나키'].moves.length>24);for(const marker of ['data-detail-tab="stats"','data-learnerfilter','pokemonDexSortKey','pokemonDexSortDirection',"sortKey==='rank'",'data-catalogsort'])assert(code.includes(marker));
 console.log('PASS: type priority, actual selected moves, and OCR runtime removal.');

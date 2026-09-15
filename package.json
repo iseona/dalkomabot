@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "test": "node tests/verify.mjs && node tests/dex-sorting.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}

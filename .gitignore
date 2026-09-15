@@ -5,3 +5,4 @@ aws/discord.zip
 aws/recognizer.zip
 .local-icon-training/
 .local-champions-images/
+node_modules/
