@@ -27,6 +27,7 @@ with tempfile.TemporaryDirectory() as directory:
  package=Path(directory)
  for source,target in [('aws/collector.py','collector.py'),('scripts/import_opendata.py','import_opendata.py'),('dist/data.json','data.json'),('sources/season-usage-identities.json','season-usage-identities.json'),('dist/champions-image-map.json','champions-image-map.json')]:shutil.copy(ROOT/source,package/target)
  spec=importlib.util.spec_from_file_location('collector',package/'collector.py');collector=importlib.util.module_from_spec(spec);spec.loader.exec_module(collector)
+ assert collector.champions_mega_items('<div class="pokemon-trend__column-items" x-data="window.usagePieChart([{&quot;rank&quot;:1,&quot;name&quot;:&quot;ボーマンダナイト&quot;,&quot;rate&quot;:97.8}])"></div>'.encode(),'ボーマンダ','보만다',{'items':[['보만다나이트']]})==[{'name':'보만다나이트','rate':97.8}]
  source={mode:(ROOT/f'sources/s5_{mode}_ranked_teams.json').read_bytes() for mode in ('single','double')}
  guide=b'<a href="/opendata/s4_single_ranked_teams.json"><a href="/opendata/s4_double_ranked_teams.json"><a href="/opendata/s5_single_ranked_teams.json"><a href="/opendata/s5_double_ranked_teams.json">'
  usage=(r'x\"table\":{\"seasons\":[\"M-5\",\"M-6\"],\"format\":\"single\",\"rows\":[{\"id\":\"salamence\",\"name\":\"ボーマンダ\",\"ranks\":[null,1]},{\"id\":\"garchomp\",\"name\":\"ガブリアス\",\"ranks\":[1,2]}]} y \"table\":{\"seasons\":[\"M-5\",\"M-6\"],\"format\":\"double\",\"rows\":[{\"id\":\"sneasler\",\"name\":\"オオニューラ\",\"ranks\":[1,1]}]}').encode()

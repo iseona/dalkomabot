@@ -60,6 +60,21 @@ def champions_related(page,column,identity_by_form):
   if name and name not in result:result.append(name)
  return result[:10]
 
+def champions_mega_items(page,source_name,korean_name,master):
+ text=html.unescape(page.decode());start=text.find('pokemon-trend__column-items')
+ if start<0:return []
+ match=re.search(r'usagePieChart\((\[.*?\])\)',text[start:],re.S)
+ if not match:return []
+ try:entries=json.loads(match.group(1))
+ except json.JSONDecodeError:return []
+ result=[]
+ for entry in entries:
+  japanese=str(entry.get('name',''))
+  suffix=japanese.removeprefix(source_name+'ナイト') if japanese.startswith(source_name+'ナイト') else None
+  name=korean_name+'나이트'+(suffix or '') if suffix is not None else None
+  if name:result.append({'name':name,'rate':entry['rate']})
+ return result
+
 def translate_detail(value,mode,season,master,related=None):
  section=value.get(mode,{})
  if section.get('season')!=season or section.get('isFallback') is not False:raise ValueError('Detail season or fallback mismatch')
@@ -83,8 +98,8 @@ def translate_detail(value,mode,season,master,related=None):
    points={letter:int(number) for letter,number in re.findall(r'([HABCDS])(\d+)',entry['spread'])};name=' '.join(letter+str(points.get(letter,0)).zfill(2) for letter in 'HABCDS')
    if sum(points.values())<=66 and all(0<=point<=32 for point in points.values()):evs.append({'name':name,'rate':entry['pct']})
    else:excluded.append({'category':'evs','sourceName':entry['spread']})
- related=related or {}
- return {'moves':entities('moves'),'items':entities('items'),'abilities':entities('abilities'),'natures':natures,'evs':evs,'teammates':related.get('teammates',[]),'defeated':related.get('defeated',[]),'counters':related.get('counters',[])},excluded
+ related=related or {};ordinary_items=entities('items');mega_items=related.get('megaItems',[]);mega_names={entry['name'] for entry in mega_items};items=sorted(mega_items+[entry for entry in ordinary_items if entry['name'] not in mega_names],key=lambda entry:-entry['rate'])
+ return {'moves':entities('moves'),'items':items,'abilities':entities('abilities'),'natures':natures,'evs':evs,'teammates':related.get('teammates',[]),'defeated':related.get('defeated',[]),'counters':related.get('counters',[])},excluded
 
 def collect_settings(usage,season,master,identity_ledger,limit=None):
  wanted=[]
@@ -110,7 +125,8 @@ def collect_settings(usage,season,master,identity_ledger,limit=None):
     if response.geturl()!=related_url:raise ValueError('Unexpected Champions detail redirect')
     related_body=response.read(1_200_001)
     if len(related_body)>1_200_000:raise ValueError('Champions detail source size exceeds limit')
-   relations[mode]={'teammates':champions_related(related_body,'same_team',identity_by_form),'defeated':champions_related(related_body,'win_pokemons',identity_by_form),'counters':champions_related(related_body,'lose_pokemons',identity_by_form)}
+   identity=next(row for row in identity_rows if row['sourceId']==source_id)
+   relations[mode]={'teammates':champions_related(related_body,'same_team',identity_by_form),'defeated':champions_related(related_body,'win_pokemons',identity_by_form),'counters':champions_related(related_body,'lose_pokemons',identity_by_form),'megaItems':champions_mega_items(related_body,identity['source'][0],identity['name'],master)}
   return detail_payload(body),relations
  with ThreadPoolExecutor(max_workers=6) as pool:
   futures={pool.submit(fetch,source_id):source_id for source_id in wanted}
